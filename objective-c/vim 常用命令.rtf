@@ -1,0 +1,1138 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 Verdana;\f2\fnil\fcharset134 STHeitiSC-Light;
+\f3\fnil\fcharset134 STSong;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red254\green73\blue64;\red110\green5\blue0;
+\red193\green193\blue193;\red4\green45\blue167;\red251\green0\blue7;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs36 \cf2 http://linux.chinaunix.net/techdoc/beginner/2009/12/20/1150108.shtml\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trwWidth13200\trftsWidth3 \trmarl340 \trmarr360 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth13200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc
+\cf2 \
+\
+\pard\intbl\itap1\pardeftab720
+
+\f1\b0\fs28 \cf0 \'a0\'a0 \'a0\'a0\'a0VIM
+\f2 \'c3\'fc\'c1\'ee\'b4\'f3\'c8\'ab
+\f1 \
+
+\f2 \'b9\'e2\'b1\'ea\'bf\'d8\'d6\'c6\'c3\'fc\'c1\'ee
+\f1 \
+
+\f2 \'c3\'fc\'c1\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b9\'e2\'b1\'ea\'d2\'c6\'b6\'af
+\f1 \
+h\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'cf\'f2\'d7\'f3\'d2\'c6\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb
+\f1 \
+j\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'cf\'f2\'cf\'c2\'d2\'c6\'d2\'bb\'d0\'d0
+\f1 \
+k\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'cf\'f2\'c9\'cf\'d2\'c6\'d2\'bb\'d0\'d0
+\f1 \
+l\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'cf\'f2\'d3\'d2\'d2\'c6\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb
+\f1 \
+G\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'ce\'c4\'bc\'fe\'b5\'c4\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0
+\f1 \
+w\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'c4\'bf\'aa\'cd\'b7
+\f1 \
+W\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'c4\'bf\'aa\'cd\'b7\'a3\'ac\'ba\'f6\'c2\'d4\'b1\'ea\'b5\'e3\'b7\'fb\'ba\'c5
+\f1 \
+b\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'c7\'b0\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'c4\'bf\'aa\'cd\'b7
+\f1 \
+B\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'c7\'b0\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'c4\'bf\'aa\'cd\'b7\'a3\'ac\'ba\'f6\'c2\'d4\'b1\'ea\'b5\'e3\'b7\'fb\'ba\'c5
+\f1 \
+L\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'c6\'c1\'c4\'bb\'b5\'c4\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0
+\f1 \
+M\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'c6\'c1\'c4\'bb\'b5\'c4\'d6\'d0\'bc\'e4\'d2\'bb\'d0\'d0
+\f1 \
+H\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'c6\'c1\'c4\'bb\'b5\'c4\'b5\'da\'d2\'bb\'d0\'d0
+\f1 \
+e\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'c4\'bd\'e1\'ce\'b2
+\f1 \
+E\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'c4\'bd\'e1\'ce\'b2\'a3\'ac\'ba\'f6\'c2\'d4\'b1\'ea\'b5\'e3\'b7\'fb\'ba\'c5
+\f1 \
+(\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d2\'c6\'b5\'bd\'be\'e4\'d7\'d3\'b5\'c4\'bf\'aa\'cd\'b7
+\f1 \
+)\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d2\'c6\'b5\'bd\'be\'e4\'d7\'d3\'b5\'c4\'bd\'e1\'ce\'b2
+\f1 \
+\{\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d2\'c6\'b5\'bd\'b6\'ce\'c2\'e4\'b5\'c4\'bf\'aa\'cd\'b7
+\f1 \
+\}\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d2\'c6\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6\'b6\'ce\'c2\'e4\'b5\'c4\'bf\'aa\'cd\'b7
+\f1 \
+0(
+\f2 \'ca\'fd\'d7\'d6
+\f1 ), |\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'b5\'b1\'c7\'b0\'d0\'d0\'b5\'c4\'b5\'da\'d2\'bb\'c1\'d0
+\f1 \
+^\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d2\'c6\'b5\'bd\'b5\'b1\'c7\'b0\'d0\'d0\'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'b7\'c7\'bf\'d5\'d7\'d6\'b7\'fb
+\f1 \
+$\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d2\'c6\'b5\'bd\'b5\'b1\'c7\'b0\'d0\'d0\'b5\'c4\'d7\'ee\'ba\'f3\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb
+\f1 \
++, Enter\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d2\'c6\'b5\'bd\'cf\'c2\'d2\'bb\'d0\'d0\'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb
+\f1 \
+-\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d2\'c6\'b5\'bd\'c7\'b0\'d2\'bb\'d0\'d0\'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'b7\'c7\'bf\'d5\'d7\'d6\'b7\'fb
+\f1 \
+
+\f2 \'d4\'da
+\f1  vi 
+\f2 \'d6\'d0\'cc\'ed\'bc\'d3\'ce\'c4\'b1\'be
+\f1 \
+
+\f2 \'c3\'fc\'c1\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b2\'e5\'c8\'eb\'b6\'af\'d7\'f7
+\f1 \
+a\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b9\'e2\'b1\'ea\'ba\'f3\'b2\'e5\'c8\'eb\'ce\'c4\'b1\'be
+\f1 \
+A\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b5\'b1\'c7\'b0\'d0\'d0\'b2\'e5\'c8\'eb\'ce\'c4\'b1\'be
+\f1 \
+i\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b9\'e2\'b1\'ea\'c7\'b0\'b2\'e5\'c8\'eb\'ce\'c4\'b1\'be
+\f1 \
+I\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b5\'b1\'c7\'b0\'d0\'d0\'c7\'b0\'b2\'e5\'c8\'eb\'ce\'c4\'b1\'be
+\f1 \
+o\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b5\'b1\'c7\'b0\'d0\'d0\'b5\'c4\'cf\'c2\'b1\'df\'b2\'e5\'c8\'eb\'d0\'c2\'d0\'d0
+\f1 \
+O\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b5\'b1\'c7\'b0\'d0\'d0\'b5\'c4\'c9\'cf\'b1\'df\'b2\'e5\'c8\'eb\'d0\'c2\'d0\'d0
+\f1 \
+s\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'c9\'be\'b3\'fd\'b9\'e2\'b1\'ea\'cb\'f9\'d4\'da\'b4\'a6\'d7\'d6\'b7\'fb\'a3\'ac\'b2\'a2\'bd\'f8\'c8\'eb\'b2\'e5\'c8\'eb\'c4\'a3\'ca\'bd
+\f1 \
+S\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'c9\'be\'b3\'fd\'b9\'e2\'b1\'ea\'cb\'f9\'d4\'da\'b5\'c4\'d0\'d0\'a3\'ac\'b2\'a2\'bd\'f8\'c8\'eb\'b2\'e5\'c8\'eb\'c4\'a3\'ca\'bd
+\f1 \
+:r file\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b6\'c1\'c8\'eb\'ce\'c4\'bc\'fe
+\f1  file 
+\f2 \'c4\'da\'c8\'dd\'a3\'ac\'b2\'a2\'b2\'e5\'d4\'da\'b5\'b1\'c7\'b0\'d0\'d0\'ba\'f3
+\f1 \
+:nr file\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b6\'c1\'c8\'eb\'ce\'c4\'bc\'fe
+\f1  file 
+\f2 \'c4\'da\'c8\'dd\'a3\'ac\'b2\'a2\'b2\'e5\'d4\'da\'b5\'da
+\f1  n 
+\f2 \'d0\'d0\'ba\'f3
+\f1 \
+Esc\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'bb\'d8\'b5\'bd\'c3\'fc\'c1\'ee\'c4\'a3\'ca\'bd
+\f1 \
+^v char\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b2\'e5\'c8\'eb\'ca\'b1\'ba\'f6\'c2\'d4
+\f1  char 
+\f2 \'b5\'c4\'d6\'b8\'b6\'a8\'d2\'e2\'d2\'e5\'a3\'ac\'d5\'e2\'ca\'c7\'ce\'aa\'c1\'cb\'b2\'e5\'c8\'eb\'cc\'d8\'ca\'e2\'d7\'d6\'b7\'fb
+\f1 \
+
+\f2 \'d4\'da
+\f1  vi 
+\f2 \'d6\'d0\'c9\'be\'b3\'fd\'ce\'c4\'b1\'be
+\f1 \
+
+\f2 \'c3\'fc\'c1\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'c9\'be\'b3\'fd\'b2\'d9\'d7\'f7
+\f1 \
+x\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'c9\'be\'b3\'fd\'b9\'e2\'b1\'ea\'b4\'a6\'b5\'c4\'d7\'d6\'b7\'fb
+\f1 \
+dw\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'c9\'be\'d6\'c1\'cf\'c2\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'c4\'bf\'aa\'cd\'b7
+\f1 \
+dG\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'c9\'be\'b3\'fd\'d0\'d0\'a3\'ac\'d6\'b1\'b5\'bd\'ce\'c4\'bc\'fe\'bd\'e1\'ca\'f8
+\f1 \
+dd\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'c9\'be\'b3\'fd\'d5\'fb\'d0\'d0
+\f1 \
+db\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'c9\'be\'b3\'fd\'b9\'e2\'b1\'ea\'c7\'b0\'c3\'e6\'b5\'c4\'d7\'d6
+\f1 \
+:n,md\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b4\'d3\'b5\'da
+\f1  m 
+\f2 \'d0\'d0\'bf\'aa\'ca\'bc\'cd\'f9\'c7\'b0\'c9\'be\'b3\'fd
+\f1  n 
+\f2 \'d0\'d0
+\f1 \
+d, d$\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b4\'d3\'b9\'e2\'b1\'ea\'b4\'a6\'c9\'be\'b3\'fd\'b5\'bd\'d0\'d0\'ce\'b2
+\f1 \
+^h, backspace\'a0 \'a0\'a0 \'a0 
+\f2 \'b2\'e5\'c8\'eb\'ca\'b1\'a3\'ac\'c9\'be\'b3\'fd\'c7\'b0\'c3\'e6\'b5\'c4\'d7\'d6\'b7\'fb
+\f1 \
+^w\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b2\'e5\'c8\'eb\'ca\'b1\'a3\'ac\'c9\'be\'b3\'fd\'c7\'b0\'c3\'e6\'b5\'c4\'d7\'d6
+\f1 \
+
+\f2 \'d0\'de\'b8\'c4
+\f1  vi 
+\f2 \'ce\'c4\'b1\'be
+\f1 \
+
+\f2 \'c3\'bf\'b8\'f6\'c3\'fc\'c1\'ee\'c7\'b0\'c3\'e6\'b5\'c4\'ca\'fd\'d7\'d6\'b1\'ed\'ca\'be\'b8\'c3\'c3\'fc\'c1\'ee\'d6\'d8\'b8\'b4\'b5\'c4\'b4\'ce\'ca\'fd
+\f1 \
+
+\f2 \'c3\'fc\'c1\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'cc\'e6\'bb\'bb\'b2\'d9\'d7\'f7
+\f1 \
+rchar\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d3\'c3
+\f1  char 
+\f2 \'cc\'e6\'bb\'bb\'b5\'b1\'c7\'b0\'d7\'d6\'b7\'fb
+\f1 \
+R text escape\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d3\'c3
+\f1  text 
+\f2 \'cc\'e6\'bb\'bb\'b5\'b1\'c7\'b0\'d7\'d6\'b7\'fb\'d6\'b1\'b5\'bd\'b0\'b4\'cf\'c2
+\f1  Esc 
+\f2 \'bc\'fc
+\f1 \
+stext escape\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d3\'c3
+\f1  text 
+\f2 \'b4\'fa\'cc\'e6\'b5\'b1\'c7\'b0\'d7\'d6\'b7\'fb
+\f1 \
+S 
+\f2 \'bb\'f2
+\f1  cctext escape\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d3\'c3
+\f1  text 
+\f2 \'b4\'fa\'cc\'e6\'d5\'fb\'d0\'d0
+\f1 \
+cwtext escape\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d7\'d6\'b8\'c4\'ce\'aa
+\f1  text\
+Ctext escape\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d0\'d0\'d3\'e0\'cf\'c2\'b5\'c4\'b8\'c4\'ce\'aa
+\f1  text\
+cG escape\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d0\'de\'b8\'c4\'d6\'c1\'ce\'c4\'bc\'fe\'b5\'c4\'c4\'a9\'ce\'b2
+\f1 \
+ccursor_cmd text escape\'a0 \'a0\'a0 \'a0 
+\f2 \'b4\'d3\'b5\'b1\'c7\'b0\'ce\'bb\'d6\'c3\'b4\'a6\'b5\'bd\'b9\'e2\'b1\'ea\'c3\'fc\'c1\'ee\'ce\'bb\'d6\'c3\'b4\'a6\'b6\'bc\'b8\'c4\'ce\'aa
+\f1  text\
+
+\f2 \'d4\'da
+\f1  vi 
+\f2 \'d6\'d0\'b2\'e9\'d5\'d2\'d3\'eb\'cc\'e6\'bb\'bb
+\f1 \
+
+\f2 \'c3\'fc\'c1\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b2\'e9\'d5\'d2\'d3\'eb\'cc\'e6\'bb\'bb\'b2\'d9\'d7\'f7
+\f1 \
+/text\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'ce\'c4\'bc\'fe\'d6\'d0\'cf\'f2\'c7\'b0\'b2\'e9\'d5\'d2
+\f1  text\
+?text\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'ce\'c4\'bc\'fe\'d6\'d0\'cf\'f2\'ba\'f3\'b2\'e9\'d5\'d2
+\f1  text\
+n\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d4\'da\'cd\'ac\'d2\'bb\'b7\'bd\'cf\'f2\'d6\'d8\'b8\'b4\'b2\'e9\'d5\'d2
+\f1 \
+N\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d4\'da\'cf\'e0\'b7\'b4\'b7\'bd\'cf\'f2\'d6\'d8\'b8\'b4\'b2\'e9\'d5\'d2
+\f1 \
+ftext\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b5\'b1\'c7\'b0\'d0\'d0\'cf\'f2\'c7\'b0\'b2\'e9\'d5\'d2
+\f1  text\
+Ftext\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b5\'b1\'c7\'b0\'d0\'d0\'cf\'f2\'ba\'f3\'b2\'e9\'d5\'d2
+\f1  text\
+ttext\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b5\'b1\'c7\'b0\'d0\'d0\'cf\'f2\'c7\'b0\'b2\'e9\'d5\'d2
+\f1  text
+\f2 \'a3\'ac\'b2\'a2\'bd\'ab\'b9\'e2\'b1\'ea\'b6\'a8\'ce\'bb\'d4\'da
+\f1  text 
+\f2 \'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb
+\f1 \
+Ttext\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b5\'b1\'c7\'b0\'d0\'d0\'cf\'f2\'ba\'f3\'b2\'e9\'d5\'d2
+\f1  text
+\f2 \'a3\'ac\'b2\'a2\'bd\'ab\'b9\'e2\'b1\'ea\'b6\'a8\'ce\'bb\'d4\'da
+\f1  text 
+\f2 \'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'d7\'d6\'b7\'fb
+\f1 \
+:set ic\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'b2\'e9\'d5\'d2\'ca\'b1\'ba\'f6\'c2\'d4\'b4\'f3\'d0\'a1\'d0\'b4
+\f1 \
+:set noic\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b2\'e9\'d5\'d2\'ca\'b1\'b6\'d4\'b4\'f3\'d0\'a1\'d0\'b4\'c3\'f4\'b8\'d0
+\f1 \
+:ranges/pat1/pat2/g\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d3\'c3
+\f1  newtext 
+\f2 \'cc\'e6\'bb\'bb
+\f1  oldtext\
+:m,ns/oldtext/newtext\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d4\'da
+\f1  m 
+\f2 \'d0\'d0\'cd\'a8\'b9\'fd
+\f1  n
+\f2 \'a3\'ac\'d3\'c3
+\f1  newtext 
+\f2 \'cc\'e6\'bb\'bb
+\f1  oldtext\
+&\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d6\'d8\'b8\'b4\'d7\'ee\'ba\'f3\'b5\'c4
+\f1  :s 
+\f2 \'c3\'fc\'c1\'ee
+\f1 \
+:g/text1/s/text2/text3\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'b2\'e9\'d5\'d2\'b0\'fc\'ba\'ac
+\f1  text1 
+\f2 \'b5\'c4\'d0\'d0\'a3\'ac\'d3\'c3
+\f1  text3 
+\f2 \'cc\'e6\'bb\'bb
+\f1  text2\
+:g/text/command\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d4\'da\'cb\'f9\'d3\'d0\'b0\'fc\'ba\'ac
+\f1  text 
+\f2 \'b5\'c4\'d0\'d0\'d4\'cb\'d0\'d0
+\f1  command 
+\f2 \'cb\'f9\'b1\'ed\'ca\'be\'b5\'c4\'c3\'fc\'c1\'ee
+\f1 \
+:v/text/command\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d4\'da\'cb\'f9\'d3\'d0\'b2\'bb\'b0\'fc\'ba\'ac
+\f1  text 
+\f2 \'b5\'c4\'d0\'d0\'d4\'cb\'d0\'d0
+\f1  command 
+\f2 \'cb\'f9\'b1\'ed\'ca\'be\'b5\'c4\'c3\'fc\'c1\'ee
+\f1 \
+
+\f2 \'d4\'da
+\f1  vi 
+\f2 \'d6\'d0\'b8\'b4\'d6\'c6\'ce\'c4\'b1\'be
+\f1 \
+
+\f2 \'c3\'fc\'c1\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b8\'b4\'d6\'c6\'b2\'d9\'d7\'f7
+\f1 \
+yy\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d0\'d0\'b5\'c4\'c4\'da\'c8\'dd\'b7\'c5\'c8\'eb\'c1\'d9\'ca\'b1\'bb\'ba\'b3\'e5\'c7\'f8
+\f1 \
+nyy\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab
+\f1  n 
+\f2 \'d0\'d0\'b5\'c4\'c4\'da\'c8\'dd\'b7\'c5\'c8\'eb\'c1\'d9\'ca\'b1\'bb\'ba\'b3\'e5\'c7\'f8
+\f1 \
+p\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'c1\'d9\'ca\'b1\'bb\'ba\'b3\'e5\'c7\'f8\'d6\'d0\'b5\'c4\'ce\'c4\'b1\'be\'b7\'c5\'c8\'eb\'b9\'e2\'b1\'ea\'ba\'f3
+\f1 \
+P\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'c1\'d9\'ca\'b1\'bb\'ba\'b3\'e5\'c7\'f8\'d6\'d0\'b5\'c4\'ce\'c4\'b1\'be\'b7\'c5\'c8\'eb\'b9\'e2\'b1\'ea\'c7\'b0
+\f1 \
+"(a-z)nyy\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b8\'b4\'d6\'c6
+\f1  n 
+\f2 \'d0\'d0\'b7\'c5\'c8\'eb\'c3\'fb\'d7\'d6\'ce\'aa\'d4\'b2\'c0\'a8\'ba\'c5\'c4\'da\'b5\'c4\'bf\'c9\'c3\'fc\'c3\'fb\'bb\'ba\'b3\'e5\'c7\'f8\'a3\'ac\'ca\'a1\'c2\'d4
+\f1  n 
+\f2 \'b1\'ed\'ca\'be\'b5\'b1\'c7\'b0\'d0\'d0
+\f1 \
+"(a-z)ndd\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'c9\'be\'b3\'fd
+\f1  n 
+\f2 \'d0\'d0\'b7\'c5\'c8\'eb\'c3\'fb\'d7\'d6\'ce\'aa\'d4\'b2\'c0\'a8\'ba\'c5\'c4\'da\'b5\'c4\'bf\'c9\'c3\'fc\'c3\'fb\'bb\'ba\'b3\'e5\'c7\'f8\'a3\'ac\'ca\'a1\'c2\'d4
+\f1  n 
+\f2 \'b1\'ed\'ca\'be\'b5\'b1\'c7\'b0\'d0\'d0
+\f1 \
+"(a-z)p\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'c3\'fb\'d7\'d6\'ce\'aa\'d4\'b2\'c0\'a8\'ba\'c5\'b5\'c4\'bf\'c9\'c3\'fc\'c3\'fb\'bb\'ba\'b3\'e5\'c7\'f8\'b5\'c4\'c4\'da\'c8\'dd\'b7\'c5\'c8\'eb\'b5\'b1\'c7\'b0\'d0\'d0\'ba\'f3
+\f1 \
+"(a-z)P\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'c3\'fb\'d7\'d6\'ce\'aa\'d4\'b2\'c0\'a8\'ba\'c5\'b5\'c4\'bf\'c9\'c3\'fc\'c3\'fb\'bb\'ba\'b3\'e5\'c7\'f8\'b5\'c4\'c4\'da\'c8\'dd\'b7\'c5\'c8\'eb\'b5\'b1\'c7\'b0\'d0\'d0\'c7\'b0
+\f1 \
+
+\f2 \'d4\'da
+\f1  vi 
+\f2 \'d6\'d0\'b3\'b7\'cf\'fb\'d3\'eb\'d6\'d8\'b8\'b4
+\f1 \
+
+\f2 \'c3\'fc\'c1\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b3\'b7\'cf\'fb\'b2\'d9\'d7\'f7
+\f1 \
+u\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b3\'b7\'cf\'fb\'d7\'ee\'ba\'f3\'d2\'bb\'b4\'ce\'d0\'de\'b8\'c4
+\f1 \
+U\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b3\'b7\'cf\'fb\'b5\'b1\'c7\'b0\'d0\'d0\'b5\'c4\'cb\'f9\'d3\'d0\'d0\'de\'b8\'c4
+\f1 \
+.\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d6\'d8\'b8\'b4\'d7\'ee\'ba\'f3\'d2\'bb\'b4\'ce\'d0\'de\'b8\'c4
+\f1 \
+,\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d2\'d4\'cf\'e0\'b7\'b4\'b5\'c4\'b7\'bd\'cf\'f2\'d6\'d8\'b8\'b4\'c7\'b0\'c3\'e6\'b5\'c4
+\f1  f
+\f2 \'a1\'a2
+\f1 F
+\f2 \'a1\'a2
+\f1 t 
+\f2 \'bb\'f2
+\f1  T 
+\f2 \'b2\'e9\'d5\'d2\'c3\'fc\'c1\'ee
+\f1 \
+;\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d6\'d8\'b8\'b4\'c7\'b0\'c3\'e6\'b5\'c4
+\f1  f
+\f2 \'a1\'a2
+\f1 F
+\f2 \'a1\'a2
+\f1 t 
+\f2 \'bb\'f2
+\f1  T 
+\f2 \'b2\'e9\'d5\'d2\'c3\'fc\'c1\'ee
+\f1 \
+"np\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'c8\'a1\'bb\'d8\'d7\'ee\'ba\'f3\'b5\'da
+\f1  n 
+\f2 \'b4\'ce\'b5\'c4\'c9\'be\'b3\'fd
+\f1 (
+\f2 \'bb\'ba\'b3\'e5\'c7\'f8\'d6\'d0\'b4\'e6\'d3\'d0\'d2\'bb\'b6\'a8\'b4\'ce\'ca\'fd\'b5\'c4\'c9\'be\'b3\'fd\'c4\'da\'c8\'dd\'a3\'ac\'d2\'bb\'b0\'e3\'ce\'aa
+\f1  9)\
+\cf3 n\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d6\'d8\'b8\'b4\'c7\'b0\'c3\'e6\'b5\'c4
+\f1  / 
+\f2 \'bb\'f2
+\f1  ? 
+\f2 \'b2\'e9\'d5\'d2\'c3\'fc\'c1\'ee
+\f1 \
+N\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d2\'d4\'cf\'e0\'b7\'b4\'b7\'bd\'cf\'f2\'d6\'d8\'b8\'b4\'c7\'b0\'c3\'e6\'b5\'c4
+\f1  / 
+\f2 \'bb\'f2
+\f1  ? 
+\f2 \'c3\'fc\'c1\'ee
+\f1 \
+
+\f2 \'b1\'a3\'b4\'e6\'ce\'c4\'b1\'be\'ba\'cd\'cd\'cb\'b3\'f6
+\f1  vi\
+
+\f2 \'c3\'fc\'c1\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b1\'a3\'b4\'e6\'ba\'cd
+\f1 /
+\f2 \'bb\'f2\'cd\'cb\'b3\'f6\'b2\'d9\'d7\'f7
+\f1 \
+\cf4 :w\'a0 \'a0\cf3 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'b1\'a3\'b4\'e6\'ce\'c4\'bc\'fe\'b5\'ab\'b2\'bb\'cd\'cb\'b3\'f6
+\f1  vi\
+:w file\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'d0\'de\'b8\'c4\'b1\'a3\'b4\'e6\'d4\'da
+\f1  file 
+\f2 \'d6\'d0\'b5\'ab\'b2\'bb\'cd\'cb\'b3\'f6
+\f1  vi\
+:wq 
+\f2 \'bb\'f2
+\f1  ZZ 
+\f2 \'bb\'f2
+\f1  :x\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b1\'a3\'b4\'e6\'ce\'c4\'bc\'fe\'b2\'a2\'cd\'cb\'b3\'f6
+\f1  vi\
+:q!\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b2\'bb\'b1\'a3\'b4\'e6\'ce\'c4\'bc\'fe\'a3\'ac\'cd\'cb\'b3\'f6
+\f1  vi\
+:e!\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'b7\'c5\'c6\'fa\'cb\'f9\'d3\'d0\'d0\'de\'b8\'c4\'a3\'ac\'b4\'d3\'c9\'cf\'b4\'ce\'b1\'a3\'b4\'e6\'ce\'c4\'bc\'fe\'bf\'aa\'ca\'bc\'d4\'d9\'b1\'e0\'bc\'ad
+\f1 \
+vi 
+\f2 \'d6\'d0\'b5\'c4\'d1\'a1\'cf\'ee
+\f1 \
+
+\f2 \'d1\'a1\'cf\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d7\'f7\'d3\'c3
+\f1 \
+:set all\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'b4\'f2\'d3\'a1\'cb\'f9\'d3\'d0\'d1\'a1\'cf\'ee
+\f1 \
+:set nooption\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b9\'d8\'b1\'d5
+\f1  option 
+\f2 \'d1\'a1\'cf\'ee
+\f1 \
+:set nu\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'c3\'bf\'d0\'d0\'c7\'b0\'b4\'f2\'d3\'a1\'d0\'d0\'ba\'c5
+\f1 \
+\cf0 :set showmode\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'cf\'d4\'ca\'be\'ca\'c7\'ca\'e4\'c8\'eb\'c4\'a3\'ca\'bd\'bb\'b9\'ca\'c7\'cc\'e6\'bb\'bb\'c4\'a3\'ca\'bd
+\f1 \
+:set autoindent\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bc\'cc\'b3\'d0\'c7\'b0\'d2\'bb\'d0\'d0\'b5\'c4\'cb\'f5\'bd\'f8\'b7\'bd\'ca\'bd\'a3\'ac\'cc\'d8\'b1\'f0\'ca\'ca\'d3\'c3\'d3\'da\'b6\'e0\'d0\'d0\'d7\'a2\'ca\'cd
+\f1 \
+:set smartindent\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'ce\'aa
+\f1 C
+\f2 \'b3\'cc\'d0\'f2\'cc\'e1\'b9\'a9\'d7\'d4\'b6\'af\'cb\'f5\'bd\'f8
+\f1 \
+:set list\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'cf\'d4\'ca\'be\'d6\'c6\'b1\'ed\'b7\'fb
+\f1 (^I)
+\f2 \'ba\'cd\'d0\'d0\'ce\'b2\'b7\'fb\'ba\'c5
+\f1 \
+:set ts=8\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'ce\'aa\'ce\'c4\'b1\'be\'ca\'e4\'c8\'eb\'c9\'e8\'d6\'c3
+\f1  tab stops\
+:set window=n\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'c9\'e8\'d6\'c3\'ce\'c4\'b1\'be\'b4\'b0\'bf\'da\'cf\'d4\'ca\'be
+\f1  n 
+\f2 \'d0\'d0
+\f1 \
+:set number\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'cf\'d4\'ca\'be\'d0\'d0\'ca\'fd
+\f1 \
+:set nonumber\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'c8\'a1\'cf\'fb\'cf\'d4\'ca\'be\'d0\'d0\'ca\'fd
+\f1 \
+vi 
+\f2 \'b5\'c4\'d7\'b4\'cc\'ac
+\f1 \
+
+\f2 \'d1\'a1\'cf\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d7\'f7\'d3\'c3
+\f1 \
+:.=\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b4\'f2\'d3\'a1\'b5\'b1\'c7\'b0\'d0\'d0\'b5\'c4\'d0\'d0\'ba\'c5
+\f1 \
+:=\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b4\'f2\'d3\'a1\'ce\'c4\'bc\'fe\'d6\'d0\'b5\'c4\'d0\'d0\'ca\'fd
+\f1 \
+ctrl+g\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'cf\'d4\'ca\'be\'ce\'c4\'bc\'fe\'c3\'fb\'a1\'a2\'b5\'b1\'c7\'b0\'b5\'c4\'d0\'d0\'ba\'c5\'a1\'a2\'ce\'c4\'bc\'fe\'b5\'c4\'d7\'dc\'d0\'d0\'ca\'fd\'ba\'cd\'ce\'c4\'bc\'fe\'ce\'bb\'d6\'c3\'b5\'c4\'b0\'d9\'b7\'d6\'b1\'c8
+\f1 \
+:l\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'ca\'b9\'d3\'c3\'d7\'d6\'c4\'b8
+\f1  "l" 
+\f2 \'c0\'b4\'cf\'d4\'ca\'be\'d0\'ed\'b6\'e0\'b5\'c4\'cc\'d8\'ca\'e2\'d7\'d6\'b7\'fb\'a3\'ac\'c8\'e7\'d6\'c6\'b1\'ed\'b7\'fb\'ba\'cd\'bb\'bb\'d0\'d0\'b7\'fb
+\f1 \
+
+\f2 \'d4\'da\'ce\'c4\'b1\'be\'d6\'d0\'b6\'a8\'ce\'bb\'b6\'ce\'c2\'e4\'ba\'cd\'b7\'c5\'d6\'c3\'b1\'ea\'bc\'c7
+\f1 \
+
+\f2 \'d1\'a1\'cf\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d7\'f7\'d3\'c3
+\f1 \
+\{\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d4\'da\'b5\'da\'d2\'bb\'c1\'d0\'b2\'e5\'c8\'eb
+\f1  \{ 
+\f2 \'c0\'b4\'b6\'a8\'d2\'e5\'d2\'bb\'b8\'f6\'b6\'ce\'c2\'e4
+\f1 \
+[[\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bb\'d8\'b5\'bd\'b6\'ce\'c2\'e4\'b5\'c4\'bf\'aa\'cd\'b7\'b4\'a6
+\f1 \
+]]\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'cf\'f2\'c7\'b0\'d2\'c6\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6\'b6\'ce\'c2\'e4\'b5\'c4\'bf\'aa\'cd\'b7\'b4\'a6
+\f1 \
+m(a-z)\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d3\'c3\'d2\'bb\'b8\'f6\'d7\'d6\'c4\'b8\'c0\'b4\'b1\'ea\'bc\'c7\'b5\'b1\'c7\'b0\'ce\'bb\'d6\'c3\'a3\'ac\'c8\'e7\'d3\'c3
+\f1  mz 
+\f2 \'b1\'ed\'ca\'be\'b1\'ea\'bc\'c7
+\f1  z\
+'(a-z)\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'b9\'e2\'b1\'ea\'d2\'c6\'b6\'af\'b5\'bd\'d6\'b8\'b6\'a8\'b5\'c4\'b1\'ea\'bc\'c7\'a3\'ac\'c8\'e7\'d3\'c3
+\f1  'z 
+\f2 \'b1\'ed\'ca\'be\'d2\'c6\'b6\'af\'b5\'bd
+\f1  z\
+
+\f2 \'d4\'da
+\f1  vi 
+\f2 \'d6\'d0\'c1\'ac\'bd\'d3\'d0\'d0
+\f1 \
+
+\f2 \'d1\'a1\'cf\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d7\'f7\'d3\'c3
+\f1 \
+J\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'cf\'c2\'d2\'bb\'d0\'d0\'c1\'ac\'bd\'d3\'b5\'bd\'b5\'b1\'c7\'b0\'d0\'d0\'b5\'c4\'c4\'a9\'ce\'b2
+\f1 \
+nJ\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'c1\'ac\'bd\'d3\'ba\'f3\'c3\'e6
+\f1  n 
+\f2 \'d0\'d0
+\f1 \
+
+\f2 \'b9\'e2\'b1\'ea\'b7\'c5\'d6\'c3\'d3\'eb\'c6\'c1\'c4\'bb\'b5\'f7\'d5\'fb
+\f1 \
+
+\f2 \'d1\'a1\'cf\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d7\'f7\'d3\'c3
+\f1 \
+H\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'b9\'e2\'b1\'ea\'d2\'c6\'b6\'af\'b5\'bd\'c6\'c1\'c4\'bb\'b5\'c4\'b6\'a5\'d0\'d0
+\f1 \
+nH\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'bd\'ab\'b9\'e2\'b1\'ea\'d2\'c6\'b6\'af\'b5\'bd\'c6\'c1\'c4\'bb\'b6\'a5\'d0\'d0\'cf\'c2\'b5\'c4\'b5\'da
+\f1  n 
+\f2 \'d0\'d0
+\f1 \
+M\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'b9\'e2\'b1\'ea\'d2\'c6\'b6\'af\'b5\'bd\'c6\'c1\'c4\'bb\'b5\'c4\'d6\'d0\'bc\'e4
+\f1 \
+L\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'b9\'e2\'b1\'ea\'d2\'c6\'b6\'af\'b5\'bd\'c6\'c1\'c4\'bb\'b5\'c4\'b5\'d7\'d0\'d0
+\f1 \
+nL\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'bd\'ab\'b9\'e2\'b1\'ea\'d2\'c6\'b6\'af\'b5\'bd\'c6\'c1\'c4\'bb\'b5\'d7\'d0\'d0\'c9\'cf\'b5\'c4\'b5\'da
+\f1  n 
+\f2 \'d0\'d0
+\f1 \
+^e(ctrl+e)\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'c6\'c1\'c4\'bb\'c9\'cf\'b9\'f6\'d2\'bb\'d0\'d0
+\f1 \
+ctrl+y\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'c6\'c1\'c4\'bb\'cf\'c2\'b9\'f6\'d2\'bb\'d0\'d0
+\f1 \
+ctrl+u\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'c6\'c1\'c4\'bb\'c9\'cf\'b9\'f6\'b0\'eb\'d2\'b3
+\f1 \
+ctrl+d\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'c6\'c1\'c4\'bb\'cf\'c2\'b9\'f6\'b0\'eb\'d2\'b3
+\f1 \
+ctrl+b\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'c6\'c1\'c4\'bb\'c9\'cf\'b9\'f6\'d2\'bb\'d2\'b3
+\f1 \
+ctrl+f\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'c6\'c1\'c4\'bb\'cf\'c2\'b9\'f6\'d2\'bb\'d2\'b3
+\f1 \
+ctrl+l\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d6\'d8\'bb\'e6\'c6\'c1\'c4\'bb
+\f1 \
+z-return\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d0\'d0\'d6\'c3\'ce\'aa\'c6\'c1\'c4\'bb\'b5\'c4\'b6\'a5\'d0\'d0
+\f1 \
+nz-return\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d0\'d0\'cf\'c2\'b5\'c4\'b5\'da
+\f1  n 
+\f2 \'d0\'d0\'d6\'c3\'ce\'aa\'c6\'c1\'c4\'bb\'b5\'c4\'b6\'a5\'d0\'d0
+\f1 \
+z.\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d0\'d0\'d6\'c3\'ce\'aa\'c6\'c1\'c4\'bb\'b5\'c4\'d6\'d0\'d1\'eb
+\f1 \
+nz.\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d0\'d0\'c9\'cf\'b5\'c4\'b5\'da
+\f1  n 
+\f2 \'d0\'d0\'d6\'c3\'ce\'aa\'c6\'c1\'c4\'bb\'b5\'c4\'d6\'d0\'d1\'eb
+\f1 \
+z-\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d0\'d0\'d6\'c3\'ce\'aa\'c6\'c1\'c4\'bb\'b5\'c4\'b5\'d7\'d0\'d0
+\f1 \
+nz-\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d0\'d0\'c9\'cf\'b5\'c4\'b5\'da
+\f1  n 
+\f2 \'d0\'d0\'d6\'c3\'ce\'aa\'c6\'c1\'c4\'bb\'b5\'c4\'b5\'d7\'d0\'d0
+\f1 \
+vi 
+\f2 \'d6\'d0\'b5\'c4
+\f1  shell 
+\f2 \'d7\'aa\'d2\'e5\'c3\'fc\'c1\'ee
+\f1 \
+
+\f2 \'d1\'a1\'cf\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d7\'f7\'d3\'c3
+\f1 \
+:!command\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d6\'b4\'d0\'d0
+\f1  shell 
+\f2 \'b5\'c4
+\f1  command 
+\f2 \'c3\'fc\'c1\'ee\'a3\'ac\'c8\'e7
+\f1  :!ls\
+:!!\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d6\'b4\'d0\'d0\'c7\'b0\'d2\'bb\'b8\'f6
+\f1  shell 
+\f2 \'c3\'fc\'c1\'ee
+\f1 \
+:r!command\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b6\'c1\'c8\'a1
+\f1  command 
+\f2 \'c3\'fc\'c1\'ee\'b5\'c4\'ca\'e4\'c8\'eb\'b2\'a2\'b2\'e5\'c8\'eb\'a3\'ac\'c8\'e7
+\f1  :r!ls 
+\f2 \'bb\'e1\'cf\'c8\'d6\'b4\'d0\'d0
+\f1  ls
+\f2 \'a3\'ac\'c8\'bb\'ba\'f3\'b6\'c1\'c8\'eb\'c4\'da\'c8\'dd
+\f1 \
+:w!command\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'d2\'d1\'b1\'e0\'bc\'ad\'ce\'c4\'bc\'fe\'d7\'f7\'ce\'aa
+\f1  command 
+\f2 \'c3\'fc\'c1\'ee\'b5\'c4\'b1\'ea\'d7\'bc\'ca\'e4\'c8\'eb\'b2\'a2\'d6\'b4\'d0\'d0
+\f1  command 
+\f2 \'c3\'fc\'c1\'ee\'a3\'ac\'c8\'e7
+\f1  :w!grep all\
+:cd directory\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'bd\'ab\'b5\'b1\'c7\'b0\'b9\'a4\'d7\'f7\'c4\'bf\'c2\'bc\'b8\'fc\'b8\'c4\'ce\'aa
+\f1  directory 
+\f2 \'cb\'f9\'b1\'ed\'ca\'be\'b5\'c4\'c4\'bf\'c2\'bc
+\f1 \
+:sh\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'c6\'f4\'b6\'af\'d2\'bb\'b8\'f6\'d7\'d3
+\f1  shell
+\f2 \'a3\'ac\'ca\'b9\'d3\'c3
+\f1  ^d(ctrl+d) 
+\f2 \'b7\'b5\'bb\'d8
+\f1  vi\
+:so file\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'d4\'da
+\f1  shell 
+\f2 \'b3\'cc\'d0\'f2
+\f1  file 
+\f2 \'d6\'d0\'b6\'c1\'c8\'eb\'ba\'cd\'d6\'b4\'d0\'d0\'c3\'fc\'c1\'ee
+\f1 \
+vi 
+\f2 \'d6\'d0\'b5\'c4\'ba\'ea\'d3\'eb\'cb\'f5\'d0\'b4
+\f1 \
+(
+\f2 \'b1\'dc\'c3\'e2\'ca\'b9\'d3\'c3\'bf\'d8\'d6\'c6\'bc\'fc\'ba\'cd\'b7\'fb\'ba\'c5\'a3\'ac\'b2\'bb\'d2\'aa\'ca\'b9\'d3\'c3\'d7\'d6\'b7\'fb
+\f1  K
+\f2 \'a1\'a2
+\f1 V
+\f2 \'a1\'a2
+\f1 g
+\f2 \'a1\'a2
+\f1 q
+\f2 \'a1\'a2
+\f1 v
+\f2 \'a1\'a2
+\f1 *
+\f2 \'a1\'a2
+\f1 = 
+\f2 \'ba\'cd\'b9\'a6\'c4\'dc\'bc\'fc
+\f1 )\
+
+\f2 \'d1\'a1\'cf\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'d7\'f7\'d3\'c3
+\f1 \
+:map key command_seq 
+\f2 \'b6\'a8\'d2\'e5\'d2\'bb\'b8\'f6\'bc\'fc\'c0\'b4\'d4\'cb\'d0\'d0
+\f1  command_seq
+\f2 \'a3\'ac\'c8\'e7
+\f1  :map e ea
+\f2 \'a3\'ac\'ce\'de\'c2\'db\'ca\'b2\'c3\'b4\'ca\'b1\'ba\'f2\'b6\'bc\'bf\'c9\'d2\'d4
+\f1  e 
+\f2 \'d2\'c6\'b5\'bd\'d2\'bb\'b8\'f6\'d7\'d6\'b5\'c4\'c4\'a9\'ce\'b2\'c0\'b4\'d7\'b7\'bc\'d3\'ce\'c4\'b1\'be
+\f1 \
+:map\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d4\'da\'d7\'b4\'cc\'ac\'d0\'d0\'cf\'d4\'ca\'be\'cb\'f9\'d3\'d0\'d2\'d1\'b6\'a8\'d2\'e5\'b5\'c4\'ba\'ea
+\f1 \
+:umap key\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'c9\'be\'b3\'fd\'b8\'c3\'bc\'fc\'b5\'c4\'ba\'ea
+\f1 \
+:ab string1 string2\'a0 \'a0
+\f2 \'b6\'a8\'d2\'e5\'d2\'bb\'b8\'f6\'cb\'f5\'d0\'b4\'a3\'ac\'ca\'b9\'b5\'c3\'b5\'b1\'b2\'e5\'c8\'eb
+\f1  string1 
+\f2 \'ca\'b1\'a3\'ac\'d3\'c3
+\f1  string2 
+\f2 \'cc\'e6\'bb\'bb
+\f1  string1
+\f2 \'a1\'a3\'b5\'b1\'d2\'aa\'b2\'e5\'c8\'eb\'ce\'c4\'b1\'be\'ca\'b1\'a3\'ac\'bc\'fc\'c8\'eb
+\f1  string1 
+\f2 \'c8\'bb\'ba\'f3\'b0\'b4
+\f1  Esc 
+\f2 \'bc\'fc\'a3\'ac\'cf\'b5\'cd\'b3\'be\'cd\'b2\'e5\'c8\'eb\'c1\'cb
+\f1  string2\
+:ab\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'cf\'d4\'ca\'be\'cb\'f9\'d3\'d0\'cb\'f5\'d0\'b4
+\f1 \
+:una string\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0\'a0
+\f2 \'c8\'a1\'cf\'fb
+\f1  string 
+\f2 \'b5\'c4\'cb\'f5\'d0\'b4
+\f1 \
+
+\f2 \'d4\'da
+\f1  vi 
+\f2 \'d6\'d0\'cb\'f5\'bd\'f8\'ce\'c4\'b1\'be
+\f1 \
+
+\f2 \'d1\'a1\'cf\'ee
+\f1 \'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'d7\'f7\'d3\'c3
+\f1 \
+ctrl+i
+\f2 \'bb\'f2
+\f1  tab\'a0 \'a0\'a0\'a0
+\f2 \'b2\'e5\'c8\'eb\'ce\'c4\'b1\'be\'ca\'b1\'a3\'ac\'b2\'e5\'c8\'eb\'d2\'c6\'b6\'af\'b5\'c4\'bf\'ed\'b6\'c8\'a3\'ac\'d2\'c6\'b6\'af\'bf\'ed\'b6\'c8\'ca\'c7\'ca\'c2\'cf\'c8\'b6\'a8\'d2\'e5\'ba\'c3\'b5\'c4
+\f1 \
+:set ai\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0
+\f2 \'b4\'f2\'bf\'aa\'d7\'d4\'b6\'af\'cb\'f5\'bd\'f8
+\f1 \
+:set sw=n\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'bd\'ab\'d2\'c6\'b6\'af\'bf\'ed\'b6\'c8\'c9\'e8\'d6\'c3\'ce\'aa
+\f1  n 
+\f2 \'b8\'f6\'d7\'d6\'b7\'fb
+\f1 \
+n>\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 
+\f2 \'ca\'b9
+\f1  n 
+\f2 \'d0\'d0\'b6\'bc\'cf\'f2\'d3\'d2\'d2\'c6\'b6\'af\'d2\'bb\'b8\'f6\'bf\'ed\'b6\'c8\'a3\'ac\'c0\'fd\'c8\'e7
+\f1  3>> 
+\f2 \'be\'cd\'bd\'ab\'bd\'d3\'cf\'c2\'c0\'b4\'b5\'c4\'c8\'fd\'d0\'d0\'c3\'bf\'d0\'d0\'b6\'bc\'cf\'f2\'d3\'d2\'d2\'c6\'b6\'af\'d2\'bb\'b8\'f6\'d2\'c6\'b6\'af\'bf\'ed\'b6\'c8
+\f1 \
+\pard\intbl\itap1\pardeftab720\qc
+
+\f0\b\fs36 \cf2 \
+vim
+\f3\b0 \'bb\'f9\'b1\'be\'c3\'fc\'c1\'ee
+\f0\b \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trwWidth13200\trftsWidth3 \trmarl340 \trmarr360 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth13200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+
+\itap2\trowd \taflags0 \trgaph108\trleft-108 \trwWidth10560\trftsWidth3 \trmarl1320 \trmarr1320 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clcbpat5 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720
+
+\f1\b0\fs24 \cf0 \nestcell \lastrow\nestrow\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trwWidth13200\trftsWidth3 \trmarl340 \trmarr360 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth13200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc
+
+\f2 \cf0 \'c0\'b4\'d4\'b4
+\f1 : ChinaUnix
+\f2 \'b2\'a9\'bf\'cd
+\f1  
+\f2 \'a1\'a1\'c8\'d5\'c6\'da\'a3\'ba
+\f1  2009.12.20 23:33
+\f2 \'a1\'a1
+\f1 (
+\f2 \'b9\'b2\'d3\'d0\'cc\'f5\'c6\'c0\'c2\'db
+\f1 ) {\field{\*\fldinst{HYPERLINK "http://linux.chinaunix.net/bbs/thread-1150108-1-1.html"}}{\fldrslt 
+\f2 \cf6 \'ce\'d2\'d2\'aa\'c6\'c0\'c2\'db}}\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trwWidth13200\trftsWidth3 \trmarl340 \trmarr360 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth13200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf0 \'a0\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trwWidth13200\trftsWidth3 \trmarl340 \trmarr360 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth13200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\fs28 \cf0 1.\
+vim\
+#
+\f2 \'d4\'da\'c3\'fc\'c1\'ee\'d0\'d0\'d6\'d0\'ca\'e4\'c8\'eb
+\f1 vim,
+\f2 \'bd\'f8\'c8\'eb
+\f1 vim
+\f2 \'b1\'e0\'bc\'ad\'c6\'f7
+\f1 \
+2.\
+i\
+#
+\f2 \'b0\'b4\'d2\'bb\'cf\'c2
+\f1 i
+\f2 \'bc\'fc
+\f1 ,
+\f2 \'cf\'c2\'b6\'cb\'cf\'d4\'ca\'be
+\f1  --INSERT--\
+#
+\f2 \'b2\'e5\'c8\'eb\'c3\'fc\'c1\'ee
+\f1 ,
+\f2 \'d4\'da
+\f1 vim
+\f2 \'d6\'d0\'bf\'c9\'c4\'dc\'c8\'ce\'d2\'e2\'d7\'d6\'b7\'fb\'b6\'bc\'d3\'d0\'d7\'f7\'d3\'c3
+\f1 \
+3.\
+Esc\
+#
+\f2 \'cd\'cb\'b3\'f6
+\f1 i(
+\f2 \'b2\'e5\'c8\'eb
+\f1 )
+\f2 \'c3\'fc\'c1\'ee\'bd\'f8\'d0\'d0\'c6\'e4\'cb\'fc\'c3\'fc\'c1\'ee\'ca\'b9\'d3\'c3
+\f1 \
+4.\
+:r filename\
+#
+\f2 \'b6\'c1\'c8\'eb\'d2\'bb\'b8\'f6\'ce\'c4\'bc\'fe\'c4\'da\'c8\'dd
+\f1 ,
+\f2 \'b2\'a2\'d0\'b4\'c8\'eb\'b5\'bd\'b5\'b1\'c7\'b0\'b1\'e0\'bc\'ad\'c6\'f7\'d6\'d0
+\f1 \
+\pard\intbl\itap1\pardeftab720
+\cf7 5.\
+:w newfilename\
+#
+\f2 \'bd\'ab\'b8\'c3\'b1\'e0\'bc\'ad\'c6\'f7\'d6\'d0\'b5\'c4\'c4\'da\'c8\'dd\'d0\'b4\'c8\'eb\'b5\'bd\'d2\'bb\'b8\'f6\'d0\'c2\'ce\'c4\'bc\'fe\'d6\'d0
+\f1 \
+\pard\intbl\itap1\pardeftab720
+\cf0 6.\
+:w\
+#
+\f2 \'d4\'da\'b1\'e0\'bc\'ad\'b5\'c4\'b9\'fd\'b3\'cc\'d6\'d0\'b1\'a3\'b4\'e6\'ce\'c4\'bc\'fe
+\f1 ,
+\f2 \'cf\'e0\'b5\'b1\'d3\'da
+\f1 word
+\f2 \'d6\'d0\'b5\'c4
+\f1 ctrl+s\
+7.\
+:! command\
+
+\f2 \'d4\'dd\'ca\'b1\'c0\'eb\'bf\'aa
+\f1  vi 
+\f2 \'b5\'bd\'d6\'b8\'c1\'ee\'c1\'d0\'c4\'a3\'ca\'bd\'cf\'c2\'d6\'b4\'d0\'d0
+\f1  command 
+\f2 \'b5\'c4\'cf\'d4\'ca\'be\'bd\'e1\'b9\'fb\'a3\'a1\'c0\'fd\'c8\'e7
+\f1 \
+\pard\intbl\itap1\pardeftab720
+\cf7 :!ls\
+#
+\f2 \'d4\'da\'b1\'e0\'bc\'ad\'b9\'fd\'b3\'cc\'d6\'d0\'d6\'b4\'d0\'d0
+\f1 shell
+\f2 \'c3\'fc\'c1\'ee
+\f1 ls\
+\pard\intbl\itap1\pardeftab720
+\cf0 8.\
+\pard\intbl\itap1\pardeftab720
+\cf7 :sh\
+#
+\f2 \'bd\'f8\'c8\'eb
+\f1 shell
+\f2 \'c3\'fc\'c1\'ee\'d0\'d0
+\f1 ,
+\f2 \'d6\'b4\'d0\'d0\'cd\'ea\'c3\'fc\'c1\'ee\'ba\'f3
+\f1 ctrl+d
+\f2 \'cd\'cb\'b3\'f6\'d6\'d8\'d0\'c2\'bd\'f8\'c8\'eb
+\f1 vim
+\f2 \'b1\'e0\'bc\'ad\'bc\'cc\'d0\'f8\'b1\'e0\'bc\'ad
+\f1 \cf0 \
+
+\f2 \cf7 \'d4\'da
+\f1 shell
+\f2 \'c3\'fc\'c1\'ee\'cf\'c2\'a3\'ac\'d6\'b4\'d0\'d0
+\f1 ctral+l
+\f2 \'cd\'ea\'b3\'c9\'c7\'e5\'c6\'c1
+\f1 \
+\pard\intbl\itap1\pardeftab720
+\cf0 9.\
+:wq\
+#
+\f2 \'b1\'a3\'b4\'e6\'ce\'c4\'bc\'fe\'b2\'a2\'cd\'cb\'b3\'f6
+\f1 \
+10.\
+ZZ\
+#
+\f2 \'b1\'a3\'b4\'e6\'ce\'c4\'bc\'fe\'b2\'a2\'cd\'cb\'b3\'f6
+\f1 ,
+\f2 \'cd\'ac\'c9\'cf\'d2\'bb\'b8\'f6\'c3\'fc\'c1\'ee
+\f1 ,
+\f2 \'d7\'a2\'d2\'e2\'b4\'f3\'d0\'b4
+\f1 \
+11.\
+:q!\
+#
+\f2 \'c7\'bf\'d6\'c6\'cd\'cb\'b3\'f6
+\f1 ,
+\f2 \'b2\'bb\'b1\'a3\'b4\'e6
+\f1 \
+12.\
+:set number
+\f2 \'bb\'f2\'d5\'df\'a3\'ba
+\f1 set nu\
+#
+\f2 \'ca\'b9\'b1\'e0\'bc\'ad\'d6\'d0\'b5\'c4\'ce\'c4\'bc\'fe\'cf\'d4\'ca\'be\'d0\'d0\'ba\'c5
+\f1 \
+13.\
+:set nonumber
+\f2 \'bb\'f2\'d5\'df\'a3\'ba
+\f1 set nonu \
+#
+\f2 \'d3\'eb\'c9\'cf\'d2\'bb\'cc\'f5\'c3\'fc\'c1\'ee\'cf\'e0\'b7\'b4
+\f1 ,
+\f2 \'b2\'bb\'cf\'d4\'ca\'be\'d0\'d0\'ba\'c5
+\f1 \
+14.\
+:help i\
+#
+\f2 \'b2\'e9\'bf\'b4\'b2\'e5\'c8\'eb\'c3\'fc\'c1\'ee\'b0\'ef\'d6\'fa
+\f1 \
+15.\
+u \
+#
+\f2 \'b3\'b7\'cf\'fb\'c9\'cf\'d2\'bb\'b2\'bd\'b2\'d9\'d7\'f7
+\f1 \
+16.\
+/Fedora\
+#
+\f2 \'b2\'e9\'d5\'d2
+\f1 Fedora
+\f2 \'d7\'d6\'b7\'fb
+\f1 \
+17.\
+:s /Fedora/Redhat\
+#
+\f2 \'bd\'ab
+\f1 Fedora
+\f2 \'d7\'d6\'b7\'fb\'cc\'e6\'bb\'bb\'ce\'aa
+\f1 Redhat(
+\f2 \'d6\'bb\'cc\'e6\'bb\'bb\'d4\'da\'b9\'e2\'b1\'ea\'cb\'f9\'d4\'da\'b5\'c4\'d0\'d0
+\f1 )\
+18.\
+dw\
+#
+\f2 \'c9\'be\'b3\'fd\'b5\'a5\'b4\'ca
+\f1 \
+dd\
+#
+\f2 \'c9\'be\'b3\'fd\'d0\'d0
+\f1 \
+19.\
+o\
+#
+\f2 \'b4\'f2\'bf\'aa\'bf\'d5\'b0\'d7\'d2\'bb\'d0\'d0
+\f1 \
+20.\
+vim + filename\
+#
+\f2 \'bd\'f8\'d0\'d0\'ce\'c4\'bc\'fe\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0\'bd\'f8\'d0\'d0\'b1\'e0\'bc\'ad
+\f1 \
+21.\
+vim +n filename\
+#
+\f2 \'bd\'f8\'c8\'eb\'ce\'c4\'bc\'fe\'b5\'da
+\f1 n
+\f2 \'d0\'d0\'bd\'f8\'d0\'d0\'b1\'e0\'bc\'ad
+\f1 \
+22.\
+:1,.s/redhat/fedora\
+#.
+\f2 \'ba\'c5\'b1\'ed\'ca\'be\'b5\'b1\'c7\'b0\'d0\'d0
+\f1 ,
+\f2 \'bc\'b4\'b9\'e2\'b1\'ea\'cb\'f9\'d4\'da\'d0\'d0
+\f1 \
+#
+\f2 \'bd\'ab\'b5\'da
+\f1 1
+\f2 \'d0\'d0\'b5\'bd\'b5\'b1\'c7\'b0\'d0\'d0
+\f1 (.)
+\f2 \'b5\'da\'d2\'bb\'b4\'ce\'b3\'f6\'cf\'d6\'b5\'c4
+\f1 redhat
+\f2 \'d7\'d6\'b7\'fb\'b4\'fa\'cc\'e6\'ce\'aa
+\f1 fedora\
+23.\
+:1,.s/redhat/fedora/g\
+#
+\f2 \'bd\'ab\'b5\'da
+\f1 1
+\f2 \'d0\'d0\'b5\'bd\'b5\'b1\'c7\'b0\'d0\'d0
+\f1 (.)
+\f2 \'cb\'f9\'d3\'d0\'b3\'f6\'cf\'d6\'b5\'c4
+\f1 redhat
+\f2 \'d7\'d6\'b7\'fb\'b4\'fa\'cc\'e6\'ce\'aa
+\f1 fedora,g\
+
+\f2 \'c8\'ab\'be\'d6\'b1\'ea\'d6\'be
+\f1 \
+24.\
+:1,$s/redhat/fedora/g\
+#$
+\f2 \'b1\'ed\'ca\'be\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0
+\f1 \
+#
+\f2 \'bd\'ab\'b5\'da
+\f1 1
+\f2 \'d0\'d0\'b5\'bd\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0\'cb\'f9\'d3\'d0\'b3\'f6\'cf\'d6\'b5\'c4
+\f1 redhat
+\f2 \'d7\'d6\'b7\'fb\'b4\'fa\'cc\'e6\'ce\'aa
+\f1 fedora\
+25.\
+:%s/redhat/fedora/g\
+#
+\f2 \'cd\'ac\'c9\'cf\'d2\'bb\'b8\'f6\'c3\'fc\'c1\'ee
+\f1 \
+26.\
+:%s/\\/fedora/g\
+#
+\f2 \'bd\'ab\'b5\'da
+\f1 1
+\f2 \'d0\'d0\'b5\'bd\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0\'cb\'f9\'d3\'d0\'b3\'f6\'cf\'d6\'b5\'c4
+\f1 redhat
+\f2 \'d7\'d6\'b4\'fa\'cc\'e6\'ce\'aa
+\f1 fedora\
+#
+\f2 \'d7\'d6
+\f1 ,
+\f2 \'b6\'f8\'b2\'bb\'ca\'c7\'d7\'d6\'b7\'fb
+\f1 \
+27.\
+:f\
+#
+\f2 \'cf\'d4\'ca\'be\'ce\'c4\'bc\'fe\'c4\'da\'c8\'dd
+\f1 ,
+\f2 \'d7\'b4\'cc\'ac\'b5\'c8\'b5\'c8
+\f1 \
+#
+\f2 \'cd\'ac
+\f1 ctrl+g
+\f2 \'c3\'fc\'c1\'ee
+\f1 \
+28.\
+:e!\
+#
+\f2 \'b5\'b1\'c7\'b0\'ce\'c4\'bc\'fe
+\f1 ,
+\f2 \'b7\'b5\'bb\'d8\'b5\'bd\'c9\'cf\'b4\'ce\'b1\'a3\'b4\'e6
+\f1 \
+:e file\
+#
+\f2 \'c7\'d0\'bb\'bb\'b1\'e0\'bc\'ad\'ce\'c4\'bc\'fe
+\f1 \
+29.\
+:n\
+#
+\f2 \'b5\'b1\'b1\'e0\'bc\'ad\'ca\'b1\'d3\'d0\'b6\'e0\'b8\'f6\'ce\'c4\'bc\'fe
+\f1 (
+\f2 \'b1\'c8\'c8\'e7
+\f1 vim file1 file2)
+\f2 \'ca\'b1\'c7\'d0\'bb\'bb\'b5\'bd\'cf\'c2\'d2\'bb\'b8\'f6\'ce\'c4\'bc\'fe
+\f1 ,
+\f2 \'d3\'eb
+\f1 :e file\
+
+\f2 \'bd\'e1\'ba\'cf\'ca\'b9\'d3\'c3
+\f1 \
+\
+\
+\
+\
+\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0 \
+\
+\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \'a0\'a0 \cell \lastrow\row
+}

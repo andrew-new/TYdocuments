@@ -1,0 +1,268 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Verdana;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red10\green81\blue153;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww8860\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa220
+{\field{\*\fldinst{HYPERLINK "http://www.cnblogs.com/pengyingh/articles/2378732.html"}}{\fldrslt 
+\f0\b\fs26 \cf2 CGAffineTransform
+\f1 \'cf\'e0\'b9\'d8\'ba\'af\'ca\'fd}}
+\f0\b\fs26 \
+\pard\pardeftab720\sa200
+
+\b0 \cf0 CoreGraphics.h\
+CGAffineTransform rotation = CGAffineTransformMakeRotation(M_PI_2);\uc0\u8232 [xxx setTransform:rotation];\u8232 
+\f1 \'ba\'c7\'ba\'c7\'be\'cd\'d5\'e2\'c3\'b4\'bc\'f2\'b5\'a5\'b5\'c4\'c1\'bd\'d0\'d0\'b4\'fa\'c2\'eb\'be\'cd\'bf\'c9\'d2\'d4\'ca\'b5\'cf\'d6\'c1\'cb\'a3\'a1
+\f0 \uc0\u8232 
+\f1 \'cb\'b3\'b1\'e3\'bc\'c7\'c2\'bc\'d2\'bb\'d0\'a9\'b3\'a3\'c1\'bf\'a3\'ac\'d2\'d4\'ba\'f3\'d3\'c3\'b5\'c4\'d7\'c5\'a3\'a1
+\f0 \uc0\u8232 #define M_E\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a02.71828182845904523536028747135266250\'a0\'a0\'a0e\u8232 #define M_LOG2E\'a0\'a0\'a0\'a0\'a01.44269504088896340735992468100189214\'a0\'a0\'a0log 2e\u8232 #define M_LOG10E\'a0\'a0\'a0\'a00.434294481903251827651128918916605082\'a0\'a0log 10e\u8232 #define M_LN2\'a0\'a0\'a0\'a0\'a0\'a0\'a00.693147180559945309417232121458176568\'a0\'a0log e2\u8232 #define M_LN10\'a0\'a0\'a0\'a0\'a0\'a02.30258509299404568401799145468436421\'a0\'a0\'a0log e10\u8232 #define M_PI\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a03.14159265358979323846264338327950288\'a0\'a0\'a0pi\u8232 #define M_PI_2\'a0\'a0\'a0\'a0\'a0\'a01.57079632679489661923132169163975144\'a0\'a0\'a0pi/2\u8232 #define M_PI_4\'a0\'a0\'a0\'a0\'a0\'a00.785398163397448309615660845819875721\'a0\'a0pi/4\u8232 #define M_1_PI\'a0\'a0\'a0\'a0\'a0\'a00.318309886183790671537767526745028724\'a0\'a01/pi\u8232 #define M_2_PI\'a0\'a0\'a0\'a0\'a0\'a00.636619772367581343075535053490057448\'a0\'a02/pi\u8232 #define M_2_SQRTPI\'a0\'a01.12837916709551257389615890312154517\'a0\'a0\'a02/sqrt(pi)\u8232 #define M_SQRT2\'a0\'a0\'a0\'a0\'a01.41421356237309504880168872420969808\'a0\'a0\'a0sqrt(2)\u8232 #define M_SQRT1_2\'a0\'a0\'a00.707106781186547524400844362104849039\'a0\'a01/sqrt(2)\u8232 \'a0\u8232 \'a0\u8232 from:{\field{\*\fldinst{HYPERLINK "http://donbe.blog.163.com/blog/static/138048021201061054243442/"}}{\fldrslt \cf2 http://donbe.blog.163.com/blog/static/138048021201061054243442/\uc0\u8232 \u8232 }}CGAffineTransformMakeTranslation(width, 0.0);
+\f1 \'ca\'c7\'b8\'c4\'b1\'e4\'ce\'bb\'d6\'c3\'b5\'c4\'a3\'ac
+\f0 \uc0\u8232 \
+CGAffineTransformRotate(transform, M_PI);
+\f1 \'ca\'c7\'d0\'fd\'d7\'aa\'b5\'c4\'a1\'a3
+\f0 \uc0\u8232 \
+CGAffineTransformMakeRotation(-M_PI);
+\f1 \'d2\'b2\'ca\'c7\'d0\'fd\'d7\'aa\'b5\'c4
+\f0 \uc0\u8232 \
+transform = CGAffineTransformScale(transform, -1.0, 1.0);
+\f1 \'ca\'c7\'cb\'f5\'b7\'c5\'b5\'c4\'a1\'a3
+\f0 \
+\uc0\u8232 view.transform = CGAffineTransformIdentity;
+\f1 \'cf\'df\'d0\'d4\'b4\'fa\'ca\'fd\'c0\'ef\'c3\'e6\'bd\'b2\'b5\'c4\'be\'d8\'d5\'f3\'b1\'e4\'bb\'bb\'a3\'ac\'d5\'e2\'b8\'f6\'ca\'c7\'ba\'e3\'b5\'c8\'b1\'e4\'bb\'bb
+\f0 \uc0\u8232 \u8232 \u8232 
+\f1 \'b5\'b1
+\f0  
+\f1 \'c4\'e3\'b8\'c4\'b1\'e4\'b9\'fd\'d2\'bb\'b8\'f6
+\f0 view.transform
+\f1 \'ca\'f4\'d0\'d4\'bb\'f2\'d5\'df
+\f0 view.layer.transform
+\f1 \'b5\'c4\'ca\'b1\'ba\'f2\'d0\'e8\'d2\'aa\'bb\'d6\'b8\'b4\'c4\'ac\'c8\'cf\'d7\'b4\'cc\'ac\'b5\'c4\'bb\'b0\'a3\'ac\'bc\'c7\'b5\'c3\'cf\'c8\'b0\'d1\'cb\'fb\'c3\'c7\'d6\'d8\'d6\'c3\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3
+\f0 \
+view.transform = CGAffineTransformIdentity
+\f1 \'a3\'ac
+\f0 \
+
+\f1 \'bb\'f2\'d5\'df
+\f0 view.layer.transform = CATransform3DIdentity
+\f1 \'a3\'ac
+\f0 \
+
+\f1 \'bc\'d9\'c9\'e8\'c4\'e3\'d2\'bb\'d6\'b1\'b2\'bb\'b6\'cf\'b5\'c4\'b8\'c4\'b1\'e4\'d2\'bb\'b8\'f6
+\f0 view.transform
+\f1 \'b5\'c4\'ca\'f4\'d0\'d4\'a3\'ac\'b6\'f8\'c3\'bf\'b4\'ce\'b8\'c4\'b1\'e4\'d6\'ae\'c7\'b0\'c3\'bb\'d3\'d0\'d6\'d8\'d6\'c3\'b5\'c4\'bb\'b0\'a3\'ac\'c4\'e3\'bb\'e1\'b7\'a2\'cf\'d6\'ba\'f3\'c0\'b4
+\f0  
+\f1 \'b5\'c4\'b8\'c4\'b1\'e4\'ba\'cd\'c4\'e3\'cf\'eb\'d2\'aa\'b5\'c4\'b7\'a2\'c9\'fa\'b1\'e4\'bb\'af\'c1\'cb\'a3\'ac\'b2\'bb\'ca\'c7\'c4\'e3\'d5\'e6\'d5\'fd\'cf\'eb\'d2\'aa\'b5\'c4\'bd\'e1\'b9\'fb
+\f0 \uc0\u8232 \u8232 \u8232 Quartz
+\f1 \'d7\'aa\'bb\'bb\'ca\'b5\'cf\'d6\'b5\'c4\'d4\'ad\'c0\'ed
+\f0 :Quartz
+\f1 \'b0\'d1\'bb\'e6\'cd\'bc\'b7\'d6\'b3\'c9\'c1\'bd\'b8\'f6\'b2\'bf\'b7\'d6\'a3\'ac
+\f0 \uc0\u8232 \'a0 \'a0 
+\f1 \'d3\'c3\'bb\'a7\'bf\'d5\'bc\'e4\'a3\'ac\'bc\'b4\'ba\'cd\'c9\'e8\'b1\'b8\'ce\'de\'b9\'d8\'a3\'ac
+\f0 \uc0\u8232 \'a0 \'a0 
+\f1 \'c9\'e8\'b1\'b8\'bf\'d5\'bc\'e4\'a3\'ac
+\f0 \uc0\u8232 
+\f1 \'d3\'c3\'bb\'a7\'bf\'d5\'bc\'e4\'ba\'cd\'c9\'e8\'b1\'b8\'bf\'d5\'bc\'e4\'d6\'d0\'bc\'e4\'b4\'e6\'d4\'da\'d2\'bb\'b8\'f6\'d7\'aa\'bb\'bb\'be\'d8\'d5\'f3
+\f0  
+\f1 \'a3\'ba
+\f0  CTM\uc0\u8232 
+\f1 \'b1\'be\'d5\'c2\'ca\'b5\'d6\'ca\'ca\'c7\'bd\'b2\'bd\'e2
+\f0 CTM\uc0\u8232 \'a0\u8232 Quartz
+\f1 \'cc\'e1\'b9\'a9\'b5\'c4
+\f0 3
+\f1 \'b4\'f3\'b9\'a6\'c4\'dc
+\f0 \uc0\u8232 
+\f1 \'d2\'c6\'b6\'af\'a3\'ac\'d0\'fd\'d7\'aa\'a3\'ac\'cb\'f5\'b7\'c5
+\f0 \uc0\u8232 \'a0\u8232 
+\f1 \'d1\'dd\'ca\'be\'c8\'e7\'cf\'c2\'a3\'ac\'ca\'d7\'cf\'c8\'bc\'d3\'d4\'d8\'d2\'bb\'d5\'c5\'cd\'bc\'c6\'ac
+\f0 \uc0\u8232 void CGContextDrawImage (\u8232 \'a0 \'a0CGContextRef c,\u8232 \'a0 \'a0CGRect rect,\u8232 \'a0 \'a0CGImageRef image\u8232 );\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'d2\'c6\'b6\'af\'ba\'af\'ca\'fd
+\f0 \uc0\u8232 CGContextTranslateCTM (myContext, 100, 50);\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'d0\'fd\'d7\'aa\'ba\'af\'ca\'fd
+\f0 \uc0\u8232 include <math.h>\u8232 static inline double radians (double degrees) \{return degrees * M_PI/180;\}\u8232 CGContextRotateCTM (myContext, radians(\'9645.));\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'cb\'f5\'b7\'c5
+\f0 \uc0\u8232 CGContextScaleCTM (myContext, .5, .75);\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'b7\'ad\'d7\'aa\'a3\'ac
+\f0  
+\f1 \'c1\'bd\'d6\'d6\'d7\'aa\'bb\'bb\'ba\'cf\'b3\'c9\'ba\'f3\'b5\'c4\'d0\'a7\'b9\'fb\'a3\'ac\'cf\'c8\'b0\'d1\'cd\'bc\'c6\'ac\'d2\'c6\'b6\'af\'b5\'bd\'d3\'d2\'c9\'cf\'bd\'c7\'a3\'ac\'c8\'bb\'ba\'f3\'d0\'fd\'d7\'aa
+\f0 180
+\f1 \'b6\'c8
+\f0 \uc0\u8232 CGContextTranslateCTM (myContext, w,h);\u8232 CGContextRotateCTM (myContext, radians(-180.));\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'d7\'e9\'ba\'cf\'bc\'b8\'b8\'f6\'b6\'af\'d7\'f7
+\f0 \uc0\u8232 CGContextTranslateCTM (myContext, w/4, 0);\u8232 CGContextScaleCTM (myContext, .25, \'a0.5);\u8232 CGContextRotateCTM (myContext, radians ( 22.));\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 CGContextRotateCTM (myContext, radians ( 22.));\u8232 CGContextScaleCTM (myContext, .25, \'a0.5);\u8232 CGContextTranslateCTM (myContext, w/4, 0);\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'c9\'cf\'c3\'e6\'ca\'c7\'cd\'a8\'b9\'fd\'d6\'b1\'bd\'d3\'d0\'de\'b8\'c4\'b5\'b1\'c7\'b0\'b5\'c4
+\f0 ctm
+\f1 \'ca\'b5\'cf\'d6
+\f0 3
+\f1 \'b4\'f3\'d0\'a7\'b9\'fb\'a3\'ac\'cf\'c2\'c3\'e6\'ca\'c7\'cd\'a8\'b9\'fd\'b4\'b4\'bd\'a8
+\f0 Affine Transforms
+\f1 \'a3\'ac\'c8\'bb\'ba\'f3\'c1\'ac\'bd\'d3
+\f0 ctm
+\f1 \'ca\'b5\'cf\'d6\'cd\'ac\'d1\'f9\'b5\'c4
+\f0 3
+\f1 \'d6\'d6\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 
+\f1 \'d5\'e2\'d1\'f9\'d7\'f6\'b5\'c4\'ba\'c3\'b4\'a6\'ca\'c7\'bf\'c9\'d2\'d4\'d6\'d8\'d3\'c3\'d5\'e2\'b8\'f6
+\f0 Affine Transforms\uc0\u8232 
+\f1 \'d3\'a6\'d3\'c3
+\f0 Affine Transforms 
+\f1 \'b5\'bd
+\f0 ctm
+\f1 \'b5\'c4\'ba\'af\'ca\'fd
+\f0 \uc0\u8232 void CGContextConcatCTM (\u8232 \'a0 \'a0CGContextRef c,\u8232 \'a0 \'a0CGAffineTransform transform\u8232 );\u8232 \'a0\u8232 \'a0\u8232 Creating Affine Transforms\u8232 
+\f1 \'d2\'c6\'b6\'af\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGAffineTransform CGAffineTransformMakeTranslation (\u8232 \'a0 \'a0CGFloat tx,\u8232 \'a0 \'a0CGFloat ty\u8232 );\u8232 \'a0\u8232 CGAffineTransform CGAffineTransformTranslate (\u8232 \'a0 \'a0CGAffineTransform t,\u8232 \'a0 \'a0CGFloat tx,\u8232 \'a0 \'a0CGFloat ty\u8232 );\u8232 \'a0\u8232 
+\f1 \'d0\'fd\'d7\'aa\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGAffineTransform CGAffineTransformMakeRotation (\u8232 \'a0 \'a0CGFloat angle\u8232 );\u8232 \'a0\u8232 CGAffineTransform CGAffineTransformRotate (\u8232 \'a0 \'a0CGAffineTransform t,\u8232 \'a0 \'a0CGFloat angle\u8232 );\u8232 \'a0\u8232 
+\f1 \'cb\'f5\'b7\'c5\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGAffineTransform CGAffineTransformMakeScale (\u8232 \'a0 \'a0CGFloat sx,\u8232 \'a0 \'a0CGFloat sy\u8232 );\u8232 \'a0\u8232 CGAffineTransform CGAffineTransformScale (\u8232 \'a0 \'a0CGAffineTransform t,\u8232 \'a0 \'a0CGFloat sx,\u8232 \'a0 \'a0CGFloat sy\u8232 );\u8232 \'a0\u8232 
+\f1 \'b7\'b4\'d7\'aa\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGAffineTransform CGAffineTransformInvert (\u8232 \'a0 \'a0CGAffineTransform t\u8232 );\u8232 \'a0\u8232 
+\f1 \'d6\'bb\'b6\'d4\'be\'d6\'b2\'bf\'b2\'fa\'c9\'fa\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGRect CGRectApplyAffineTransform (\u8232 \'a0 \'a0CGRect rect,\u8232 \'a0 \'a0CGAffineTransform t\u8232 );\u8232 \'a0\u8232 
+\f1 \'c5\'d0\'b6\'cf\'c1\'bd\'b8\'f6
+\f0 AffineTrans
+\f1 \'ca\'c7\'b7\'f1\'cf\'e0\'b5\'c8
+\f0 \uc0\u8232 bool CGAffineTransformEqualToTransform (\u8232 \'a0 \'a0CGAffineTransform t1,\u8232 \'a0 \'a0CGAffineTransform t2\u8232 );\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'bb\'f1\'b5\'c3
+\f0 Affine Transform\uc0\u8232 CGAffineTransform CGContextGetUserSpaceToDeviceSpaceTransform (\u8232 \'a0 \'a0CGContextRef c\u8232 );\u8232 \'a0\u8232 
+\f1 \'cf\'c2\'c3\'e6\'b5\'c4\'ba\'af\'ca\'fd\'d6\'bb\'c6\'f0\'b5\'bd\'b2\'e9\'bf\'b4\'b5\'c4\'d0\'a7\'b9\'fb\'a3\'ac\'b1\'c8\'c8\'e7\'bf\'b4\'d2\'bb\'cf\'c2\'d5\'e2\'b8\'f6\'d3\'c3\'bb\'a7\'bf\'d5\'bc\'e4\'b5\'c4\'b5\'e3\'a3\'ac\'d7\'aa\'bb\'bb\'b5\'bd\'c9\'e8\'b1\'b8\'bf\'d5\'bc\'e4\'c8\'a5\'d7\'f8\'b1\'ea\'ca\'c7\'b6\'e0\'c9\'d9
+\f0 \uc0\u8232 CGPoint CGContextConvertPointToDeviceSpace (\u8232 \'a0 \'a0CGContextRef c,\u8232 \'a0 \'a0CGPoint point\u8232 );\u8232 \'a0\u8232 CGPoint CGContextConvertPointToUserSpace (\u8232 \'a0 \'a0CGContextRef c,\u8232 \'a0 \'a0CGPoint point\u8232 );\u8232 \'a0\u8232 CGSize CGContextConvertSizeToDeviceSpace (\u8232 \'a0 \'a0CGContextRef c,\u8232 \'a0 \'a0CGSize size\u8232 );\u8232 \'a0\u8232 CGSize CGContextConvertSizeToUserSpace (\u8232 \'a0 \'a0CGContextRef c,\u8232 \'a0 \'a0CGSize size\u8232 );\u8232 \'a0\u8232 CGRect CGContextConvertRectToDeviceSpace (\u8232 \'a0 \'a0CGContextRef c,\u8232 \'a0 \'a0CGRect rect\u8232 );\u8232 \'a0\u8232 CGRect CGContextConvertRectToUserSpace (\u8232 \'a0 \'a0CGContextRef c,\u8232 \'a0 \'a0CGRect rect\u8232 );\u8232 \'a0\u8232 \'a0\u8232 CTM
+\f1 \'d5\'e6\'d5\'fd\'b5\'c4\'ca\'fd\'d1\'a7\'d0\'d0\'ce\'aa
+\f0 \uc0\u8232 
+\f1 \'d5\'e2\'b8\'f6\'d7\'aa\'bb\'bb\'be\'d8\'d5\'f3\'c6\'e4\'ca\'b5\'ca\'c7\'d2\'bb\'b8\'f6
+\f0  3x3
+\f1 \'b5\'c4
+\f0  
+\f1 \'be\'d9\'d6\'a4
+\f0 \uc0\u8232 
+\f1 \'c8\'e7\'cf\'c2\'cd\'bc
+\f0 \uc0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'cf\'c2\'c3\'e6\'be\'d9\'c0\'fd\'cb\'b5\'c3\'f7\'bc\'b8\'b8\'f6\'d7\'aa\'bb\'bb\'d4\'cb\'cb\'e3\'b5\'c4\'ca\'fd\'d1\'a7\'ca\'b5\'cf\'d6
+\f0 \uc0\u8232 x y 
+\f1 \'ca\'c7\'d4\'ad\'cf\'c8\'b5\'e3\'b5\'c4\'d7\'f8\'b1\'ea
+\f0 \uc0\u8232 
+\f1 \'cf\'c2\'c3\'e6\'ca\'c7\'b4\'d3\'d3\'c3\'bb\'a7\'d7\'f8\'b1\'ea\'d7\'aa\'bb\'bb\'b5\'bd\'c9\'e8\'b1\'b8\'d7\'f8\'b1\'ea\'b5\'c4\'bc\'c6\'cb\'e3\'b9\'ab\'ca\'bd
+\f0 \uc0\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'cf\'c2\'c3\'e6\'ca\'c7\'d2\'bb\'b8\'f6
+\f0 identity matrix
+\f1 \'a3\'ac\'be\'cd\'ca\'c7\'ca\'e4\'c8\'eb\'ca\'b2\'c3\'b4\'d7\'f8\'b1\'ea\'a3\'ac\'b3\'f6\'c0\'b4\'ca\'b2\'c3\'b4\'d7\'f8\'b1\'ea\'a3\'ac\'c3\'bb\'d3\'d0\'d7\'aa\'bb\'bb
+\f0 \uc0\u8232 \'a0\u8232 
+\f1 \'d7\'ee\'d6\'d5\'b5\'c4\'bc\'c6\'cb\'e3\'bd\'e1\'b9\'fb\'ca\'c7
+\f0  x=x
+\f1 \'a3\'ac
+\f0 y=y
+\f1 \'a3\'ac
+\f0  \'a0\uc0\u8232 \'a0\u8232 \'a0\u8232 \'a0
+\f1 \'bf\'c9\'d2\'d4\'d3\'c3\'ba\'af\'ca\'fd\'c5\'d0\'b6\'cf\'d5\'e2\'b8\'f6\'be\'d8\'d5\'f3\'ca\'c7\'b2\'bb\'ca\'c7\'d2\'bb\'b8\'f6
+\f0  identity matrix\uc0\u8232 bool CGAffineTransformIsIdentity (\u8232 \'a0 \'a0CGAffineTransform t\u8232 );\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 
+\f1 \'b2\'ce\'bf\'bc
+\f0 :http://developer.apple.com/library/ios/#documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_affine/dq_affine.html\uc0\u8232 \u8232 \u8232 \u8232 \u8232 \u8232 \u8232 \u8232 \u8232 - (void)willAnimateFirstHalfOfRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation \'a0 duration:(NSTimeInterval)duration\u8232 \{\u8232 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 if (toInterfaceOrientation == UIInterfaceOrientationPortrait)\u8232 \'a0 \'a0 \'a0 \'a0 \{\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 b=YES;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view=mainvv;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.transform = CGAffineTransformIdentity;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.transform = CGAffineTransformMakeRotation(degreesToRadian(0));\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.bounds = CGRectMake(0.0, 0.0, 768.0, 1004.0);\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \}\u8232 \'a0 \'a0 \'a0 \'a0 else if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft)\u8232 \'a0 \'a0 \'a0 \'a0 \{\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 b=NO;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view = self.vv;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.transform = CGAffineTransformIdentity;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.transform = CGAffineTransformMakeRotation(degreesToRadian(-90));\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.bounds = CGRectMake(0.0, 0.0, 1024.0, 748.0);\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \}\u8232 \'a0 \'a0 \'a0 \'a0 else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)\u8232 \'a0 \'a0 \'a0 \'a0 \{\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 b=YES;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view=mainvv;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.transform = CGAffineTransformIdentity;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.transform = CGAffineTransformMakeRotation(degreesToRadian(180));\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.bounds = CGRectMake(0.0, 0.0, 768.0, 1004.0);\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \}\u8232 \'a0 \'a0 \'a0 \'a0 else if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)\u8232 \'a0 \'a0 \'a0 \'a0 \{\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 b=NO;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view = self.vv;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.transform = CGAffineTransformIdentity;\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.transform = CGAffineTransformMakeRotation(degreesToRadian(90));\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 self.view.bounds = CGRectMake(0.0, 0.0, 1024.0, 748.0);\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0 \}\u8232 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \}\u8232 \u8232 \u8232 3\u8232 \u8232 Quartz
+\f1 \'d7\'aa\'bb\'bb\'ca\'b5\'cf\'d6\'b5\'c4\'d4\'ad\'c0\'ed
+\f0 :Quartz
+\f1 \'b0\'d1\'bb\'e6\'cd\'bc\'b7\'d6\'b3\'c9\'c1\'bd\'b8\'f6\'b2\'bf\'b7\'d6\'a3\'ac
+\f0 \uc0\u8232 \'a0\'a0 \'a0
+\f1 \'d3\'c3\'bb\'a7\'bf\'d5\'bc\'e4\'a3\'ac\'bc\'b4\'ba\'cd\'c9\'e8\'b1\'b8\'ce\'de\'b9\'d8\'a3\'ac
+\f0 \uc0\u8232 \'a0\'a0 \'a0
+\f1 \'c9\'e8\'b1\'b8\'bf\'d5\'bc\'e4\'a3\'ac
+\f0 \uc0\u8232 
+\f1 \'d3\'c3\'bb\'a7\'bf\'d5\'bc\'e4\'ba\'cd\'c9\'e8\'b1\'b8\'bf\'d5\'bc\'e4\'d6\'d0\'bc\'e4\'b4\'e6\'d4\'da\'d2\'bb\'b8\'f6\'d7\'aa\'bb\'bb\'be\'d8\'d5\'f3
+\f0  
+\f1 \'a3\'ba
+\f0  CTM\uc0\u8232 
+\f1 \'b1\'be\'d5\'c2\'ca\'b5\'d6\'ca\'ca\'c7\'bd\'b2\'bd\'e2
+\f0 CTM\uc0\u8232 \u8232 Quartz
+\f1 \'cc\'e1\'b9\'a9\'b5\'c4
+\f0 3
+\f1 \'b4\'f3\'b9\'a6\'c4\'dc
+\f0 \uc0\u8232 
+\f1 \'d2\'c6\'b6\'af\'a3\'ac\'d0\'fd\'d7\'aa\'a3\'ac\'cb\'f5\'b7\'c5
+\f0 \uc0\u8232 \u8232 
+\f1 \'d1\'dd\'ca\'be\'c8\'e7\'cf\'c2\'a3\'ac\'ca\'d7\'cf\'c8\'bc\'d3\'d4\'d8\'d2\'bb\'d5\'c5\'cd\'bc\'c6\'ac
+\f0 \uc0\u8232 void CGContextDrawImage (\u8232 \'a0\'a0 CGContextRef c,\u8232 \'a0\'a0 CGRect rect,\u8232 \'a0\'a0 CGImageRef image\u8232 );\u8232 \u8232  \'a0\u8232 
+\f1 \'d2\'c6\'b6\'af\'ba\'af\'ca\'fd
+\f0 \uc0\u8232 CGContextTranslateCTM (myContext, 100, 50);\u8232 \u8232 \u8232 \u8232 \u8232 
+\f1 \'d0\'fd\'d7\'aa\'ba\'af\'ca\'fd
+\f0 \uc0\u8232 include <math.h>\u8232 static inline double radians (double degrees) \{return degrees * M_PI/180;\}\u8232 CGContextRotateCTM (myContext, radians(\'9645.));\u8232 \u8232 \u8232 \u8232 
+\f1 \'cb\'f5\'b7\'c5
+\f0 \uc0\u8232 CGContextScaleCTM (myContext, .5, .75);\u8232 \u8232 \u8232 \u8232 
+\f1 \'b7\'ad\'d7\'aa\'a3\'ac
+\f0  
+\f1 \'c1\'bd\'d6\'d6\'d7\'aa\'bb\'bb\'ba\'cf\'b3\'c9\'ba\'f3\'b5\'c4\'d0\'a7\'b9\'fb\'a3\'ac\'cf\'c8\'b0\'d1\'cd\'bc\'c6\'ac\'d2\'c6\'b6\'af\'b5\'bd\'d3\'d2\'c9\'cf\'bd\'c7\'a3\'ac\'c8\'bb\'ba\'f3\'d0\'fd\'d7\'aa
+\f0 180
+\f1 \'b6\'c8
+\f0 \uc0\u8232 CGContextTranslateCTM (myContext, w,h);\u8232 CGContextRotateCTM (myContext, radians(-180.));\u8232 \u8232 \u8232 \u8232 
+\f1 \'d7\'e9\'ba\'cf\'bc\'b8\'b8\'f6\'b6\'af\'d7\'f7
+\f0 \uc0\u8232 CGContextTranslateCTM (myContext, w/4, 0);\u8232 CGContextScaleCTM (myContext, .25,\'a0 .5);\u8232 CGContextRotateCTM (myContext, radians ( 22.));\u8232 \u8232  \u8232 CGContextRotateCTM (myContext, radians ( 22.));\u8232 CGContextScaleCTM (myContext, .25,\'a0 .5);\u8232 CGContextTranslateCTM (myContext, w/4, 0);\u8232 \u8232 \u8232 \u8232 \u8232 
+\f1 \'c9\'cf\'c3\'e6\'ca\'c7\'cd\'a8\'b9\'fd\'d6\'b1\'bd\'d3\'d0\'de\'b8\'c4\'b5\'b1\'c7\'b0\'b5\'c4
+\f0 ctm
+\f1 \'ca\'b5\'cf\'d6
+\f0 3
+\f1 \'b4\'f3\'d0\'a7\'b9\'fb\'a3\'ac\'cf\'c2\'c3\'e6\'ca\'c7\'cd\'a8\'b9\'fd\'b4\'b4\'bd\'a8
+\f0 Affine Transforms
+\f1 \'a3\'ac\'c8\'bb\'ba\'f3\'c1\'ac\'bd\'d3
+\f0 ctm
+\f1 \'ca\'b5\'cf\'d6\'cd\'ac\'d1\'f9\'b5\'c4
+\f0 3
+\f1 \'d6\'d6\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 
+\f1 \'d5\'e2\'d1\'f9\'d7\'f6\'b5\'c4\'ba\'c3\'b4\'a6\'ca\'c7\'bf\'c9\'d2\'d4\'d6\'d8\'d3\'c3\'d5\'e2\'b8\'f6
+\f0 Affine Transforms\uc0\u8232 
+\f1 \'d3\'a6\'d3\'c3
+\f0 Affine Transforms 
+\f1 \'b5\'bd
+\f0 ctm
+\f1 \'b5\'c4\'ba\'af\'ca\'fd
+\f0 \uc0\u8232 void CGContextConcatCTM (\u8232 \'a0\'a0 CGContextRef c,\u8232 \'a0\'a0 CGAffineTransform transform\u8232 );\u8232 \u8232 \u8232 Creating Affine Transforms\u8232 
+\f1 \'d2\'c6\'b6\'af\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGAffineTransform CGAffineTransformMakeTranslation (\u8232 \'a0\'a0 CGFloat tx,\u8232 \'a0\'a0 CGFloat ty\u8232 );\u8232 \u8232 CGAffineTransform CGAffineTransformTranslate (\u8232 \'a0\'a0 CGAffineTransform t,\u8232 \'a0\'a0 CGFloat tx,\u8232 \'a0\'a0 CGFloat ty\u8232 );\u8232 \u8232 
+\f1 \'d0\'fd\'d7\'aa\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGAffineTransform CGAffineTransformMakeRotation (\u8232 \'a0\'a0 CGFloat angle\u8232 );\u8232 \u8232 CGAffineTransform CGAffineTransformRotate (\u8232 \'a0\'a0 CGAffineTransform t,\u8232 \'a0\'a0 CGFloat angle\u8232 );\u8232 \u8232 
+\f1 \'cb\'f5\'b7\'c5\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGAffineTransform CGAffineTransformMakeScale (\u8232 \'a0\'a0 CGFloat sx,\u8232 \'a0\'a0 CGFloat sy\u8232 );\u8232 \u8232 CGAffineTransform CGAffineTransformScale (\u8232 \'a0\'a0 CGAffineTransform t,\u8232 \'a0\'a0 CGFloat sx,\u8232 \'a0\'a0 CGFloat sy\u8232 );\u8232 \u8232 
+\f1 \'b7\'b4\'d7\'aa\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGAffineTransform CGAffineTransformInvert (\u8232 \'a0\'a0 CGAffineTransform t\u8232 );\u8232 \u8232 
+\f1 \'d6\'bb\'b6\'d4\'be\'d6\'b2\'bf\'b2\'fa\'c9\'fa\'d0\'a7\'b9\'fb
+\f0 \uc0\u8232 CGRect CGRectApplyAffineTransform (\u8232 \'a0\'a0 CGRect rect,\u8232 \'a0\'a0 CGAffineTransform t\u8232 );\u8232 \u8232 
+\f1 \'c5\'d0\'b6\'cf\'c1\'bd\'b8\'f6
+\f0 AffineTrans
+\f1 \'ca\'c7\'b7\'f1\'cf\'e0\'b5\'c8
+\f0 \uc0\u8232 bool CGAffineTransformEqualToTransform (\u8232 \'a0\'a0 CGAffineTransform t1,\u8232 \'a0\'a0 CGAffineTransform t2\u8232 );\u8232 \u8232 \u8232 \u8232 
+\f1 \'bb\'f1\'b5\'c3
+\f0 Affine Transform\uc0\u8232 CGAffineTransform CGContextGetUserSpaceToDeviceSpaceTransform (\u8232 \'a0\'a0 CGContextRef c\u8232 );\u8232 \u8232 
+\f1 \'cf\'c2\'c3\'e6\'b5\'c4\'ba\'af\'ca\'fd\'d6\'bb\'c6\'f0\'b5\'bd\'b2\'e9\'bf\'b4\'b5\'c4\'d0\'a7\'b9\'fb\'a3\'ac\'b1\'c8\'c8\'e7\'bf\'b4\'d2\'bb\'cf\'c2\'d5\'e2\'b8\'f6\'d3\'c3\'bb\'a7\'bf\'d5\'bc\'e4\'b5\'c4\'b5\'e3\'a3\'ac\'d7\'aa\'bb\'bb\'b5\'bd\'c9\'e8\'b1\'b8\'bf\'d5\'bc\'e4\'c8\'a5\'d7\'f8\'b1\'ea\'ca\'c7\'b6\'e0\'c9\'d9
+\f0 \uc0\u8232 CGPoint CGContextConvertPointToDeviceSpace (\u8232 \'a0\'a0 CGContextRef c,\u8232 \'a0\'a0 CGPoint point\u8232 );\u8232 \u8232 CGPoint CGContextConvertPointToUserSpace (\u8232 \'a0\'a0 CGContextRef c,\u8232 \'a0\'a0 CGPoint point\u8232 );\u8232 \u8232 CGSize CGContextConvertSizeToDeviceSpace (\u8232 \'a0\'a0 CGContextRef c,\u8232 \'a0\'a0 CGSize size\u8232 );\u8232 \u8232 CGSize CGContextConvertSizeToUserSpace (\u8232 \'a0\'a0 CGContextRef c,\u8232 \'a0\'a0 CGSize size\u8232 );\u8232 \u8232 CGRect CGContextConvertRectToDeviceSpace (\u8232 \'a0\'a0 CGContextRef c,\u8232 \'a0\'a0 CGRect rect\u8232 );\u8232 \u8232 CGRect CGContextConvertRectToUserSpace (\u8232 \'a0\'a0 CGContextRef c,\u8232 \'a0\'a0 CGRect rect\u8232 );\u8232 \u8232 \u8232 CTM
+\f1 \'d5\'e6\'d5\'fd\'b5\'c4\'ca\'fd\'d1\'a7\'d0\'d0\'ce\'aa
+\f0 \uc0\u8232 
+\f1 \'d5\'e2\'b8\'f6\'d7\'aa\'bb\'bb\'be\'d8\'d5\'f3\'c6\'e4\'ca\'b5\'ca\'c7\'d2\'bb\'b8\'f6
+\f0  3x3
+\f1 \'b5\'c4
+\f0  
+\f1 \'be\'d9\'d6\'a4
+\f0 \uc0\u8232 
+\f1 \'c8\'e7\'cf\'c2\'cd\'bc
+\f0 \uc0\u8232 \u8232 \u8232 
+\f1 \'cf\'c2\'c3\'e6\'be\'d9\'c0\'fd\'cb\'b5\'c3\'f7\'bc\'b8\'b8\'f6\'d7\'aa\'bb\'bb\'d4\'cb\'cb\'e3\'b5\'c4\'ca\'fd\'d1\'a7\'ca\'b5\'cf\'d6
+\f0 \uc0\u8232 x y 
+\f1 \'ca\'c7\'d4\'ad\'cf\'c8\'b5\'e3\'b5\'c4\'d7\'f8\'b1\'ea
+\f0 \uc0\u8232 
+\f1 \'cf\'c2\'c3\'e6\'ca\'c7\'b4\'d3\'d3\'c3\'bb\'a7\'d7\'f8\'b1\'ea\'d7\'aa\'bb\'bb\'b5\'bd\'c9\'e8\'b1\'b8\'d7\'f8\'b1\'ea\'b5\'c4\'bc\'c6\'cb\'e3\'b9\'ab\'ca\'bd
+\f0 \uc0\u8232 \u8232 \u8232 \u8232 \u8232 
+\f1 \'cf\'c2\'c3\'e6\'ca\'c7\'d2\'bb\'b8\'f6
+\f0 identity matrix
+\f1 \'a3\'ac\'be\'cd\'ca\'c7\'ca\'e4\'c8\'eb\'ca\'b2\'c3\'b4\'d7\'f8\'b1\'ea\'a3\'ac\'b3\'f6\'c0\'b4\'ca\'b2\'c3\'b4\'d7\'f8\'b1\'ea\'a3\'ac\'c3\'bb\'d3\'d0\'d7\'aa\'bb\'bb
+\f0 \uc0\u8232 \u8232 
+\f1 \'d7\'ee\'d6\'d5\'b5\'c4\'bc\'c6\'cb\'e3\'bd\'e1\'b9\'fb\'ca\'c7
+\f0  x=x
+\f1 \'a3\'ac
+\f0 y=y
+\f1 \'a3\'ac
+\f0 \'a0\'a0\uc0\u8232 \u8232 \u8232 \'a0
+\f1 \'bf\'c9\'d2\'d4\'d3\'c3\'ba\'af\'ca\'fd\'c5\'d0\'b6\'cf\'d5\'e2\'b8\'f6\'be\'d8\'d5\'f3\'ca\'c7\'b2\'bb\'ca\'c7\'d2\'bb\'b8\'f6
+\f0  identity matrix\uc0\u8232 bool CGAffineTransformIsIdentity (\u8232 \'a0\'a0 CGAffineTransform t\u8232 );\u8232 \u8232 \u8232 
+\f1 \'d2\'c6\'b6\'af\'be\'d8\'d5\'f3
+\f0 \uc0\u8232 \u8232  
+\f1 \'cb\'f5\'b7\'c5\'be\'d8\'d5\'f3
+\f0 \uc0\u8232  
+\f1 \'d0\'fd\'d7\'aa\'be\'d8\'d5\'f3
+\f0 \uc0\u8232  
+\f1 \'d0\'fd\'d7\'aa\'bc\'d3\'d2\'c6\'b6\'af\'be\'d8\'d5\'f3}

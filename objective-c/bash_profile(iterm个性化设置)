@@ -1,0 +1,14 @@
+#设置默认文本编辑器
+export EDITOR=vim
+
+#设置终端颜色和git的分支名称
+export CLICOLOR=1
+export LSCOLORS=gxfxaxdxcxegedabagacad
+function parse_git_branch {
+     ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+       echo "("${ref#refs/heads/}")"
+}
+
+export PS1="\[\e[32;1m\]\w\[\e[31;1m\]\$(parse_git_branch) \[\e[32;1m\]\$ \[\e[0m\]"
+
+

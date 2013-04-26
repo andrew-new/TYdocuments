@@ -1,0 +1,94 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red92\green38\blue153;\red46\green13\blue110;
+\red170\green13\blue145;\red28\green0\blue207;\red100\green56\blue32;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \'c7\'bf\'d6\'c6\'d7\'aa\'ba\'e1\'c6\'c1 \'c8\'fd\'d6\'d6\'b7\'bd\'b7\'a8\'a3\'ba\
+\
+1\'a3\'ac\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0  \cf2 //
+\f0 \'c9\'e8\'d6\'c3\'d7\'b4\'cc\'ac\'c0\'b8\'d0\'fd\'d7\'aa
+\f1 \cf0 \
+    [[\cf3 UIApplication\cf0  \cf4 sharedApplication\cf0 ] \cf4 setStatusBarOrientation\cf0 :\cf4 UIDeviceOrientationLandscapeRight\cf0 \
+                                                      \cf4 animated\cf0 :\cf5 YES\cf0 ];\
+    \cf3 CGFloat\cf0  duration = [\cf3 UIApplication\cf0  \cf4 sharedApplication\cf0 ].\cf3 statusBarOrientationAnimationDuration\cf0 ;\
+    \cf2 //
+\f0 \'c9\'e8\'d6\'c3\'d0\'fd\'d7\'aa\'b6\'af\'bb\'ad
+\f1 \cf0 \
+    [\cf3 UIView\cf0  \cf4 beginAnimations\cf0 :\cf5 nil\cf0  \cf4 context\cf0 :\cf5 nil\cf0 ];\
+    [\cf3 UIView\cf0  \cf4 setAnimationDuration\cf0 :duration];\
+    \cf2 //
+\f0 \'c9\'e8\'d6\'c3\'b5\'bc\'ba\'bd\'c0\'b8\'d0\'fd\'d7\'aa
+\f1 \cf0 \
+    \cf5 self\cf0 .\cf3 navigationController\cf0 .\cf3 navigationBar\cf0 .\cf3 frame\cf0  = \cf4 CGRectMake\cf0 (-\cf6 204\cf0 , \cf6 224\cf0 , \cf6 480\cf0 , \cf6 32\cf0 );\
+    \cf5 self\cf0 .\cf3 navigationController\cf0 .\cf3 navigationBar\cf0 .\cf3 transform\cf0  = \cf4 CGAffineTransformMakeRotation\cf0 (\cf7 M_PI\cf0 *\cf6 1.5\cf0 );\
+    \cf2 //
+\f0 \'c9\'e8\'d6\'c3\'ca\'d3\'cd\'bc\'d0\'fd\'d7\'aa
+\f1 \cf0 \
+    \cf5 self\cf0 .\cf3 view\cf0 .\cf3 bounds\cf0  = \cf4 CGRectMake\cf0 (\cf6 0\cf0 , -\cf6 54\cf0 , \cf5 self\cf0 .\cf3 view\cf0 .\cf3 frame\cf0 .\cf3 size\cf0 .\cf3 width\cf0 +\cf6 44\cf0 , \cf5 self\cf0 .\cf3 view\cf0 .\cf3 frame\cf0 .\cf3 size\cf0 .\cf3 height\cf0 );\
+    \cf5 self\cf0 .\cf3 view\cf0 .\cf3 transform\cf0  = \cf4 CGAffineTransformMakeRotation\cf0 (\cf7 M_PI\cf0 *\cf6 1.5\cf0 );\
+    [\cf3 UIView\cf0  \cf4 commitAnimations\cf0 ];
+\f0\fs24 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\
+2\'a3\'ac\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0   \cf5 if\cf0  ([[\cf3 UIDevice\cf0  \cf4 currentDevice\cf0 ] \cf4 respondsToSelector\cf0 :\cf5 @selector\cf0 (setOrientation:)]) \{\
+        [[\cf3 UIDevice\cf0  \cf4 currentDevice\cf0 ] \cf4 performSelector\cf0 :\cf5 @selector\cf0 (setOrientation:)\
+                                       \cf4 withObject\cf0 :(\cf5 id\cf0 )\cf4 UIInterfaceOrientationLandscapeLeft\cf0 ];\
+    \}
+\f0\fs24 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\
+3\'a3\'ac\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf2 \CocoaLigature0 // Manually handles orientation changes on iPhone\cf0 \
+- (\cf5 void\cf0 )orientationChanged\
+\{\
+    \cf3 UIInterfaceOrientation\cf0  o = (\cf3 UIInterfaceOrientation\cf0 )[[\cf3 UIApplication\cf0  \cf4 sharedApplication\cf0 ] \cf4 statusBarOrientation\cf0 ];\
+    \cf3 CGFloat\cf0  angle = \cf6 0\cf0 ;\
+    \cf5 switch\cf0  (o) \{\
+        \cf5 case\cf0  \cf4 UIDeviceOrientationLandscapeLeft\cf0 : angle = \cf6 90\cf0 ; \cf5 break\cf0 ;\
+        \cf5 case\cf0  \cf4 UIDeviceOrientationLandscapeRight\cf0 : angle = -\cf6 90\cf0 ; \cf5 break\cf0 ;\
+        \cf5 case\cf0  \cf4 UIDeviceOrientationPortraitUpsideDown\cf0 : angle = \cf6 180\cf0 ; \cf5 break\cf0 ;\
+        \cf5 default\cf0 : \cf5 break\cf0 ;\
+    \}\
+    \
+    \cf3 CGRect\cf0  f = [[\cf3 UIScreen\cf0  \cf4 mainScreen\cf0 ] \cf4 applicationFrame\cf0 ];\
+    \
+    \cf2 // Swap the frame height and width if necessary\cf0 \
+    \cf5 if\cf0  (\cf7 UIDeviceOrientationIsLandscape\cf0 (o)) \{\
+        \cf3 CGFloat\cf0  t;\
+        t = f.\cf3 size\cf0 .\cf3 width\cf0 ;\
+        f.\cf3 size\cf0 .\cf3 width\cf0  = f.\cf3 size\cf0 .\cf3 height\cf0 ;\
+        f.\cf3 size\cf0 .\cf3 height\cf0  = t;\
+    \}\
+    \
+    \cf3 CGAffineTransform\cf0  previousTransform = \cf5 self\cf0 .\cf3 view\cf0 .\cf3 layer\cf0 .\cf4 affineTransform\cf0 ;\
+    \cf3 CGAffineTransform\cf0  newTransform = \cf4 CGAffineTransformMakeRotation\cf0 ((\cf3 CGFloat\cf0 )(angle * \cf7 M_PI\cf0  / \cf6 180.0\cf0 ));\
+    \
+    \cf2 // Reset the transform so we can set the size\cf0 \
+    \cf5 self\cf0 .\cf3 view\cf0 .\cf3 layer\cf0 .\cf4 affineTransform\cf0  = \cf3 CGAffineTransformIdentity\cf0 ;\
+    \cf5 self\cf0 .\cf3 view\cf0 .\cf3 frame\cf0  = (\cf3 CGRect\cf0 )\{ \{ \cf6 0\cf0 , \cf6 0\cf0  \}, f.\cf3 size\cf0 \};\
+    \
+    \cf2 // Revert to the previous transform for correct animation\cf0 \
+    \cf5 self\cf0 .\cf3 view\cf0 .\cf3 layer\cf0 .\cf4 affineTransform\cf0  = previousTransform;\
+    \
+    [\cf3 UIView\cf0  \cf4 beginAnimations\cf0 :\cf5 nil\cf0  \cf4 context\cf0 :\cf5 NULL\cf0 ];\
+    [\cf3 UIView\cf0  \cf4 setAnimationDuration\cf0 :\cf6 0.3\cf0 ];\
+    \
+    \cf2 // Set the new transform\cf0 \
+    \cf5 self\cf0 .\cf3 view\cf0 .\cf3 layer\cf0 .\cf4 affineTransform\cf0  = newTransform;\
+    \
+    \cf2 // Fix the view origin\cf0 \
+    \cf5 self\cf0 .\cf3 view\cf0 .\cf3 frame\cf0  = (\cf3 CGRect\cf0 )\{ \{ f.\cf3 origin\cf0 .\cf3 x\cf0 , f.\cf3 origin\cf0 .\cf3 y\cf0  \},\cf5 self\cf0 .\cf3 view\cf0 .\cf3 frame\cf0 .\cf3 size\cf0 \};\
+    [\cf3 UIView\cf0  \cf4 commitAnimations\cf0 ];\
+\}}

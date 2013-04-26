@@ -1,0 +1,868 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 SimSun;\f1\fnil\fcharset0 Verdana;\f2\fnil\fcharset134 STHeitiSC-Light;
+}
+{\colortbl;\red255\green255\blue255;\red38\green48\blue38;\red83\green83\blue83;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 1.\uc0\u20445 \u35777 \u31243 \u24207 UI\u21644 \u35774 \u35745 \u22270 \u23436 \u20840 \u21563 \u21512 \u65288 UI\u26174 \u31034 \u65289 \u8232 2.\u23613 \u37327 \u33021 \u36991 \u20813 \u38378 \u20986 \u38378 \u21435 \u31561 \u25805 \u20316 \u65292 \u32467 \u21512 \u23454 \u38469 \u24773 \u20917 \u65292 \u33021 \u36807 \u28193 \u30340 \u20132 \u20114 \u23613 \u37327 \u32467 \u21512 \u21160 \u30011 \u21046 \u20316 \u65292 \u20197 \u31526 \u21512 ios\u39118 \u26684 \u65292 (Animation)\
+(\uc0\u19968 ).UI\u26174 \u31034 \u65306 \
+\uc0\u21407 \u21017 \u65306 \u20445 \u35777 \u35201 \u19982 \u35774 \u35745 \u22270 \u27169 \u24335 \u19968 \u25720 \u19968 \u26679 \u65292 \u21457 \u29616 \u19981 \u36866 \u21512 \u30340 \u19996 \u35199 \u65292 \u38656 \u35201 \u21450 \u26102 \u27807 \u36890 \u21518 \u35753 \u35774 \u35745 \u24072 \u20462 \u25913 \u65292 \u23613 \u37327 \u35201 \u20445 \u35777 \u21644 \u35774 \u35745 \u22270 \u30340 \u20687 \u32032 \u19968 \u19968 \u23545 \u24212 \u8232 1.\u33258 \u23450 \u20041 UIAlertView\u65306 \
+\uc0\u25442 \u32972 \u26223 \u65306 \
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
+UIAlertView\
+ *theAlert = [[UIAlertView alloc] initWithTitle:title message:message \
+delegate:delegate cancelButtonTitle:cancleTitle \
+otherButtonTitles:otherTitle,nil];\
+[theAlert show];\
+theAlert.backgroundColor = [UIColor clearColor];\
+UILabel *theTitle = [theAlert valueForKey:@"_titleLabel"];\
+[theTitle setTextColor:[UIColor whiteColor]];\
+UILabel *theBody = [theAlert valueForKey:@"_bodyTextLabel"];\
+[theBody setTextColor:[UIColor whiteColor]];\
+UIImage *theImage = [UIImage imageNamed:@"alertBack.png"];\
+theImage = [theImage stretchableImageWithLeft<wbr>CapWidth:0. \
+topCapHeight:0.];\
+CGSize theSize = [theAlert frame].size;\
+UIGraphicsBeginImageCont<wbr>ext(theSize);\
+[theImage drawInRect:CGRectMake(0, 0, theSize.width, theSize.height)];\
+theImage = UIGraphicsGetImageFromCu<wbr>rrentImageContext();\
+UIGraphicsEndImageContex<wbr>t();\
+theAlert.layer.contents = (id)[theImage CGImage];\
+for (UIView *tempView in theAlert.subviews)\
+if ([tempView isMemberOfClass:[UIImageView class]])\
+[tempView removeFromSuperview];\
+[theAlert release];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth320\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13480\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:cancleTitle otherButtonTitles:otherTitle,nil];\
+[theAlert show];\
+theAlert.backgroundColor = [UIColor clearColor];\
+UILabel *theTitle = [theAlert valueForKey:@"_titleLabel"];\
+[theTitle setTextColor:[UIColor whiteColor]];\
+UILabel *theBody = [theAlert valueForKey:@"_bodyTextLabel"];\
+[theBody setTextColor:[UIColor whiteColor]];\
+UIImage *theImage = [UIImage imageNamed:@"alertBack.png"];\
+theImage = [theImage stretchableImageWithLeftCapWidth:0. topCapHeight:0.];\
+CGSize theSize = [theAlert frame].size;\
+UIGraphicsBeginImageContext(theSize);\
+[theImage drawInRect:CGRectMake(0, 0, theSize.width, theSize.height)];\
+theImage = UIGraphicsGetImageFromCurrentImageContext();\
+UIGraphicsEndImageContext();\
+theAlert.layer.contents = (id)[theImage CGImage];\
+for (UIView *tempView in theAlert.subviews)\
+if ([tempView isMemberOfClass:[UIImageView class]])\
+[tempView removeFromSuperview];\
+[theAlert release];\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+<span\
+ class="Apple-style-span" style="font-family: Georgia, 'Times New \
+Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height:\
+ 19px; white-space: normal;">2.
+\f2 \'d7\'d4\'b6\'a8\'d2\'e5
+\f1 UIPageControl</span>\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 <span class="Apple-style-span" style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;">2.
+\f2 \'d7\'d4\'b6\'a8\'d2\'e5
+\f1 UIPageControl</span>\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 \uc0\u25913 \u21464 \u28857 \u20799 \u30340 \u39068 \u33394 \u65292 \u21487 \u20197 \u25913 \u21464 \u23567 \u28857 \u20799 \u30340 \u39068 \u33394 \u65306 (\u38468 \u20214 \u20013 )\u8232 MyPageControl.h\u8232 MyPageControl.m\
+3.\uc0\u33258 \u23450 \u20041 UISegmentConrol\u8232 \u25913 \u21464 \u33258 \u23450 \u20041 \u39118 \u26684 \u65306 \u65288 \u38656 \u35201 \u29992 \u20999 \u22270 \u37197 \u21512 \u65289 \
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
+UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:\
+[UIImage imageNamed:@"seg1_tapped.png"],\
+[UIImage imageNamed:@"seg2.png"],\
+[UIImage imageNamed:@"seg3.png"],nil]];\
+segmentControl.segmentedControlStyle = UISegmentedControlStyleB<wbr>ar;\
+segmentControl.frame = CGRectMake((DeviceWidth-76*3)/2-9, 14+[cellContentArray count]*35, 76*3, 33.5);\
+segmentControl.selectedSegmentIndex = 0;\
+[segmentControl addTarget:self action:@selector(changeBookType:) forControlEvents:UIControlEventValueChang<wbr>ed];\
+[cell.contentView addSubview:segmentControl];\
+[segmentControl release];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth320\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13480\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:\
+[UIImage imageNamed:@"seg1_tapped.png"],\
+[UIImage imageNamed:@"seg2.png"],\
+[UIImage imageNamed:@"seg3.png"],nil]];\
+segmentControl.segmentedControlStyle = UISegmentedControlStyleBar;\
+segmentControl.frame = CGRectMake((DeviceWidth-76*3)/2-9, 14+[cellContentArray count]*35, 76*3, 33.5);\
+segmentControl.selectedSegmentIndex = 0;\
+[segmentControl addTarget:self action:@selector(changeBookType:) forControlEvents:UIControlEventValueChanged];\
+[cell.contentView addSubview:segmentControl];\
+[segmentControl release];\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 4.\uc0\u33258 \u23450 \u20041 UIProgressView\u8232 \u25913 \u21464 pressView\u30340 \u36827 \u24230 \u39068 \u33394 \u26174 \u31034 \u65306 \u22522 \u20110 QuartzCore\u32472 \u21046 \u22270 \u20687 \u8232 CustemProgressBar.h\u8232 CustemProgressBar.m\
+5.\uc0\u33258 \u23450 \u20041 UITableView/UITableViewCell\u8232 \u24456 \u24120 \u29992 \u65292 \u24448 \u21518 \u35201 \u20542 \u21521 IB\u26469 \u20570 \u65306 layOutSubView\u24067 \u23616 frame\
+6.\uc0\u33258 \u23450 \u20041 UINavigationBar\u65288 \u29992 view\u32452 \u21512 \u65289 \u8232 TopBarView.h\u8232 TopBarView.m\u8232 \u25105 \u30340 \u20570 \u27861 \u65306 \u23558 \u33258 \u36523 \u30340 navibar\u33521 \u34255 \u21518 \u22312 \u26174 \u31034 \u20026 \u33258 \u23450 \u20041 \u30340 navibarView\u65306 \u36825 \u26679 \u26041 \u20415 \u31243 \u24207 \u26469 \u25511 \u21046 \u65306 \
+7.\uc0\u33258 \u23450 \u20041 UIPopViewController(\u29992 view\u32452 \u21512 )\u8232 iPhone\u37324 \u19981 \u25903 \u25345 PopViewController\u65292 \u20294 \u26159 \u26377 \u26102 \u20250 \u38656 \u35201 \u22312 \u31243 \u24207 \u37324 \u26174 \u31034 PopViewController\u36825 \u26679 \u30340 \u19996 \u35199 \
+8.\uc0\u33258 \u23450 \u20041 UITabBarView\u8232 \u29992 \u19968 \u32452 button\u32452 \u21512 \u25104 tabbar\u30340 \u26174 \u31034 \u65292 \u26041 \u20415 \u28789 \u27963 \u65292 \u20294 \u35201 \u30830 \u20445 \u38656 \u35201 \u31649 \u29702 \u22909 \u20869 \u23481 \u65306 \u8232 \u30001 \u20110 sdk\u20013 \u30340 tabbar\u26159 \u24456 \u19981 \u28789 \u27963 \u30340 \u65292 \u38544 \u34255 \u20043 \u31867 \u30340 \u25805 \u20316 \u37117 \u24456 \u38590 \u25511 \u21046 \u65306 \
+9.\uc0\u33258 \u23450 \u20041 UISearchBar\u8232 \u29992 \u22810 \u20010 view\u32452 \u21512 \u36215 \u26469 \u24179 \u22478 searchview\u30340 \u26174 \u31034 \u65306 \u21487 \u20197 \u25913 \u21464 \u32972 \u26223 \u65292 \u22278 \u35282 \u31561 \u8232 \u25913 \u21464 \u32972 \u26223 \u31561 \u38656 \u27714 \u65307 \
+10.\uc0\u33258 \u23450 \u20041 UITextField/UITextView\u8232 \u21487 \u20197 \u25442 \u32972 \u26223 \u31561 \u65306 leftview rightView background\u31561 \
+11.\uc0\u32763 \u39029 \u25928 \u26524 \u65306 UIPageViewController\u65288 iOS5\u65289 \u8232 1.\u23448 \u26041 demo\u65292 \u8232 2.leaves\u26694 \u26550 \u32763 \u39029 \u25928 \u26524 \
+(\uc0\u20108 ).\u24120 \u29992 \u21040 \u30340 \u21160 \u30011 \u27719 \u24635 \u65306 \
+\uc0\u19968 .\u25511 \u20214 \u26412 \u36523 \u38468 \u26377 \u30340 \u21160 \u30011 \u26041 \u27861 \u65306 \u8232 UIKit\u21253 \u21547 \u30340 \u21160 \u30011 \u25928 \u26524 \u65292 \u29992 \u36215 \u26469 \u20063 \u27604 \u36739 \u30465 \u20107 \u65292 \u20030 \u20363 \u22914 \u19979 \u65306 \
+1. [self.navigationController setNavigationBarHidden:YES animated:YES];\uc0\u8232 2.\u19968 \u33324 \u20351 \u29992 UITableView\u30340 \u30340 \u21160 \u30011 \u25928 \u26524 \u27719 \u24635 \u65306 \u8232 \u20808 \u35774 \u32622 \u25968 \u25454 \u28304 \u65292 \u28982 \u21518 \u22312 \u25191 \u34892 \u21160 \u30011 \u65306 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth5320\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\f1\fs24 \cf2 An error has occurred. Please try again later.\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+-\
+ (void)insertSections:(NSIndexSet *)sections \
+withRowAnimation:(UITableViewRowAnimation)animation;\
+- (void)deleteSections:(NSIndexSet *)sections \
+withRowAnimation:(UITableViewRowAnimation)animation;\
+- (void)reloadSections:(NSIndexSet *)sections \
+withRowAnimation:(UITableViewRowAnimation)animation \
+__OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0);\
+- (void)insertRowsAtIndexPaths:(NSArray *)indexPaths \
+withRowAnimation:(UITableViewRowAnimation)animation;\
+- (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths \
+withRowAnimation:(UITableViewRowAnimation)animation;\
+- (void)reloadRowsAtIndexPaths:(NSArray *)indexPaths \
+withRowAnimation:(UITableViewRowAnimation)animation \
+__OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0);\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 - (void)insertSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation;\
+- (void)deleteSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation;\
+- (void)reloadSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0);\
+- (void)insertRowsAtIndexPaths:(NSArray *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;\
+- (void)deleteRowsAtIndexPaths:(NSArray *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;\
+- (void)reloadRowsAtIndexPaths:(NSArray *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0);\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 3.[scrollVie setContentOffset:CGPoint animated:BOOL]\uc0\u8232 4.UIImageView\u30340 \u21160 \u30011 \u25928 \u26524 \u65306 \
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
+UIImageView *campFireView = [[UIImageView alloc] initWithFrame:XXX];\
+campFireView.animationImages = [NSArray arrayWithObjects:\
+[UIImage imageNamed:@"campFire01.gif"],\
+[UIImage imageNamed:@"campFire02.gif"]......., nil];\
+campFireView.animationDuration = 1.75;\
+campFireView.animationRepeatCount = 0;\
+[campFireView startAnimating];\
+[campFireView release];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth8900\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 UIImageView *campFireView = [[UIImageView alloc] initWithFrame:XXX];\
+campFireView.animationImages = [NSArray arrayWithObjects:\
+[UIImage imageNamed:@"campFire01.gif"],\
+[UIImage imageNamed:@"campFire02.gif"]......., nil];\
+campFireView.animationDuration = 1.75;\
+campFireView.animationRepeatCount = 0;\
+[campFireView startAnimating];\
+[campFireView release];\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 \uc0\u20108 .UIViewAnimation\u23454 \u20363 \u65306 Animation\u22359 \u21160 \u30011 \u65292 Animation\u22359 \u25903 \u25345 \u22810 \u31181 \u21160 \u30011 \u21472 \u21152 \u65292 \u20250 \u20135 \u29983 \u21508 \u31181 \u19981 \u21516 \u30340 \u25928 \u26524 \u8232 //\u22312 \u36825 \u37324 \u20043 \u21069 \u21021 \u22987 \u21270 \u21442 \u25968 \u8232 XXX\u8232 XXX\
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
+[UIView beginAnimations:nil context:nil];\
+ [UIView setAnimationDelegate:delegate];\
+ [UIView setAnimationWillStartSel<wbr>ector:startSelector];//
+\f2 \'bf\'aa\'ca\'bc\'b5\'c4\'b4\'fa\'c0\'ed
+\f1 \
+ [UIView setAnimationDidStopSelec<wbr>tor:stopSelector];//
+\f2 \'bd\'e1\'ca\'f8\'b5\'c4\'b4\'fa\'c0\'ed
+\f1 \
+ [UIView setAnimationDuration:seconds];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7800\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 [UIView beginAnimations:nil context:nil];\
+[UIView setAnimationDelegate:delegate];\
+[UIView setAnimationWillStartSelector:startSelector];//
+\f2 \'bf\'aa\'ca\'bc\'b5\'c4\'b4\'fa\'c0\'ed
+\f1 \
+[UIView setAnimationDidStopSelector:stopSelector];//
+\f2 \'bd\'e1\'ca\'f8\'b5\'c4\'b4\'fa\'c0\'ed
+\f1 \
+[UIView setAnimationDuration:seconds];\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+//
+\f2 \'b8\'c4\'b1\'e4\'ba\'f3\'b5\'c4\'b2\'ce\'ca\'fd\'a3\'ac\'b6\'af\'bb\'ad\'bd\'ab\'bb\'e1\'b4\'d3\'b3\'f5\'ca\'bc\'bb\'af\'b5\'c4\'b2\'ce\'ca\'fd\'cf\'f2\'b8\'c4\'b1\'e4\'ba\'f3\'b5\'c4\'b2\'ce\'ca\'fd\'b9\'fd\'b6\'c9
+\f1 \
+ //
+\f2 \'ce\'bb\'d6\'c3\'a3\'ba
+\f1 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth6680\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 //
+\f2 \'b8\'c4\'b1\'e4\'ba\'f3\'b5\'c4\'b2\'ce\'ca\'fd\'a3\'ac\'b6\'af\'bb\'ad\'bd\'ab\'bb\'e1\'b4\'d3\'b3\'f5\'ca\'bc\'bb\'af\'b5\'c4\'b2\'ce\'ca\'fd\'cf\'f2\'b8\'c4\'b1\'e4\'ba\'f3\'b5\'c4\'b2\'ce\'ca\'fd\'b9\'fd\'b6\'c9
+\f1 \
+//
+\f2 \'ce\'bb\'d6\'c3\'a3\'ba
+\f1 \cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+tempView.center = center;\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3240\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 tempView.center = center;\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+//
+\f2 \'b4\'f3\'d0\'a1
+\f1 transform\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1860\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 //
+\f2 \'b4\'f3\'d0\'a1
+\f1 transform\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+tempView.transform = CGAffineTransformMakeSca<wbr>le(number, number);\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth8620\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 tempView.transform = CGAffineTransformMakeScale(number, number);\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+//
+\f2 \'cd\'b8\'c3\'f7\'b6\'c8
+\f1 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth920\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 //
+\f2 \'cd\'b8\'c3\'f7\'b6\'c8
+\f1 \cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+tempView.alpha = 0;\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2520\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 tempView.alpha = 0;\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+//
+\f2 \'d0\'fd\'d7\'aa
+\f1 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth680\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 //
+\f2 \'d0\'fd\'d7\'aa
+\f1 \cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+CGAffineTransform newTransform = CGAffineTransformMakeRot<wbr>ation(M_PI);\
+[viewToAddAnimation setTransform:newTransform];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth9160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 CGAffineTransform newTransform = CGAffineTransformMakeRotation(M_PI);\
+[viewToAddAnimation setTransform:newTransform];\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+//
+\f2 \'b7\'ad\'d7\'aa\'c1\'bd\'b8\'f6
+\f1 View
+\f2 \'b5\'c4\'b6\'af\'bb\'ad\'a3\'ba
+\f1 \
+
+\f2 \'b0\'d1\'d2\'bb\'b8\'f6
+\f1 removeFromSupview
+\f2 \'cd\'ac\'ca\'b1\'b0\'d1\'c1\'ed\'d2\'bb\'b8\'f6
+\f1 addSubView
+\f2 \'a3\'ac\'c9\'e8\'d6\'c3\'d2\'bb\'cf\'c2\'b6\'af\'bb\'ad\'b5\'c4\'b7\'ad\'d7\'aa\'d0\'a7\'b9\'fb\'a3\'ba\'c9\'cf\'cf\'c2\'d7\'f3\'d3\'d2\'d1\'a1\'d2\'bb\'b8\'f6\'a3\'bb
+\f1 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth11160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 //
+\f2 \'b7\'ad\'d7\'aa\'c1\'bd\'b8\'f6
+\f1 View
+\f2 \'b5\'c4\'b6\'af\'bb\'ad\'a3\'ba
+\f1 \
+
+\f2 \'b0\'d1\'d2\'bb\'b8\'f6
+\f1 removeFromSupview
+\f2 \'cd\'ac\'ca\'b1\'b0\'d1\'c1\'ed\'d2\'bb\'b8\'f6
+\f1 addSubView
+\f2 \'a3\'ac\'c9\'e8\'d6\'c3\'d2\'bb\'cf\'c2\'b6\'af\'bb\'ad\'b5\'c4\'b7\'ad\'d7\'aa\'d0\'a7\'b9\'fb\'a3\'ba\'c9\'cf\'cf\'c2\'d7\'f3\'d3\'d2\'d1\'a1\'d2\'bb\'b8\'f6\'a3\'bb
+\f1 \cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+[view1 removeFromSupview];\
+[view addSubView:view2];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3600\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 [view1 removeFromSupview];\
+[view addSubView:view2];\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+//
+\f2 \'ba\'e1\'cf\'f2\'bb\'ac\'b6\'af\'d0\'a7\'b9\'fb\'b5\'c8
+\f1 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1880\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 //
+\f2 \'ba\'e1\'cf\'f2\'bb\'ac\'b6\'af\'d0\'a7\'b9\'fb\'b5\'c8
+\f1 \cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+[UIView commitAnimations];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3460\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 [UIView commitAnimations];\cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+.........\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth720\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 .........\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 \'a0\
+\uc0\u19977 .CAAnimation\u23454 \u20363 \u65306 \u8232 \u24377 \u20986 \u26102 \u25238 \u21160 \u26174 \u31034 \u65292 \u27169 \u20223 AlertView\u30340 \u24377 \u20986 \u25928 \u26524 \u65292 \u21487 \u20197 \u23558 \u25238 \u21160 \u32467 \u21512 \u29992 \u21040 \u20854 \u20182 \u30340 \u22320 \u26041 \u65306 \
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
++(void) showCustemAlertViewInRec<wbr>t:(CGRect) frame inView:(UIView *) superview\
+\{\
+UIView *tempView = [UIGloble newWhiteViewWithFrame:frame backgroundColor:[UIColor blueColor]];\
+[superview addSubview:tempView];//CGRectMake(40, 60, DeviceWidth-80, DeviceHeight-200)\
+CAKeyframeAnimation *animation=nil;\
+animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];\
+animation.duration = 0.8;\
+animation.delegate = self;\
+animation.removedOnCompletion = YES;\
+animation.fillMode = kCAFillModeForwards;\
+NSMutableArray *values = [NSMutableArray array];\
+[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)]];\
+[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2, 1.2, 1.0)]];\
+[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.9, 0.9, 0.9)]];\
+[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];\
+animation.values = values;\
+animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEa<wbr>seInEaseOut];\
+[tempView.layer addAnimation:animation forKey:nil];\
+[tempView release];\
+\}\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth320\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13480\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 +(void) showCustemAlertViewInRect:(CGRect) frame inView:(UIView *) superview\
+\{\
+UIView *tempView = [UIGloble newWhiteViewWithFrame:frame backgroundColor:[UIColor blueColor]];\
+[superview addSubview:tempView];//CGRectMake(40, 60, DeviceWidth-80, DeviceHeight-200)\
+CAKeyframeAnimation *animation=nil;\
+animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];\
+animation.duration = 0.8;\
+animation.delegate = self;\
+animation.removedOnCompletion = YES;\
+animation.fillMode = kCAFillModeForwards;\
+NSMutableArray *values = [NSMutableArray array];\
+[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)]];\
+[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2, 1.2, 1.0)]];\
+[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.9, 0.9, 0.9)]];\
+[values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];\
+animation.values = values;\
+animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];\
+[tempView.layer addAnimation:animation forKey:nil];\
+[tempView release];\
+\}\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 \uc0\u22235 .\u26179 \u21160 \u21160 \u25928 \u26524 \u65306 CABasicAnimation\u21160 \u30011 \u20030 \u20363 \u65306 \u21487 \u20197 \u27169 \u20223 iphone\u21024 \u38500 \u31243 \u24207 \u27169 \u24335 \u19979 \u30340 \u25238 \u21160 \u25928 \u26524 \u65306 \
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
+CALayer*viewLayer=[self layer];\
+CABasicAnimation*animation=[CABasicAnimation animationWithKeyPath:@"transform"];\
+animation.duration=0.2;\
+animation.repeatCount = 100000;\
+animation.autoreverses=YES;\
+animation.fromValue=[NSValue valueWithCATransform3D:CATransform3DRotate(viewLayer.transform, -0.03, 0.0, 0.0, 0.03)];\
+animation.toValue=[NSValue valueWithCATransform3D:CATransform3DRotate(viewLayer.transform, 0.03, 0.0, 0.0, 0.03)];\
+[viewLayer addAnimation:animation forKey:@"wiggle"];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13640\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 CALayer*viewLayer=[self layer];\
+CABasicAnimation*animation=[CABasicAnimation animationWithKeyPath:@"transform"];\
+animation.duration=0.2;\
+animation.repeatCount = 100000;\
+animation.autoreverses=YES;\
+animation.fromValue=[NSValue valueWithCATransform3D:CATransform3DRotate(viewLayer.transform, -0.03, 0.0, 0.0, 0.03)];\
+animation.toValue=[NSValue valueWithCATransform3D:CATransform3DRotate(viewLayer.transform, 0.03, 0.0, 0.0, 0.03)];\
+[viewLayer addAnimation:animation forKey:@"wiggle"];\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 \uc0\u20116 .\u25353 \u29031 \u36335 \u24452 \u32472 \u21046 \u21160 \u30011 \u30340 \u25928 \u26524 \u65288 CAKeyframeAnimation : CAPropertyAnimation\u65289 \u8232 \u25351 \u23450 \u20960 \u20010 \u28857 \u65292 \u20250 \u25353 \u29031 \u21160 \u30011 \u25351 \u23450 \u30340 \u36712 \u36857 \u20986 \u25928 \u26524 \u65306 \u21487 \u20197 \u33258 \u36873 \u20960 \u20010 \u27604 \u36739 \u26126 \u26174 \u37325 \u35201 \u30340 \u28857 \u26469 \u32472 \u21046 \u20986 \u21160 \u30011 \
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth20\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 \cell \lastrow\row
+\pard\pardeftab720
+\cf3 \
+CAKeyframeAnimation\
+ *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];\
+[animation setDuration:0.8];\
+CGPoint p1 = tempButton.center;\
+CGPoint p2 = CGPointMake(152, 97);\
+CGPoint p3 = CGPointMake(189, 110);\
+CGPoint p4 = CGPointMake(220, 124);\
+CGPoint p5 = CGPointMake(245, 163);\
+CGPoint p6 = CGPointMake(220, 250);\
+CGPoint p7 = CGPointMake(177, 379);\
+[animation setValues:[NSArray arrayWithObjects:\
+[NSValue valueWithCGPoint:p1],\
+[NSValue valueWithCGPoint:p2],\
+[NSValue valueWithCGPoint:p3],\
+[NSValue valueWithCGPoint:p4],\
+[NSValue valueWithCGPoint:p5],\
+[NSValue valueWithCGPoint:p6],\
+[NSValue valueWithCGPoint:p7],\
+nil]];\
+[animation setKeyTimes:[NSArray arrayWithObjects:\
+[NSNumber numberWithFloat:0.0],\
+[NSNumber numberWithFloat:0.3],\
+[NSNumber numberWithFloat:0.4],\
+[NSNumber numberWithFloat:0.5],\
+[NSNumber numberWithFloat:0.6],\
+[NSNumber numberWithFloat:0.7],\
+[NSNumber numberWithFloat:0.8],\
+nil]];\
+//[animation setAutoreverses:YES];//
+\f2 \'b7\'b5\'bb\'d8\'b5\'bd\'d4\'ad\'ca\'bc\'d7\'b4\'cc\'ac
+\f1 \
+[tempButton.layer addAnimation:animation forKey:@"BookView-Fly"];\
+[UIGloble addAnimationFade:tempButton duraion:0.8];\
+[UIGloble addAnimationScal:tempButton toPoint:tempButton.center \
+lightState:YES delegate:tempButton startSelector:nil \
+stopSelector:@selector(removeFromSuperview) scaleNumber:0.1 \
+duraion:0.8];\
+[tempButton release];\
+[self performSelector:@selector(changeBadgeValue) withObject:nil \
+afterDelay:0.8];\
+\
+
+\f2 \'c1\'f9
+\f1 .CATransition,cube
+\f2 \'b6\'af\'bb\'ad\'b7\'ad\'d7\'aa\'a3\'ac
+\f1 privateAPI\
+\
+CATransition *animation = [CATransition animation];\
+animation.delegate = self;\
+animation.duration = 0.5f;\
+animation.timingFunction = UIViewAnimationCurveEase<wbr>InOut;\
+animation.fillMode = kCAFillModeRemoved;\
+animation.removedOnCompletion = NO;\
+animation.type = @"cube";\
+[[UIApplication sharedApplication].keyWindow.layer \
+addAnimation:animation forKey:@"animationID"];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth320\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13480\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\
+14\
+15\
+16\
+17\
+18\
+19\
+20\
+21\
+22\
+23\
+24\
+25\
+26\
+27\
+28\
+29\
+30\
+31\
+32\
+33\
+34\
+35\
+36\
+37\
+38\
+39\
+40\
+41\
+42\
+43\
+44\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];\
+[animation setDuration:0.8];\
+CGPoint p1 = tempButton.center;\
+CGPoint p2 = CGPointMake(152, 97);\
+CGPoint p3 = CGPointMake(189, 110);\
+CGPoint p4 = CGPointMake(220, 124);\
+CGPoint p5 = CGPointMake(245, 163);\
+CGPoint p6 = CGPointMake(220, 250);\
+CGPoint p7 = CGPointMake(177, 379);\
+[animation setValues:[NSArray arrayWithObjects:\
+[NSValue valueWithCGPoint:p1],\
+[NSValue valueWithCGPoint:p2],\
+[NSValue valueWithCGPoint:p3],\
+[NSValue valueWithCGPoint:p4],\
+[NSValue valueWithCGPoint:p5],\
+[NSValue valueWithCGPoint:p6],\
+[NSValue valueWithCGPoint:p7],\
+nil]];\
+[animation setKeyTimes:[NSArray arrayWithObjects:\
+[NSNumber numberWithFloat:0.0],\
+[NSNumber numberWithFloat:0.3],\
+[NSNumber numberWithFloat:0.4],\
+[NSNumber numberWithFloat:0.5],\
+[NSNumber numberWithFloat:0.6],\
+[NSNumber numberWithFloat:0.7],\
+[NSNumber numberWithFloat:0.8],\
+nil]];\
+//[animation setAutoreverses:YES];//
+\f2 \'b7\'b5\'bb\'d8\'b5\'bd\'d4\'ad\'ca\'bc\'d7\'b4\'cc\'ac
+\f1 \
+[tempButton.layer addAnimation:animation forKey:@"BookView-Fly"];\
+[UIGloble addAnimationFade:tempButton duraion:0.8];\
+[UIGloble addAnimationScal:tempButton toPoint:tempButton.center lightState:YES delegate:tempButton startSelector:nil stopSelector:@selector(removeFromSuperview) scaleNumber:0.1 duraion:0.8];\
+[tempButton release];\
+[self performSelector:@selector(changeBadgeValue) withObject:nil afterDelay:0.8];\
+\
+
+\f2 \'c1\'f9
+\f1 .CATransition,cube
+\f2 \'b6\'af\'bb\'ad\'b7\'ad\'d7\'aa\'a3\'ac
+\f1 privateAPI\
+\
+CATransition *animation = [CATransition animation];\
+animation.delegate = self;\
+animation.duration = 0.5f;\
+animation.timingFunction = UIViewAnimationCurveEaseInOut;\
+animation.fillMode = kCAFillModeRemoved;\
+animation.removedOnCompletion = NO;\
+animation.type = @"cube";\
+[[UIApplication sharedApplication].keyWindow.layer addAnimation:animation forKey:@"animationID"];\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 \uc0\u24635 \u32467 \u20986 \u26469 \u30340 \u65306 \
+\uc0\u23454 \u29616 iphone\u28418 \u20142 \u30340 \u21160 \u30011 \u25928 \u26524 \u20027 \u35201 \u26377 \u20004 \u31181 \u26041 \u27861 \u65292 \u19968 \u31181 \u26159 UIView\u23618 \u38754 \u30340 \u65292 \u19968 \u31181 \u26159 \u20351 \u29992 CATransition\u36827 \u34892 \u26356 \u20302 \u23618 \u27425 \u30340 \u25511 \u21046 \u65292 \u8232 \u31532 \u19968 \u31181 \u26159 UIView\u65292 UIView\u26041 \u24335 \u21487 \u33021 \u22312 \u20302 \u23618 \u20063 \u26159 \u20351 \u29992 CATransition\u36827 \u34892 \u20102 \u23553 \u35013 \u65292 \u23427 \u21482 \u33021 \u29992 \u20110 \u19968 \u20123 \u31616 \u21333 \u30340 \u12289 \u24120 \u29992 \u30340 \u25928 \u26524 \u23637 \u29616 \u65292 \u36825 \u37324 \u20889 \u19968 \u20010 \u24120 \u29992 \u30340 \u31034 \u20363 \u20195 \u30721 \u65292 \u20379 \u22823 \u23478 \u21442 \u32771 \u12290 \
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
+[UIView beginAnimations:@"Curl"context:nil];//
+\f2 \'b6\'af\'bb\'ad\'bf\'aa\'ca\'bc
+\f1 \
+[UIView setAnimationDuration:0.75];\
+[UIView setAnimationDelegate:self];\
+[UIView setAnimationTransition:UIViewAnimationTransitio<wbr>nCurlUp forView:myview cache:YES];\
+[myview removeFromSuperview];\
+[UIView commitAnimations];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth11420\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 [UIView beginAnimations:@"Curl"context:nil];//
+\f2 \'b6\'af\'bb\'ad\'bf\'aa\'ca\'bc
+\f1 \
+[UIView setAnimationDuration:0.75];\
+[UIView setAnimationDelegate:self];\
+[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:myview cache:YES];\
+[myview removeFromSuperview];\
+[UIView commitAnimations];\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 \uc0\u31532 \u20108 \u31181 \u26041 \u24335 \u30456 \u23545 \u22797 \u26434 \u19968 \u20123 \u65292 \u20294 \u22914 \u26524 \u26356 \u22909 \u30340 \u36827 \u34892 \u25511 \u21046 \u65292 \u36824 \u26159 \u20351 \u29992 \u36825 \u31181 \u26041 \u27861 \u21543 \u65292 \u22522 \u26412 \u20351 \u29992 \u26041 \u27861 \u21487 \u20197 \u30475 \u19968 \u19979 \u22914 \u19979 \u20363 \u23376 \u65306 \
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
+CATransition *animation = [CATransition animation];\
+[animation setDuration:1.25f];\
+[animation setTimingFunction:[CAMediaTimingFunction\
+functionWithName:kCAMediaTimingFunctionEa<wbr>seIn]];\
+[animation setType:kCATransitionReveal];\
+[animation setSubtype: kCATransitionFromBottom];\
+[self.view.layer addAnimation:animation forKey:@"Reveal"];\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth160\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\
+7\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 CATransition *animation = [CATransition animation];\
+[animation setDuration:1.25f];\
+[animation setTimingFunction:[CAMediaTimingFunction\
+functionWithName:kCAMediaTimingFunctionEaseIn]];\
+[animation setType:kCATransitionReveal];\
+[animation setSubtype: kCATransitionFromBottom];\
+[self.view.layer addAnimation:animation forKey:@"Reveal"];\cell \lastrow\row
+\pard\pardeftab720\sa100
+
+\f0\fs28 \cf2 \uc0\u36824 \u26377 \u19968 \u31181 \u35774 \u32622 \u21160 \u30011 \u31867 \u22411 \u30340 \u26041 \u27861 \u65292 \u19981 \u29992 setSubtype\u65292 \u21482 \u29992 setType\u8232 [animation setType:@"suckEffect"];\u8232 \u36825 \u37324 \u30340 suckEffect\u23601 \u26159 \u25928 \u26524 \u21517 \u31216 \u65292 \u21487 \u20197 \u29992 \u30340 \u25928 \u26524 \u20027 \u35201 \u26377 \u65306 \u8232 pageCurl \u21521 \u19978 \u32763 \u19968 \u39029 \u8232 pageUnCurl \u21521 \u19979 \u32763 \u19968 \u39029 \u8232 rippleEffect \u28404 \u27700 \u25928 \u26524 \u8232 suckEffect \u25910 \u32553 \u25928 \u26524 \u65292 \u22914 \u19968 \u22359 \u24067 \u34987 \u25277 \u36208 \u8232 cube \u31435 \u26041 \u20307 \u25928 \u26524 \u8232 oglFlip \u19978 \u19979 \u32763 \u36716 \u25928 \u26524 \u8232 \u26368 \u21518 \u20877 \u32473 \u20986 \u19968 \u31181 \u24120 \u29992 \u20195 \u30721 \u20379 \u22823 \u23478 \u21442 \u32771 \u12290 \
+\pard\pardeftab720
+
+\f1\fs24 \cf3 \
+// Curl the image up or down\
+CATransition *animation = [CATransition animation];\
+[animation setDuration:0.35];\
+[animation setTimingFunction:UIViewAnimationCurveEase<wbr>InOut];\
+if (!curled)\{\
+//animation.type = @"mapCurl";\
+animation.type = @"pageCurl";\
+animation.fillMode = kCAFillModeForwards;\
+animation.endProgress = 0.99;\
+\} else \{\
+//animation.type = @"mapUnCurl";\
+animation.type = @"pageUnCurl";\
+animation.fillMode = kCAFillModeBackwards;\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth320\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth7900\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf2 1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10\
+11\
+12\
+13\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 // Curl the image up or down\
+CATransition *animation = [CATransition animation];\
+[animation setDuration:0.35];\
+[animation setTimingFunction:UIViewAnimationCurveEaseInOut];\
+if (!curled)\{\
+//animation.type = @"mapCurl";\
+animation.type = @"pageCurl";\
+animation.fillMode = kCAFillModeForwards;\
+animation.endProgress = 0.99;\
+\} else \{\
+//animation.type = @"mapUnCurl";\
+animation.type = @"pageUnCurl";\
+animation.fillMode = kCAFillModeBackwards;\cell \lastrow\row
+}

@@ -1,0 +1,23 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl480
+
+\f0\fs24 \cf2     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];\
+\'a0\'a0\'a0[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(screenWillRorate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];\
+\'a0\
+\'a0\
+- (void) screenWillRorate:(NSNotification *)notification\
+\{\
+\'a0\'a0\'a0UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];\
+\'a0\'a0\'a0if (orientation == UIDeviceOrientationLandscapeLeft)\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\}\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0if (orientation == UIDeviceOrientationLandscapeRight)\
+\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\}\
+\}\
+\'a0\
+}

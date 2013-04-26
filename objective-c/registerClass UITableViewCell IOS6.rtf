@@ -1,0 +1,158 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset134 STSong;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset0 Tahoma;
+\f3\fnil\fcharset134 STHeitiSC-Light;\f4\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red252\green106\blue8;\red251\green0\blue7;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa380
+
+\f0\fs48 \cf0 \'a1\'be\'d7\'aa\'a1\'bf
+\f1\b \'a0tableview
+\f0\b0 \'b5\'c4\'c1\'bd\'b8\'f6\'bb\'f1\'b5\'c3\'d6\'d8\'d3\'c3
+\f1\b cell
+\f0\b0 \'b7\'bd\'b7\'a8\'b5\'c4\'c7\'f8\'b1\'f0\'a3\'bf
+\f1\b \
+\pard\pardeftab720
+
+\b0\fs32 \cf0 (2013-03-10 12:55:45)\
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "javascript:;"}}{\fldrslt 
+\f0 \cf2 \'d7\'aa\'d4\'d8\'a8\'8b}}\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth960\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\f0 \cf0 \'b1\'ea\'c7\'a9\'a3\'ba
+\f1\b\fs38 \
+\pard\intbl\itap1\pardeftab720\sa360
+{\field{\*\fldinst{HYPERLINK "http://search.sina.com.cn/?c=blog&q=it&by=tag"}}{\fldrslt \cf2 \ul \ulc2 it}}\cell 
+\pard\intbl\itap1\pardeftab720
+
+\b0\fs32 \cf0 \cell \lastrow\row
+\pard\pardeftab720
+
+\fs24 \cf0 tableView:\'a0cellForRowAtIndexPath:
+\f0 \'b7\'bd\'b7\'a8\'d6\'d0\'d3\'d0\'c1\'bd\'b8\'f6\'bb\'f1\'b5\'c3\'d6\'d8\'d3\'c3
+\f1 cell
+\f0 \'b5\'c4\'b7\'bd\'b7\'a8
+\f1\fs32 \
+\pard\pardeftab720
+
+\f2\fs24 \cf0 \
+UITableViewCell\'a0*cell\'a0=\'a0[tableView\'a0dequeueReusableCellWithIdentifier:CellIdentifier];\
+\
+
+\f3 \'ba\'cd
+\f2 \
+\
+UITableViewCell\'a0*cell\'a0=\'a0[tableView\'a0dequeueReusableCellWithIdentifier:CellIdentifier\'a0forIndexPath:indexPath]\
+\
+
+\f3 \'c7\'eb\'ce\'ca\'cb\'fb\'c3\'c7\'d3\'d0\'ca\'b2\'c3\'b4\'c7\'f8\'b1\'f0\'a3\'bf
+\f2 \
+\
+
+\f3 \'b2\'a2\'c7\'d2\'b5\'b1\'ce\'d2\'d3\'c3
+\f2 \'a0UITableViewCell\'a0*cell\'a0=\'a0[tableView\'a0dequeueReusableCellWithIdentifier:CellIdentifier\'a0forIndexPath:indexPath]\
+\
+
+\f3 \'b5\'c4\'ca\'b1\'ba\'f2
+\f2 \
+\
+
+\f3 \'ce\'aa\'ca\'b2\'c3\'b4\'d7\'dc\'b1\'a8\'b4\'ed
+\f2 \
+\
+reason:\'a0'unable\'a0to\'a0dequeue\'a0a\'a0cell\'a0with\'a0identifier\'a0Cell\'a0-\'a0must\'a0register\'a0a\'a0nib\'a0or\'a0a\'a0class\'a0for\'a0the\'a0identifier\'a0or\'a0connect\'a0a\'a0prototype\'a0cell\'a0in\'a0a\'a0storyboard'\
+\
+\
+\pard\pardeftab720
+\cf3 ------
+\f3 \'bd\'e2\'be\'f6\'b7\'bd\'b0\'b8
+\f2 --------------------------------------------------------\cf0 \
+-\'a0(id)dequeueReusableCellWithIdentifier:(NSString\'a0*)identifier;\'a0\
+-\'a0(id)dequeueReusableCellWithIdentifier:(NSString\'a0*)identifier\'a0forIndexPath:(NSIndexPath\'a0*)indexPath\
+\'a0
+\b \cf4 NS_AVAILABLE_IOS(6_0);\'a0//\'a0newer
+\b0 \'a0\cf0 \
+\
+\pard\pardeftab720
+
+\f3 \cf0 \'c7\'f8\'b1\'f0\'d4\'da\'d5\'e2\'b6\'f9
+\f2 \
+\
+\pard\pardeftab720
+\cf3 ------
+\f3 \'bd\'e2\'be\'f6\'b7\'bd\'b0\'b8
+\f2 --------------------------------------------------------\cf0 \
+1\'a0
+\f3 \'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'d4\'da
+\f2 SDK5.0
+\f3 \'ca\'c7\'d4\'cb\'d0\'d0\'b2\'bb\'c6\'f0\'c0\'b4\'b5\'c4\'a1\'a3
+\f2 \
+2\'a0
+\f3 \'c8\'e7\'b9\'fb\'d0\'e8\'d2\'aa\'ca\'b9\'d3\'c3\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'a3\'ac\'c4\'e3\'b1\'d8\'d0\'eb\'ca\'b9\'d3\'c3\'c5\'e4\'cc\'d7\'b5\'c4\'b7\'bd\'b7\'a8\'c0\'b4\'d2\'bb\'c6\'f0\'d3\'c3\'a3\'ac\'cf\'c2\'c3\'e6\'c1\'bd\'b8\'f6\'c5\'e4\'cc\'d7\'b7\'bd\'b7\'a8\'a3\'ba
+\f2 \
+\pard\pardeftab720
+
+\f4 \cf0 \
+//\'a0Beginning\'a0in\'a0iOS\'a06,\'a0clients\'a0can\'a0register\'a0a\'a0nib\'a0or\'a0class\'a0for\'a0each\'a0cell.\
+//\'a0If\'a0all\'a0reuse\'a0identifiers\'a0are\'a0registered,\'a0use\'a0the\'a0newer\'a0-dequeueReusableCellWithIdentifier:forIndexPath:\'a0to\'a0guarantee\'a0that\'a0a\'a0cell\'a0instance\'a0is\'a0returned.\
+//\'a0Instances\'a0returned\'a0from\'a0the\'a0new\'a0dequeue\'a0method\'a0will\'a0also\'a0be\'a0properly\'a0sized\'a0when\'a0they\'a0are\'a0returned.\
+-\'a0(void)registerNib:(UINib\'a0*)nib\'a0forCellReuseIdentifier:(NSString\'a0*)identifier\'a0NS_AVAILABLE_IOS(5_0);\
+-\'a0(void)registerClass:(Class)cellClass\'a0forCellReuseIdentifier:(NSString\'a0*)identifier\'a0NS_AVAILABLE_IOS(6_0);\
+\pard\pardeftab720
+
+\f2 \cf0 \
+
+\f3 \'d7\'a2\'d2\'e2\'bf\'b4\'c9\'cf\'c3\'e6\'b5\'c4\'d7\'a2\'ca\'cd
+\f2 \
+3\'a0
+\f3 \'b1\'c8\'c8\'e7\'c4\'e3\'d2\'d1\'be\'ad\'d3\'c3
+\f2 NIB
+\f3 \'d7\'f6\'c1\'cb\'d2\'bb\'b8\'f6
+\f2 Cell
+\f3 \'a3\'ac\'bb\'f2\'d5\'df\'d7\'d4\'b6\'a8\'d2\'e5\'c1\'cb\'d2\'bb\'b8\'f6
+\f2 Cell
+\f3 \'a1\'a3\'ce\'d2\'c3\'c7\'d4\'da\'c4\'e3\'b4\'b4\'bd\'a8
+\f2 UITableView
+\f3 \'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'be\'cd\'bf\'c9\'d2\'d4\'cb\'b3\'b4\'f8
+\f2 \
+\pard\pardeftab720
+
+\f4 \cf0 self.tableView.backgroundColor\'a0=\'a0xxxx;\
+[self.tableView\'a0registerClass:[CustomCell\'a0class]\'a0forCellReuseIdentifier:@"CustomCell"];\
+\pard\pardeftab720
+
+\f2 \cf0 \
+\
+
+\f3 \'d5\'e2\'d1\'f9\'c4\'e3\'d4\'da
+\f2 -\'a0(UITableViewCell\'a0*)tableView:(UITableView\'a0*)tableView\'a0cellForRowAtIndexPath:(NSIndexPath\'a0*)indexPath
+\f3 \'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'c0\'ef\'a3\'ac\'c4\'e3\'be\'cd\'bf\'c9\'d2\'d4\'ca\'a1\'cf\'c2\'d5\'e2\'d0\'a9\'b4\'fa\'c2\'eb\'a3\'ba
+\f2 \
+\pard\pardeftab720
+
+\f4 \cf0 \'a0\'a0\'a0\'a0static\'a0NSString\'a0*CellIdentifier\'a0=\'a0@"Cell";\
+\'a0\'a0\'a0\'a0if\'a0(cell\'a0==\'a0nil)\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0cell\'a0=\'a0[[UITableViewCell\'a0alloc]\'a0initWithStyle:UITableViewCellStyleDefault\'a0reuseIdentifier:CellIdentifier];\
+\'a0\'a0\'a0\'a0\'a0\'a0//
+\f3 \'c9\'e8\'d6\'c3\'c4\'e3\'b5\'c4
+\f4 cell\
+\pard\pardeftab720
+
+\f3 \cf0 \'a3\'fd
+\f4 \
+
+\f2 \
+
+\f3 \'b6\'f8\'d6\'bb\'d0\'e8\'d2\'aa
+\f2 \
+\pard\pardeftab720
+
+\f4 \cf0 \
+\'a0\'a0\'a0\'a0UITableViewCell\'a0*cell\'a0=\'a0[tableView\'a0dequeueReusableCellWithIdentifier:@"Cell"\'a0forIndexPath:indexPath];\
+}
