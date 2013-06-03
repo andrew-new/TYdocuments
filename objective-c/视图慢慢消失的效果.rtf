@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red53\green117\blue213;\red13\green19\blue31;\red255\green255\blue255;
+\red163\green42\blue47;\red199\green232\blue255;\red120\green149\blue180;\red253\green154\blue48;\red34\green185\blue18;
+\red217\green226\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280
+
+\f0\fs26 \cf2 \cb3 //\cf4 \
+\cf2 //\'a0 UIView+JTRemoveAnimated.h\cf4 \
+\cf2 //\cf4 \
+\cf2 //\'a0 Created by james on 9/1/11.\cf4 \
+\cf2 //\'a0 {\field{\*\fldinst{HYPERLINK "http://ioscodesnippet.tumblr.com/"}}{\fldrslt http://ioscodesnippet.tumblr.com/}}\cf4 \
+\cf2 //\cf4 \
+@interface \cf5 UIView\cf4  \cf6 (JTRemoveAnimated)\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf6 - (\cf4 void\cf6 )removeFromSuperviewAnimated;\cf4 \
+\'a0\
+@end\
+\'a0\
+\'a0\
+\pard\pardeftab720\sl280
+\cf2 //\cf4 \
+\cf2 //\'a0 UIView+JTRemoveAnimated.m\cf4 \
+\cf2 //\cf4 \
+\cf2 //\'a0 Created by james on 9/1/11.\cf4 \
+\cf2 //\'a0 {\field{\*\fldinst{HYPERLINK "http://ioscodesnippet.tumblr.com/"}}{\fldrslt http://ioscodesnippet.tumblr.com/}}\cf4 \
+\cf2 //\cf4 \
+\pard\pardeftab720\sl280
+\cf7 #import <quartzcore quartzcore.h="">\cf4 \
+\'a0\
+@implementation \cf5 UIView\cf4  \cf6 (JTRemoveAnimated)\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf2 // remove static analyser warnings\cf4 \
+\pard\pardeftab720\sl280
+\cf7 #ifndef __clang_analyzer__\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf6 - (\cf4 void\cf6 )animationDidStop:(\cf5 NSString\cf4  \cf6 *)animationID\cf4  \cf8 finished\cf6 :(\cf5 NSNumber\cf4  \cf6 *)finished\cf4  \cf8 context\cf6 :(\cf5 void\cf4  \cf6 *)context \{\cf4 \
+\'a0\'a0\'a0\'a0if \cf6 ([animationID\cf4  \cf8 isEqualToString\cf6 :\cf9 @"fadeout"\cf6 ]) \{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 // Restore the opacity\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 CGFloat\cf4  \cf6 originalOpacity = [(\cf5 NSNumber\cf4  \cf6 *)context\cf4  \cf8 floatValue\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0self\cf10 .layer.opacity\cf4  \cf6 = originalOpacity;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 [\cf4 self \cf8 removeFromSuperview\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 [(\cf5 NSNumber\cf4  \cf6 *)context\cf4  \cf8 release\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf6 \}\cf4 \
+\cf6 \}\cf4 \
+\'a0\
+\cf6 - (\cf4 void\cf6 )removeFromSuperviewAnimated \{\cf4 \
+\'a0\'a0\'a0\'a0\cf6 [\cf5 UIView\cf4  \cf8 beginAnimations\cf6 :\cf9 @"fadeout"\cf4  \cf8 context\cf6 :[[\cf5 NSNumber\cf4  \cf8 numberWithFloat\cf6 :\cf4 self\cf10 .layer.opacity\cf6 ]\cf4  \cf8 retain\cf6 ]];\cf4 \
+\'a0\'a0\'a0\'a0\cf6 [\cf5 UIView\cf4  \cf8 setAnimationDuration\cf6 :\cf9 0\cf10 .3\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf6 [\cf5 UIView\cf4  \cf8 setAnimationDidStopSelector\cf6 :\cf4 @selector\cf6 (animationDidStop:finished:context:)];\cf4 \
+\'a0\'a0\'a0\'a0\cf6 [\cf5 UIView\cf4  \cf8 setAnimationDelegate\cf6 :\cf4 self\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0self\cf10 .layer.opacity\cf4  \cf6 = \cf9 0\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 [\cf5 UIView\cf4  \cf8 commitAnimations\cf6 ];\cf4 \
+\cf6 \}\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf7 #endif\cf4 \
+\'a0\
+}

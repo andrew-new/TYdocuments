@@ -1,0 +1,182 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Consolas;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red199\green232\blue255;\red13\green19\blue31;\red255\green255\blue255;
+\red253\green154\blue48;\red163\green42\blue47;\red217\green226\blue255;\red53\green117\blue213;\red34\green185\blue18;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280
+
+\f0\fs26 \cf2 \cb3 +(UIImage*)\cf4  \cf5 grayscale\cf2 :(UIImage*)anImage\cf4  \cf5 type\cf2 :(\cf4 char\cf2 )type \{\cf4 \
+\'a0\'a0\'a0\'a0\cf6 CGImageRef\cf4 \'a0 \cf2 imageRef;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 imageRef = anImage\cf7 .CGImage\cf2 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf2 size_t width\'a0 = CGImageGetWidth(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\cf2 size_t height = CGImageGetHeight(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'a5\'d4\'a5\'af\'a5\'bb\'a5\'eb\'a4\'f2\'98\'8b\'b3\'c9\'a4\'b9\'a4\'eb
+\f0 RGB
+\f1 \'b8\'f7\'d2\'aa\'cb\'d8\'a4\'ac\'ba\'ce\'a5\'d3\'a5\'c3\'a5\'c8\'a4\'c7\'98\'8b\'b3\'c9\'a4\'b5\'a4\'ec\'a4\'c6\'a4\'a4\'a4\'eb
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf2 size_t\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 bitsPerComponent;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 bitsPerComponent = CGImageGetBitsPerComponent(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'a5\'d4\'a5\'af\'a5\'bb\'a5\'eb\'c8\'ab\'cc\'e5\'a4\'cf\'ba\'ce\'a5\'d3\'a5\'c3\'a5\'c8\'a4\'c7\'98\'8b\'b3\'c9\'a4\'b5\'a4\'ec\'a4\'c6\'a4\'a4\'a4\'eb\'a4\'ab
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf2 size_t\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 bitsPerPixel;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 bitsPerPixel = CGImageGetBitsPerPixel(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'bb\'ad\'cf\'f1\'a4\'ce\'ba\'e1
+\f0 1
+\f1 \'a5\'e9\'a5\'a4\'a5\'f3\'b7\'d6\'a4\'ce\'a5\'c7\'a9\'60\'a5\'bf\'a4\'ac\'a1\'a2\'ba\'ce\'a5\'d0\'a5\'a4\'a5\'c8\'a4\'c7\'98\'8b\'b3\'c9\'a4\'b5\'a4\'ec\'a4\'c6\'a4\'a4\'a4\'eb\'a4\'ab
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf2 size_t\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 bytesPerRow;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 bytesPerRow = CGImageGetBytesPerRow(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'bb\'ad\'cf\'f1\'a4\'ce\'c9\'ab\'bf\'d5\'e9\'67
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf6 CGColorSpaceRef\cf4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf2 colorSpace;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 colorSpace = CGImageGetColorSpace(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'bb\'ad\'cf\'f1\'a4\'ce
+\f0 Bitmap
+\f1 \'c7\'e9\'88\'f3
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf6 CGBitmapInfo\cf4 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf2 bitmapInfo;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 bitmapInfo = CGImageGetBitmapInfo(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'bb\'ad\'cf\'f1\'a4\'ac\'a5\'d4\'a5\'af\'a5\'bb\'a5\'eb\'e9\'67\'a4\'ce\'d1\'61\'cd\'ea\'a4\'f2\'a4\'b7\'a4\'c6\'a4\'a4\'a4\'eb\'a4\'ab
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0bool\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf2 shouldInterpolate;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 shouldInterpolate = CGImageGetShouldInterpolate(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'b1\'ed\'ca\'be\'d7\'b0\'d6\'c3\'a4\'cb\'a4\'e8\'a4\'c3\'a4\'c6\'d1\'61\'d5\'fd\'a4\'f2\'a4\'b7\'a4\'c6\'a4\'a4\'a4\'eb\'a4\'ab
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf6 CGColorRenderingIntent\cf4 \'a0 \cf2 intent;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 intent = CGImageGetRenderingIntent(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'bb\'ad\'cf\'f1\'a4\'ce\'a5\'c7\'a9\'60\'a5\'bf\'a5\'d7\'a5\'ed\'a5\'d0\'a5\'a4\'a5\'c0\'a4\'f2\'c8\'a1\'b5\'c3\'a4\'b9\'a4\'eb
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf6 CGDataProviderRef\cf4 \'a0\'a0 \cf2 dataProvider;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 dataProvider = CGImageGetDataProvider(imageRef);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'a5\'c7\'a9\'60\'a5\'bf\'a5\'d7\'a5\'ed\'a5\'d0\'a5\'a4\'a5\'c0\'a4\'ab\'a4\'e9\'bb\'ad\'cf\'f1\'a4\'ce
+\f0 bitmap
+\f1 \'c9\'fa\'a5\'c7\'a9\'60\'a5\'bf\'c8\'a1\'b5\'c3
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf6 CFDataRef\cf4 \'a0\'a0 \cf2 data;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 UInt\cf9 8\cf2 *\'a0\'a0\'a0\'a0\'a0 buffer;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 data = CGDataProviderCopyData(dataProvider);\cf4 \
+\'a0\'a0\'a0\'a0\cf2 buffer = (UInt\cf9 8\cf2 *)CFDataGetBytePtr(data);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 1
+\f1 \'a5\'d4\'a5\'af\'a5\'bb\'a5\'eb\'a4\'ba\'a4\'c4\'bb\'ad\'cf\'f1\'a4\'f2\'84\'49\'c0\'ed
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf6 NSUInteger\cf4 \'a0 \cf2 x, y;\cf4 \
+\'a0\'a0\'a0\'a0for \cf2 (y = \cf9 0\cf2 ; y < height; y++) \{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0for \cf2 (x = \cf9 0\cf2 ; x < width; x++) \{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 UInt\cf9 8\cf2 *\'a0 tmp;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 tmp = buffer + \cf6 y\cf4  \cf2 * bytesPerRow + \cf6 x\cf4  \cf2 * \cf9 4\cf2 ; \cf8 // RGBA
+\f1 \'a4\'ce
+\f0 4
+\f1 \'a4\'c4\'82\'8e\'a4\'f2\'a4\'e2\'a4\'c3\'a4\'c6\'a4\'a4\'a4\'eb\'a4\'ce\'a4\'c7\'a1\'a2
+\f0 1
+\f1 \'a5\'d4\'a5\'af\'a5\'bb\'a5\'eb\'a4\'b4\'a4\'c8\'a4\'cb
+\f0 *4
+\f1 \'a4\'b7\'a4\'c6\'a4\'ba\'a4\'e9\'a4\'b9
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf8 // RGB
+\f1 \'82\'8e\'a4\'f2\'c8\'a1\'b5\'c3
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 UInt8\cf4  \cf2 red,green,blue;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 red = *(tmp + \cf9 0\cf2 );\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 green = *(tmp + \cf9 1\cf2 );\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 blue = *(tmp + \cf9 2\cf2 );\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 UInt8\cf4  \cf2 brightness;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0switch \cf2 (type) \{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0case \cf5 1\cf2 :\cf8 //
+\f1 \'a5\'e2\'a5\'ce\'a5\'af\'a5\'ed
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'dd\'78\'b6\'c8\'d3\'8b\'cb\'e3
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 brightness = (\cf6 77\cf4  \cf2 * red + \cf6 28\cf4  \cf2 * green + \cf6 151\cf4  \cf2 * blue) / \cf9 256\cf2 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 0\cf2 ) = brightness;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 1\cf2 ) = brightness;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 2\cf2 ) = brightness;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 break;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0case \cf5 2\cf2 :\cf8 //
+\f1 \'a5\'bb\'a5\'d4\'a5\'a2
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 0\cf2 ) = red;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 1\cf2 ) = \cf6 green\cf4  \cf2 * \cf9 0\cf7 .7\cf2 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 2\cf2 ) = \cf6 blue\cf4  \cf2 * \cf9 0\cf7 .4\cf2 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 break;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0case \cf5 3\cf2 :\cf8 //
+\f1 \'c9\'ab\'b7\'b4\'dc\'9e
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 0\cf2 ) = \cf9 255\cf4  \cf2 - red;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 1\cf2 ) = \cf9 255\cf4  \cf2 - green;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 2\cf2 ) = \cf9 255\cf4  \cf2 - blue;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 break;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf5 default\cf2 :\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 0\cf2 ) = red;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 1\cf2 ) = green;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 *(tmp + \cf9 2\cf2 ) = blue;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 break;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \}\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \}\cf4 \
+\'a0\'a0\'a0\'a0\cf2 \}\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'84\'bf\'b9\'fb\'a4\'f2\'d3\'eb\'a4\'a8\'a4\'bf\'a5\'c7\'a9\'60\'a5\'bf\'c9\'fa\'b3\'c9
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf6 CFDataRef\cf4 \'a0\'a0 \cf2 effectedData;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 effectedData = CFDataCreate(\cf4 NULL\cf2 , buffer, CFDataGetLength(data));\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'84\'bf\'b9\'fb\'a4\'f2\'d3\'eb\'a4\'a8\'a4\'bf\'a5\'c7\'a9\'60\'a5\'bf\'a5\'d7\'a5\'ed\'a5\'d0\'a5\'a4\'a5\'c0\'a4\'f2\'c9\'fa\'b3\'c9
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf6 CGDataProviderRef\cf4 \'a0\'a0 \cf2 effectedDataProvider;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 effectedDataProvider = CGDataProviderCreateWithCFData(effectedData);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'bb\'ad\'cf\'f1\'a4\'f2\'c9\'fa\'b3\'c9
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf6 CGImageRef\cf4 \'a0 \cf2 effectedCgImage;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 UIImage*\'a0\'a0\'a0 effectedImage;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 effectedCgImage = CGImageCreate(\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 width, height,\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 bitsPerComponent, bitsPerPixel, bytesPerRow,\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 colorSpace, bitmapInfo, effectedDataProvider,\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 NULL\cf2 , shouldInterpolate, intent);\cf4 \
+\'a0\'a0\'a0\'a0\cf2 effectedImage = [[\cf6 UIImage\cf4  \cf5 alloc\cf2 ]\cf4  \cf5 initWithCGImage\cf2 :effectedCgImage];\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // 
+\f1 \'a5\'c7\'a9\'60\'a5\'bf\'a4\'ce\'bd\'e2\'b7\'c5
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0\cf2 CGImageRelease(effectedCgImage);\cf4 \
+\'a0\'a0\'a0\'a0\cf2 CFRelease(effectedDataProvider);\cf4 \
+\'a0\'a0\'a0\'a0\cf2 CFRelease(effectedData);\cf4 \
+\'a0\'a0\'a0\'a0\cf2 CFRelease(data);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0return \cf2 effectedImage;\cf4 \
+\cf2 \}\cf4 \
+}

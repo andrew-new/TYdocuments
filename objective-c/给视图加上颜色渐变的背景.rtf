@@ -1,0 +1,85 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red13\green19\blue31;\red163\green42\blue47;
+\red199\green232\blue255;\red53\green117\blue213;\red253\green154\blue48;\red34\green185\blue18;\red217\green226\blue255;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280
+
+\f0\fs26 \cf2 \cb3 @interface \cf4 ColorGradientView\cf2  \cf5 : NSView\cf2 \
+\pard\pardeftab720\sl280
+\cf5 \{\cf2 \
+\'a0\'a0\cf4 NSColor\cf2  \cf5 *startingColor;\cf2 \
+\'a0\'a0\cf4 NSColor\cf2  \cf5 *endingColor;\cf2 \
+\'a0\'a0int \cf5 angle;\cf2 \
+\cf5 \}\cf2 \
+\'a0\'a0\
+\pard\pardeftab720\sl280
+\cf6 // Define the variables as properties\cf2 \
+@property\cf5 (\cf2 nonatomic\cf5 , \cf2 retain\cf5 ) \cf4 NSColor\cf2  \cf5 *startingColor;\cf2 \
+@property\cf5 (\cf2 nonatomic\cf5 , \cf2 retain\cf5 ) \cf4 NSColor\cf2  \cf5 *endingColor;\cf2 \
+@property\cf5 (assign) \cf2 int \cf5 angle;\cf2 \
+\'a0\'a0\
+@end\
+\'a0\'a0\
+@implementation \cf5 ColorGradientView\cf2 \
+\'a0\'a0\
+\cf6 // Automatically create accessor methods\cf2 \
+@synthesize \cf5 startingColor;\cf2 \
+@synthesize \cf5 endingColor;\cf2 \
+@synthesize \cf5 angle;\cf2 \
+\'a0\'a0\
+\pard\pardeftab720\sl280
+\cf5 - (\cf2 id\cf5 )initWithFrame:(NSRect)frame;\cf2 \
+\cf5 \{\cf2 \
+\'a0\'a0if \cf5 (\cf2 self \cf5 = [\cf2 super \cf7 initWithFrame\cf5 :frame]) \{\cf2 \
+\'a0\'a0\'a0\'a0\cf5 [\cf2 self \cf7 setStartingColor\cf5 :[\cf4 NSColor\cf2  \cf7 colorWithCalibratedWhite\cf5 :\cf8 1\cf9 .0\cf2  \cf7 alpha\cf5 :\cf8 1\cf9 .0\cf5 ]];\cf2 \
+\'a0\'a0\'a0\'a0\cf5 [\cf2 self \cf7 setEndingColor\cf2 :nil\cf5 ];\cf2 \
+\'a0\'a0\'a0\'a0\cf5 [\cf2 self \cf7 setAngle\cf5 :\cf8 270\cf5 ];\cf2 \
+\'a0\'a0\cf5 \}\cf2 \
+\'a0\'a0return self\cf5 ;\cf2 \
+\cf5 \}\cf2 \
+\'a0\'a0\
+\cf5 - (\cf2 void\cf5 )drawRect:(NSRect)rect;\cf2 \
+\cf5 \{\cf2 \
+\'a0\'a0if \cf5 (endingColor ==\cf2  nil \cf5 || [startingColor\cf2  \cf7 isEqual\cf5 :endingColor]) \{\cf2 \
+\'a0\'a0\'a0\'a0\cf6 // Fill view with a standard background color\cf2 \
+\'a0\'a0\'a0\'a0\cf5 [startingColor\cf2  \cf7 set\cf5 ];\cf2 \
+\'a0\'a0\'a0\'a0\cf5 NSRectFill(rect);\cf2 \
+\'a0\'a0\cf5 \}\cf2 \
+\'a0\'a0else \cf5 \{\cf2 \
+\'a0\'a0\'a0\'a0\cf6 // Fill view with a top-down gradient\cf2 \
+\'a0\'a0\'a0\'a0\cf6 // from startingColor to endingColor\cf2 \
+\'a0\'a0\'a0\'a0\cf5 NSGradient* aGradient = [[[\cf4 NSGradient\cf2  \cf7 alloc\cf5 ]\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf7 initWithStartingColor\cf5 :startingColor\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf7 endingColor\cf5 :endingColor]\cf2  \cf7 autorelease\cf5 ];\cf2 \
+\'a0\'a0\'a0\'a0\cf5 [aGradient\cf2  \cf7 drawInRect\cf5 :[\cf2 self \cf7 bounds\cf5 ]\cf2  \cf7 angle\cf5 :angle];\cf2 \
+\'a0\'a0\cf5 \}\cf2 \
+\cf5 \}\cf2 \
+\'a0\'a0\
+\cf5 - (\cf2 void\cf5 )setStartingColor:(\cf4 NSColor\cf2  \cf5 *)newColor;\cf2 \
+\cf5 \{\cf2 \
+\'a0\cf5 [startingColor\cf2  \cf7 autorelease\cf5 ];\cf2 \
+\'a0\cf5 startingColor = [newColor\cf2  \cf7 retain\cf5 ];\cf2 \
+\'a0\'a0\
+\'a0\cf5 [\cf2 self \cf7 setNeedsDisplay\cf5 :\cf2 YES\cf5 ];\cf2 \
+\cf5 \}\cf2 \
+\'a0\'a0\
+\cf5 - (\cf2 void\cf5 )setEndingColor:(\cf4 NSColor\cf2  \cf5 *)newColor;\cf2 \
+\cf5 \{\cf2 \
+\'a0\cf5 [endingColor\cf2  \cf7 autorelease\cf5 ];\cf2 \
+\'a0\cf5 endingColor = [newColor\cf2  \cf7 retain\cf5 ];\cf2 \
+\'a0\'a0\
+\'a0\cf5 [\cf2 self \cf7 setNeedsDisplay\cf5 :\cf2 YES\cf5 ];\cf2 \
+\cf5 \}\cf2 \
+\'a0\'a0\
+\cf5 - (\cf2 void\cf5 )dealloc;\cf2 \
+\cf5 \{\cf2 \
+\'a0\cf5 [\cf2 self \cf7 setStartingColor\cf2 :nil\cf5 ];\cf2 \
+\'a0\cf5 [\cf2 self \cf7 setEndingColor\cf2 :nil\cf5 ];\cf2 \
+\'a0\cf5 [\cf2 super \cf7 dealloc\cf5 ];\cf2 \
+\cf5 \}\cf2 \
+\'a0\'a0\
+@end\
+}

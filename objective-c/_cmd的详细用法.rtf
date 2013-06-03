@@ -1,0 +1,50 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Consolas;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red53\green117\blue213;\red13\green19\blue31;\red255\green255\blue255;
+\red199\green232\blue255;\red34\green185\blue18;\red253\green154\blue48;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280
+
+\f0\fs26 \cf2 \cb3 //
+\f1 \'b1\'c8\'c8\'e7\'d0\'e8\'d2\'aa\'b4\'f2\'d3\'a1\'b5\'b1\'c7\'b0\'b1\'bb\'b5\'f7\'d3\'c3\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ac\'bf\'c9\'d2\'d4\'d4\'da\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'d6\'d0\'cc\'ed\'bc\'d3\'a3\'ba
+\f0 \cf4 \
+\pard\pardeftab720\sl280
+\cf5 NSLog(\cf6 @"%@ call"\cf5 ,NSStringFromSelector(_cmd));\cf4 \
+\pard\pardeftab720\sl280
+\cf2 //
+\f1 \'bb\'e1\'ca\'e4\'b3\'f6\'c0\'e0\'cb\'c6
+\f0 \cf4 \
+\cf2 //2013-01-10 11:25:46.902 TDDataViewer[855:303] applicationDidFinishLaunching: call\cf4 \
+\cf2 //
+\f1 \'d5\'e2\'d1\'f9\'b5\'c4\'c4\'da\'c8\'dd\'a1\'a3
+\f0 \cf4 \
+\'a0\
+\cf2 //
+\f1 \'d4\'da
+\f0 cocos2d
+\f1 \'d6\'d0\'a3\'ac
+\f0 _cmd
+\f1 \'cd\'a8\'b3\'a3\'d3\'c3\'d3\'da\'b6\'a8\'ca\'b1\'b5\'f7\'d3\'c3\'c4\'b3\'b8\'f6\'ba\'af\'ca\'fd\'a3\'a8
+\f0 schedule
+\f1 \'a3\'a9
+\f0 \cf4 \
+\cf2 //
+\f1 \'b1\'c8\'c8\'e7\'cf\'c2\'c3\'e6\'b7\'bd\'b7\'a8\'c0\'fb\'d3\'c3
+\f0 _cmd
+\f1 \'c4\'dc\'b9\'bb\'b2\'bb\'b6\'a8\'ca\'b1\'b5\'d8\'b5\'f7\'d3\'c3\'c4\'b3\'b8\'f6\'ba\'af\'ca\'fd
+\f0 \cf4 \
+\pard\pardeftab720\sl280
+\cf5 -(\cf4 void\cf5 ) scheduleUpdates \{\cf4 \
+\'a0\'a0\'a0\'a0\cf2 // schedule the first update as usual\cf4 \
+\'a0\'a0\'a0\'a0\cf5 [\cf4 self \cf7 schedule\cf5 :\cf4 @selector\cf5 (irregularUpdate:)\cf4  \cf7 interval\cf5 :\cf6 1\cf5 ]; \cf4 \
+\cf5 \}\cf4 \
+\cf5 -(\cf4 void\cf5 )\cf4  \cf7 irregularUpdate\cf5 :(ccTime)delta \{\cf4 \
+\'a0\'a0\'a0\'a0\cf2 // unschedule the method first [self unschedule:_cmd];\cf4 \
+\'a0\'a0\'a0\'a0\cf2 // I assume you\'92d have some kind of logic other than random to determine \cf4 \
+\'a0\'a0\'a0\'a0\cf2 // the next time the method should be called\cf4 \
+\'a0\'a0\'a0\'a0float \cf5 nextUpdate = CCRANDOM_\cf6 0\cf5 _\cf6 1\cf5 () * \cf6 10\cf5 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf2 // then re-schedule it with the new interval using _cmd as the selector\cf4 \
+\'a0\'a0\'a0\'a0\cf5 [\cf4 self \cf7 schedule\cf5 :_cmd\cf4  \cf7 interval\cf5 :nextUpdate]; \cf4 \
+\cf5 \}\cf4 \
+}

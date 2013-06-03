@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Consolas;
+}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red199\green232\blue255;\red13\green19\blue31;
+\red163\green42\blue47;\red217\green226\blue255;\red253\green154\blue48;\red34\green185\blue18;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa200
+
+\f0\b\fs32 \cf0 \cb2 \'d7\'d4\'b6\'a8\'d2\'e5
+\f1 UISearchBar
+\f0 \'b5\'c4\'b1\'b3\'be\'b0\'cd\'bc
+\f1 \
+\pard\pardeftab720
+
+\f0\b0\fs28 \cf0 \cb1 \'bf\'c9\'d2\'d4\'d6\'d8\'d0\'b4
+\f1 UISearchBar
+\f0 \'a3\'ac\'c8\'bb\'ba\'f3\'b5\'f7\'d3\'c3
+\f1 layoutSubviews
+\f0 \'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8
+\f1 \
+\
+\
+\pard\pardeftab720\sl280
+
+\f2\fs26 \cf3 \cb4 - (\cf2 void\cf3 )layoutSubviews \{\cf2 \
+\'a0\'a0\'a0\'a0\cf5 UITextField\cf2  \cf3 *searchField;\cf2 \
+\'a0\'a0\'a0\'a0\cf5 NSUInteger\cf2  \cf3 numViews = [\cf2 self\cf6 .subviews\cf2  \cf7 count\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0for\cf3 (\cf2 int \cf3 i = \cf8 0\cf3 ; i < numViews; i++) \{\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0if\cf3 ([[\cf2 self\cf6 .subviews\cf2  \cf7 objectAtIndex\cf3 :i]\cf2  \cf7 isKindOfClass\cf3 :[\cf5 UITextField\cf2  \cf7 class\cf3 ]]) \{\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 searchField = [\cf2 self\cf6 .subviews\cf2  \cf7 objectAtIndex\cf3 :i];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \}\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \}\cf2 \
+\'a0\'a0\'a0\'a0if\cf3 (!(searchField ==\cf2  nil\cf3 )) \{\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 searchField\cf6 .textColor\cf2  \cf3 = [\cf5 UIColor\cf2  \cf7 whiteColor\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 [searchField\cf6 .leftView\cf2  \cf7 setHidden\cf3 :\cf2 YES\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 [searchField\cf2  \cf7 setBackground\cf3 : [\cf5 UIImage\cf2  \cf7 imageNamed\cf3 :\cf8 @"SearchBarBackground.png"\cf3 ] ];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 [searchField\cf2  \cf7 setBorderStyle\cf3 :UITextBorderStyleNone];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \}\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 [\cf2 super \cf7 layoutSubviews\cf3 ];\cf2 \
+\cf3 \}\cf2 \
+}

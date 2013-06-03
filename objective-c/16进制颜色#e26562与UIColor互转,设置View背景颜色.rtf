@@ -1,0 +1,72 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 Consolas;
+}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red199\green232\blue255;\red13\green19\blue31;
+\red253\green154\blue48;\red163\green42\blue47;\red34\green185\blue18;\red217\green226\blue255;\red53\green117\blue213;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa200
+
+\f0\b\fs32 \cf0 \cb2 16
+\f1 \'bd\'f8\'d6\'c6\'d1\'d5\'c9\'ab
+\f0 #e26562
+\f1 \'d3\'eb
+\f0 UIColor
+\f1 \'bb\'a5\'d7\'aa
+\f0 ,
+\f1 \'c9\'e8\'d6\'c3
+\f0 View
+\f1 \'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
+\f0 \
+\pard\pardeftab720\sl280
+
+\f2\b0\fs26 \cf3 \cb4 - (\cf2 void\cf3 )viewDidLoad\cf2 \
+\cf3 \{\cf2 \
+\'a0\'a0\'a0\'a0\cf3 [\cf2 super \cf5 viewDidLoad\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0\cf6 UIView\cf2  \cf3 *view=[[\cf6 UIView\cf2  \cf5 alloc\cf3 ]initWithFrame:CGRectMake(\cf7 0\cf3 , \cf7 0\cf3 , \cf2 self\cf8 .view.frame.size.width\cf3 , \cf7 300\cf3 )];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 view\cf8 .backgroundColor\cf3 =[\cf2 self \cf5 colorWithHexString\cf3 :\cf7 @"e26562"\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 [\cf2 self\cf8 .view\cf2  \cf5 addSubview\cf3 :view]; \cf2 \
+\cf3 \}\cf2 \
+\cf3 - (\cf6 UIColor\cf2  \cf3 *)\cf2  \cf5 colorWithHexString\cf3 : (\cf6 NSString\cf2  \cf3 *)color\cf2 \
+\cf3 \{\cf2 \
+\'a0\'a0\'a0\'a0\cf6 NSString\cf2  \cf3 *cString = [[color\cf2  \cf5 stringByTrimmingCharactersInSet\cf3 :[\cf6 NSCharacterSet\cf2  \cf5 whitespaceAndNewlineCharacterSet\cf3 ]]\cf2  \cf5 uppercaseString\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf9 // String should be 6 or 8 characters\cf2 \
+\'a0\'a0\'a0\'a0if \cf3 ([cString\cf2  \cf5 length\cf3 ] < \cf7 6\cf3 ) \{\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0return \cf3 [\cf6 UIColor\cf2  \cf5 clearColor\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \}\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf9 // strip 0X if it appears\cf2 \
+\'a0\'a0\'a0\'a0if \cf3 ([cString\cf2  \cf5 hasPrefix\cf3 :\cf7 @"0X"\cf3 ])\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 cString = [cString\cf2  \cf5 substringFromIndex\cf3 :\cf7 2\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0if \cf3 ([cString\cf2  \cf5 hasPrefix\cf3 :\cf7 @"#"\cf3 ])\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 cString = [cString\cf2  \cf5 substringFromIndex\cf3 :\cf7 1\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0if \cf3 ([cString\cf2  \cf5 length\cf3 ] != \cf7 6\cf3 )\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0return \cf3 [\cf6 UIColor\cf2  \cf5 clearColor\cf3 ];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf9 // Separate into r, g, b substrings\cf2 \
+\'a0\'a0\'a0\'a0\cf6 NSRange\cf2  \cf3 range;\cf2 \
+\'a0\'a0\'a0\'a0\cf3 range\cf8 .location\cf2  \cf3 = \cf7 0\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\cf3 range\cf8 .length\cf2  \cf3 = \cf7 2\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf9 //r\cf2 \
+\'a0\'a0\'a0\'a0\cf6 NSString\cf2  \cf3 *rString = [cString\cf2  \cf5 substringWithRange\cf3 :range];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf9 //g\cf2 \
+\'a0\'a0\'a0\'a0\cf3 range\cf8 .location\cf2  \cf3 = \cf7 2\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\cf6 NSString\cf2  \cf3 *gString = [cString\cf2  \cf5 substringWithRange\cf3 :range];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf9 //b\cf2 \
+\'a0\'a0\'a0\'a0\cf3 range\cf8 .location\cf2  \cf3 = \cf7 4\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\cf6 NSString\cf2  \cf3 *bString = [cString\cf2  \cf5 substringWithRange\cf3 :range];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf9 // Scan values\cf2 \
+\'a0\'a0\'a0\'a0\cf3 unsigned \cf2 int \cf3 r, g, b;\cf2 \
+\'a0\'a0\'a0\'a0\cf3 [[\cf6 NSScanner\cf2  \cf5 scannerWithString\cf3 :rString]\cf2  \cf5 scanHexInt\cf3 :&r];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 [[\cf6 NSScanner\cf2  \cf5 scannerWithString\cf3 :gString]\cf2  \cf5 scanHexInt\cf3 :&g];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 [[\cf6 NSScanner\cf2  \cf5 scannerWithString\cf3 :bString]\cf2  \cf5 scanHexInt\cf3 :&b];\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0return \cf3 [\cf6 UIColor\cf2  \cf5 colorWithRed\cf3 :((\cf2 float\cf3 ) r / \cf7 255\cf8 .0f\cf3 )\cf2  \cf5 green\cf3 :((\cf2 float\cf3 ) g / \cf7 255\cf8 .0f\cf3 )\cf2  \cf5 blue\cf3 :((\cf2 float\cf3 ) b / \cf7 255\cf8 .0f\cf3 )\cf2  \cf5 alpha\cf3 :\cf7 1\cf8 .0f\cf3 ];\cf2 \
+\cf3 \}\cf2 \
+}

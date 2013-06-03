@@ -1,0 +1,111 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 ArialMT;
+\f3\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red146\green255\blue255;\red38\green38\blue38;\red255\green255\blue255;
+\red251\green0\blue7;\red255\green255\blue84;\red199\green232\blue255;\red13\green19\blue31;\red163\green42\blue47;
+\red253\green154\blue48;\red53\green117\blue213;\red34\green185\blue18;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 iOS
+\f1   
+\f0 \'b5\'a5\'c0\'fd \'b9\'d9\'b7\'bd\
+\
+\
+\pard\pardeftab720\sl520\sa280
+
+\b\fs28 \cf0 \cb2 \'b5\'a5\'c0\'fd
+\b0 \cf3 \cb4 \'ca\'c7\'d6\'b8\'be\'b2\'cc\'ac\'b7\'d6\'c5\'e4\'b5\'c4\'ca\'b5\'c0\'fd\'a3\'ac\'b6\'f8
+\f2  iphone sdk 
+\f0 \'d6\'d0\'c8\'ab\'ca\'c7\'d5\'e2\'d6\'d6\'ca\'b5\'c0\'fd\'a3\'ac\'c0\'fd\'c8\'e7
+\f2 \
+[UIApplication sharedApplication] 
+\f0 \'b7\'b5\'bb\'d8\'d2\'bb\'b8\'f6\'d6\'b8\'cf\'f2\'b4\'fa\'b1\'ed\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4
+\b \cf0 \cb2 \'b5\'a5\'c0\'fd
+\b0 \cf3 \cb4 \'b6\'d4\'cf\'f3\'b5\'c4\'d6\'b8\'d5\'eb\'a1\'a3
+\f2 [UIDevice currentDevice] 
+\f0 \'bb\'f1\'c8\'a1\'d2\'bb\'b8\'f6\'b4\'fa\'b1\'ed\'cb\'f9\'d3\'d0\'ca\'b9\'d3\'c3\'d3\'b2\'bc\'fe\'c6\'bd\'cc\'a8\'b5\'c4\'b6\'d4\'cf\'f3\'a1\'a3
+\f2 \
+\pard\pardeftab720\sl520\sa280
+
+\f0 \cf3 \'bd\'ab\'c0\'e0\'b7\'bd\'b7\'a8\'d3\'eb
+\b \cf0 \cb2 \'b5\'a5\'c0\'fd
+\b0 \cf3 \cb4 \'cf\'e0\'bd\'e1\'ba\'cf\'a3\'ac\'b1\'e3\'bf\'c9\'d2\'d4\'d4\'da\'b3\'cc\'d0\'f2\'b5\'c4\'c8\'ce\'ba\'ce\'b5\'d8\'b7\'bd\'b7\'c3\'ce\'ca\'be\'b2\'cc\'ac\'ca\'b5\'c0\'fd\'a3\'ac\'b6\'f8\'ce\'de\'d0\'e8\'ca\'b9\'d3\'c3\'d6\'b8\'cf\'f2\'b6\'d4\'cf\'f3\'b5\'c4\'d6\'b8\'d5\'eb\'bb\'f2\'b1\'a3\'b4\'e6\'cb\'fc\'b5\'c4\'ca\'b5\'c0\'fd\'b1\'e4\'c1\'bf\'a1\'a3\'b4\'b4\'bd\'a8\'c0\'e0\'b5\'c4\'ce\'a8\'d2\'bb\'ca\'b5\'c0\'fd\'a3\'a8\'c6\'d5\'cd\'a8
+\b \cf0 \cb2 \'b5\'a5\'c0\'fd
+\b0 \cf3 \cb4 \'a3\'a9\'b5\'c4\'ba\'af\'ca\'fd\'ca\'be\'c0\'fd\'a3\'ba
+\f2 \
+//
+\f0 \'d4\'da\'ba\'dc\'b6\'e0\'ca\'b1\'ba\'f2\'a3\'ac\'ce\'d2\'c3\'c7\'ca\'b9\'d3\'c3\'c4\'b3\'b8\'f6\'c0\'e0\'b5\'c4\'ce\'a8\'d2\'bb\'ca\'b5\'c0\'fd\'a1\'a3\'d7\'ee\'b3\'a3\'bc\'fb\'b5\'c4\'be\'cd\'ca\'c7\'d2\'bb\'b8\'f6\'b3\'cc\'d0\'f2\'b5\'c4\'d6\'f7\'c0\'e0\'a3\'ac\'d2\'d4\'cf\'c2\'ca\'c7\'d2\'d4\'c3\'fb\'ce\'aa
+\f2  RootViewController 
+\f0 \'b4\'b4\'bd\'a8\'b5\'c4\'d2\'bb\'b8\'f6
+\b \cf0 \cb2 \'b5\'a5\'c0\'fd
+\b0 \cf3 \cb4 \'ba\'af\'ca\'fd\'a3\'ba
+\f2 \
+\pard\pardeftab720\sl520\sa280
+\cf5 static \cf3 RootViewController *sharedRootController = nil;\
+\cf5 +\cf3 (RootViewController *) sharedController\{ \uc0\u8232 \'a0\u8232 \'a0 \cf5 @synchronized\cf3 (self)\uc0\u8232 \'a0 \{\'a0\'a0\'a0\'a0 \u8232 \'a0\'a0\'a0\'a0 if (sharedRootController == nil)\u8232 \'a0\'a0\'a0\'a0 \{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 sharedRootController = [[[self alloc] init] autorelease];\'a0\'a0\'a0\'a0\'a0\'a0 \u8232 \'a0\'a0\'a0\'a0 \}\'a0\'a0 \u8232 \'a0 \}\u8232 \'a0 return sharedRootController; \u8232 \}\
+\cf5 +\cf3 (id) \cf5 allocWithZone\cf3 :(NSZone *)zone\uc0\u8232 \{\'a0\'a0 \u8232 \'a0\'a0 @synchronized(self)\u8232 \'a0\'a0 \{\'a0\'a0\'a0\'a0\'a0\'a0 \u8232 \'a0\'a0\'a0\'a0\'a0 if (sharedRootController == nil)\u8232 \'a0\'a0\'a0\'a0 \{\'a0\'a0 \u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sharedRootController = [super allocWithZone:zone];\'a0\'a0\'a0\'a0 \u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 return sharedRootController;\'a0\'a0\'a0\'a0\'a0 \u8232 \'a0\'a0\'a0\'a0 \}\u8232 \'a0\'a0 \}\'a0\'a0 \u8232 \'a0\'a0 return nil; \u8232 \}\
+\pard\pardeftab720\sl520\sa280
+
+\f0 \cf3 \'b4\'fa\'c2\'eb\'cb\'b5\'c3\'f7\'a3\'ba
+\f2 \'a0\
+1
+\f0 \'a1\'a2
+\f2 synchronized 
+\f0 \'d5\'e2\'b8\'f6\'d6\'f7\'d2\'aa\'ca\'c7\'bf\'bc\'c2\'c7\'b6\'e0\'cf\'df\'b3\'cc\'b5\'c4\'b3\'cc\'d0\'f2\'a3\'ac\'d5\'e2\'b8\'f6\'d6\'b8\'c1\'ee\'bf\'c9\'d2\'d4\'bd\'ab
+\f2 \{ \} 
+\f0 \'c4\'da\'b5\'c4\'b4\'fa\'c2\'eb\'cf\'de\'d6\'c6\'d4\'da\'d2\'bb\'b8\'f6\'cf\'df\'b3\'cc\'d6\'b4\'d0\'d0\'a3\'ac\'c8\'e7\'b9\'fb\'c4\'b3\'b8\'f6\'cf\'df\'b3\'cc\'c3\'bb\'d3\'d0\'d6\'b4\'d0\'d0\'cd\'ea\'a3\'ac\'c6\'e4\'cb\'fb\'b5\'c4\'cf\'df\'b3\'cc\'c8\'e7\'b9\'fb\'d0\'e8\'d2\'aa\'d6\'b4\'d0\'d0\'be\'cd\'b5\'c3\'b5\'c8\'d7\'c5\'a1\'a3
+\f2 \'a0\
+2
+\f0 \'a1\'a2\'cd\'f8\'c9\'cf\'cb\'d1\'cb\'f7\'b5\'c4\'b4\'fa\'c2\'eb\'a3\'ac\'ba\'c3\'cf\'f1\'d3\'d0\'d2\'bb\'b8\'f6\'c3\'bb\'d3\'d0\'bc\'d3\'c8\'eb
+\f2  autorelease
+\f0 \'a3\'ac\'ce\'d2\'be\'f5\'b5\'c3\'d3\'a6\'b8\'c3\'d0\'e8\'d2\'aa\'bc\'d3\'a1\'a3\'d2\'f2\'ce\'aa\'c8\'e7\'b9\'fb\'b5\'f7\'d3\'c3\'b5\'c4\'ba\'af\'ca\'fd\'c3\'bb\'d3\'d0
+\f2 release
+\f0 \'be\'cd\'c2\'e9\'b7\'b3\'c1\'cb\'a3\'a8\'ce\'d2\'be\'f5\'b5\'c3\'a3\'ac
+\f2\b \cf0 \cb6 iOS
+\b0 \cf3 \cb4  
+\f0 \'c9\'cf\'b5\'c4\'b3\'cc\'d0\'f2\'a3\'ac\'b6\'d4\'d3\'da\'b4\'b4\'bd\'a8\'d3\'c3\'d3\'da\'ba\'af\'ca\'fd\'b7\'b5\'bb\'d8\'d6\'b5\'b5\'c4\'a3\'ac\'b6\'bc\'d3\'a6\'b8\'c3\'bf\'bc\'c2\'c7
+\f2  autorelease
+\f0 \'a3\'a9\'a1\'a3
+\f2 \
+3
+\f0 \'a1\'a2
+\f2 allocWithZone 
+\f0 \'d5\'e2\'b8\'f6\'ca\'c7\'d6\'d8\'d4\'d8\'b5\'c4\'a3\'ac\'d2\'f2\'ce\'aa\'d5\'e2\'b8\'f6\'ca\'c7\'b4\'d3\'d6\'c6\'b6\'a8\'b5\'c4\'c4\'da\'b4\'e6\'c7\'f8\'d3\'f2\'b6\'c1\'c8\'a1\'d0\'c5\'cf\'a2\'b4\'b4\'bd\'a8\'ca\'b5\'c0\'fd\'a3\'ac\'cb\'f9\'d2\'d4\'c8\'e7\'b9\'fb\'d0\'e8\'d2\'aa\'b5\'c4
+\b \cf0 \cb2 \'b5\'a5\'c0\'fd
+\b0 \cf3 \cb4 \'d2\'d1\'be\'ad\'d3\'d0\'c1\'cb\'a3\'ac\'be\'cd\'d0\'e8\'d2\'aa\'bd\'fb\'d6\'b9\'d0\'de\'b8\'c4\'b5\'b1\'c7\'b0
+\b \cf0 \cb2 \'b5\'a5\'c0\'fd
+\b0 \cf3 \cb4 \'a3\'ac\'cb\'f9\'d2\'d4\'b7\'b5\'bb\'d8
+\f2  nil
+\f0 \'a1\'a3
+\f2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \cb1 \
+\
+\
+\pard\pardeftab720\sl260
+
+\f3 \cf7 \cb8 + (\cf9 NetworkManager\cf4  \cf7 *)sharedInstance\cf4 \
+\cf7 \{\cf4 \
+\'a0\'a0\'a0\'a0static \cf7 dispatch_once_t\'a0 onceToken;\cf4 \
+\'a0\'a0\'a0\'a0static \cf9 NetworkManager\cf4  \cf7 * sSharedInstance;\cf4 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf7 dispatch_once(&onceToken;, ^\{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf7 sSharedInstance = [[\cf9 NetworkManager\cf4  \cf10 alloc\cf7 ]\cf4  \cf10 init\cf7 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf7 \});\cf4 \
+\'a0\'a0\'a0\'a0return \cf7 sSharedInstance;\cf4 \
+\cf7 \}\cf4 \
+\'a0\
+\pard\pardeftab720\sl260
+\cf11 // original\cf4 \
+\pard\pardeftab720\sl260
+\cf7 _dispatch_once(\cf9 dispatch_once_t\cf4  \cf7 *predicate, dispatch_block_t block)\cf4 \
+\cf7 \{\cf4 \
+\'a0if \cf7 (DISPATCH_EXPECT(*predicate, ~\cf12 0\cf7 l) != ~\cf12 0\cf7 l) \{\cf4 \
+\'a0\'a0\cf7 dispatch_once(predicate, block);\cf4 \
+\'a0\cf7 \}\cf4 \
+\cf7 \}\cf4 \
+\
+\
+}

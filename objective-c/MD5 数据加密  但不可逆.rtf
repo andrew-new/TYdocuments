@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Consolas;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 HelveticaNeue;
+}
+{\colortbl;\red255\green255\blue255;\red199\green232\blue255;\red13\green19\blue31;\red163\green42\blue47;
+\red255\green255\blue255;\red253\green154\blue48;\red34\green185\blue18;\red26\green26\blue26;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl260
+
+\f0\fs24 \cf2 \cb3 + (\cf4 NSString\cf5  \cf2 *)\cf5  \cf6 md5\cf2 :(\cf4 NSString\cf5  \cf2 *)str\cf5 \
+\cf2 \{\cf5 \
+\'a0\'a0\'a0\'a0const char \cf2 *cStr = [str\cf5  \cf6 UTF8String\cf2 ];\cf5 \
+\'a0\'a0\'a0\'a0\cf2 unsigned \cf5 char \cf2 result[\cf7 16\cf2 ];\cf5 \
+\'a0\'a0\'a0\'a0\cf2 CC_MD\cf7 5\cf2 (cStr, strlen(cStr), result);\cf5 \
+\'a0\'a0\'a0\'a0return \cf2 [\cf4 NSString\cf5  \cf6 stringWithFormat\cf2 :\cf7 @"XXXXXXXXXXXXXXXX"\cf2 ,\cf5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 result[\cf7 0\cf2 ], result[\cf7 1\cf2 ], result[\cf7 2\cf2 ],\'a0 result[\cf7 3\cf2 ],\cf5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 result[\cf7 4\cf2 ],\'a0 result[\cf7 5\cf2 ],\'a0 result[\cf7 6\cf2 ],\'a0 result[\cf7 7\cf2 ],\cf5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 result[\cf7 8\cf2 ],\'a0 result[\cf7 9\cf2 ],\'a0 result[\cf7 10\cf2 ],\'a0 result[\cf7 11\cf2 ],\cf5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 result[\cf7 12\cf2 ],\'a0 result[\cf7 13\cf2 ],\'a0 result[\cf7 14\cf2 ],\'a0 result[\cf7 15\cf2 ]\cf5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 ];\cf5 \
+\cf2 \}\cf5 \
+\pard\pardeftab720
+
+\f1\fs28 \cf8 \cb5 \'c9\'d4\'ce\'a2\'b8\'fc\'d5\'fd\'d2\'bb\'cf\'c2\'a1\'a3
+\f2 MD5
+\f1 \'b2\'bb\'ca\'c7\'bc\'d3\'c3\'dc\'b7\'bd\'ca\'bd
+\f2 , 
+\f1 \'d6\'bb\'c4\'dc\'cb\'e3
+\f2 Message Digest.
+\f1 \'d2\'f2\'ce\'aa\'cb\'fc\'b2\'bb\'bf\'c9\'c4\'e6\'a1\'a3\'c4\'e3\'d3\'c3
+\f2 MD5
+\f1 \'bb\'b9\'d4\'ad\'b2\'bb\'b3\'c9\'d4\'ad\'ca\'bc\'ca\'fd\'be\'dd\'a1\'a3}

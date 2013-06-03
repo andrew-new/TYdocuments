@@ -1,0 +1,97 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red199\green232\blue255;\red13\green19\blue31;
+\red253\green154\blue48;\red34\green185\blue18;\red163\green42\blue47;\red53\green117\blue213;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \
+\pard\pardeftab720\sa200
+
+\f1\b\fs32 \cf0 \cb2 \'bd\'ab\'d7\'d6\'b7\'fb\'d7\'aa\'bb\'bb\'ce\'aa\'bc\'fc\'c5\'cc\'c2\'eb\'b5\'c4\'b4\'fa\'c2\'eb
+\f2 \
+\pard\pardeftab720
+
+\f1\b0\fs28 \cf0 \cb1 \'bd\'ab\'d7\'d6\'b7\'fb\'b4\'ae\'d7\'aa\'bb\'bb\'ce\'aa\'bc\'fc\'c5\'cc\'c2\'eb\'a3\'ac\'d2\'d4\'b1\'b8\'d0\'e8\'d2\'aa\'ca\'b1\'d3\'c3\'b5\'bd\'a1\'a3
+\f2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \
+\
+\pard\pardeftab720\sl280
+
+\f3\fs26 \cf3 \cb4 - (\cf2 int\cf3 )keyCodeForCharacter: (NSString*)character \{\cf2 \
+\'a0\'a0\'a0\'a0if\cf3 (![character\cf2  \cf5 length\cf3 ]) \cf2 return \cf3 -\cf6 1\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0char \cf3 code;\cf2 \
+\'a0\'a0\'a0\'a0BOOL \cf3 shift, alt;\cf2 \
+\'a0\'a0\'a0\'a0if\cf3 (Ascii\cf6 2\cf3 Virtual( (\cf2 char\cf3 )[character\cf2  \cf5 characterAtIndex\cf3 :\cf2  \cf5 0\cf3 ],shift,alt,code)) \{\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0return \cf3 code;\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \}\cf2 \
+\'a0\'a0\'a0\'a0return \cf3 -\cf6 1\cf3 ;\cf2 \
+\cf3 \}\cf2 \
+\'a0\
+BOOL \cf3 Ascii\cf6 2\cf3 Virtual(\cf2 char \cf3 pcar, \cf7 BOOL\cf2  \cf3 *pshift, \cf7 BOOL\cf2  \cf3 *palt, \cf2 char \cf3 *pkeycode)\cf2 \
+\cf3 \{\cf2 \
+\'a0\'a0\'a0\'a0\cf7 KeyboardLayoutRef\cf2  \cf3 keyboard;\cf2 \
+\'a0\'a0\'a0\'a0const \cf7 void\cf2  \cf3 *keyboardData; \cf8 // keyboard layout data\cf2 \
+\'a0\'a0\'a0\'a0\cf7 UInt16\cf2  \cf3 nbblocs;\cf2 \
+\'a0\'a0\'a0\'a0\cf7 char\cf2  \cf3 *modblocs, *blocs, *deadkeys;\cf2 \
+\'a0\'a0\'a0\'a0int \cf3 ix, ifin, numbloc, keycode;\cf2 \
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0BOOL \cf3 shift, alt;\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // get the current keyboard\cf2 \
+\'a0\'a0\'a0\'a0if\cf3 (KLGetCurrentKeyboardLayout(&keyboard;)) \cf2 return \cf7 NO\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // get the description of the current keyboard layout\cf2 \
+\'a0\'a0\'a0\'a0if\cf3 (KLGetKeyboardLayoutProperty(keyboard, kKLKCHRData, &keyboardData;)) \cf2 return NO\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // get pointer early numbers of blocks for each combination of modifiers\cf2 \
+\'a0\'a0\'a0\'a0\cf3 modblocs = ((\cf7 char\cf2  \cf3 *)keyboardData) + \cf6 2\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // get number of blocks keycode->ascii\cf2 \
+\'a0\'a0\'a0\'a0\cf3 nbblocs = *((\cf7 UInt16\cf2  \cf3 *)(keyboardData + \cf6 258\cf3 ));\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // get pointer early blocks keycode-> ascii\cf2 \
+\'a0\'a0\'a0\'a0\cf3 blocs = ((\cf7 char\cf2  \cf3 *)keyboardData) + \cf6 260\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // determining the size of all tables keycode-> ascii a scanner\cf2 \
+\'a0\'a0\'a0\'a0\cf3 ifin = nbblocs*\cf6 128\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // determining pointer early in the tables of dead keys\cf2 \
+\'a0\'a0\'a0\'a0\cf3 deadkeys = blocs+ifin;\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // Now it runs blocks keycode-> ascii to find the car ascii\cf2 \
+\'a0\'a0\'a0\'a0for \cf3 (ix=\cf6 0\cf3 ; ix<ifin ; ix++)\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \{\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0if \cf3 (blocs[ix]==pcar)\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \{\cf2 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf8 // found ascii value: now we must determine which block it is\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 keycode = ix & \cf6 0\cf3 \'d7\cf6 7\cf3 f; \cf8 // 0111 1111 mask\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 numbloc = ix >> \cf6 7\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 break;\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \}\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \}\cf2 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // not found: bail out (error)\cf2 \
+\'a0\'a0\'a0\'a0if \cf3 (ix >= ifin) \cf2 return \cf7 NO\cf3 ;\cf2 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // from block number, we must find the combination of modifiers using this block\cf2 \
+\'a0\'a0\'a0\'a0for \cf3 (ix=\cf6 0\cf3 ; ix<\cf6 15\cf3 ; ix++)\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \{\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf8 // it does not address whether the modifiers are not "capital" and "option"\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0if \cf3 (ix&\cf6 1\cf2  \cf3 || ix&\cf6 4\cf3 ) continue;\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf8 // Combining modifiers found for the block\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0if \cf3 (modblocs[ix]==numbloc)\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \{\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 shift = (ix&\cf6 2\cf3 ) ? \cf2 YES \cf3 : \cf7 NO\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 alt\'a0\'a0 = (ix&\cf6 8\cf3 ) ? \cf7 YES\cf2  \cf3 : \cf2 NO\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 break;\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 \}\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \}\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // combination modifiers not found: bail\cf2 \
+\'a0\'a0\'a0\'a0if \cf3 (ix>=\cf6 15\cf3 ) \cf2 return \cf7 NO\cf3 ;\cf2 \
+\'a0\'a0\'a0\'a0\cf8 // save our parameters\cf2 \
+\'a0\'a0\'a0\'a0\cf3 *pkeycode=keycode;\cf2 \
+\'a0\'a0\'a0\'a0\cf3 *pshift=shift;\cf2 \
+\'a0\'a0\'a0\'a0\cf3 *palt=alt;\cf2 \
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0return YES\cf3 ;\cf2 \
+\cf3 \}\cf2 \
+\cf3 </ifin>\cf2 \
+}

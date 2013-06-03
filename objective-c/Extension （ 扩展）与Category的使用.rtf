@@ -1,0 +1,244 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 MicrosoftYaHei;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fswiss\fcharset0 ArialMT;
+\f3\fnil\fcharset0 Verdana;\f4\fnil\fcharset0 Consolas;\f5\fnil\fcharset0 Consolas-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red83\green83\blue83;\red135\green135\blue135;\red188\green0\blue5;
+\red234\green234\blue234;\red179\green179\blue179;\red143\green143\blue143;\red15\green114\blue3;\red74\green74\blue74;
+\red10\green82\blue135;\red39\green123\blue69;\red15\green112\blue3;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/horkychen/article/details/7993960"}}{\fldrslt 
+\f0\fs40 \cf2 Objective-C\uc0\u20013 Extension\u19982 Category\u30340 \u20351 \u29992 }}
+\f0\fs40 \
+\pard\pardeftab720\qr
+
+\f1\fs24 \cf3 \'b7\'d6\'c0\'e0\'a3\'ba
+\f2  {\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/HorkyChen/article/category/513788"}}{\fldrslt \cf4 Mac OS/iOS}}\
+2012-09-18 23:22 1003
+\f1 \'c8\'cb\'d4\'c4\'b6\'c1
+\f2  
+\f1 \cf4 \'c6\'c0\'c2\'db
+\f2 \cf3 (1) {\field{\*\fldinst{HYPERLINK "javascript:void(0);"}}{\fldrslt 
+\f1 \cf4 \'ca\'d5\'b2\'d8}} 
+\f1 \cf4 \'be\'d9\'b1\'a8
+\f2 \cf3 \
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/tag/details.html?tag=extension"}}{\fldrslt \cf4 \cb5 extension}}{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/tag/details.html?tag=interface"}}{\fldrslt \cf4 \cb5 interface}}{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/tag/details.html?tag=%e7%bc%96%e8%af%91%e5%99%a8"}}{\fldrslt 
+\f1 \cf4 \cb5 \'b1\'e0\'d2\'eb\'c6\'f7}}{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/tag/details.html?tag=class"}}{\fldrslt \cf4 \cb5 class}}{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/tag/details.html?tag=setter"}}{\fldrslt \cf4 \cb5 setter}}{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/tag/details.html?tag=immutable"}}{\fldrslt \cf4 \cb5 immutable}}\cf0 \
+\
+\pard\pardeftab720\qr
+
+\f1 \cf0 \cb5 \'c4\'bf\'c2\'bc
+\f2 \cf4 (?)\cf0 \
+\cf4 [+]\cf0 \
+\pard\pardeftab720
+\cf0 \cb1 \
+\pard\pardeftab720
+
+\fs28 \cf0 Objective-C 2.0
+\f1 \'d4\'f6\'bc\'d3\'c1\'cb
+\f2 class extensions
+\f1 \'d3\'c3\'d3\'da\'bd\'e2\'be\'f6\'c1\'bd\'b8\'f6\'ce\'ca\'cc\'e2
+\f2 :\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 {\listtext	1.	}
+\f1 \'d4\'ca\'d0\'ed\'d2\'bb\'b8\'f6\'b6\'d4\'cf\'f3\'bf\'c9\'d2\'d4\'d3\'b5\'d3\'d0\'d2\'bb\'b8\'f6\'cb\'bd\'d3\'d0\'b5\'c4
+\f2 interface,
+\f1 \'c7\'d2\'bf\'c9\'d3\'c9\'b1\'e0\'d2\'eb\'c6\'f7\'d1\'e9\'d6\'a4\'a1\'a3
+\f2 \
+{\listtext	2.	}
+\f1 \'d6\'a7\'b3\'d6\'d2\'bb\'b8\'f6\'b9\'ab\'d3\'d0\'d6\'bb\'b6\'c1\'a3\'ac\'cb\'bd\'d3\'d0\'bf\'c9\'d0\'b4\'b5\'c4\'ca\'f4\'d0\'d4\'a1\'a3
+\f2 \
+\pard\pardeftab720
+
+\f1\b\fs36 \cf0 \'cb\'bd\'d3\'d0\'bd\'d3\'bf\'da
+\f2 (Private Interface)
+\fs56 \
+\pard\pardeftab720
+
+\b0\fs28 \cf0 Objective-C 2.0
+\f1 \'d2\'d4\'c7\'b0
+\f2 , 
+\f1 \'c8\'f4\'d2\'aa\'b6\'a8\'d2\'e5\'cb\'bd\'d3\'d0\'ba\'af\'ca\'fd\'a3\'ac\'cd\'a8\'b3\'a3\'ca\'c7\'d4\'da\'ca\'b5\'cf\'d6\'ce\'c4\'bc\'fe\'d6\'d0\'c9\'f9\'c3\'f7\'d2\'bb\'b8\'f6
+\f2 "Private" category:\
+\pard\pardeftab720
+
+\i \cf0 @interface MyClass (Private) \uc0\u8232 \'a0- (id)awesomePrivateMethod; \u8232 @end
+\i0 \
+\pard\pardeftab720
+
+\f1 \cf0 \'c8\'bb\'b6\'f8
+\f2 , 
+\f1 \'c0\'e0\'b5\'c4\'cb\'bd\'d3\'c3\'b7\'bd\'b7\'a8\'cd\'a8\'b3\'a3\'ca\'c7\'cf\'a3\'cd\'fb\'ca\'b5\'cf\'d6\'d4\'da\'c0\'e0\'b5\'c4
+\f2 @implementation
+\f1 \'bf\'e9\'d6\'d0\'b5\'c4\'a3\'ac\'b6\'f8\'b2\'bb\'ca\'c7\'cf\'f1\'c9\'cf\'c3\'e6\'b5\'c4
+\f2 Category
+\f1 \'b5\'c4\'b7\'bd\'b7\'a8\'c4\'c7\'d1\'f9\'ca\'b5\'cf\'d6\'d4\'da\'b6\'c0\'c1\'a2\'b5\'c4
+\f2 @implementation
+\f1 \'c7\'f8\'bf\'e9\'d6\'d0\'a1\'a3\'ca\'c2\'ca\'b5\'c9\'cf
+\f2 ,Category
+\f1 \'bd\'f6\'bd\'f6\'ca\'c7\'c3\'d6\'b2\'b9\'c1\'cb
+\f2 Objective-C
+\f1 \'c8\'b1\'c9\'d9
+\f2 public/private
+\f1 \'cf\'de\'b6\'a8\'b5\'c4\'b2\'bb\'d7\'e3\'a1\'a3
+\f2 \
+\'a0\
+
+\f1 \'d5\'e6\'d5\'fd\'b5\'c4\'ce\'ca\'cc\'e2\'ca\'c7
+\f2 Objective-C
+\f1 \'b1\'e0\'d2\'eb\'c6\'f7\'bb\'e1\'c8\'cf\'ce\'aa\'d4\'da
+\f2 Category
+\f1 \'d6\'d0\'c9\'f9\'c3\'f7\'b5\'c4\'b7\'bd\'b7\'a8\'bd\'ab\'bb\'e1\'d4\'da\'b1\'f0\'b4\'a6\'ca\'b5\'cf\'d6\'a3\'ac\'cb\'f9\'d2\'d4\'b1\'e0\'d2\'eb\'c6\'f7\'b2\'a2\'b2\'bb\'bb\'e1\'b3\'a2\'ca\'d4\'c8\'b7\'c8\'cf\'cb\'fc\'c3\'c7\'ca\'c7\'b2\'bb\'ca\'c7\'d5\'e6\'b5\'c3\'b6\'bc\'b1\'bb\'ca\'b5\'cf\'d6\'c1\'cb\'a1\'a3\'d2\'b2\'be\'cd\'ca\'c7\'cb\'b5\'a3\'ac\'bf\'aa\'b7\'a2\'d5\'df\'c9\'f9\'c3\'f7\'b5\'c4\'b7\'bd\'b7\'a8\'d3\'d0\'bf\'c9\'c4\'dc\'b2\'a2\'ce\'b4\'ca\'b5\'cf\'d6\'a3\'ac\'b6\'f8\'c7\'d2\'b1\'e0\'d2\'eb\'c6\'f7\'d2\'b2\'b2\'bb\'bb\'e1\'d3\'d0\'ca\'b2\'c3\'b4\'be\'af\'b8\'e6\'a1\'a3\'b1\'e0\'d2\'eb\'bb\'e1\'d2\'d4\'ce\'aa\'cb\'fc\'c3\'c7\'bd\'ab\'d4\'da\'b1\'f0\'b5\'c4\'b5\'d8\'b7\'bd\'bb\'f2\'b6\'c0\'c1\'a2\'b5\'c4\'ce\'c4\'bc\'fe\'d6\'d0\'ca\'b5\'cf\'d6\'a1\'a3
+\f2 \
+\'a0\
+
+\f1 \'ca\'b9\'d3\'c3
+\f2 class exteionsion
+\f1 \'a3\'ac\'d4\'da\'c6\'e4\'d6\'d0\'c9\'f9\'c3\'f7\'b5\'c4\'b7\'bd\'b7\'a8\'ba\'cd\'ca\'f4\'d0\'d4\'b5\'c4\'ca\'b5\'cf\'d6\'bd\'ab\'b7\'c5\'d4\'da
+\f2 class
+\f1 \'b5\'c4
+\f2 @implementation
+\f1 \'c7\'f8\'bf\'e9\'d6\'d0\'a1\'a3\'b7\'f1\'d4\'f2\'a3\'ac\'b1\'e0\'d2\'eb\'c6\'f7\'be\'cd\'bb\'e1\'b1\'a8\'b4\'ed\'a1\'a3
+\f2 \
+\pard\pardeftab720
+
+\f3\b\fs18 \cf6 [cpp]
+\b0  \cf7 view plaincopyprint?\cf6 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls2\ilvl0
+\f4\fs24 \cf8 {\listtext	1.	}//\'a0someClass.m\'a0\cf0 \'a0\'a0\cf9 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls2\ilvl0\cf0 {\listtext	2.	}@interface\'a0someClass\'a0()\'a0\'a0\'a0\cf9 \
+\ls2\ilvl0\cf0 {\listtext	3.	}-(
+\f5\b \cf10 void
+\f4\b0 \cf0 )extend;\'a0\'a0\'a0\cf9 \
+\ls2\ilvl0\cf0 {\listtext	4.	}@end\'a0\'a0\'a0\cf9 \
+\ls2\ilvl0\cf0 {\listtext	5.	}\'a0\'a0\'a0\cf9 \
+\ls2\ilvl0\cf0 {\listtext	6.	}@implementation\'a0someClass\'a0\'a0\'a0\cf9 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls2\ilvl0\cf8 {\listtext	7.	}//\'a0
+\f1 \'cb\'f9\'d3\'d0\'c9\'f9\'c3\'f7\'d4\'da\'cd\'b7\'ce\'c4\'bc\'fe\'bb\'f2\'b8\'b8\'c0\'e0\'d6\'d0\'b7\'bd\'b7\'a8\'b5\'c4\'ca\'b5\'cf\'d6
+\f4 \'a0\cf0 \'a0\'a0\cf9 \
+\ls2\ilvl0\cf8 {\listtext	8.	}//\'a0
+\f1 \'bb\'f2\'d5\'df\'d2\'bb\'d0\'a9\'cb\'bd\'d3\'d0\'ba\'af\'ca\'fd
+\f4 \'a0\cf0 \'a0\'a0\cf9 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls2\ilvl0\cf0 {\listtext	9.	}-(
+\f5\b \cf10 void
+\f4\b0 \cf0 )extend\'a0\{\'a0\'a0\'a0\cf9 \
+\ls2\ilvl0\cf0 {\listtext	10.	}\'a0\'a0\'a0\'a0\cf8 //\'a0implement\'a0private\'a0method\'a0here;\'a0\cf0 \'a0\'a0\cf9 \
+\ls2\ilvl0\cf0 {\listtext	11.	}\}\'a0\'a0\'a0\cf9 \
+\ls2\ilvl0\cf0 {\listtext	12.	}\'a0\'a0\'a0\cf9 \
+\ls2\ilvl0\cf0 {\listtext	13.	}@end\'a0\'a0\cf9 \
+\pard\pardeftab720
+
+\f2\fs28 \cf0 \'a0\
+\pard\pardeftab720
+
+\f1\b\fs36 \cf0 \'b9\'ab\'d3\'d0\'bf\'c9\'b6\'c1\'a1\'a2\'cb\'bd\'d3\'d0\'bf\'c9\'d0\'b4\'b5\'c4\'ca\'f4\'d0\'d4
+\f2 (Publicly-Readable, Privately-Writeable Properties)
+\fs56 \
+\pard\pardeftab720
+
+\b0\fs28 \cf0 \
+\pard\pardeftab720
+
+\f1\fs24 \cf0 \'ca\'b5\'cf\'d6\'d2\'bb\'b8\'f6\'b2\'bb\'bf\'c9\'b1\'e4
+\f2 (immutable)
+\f1 \'b5\'c4\'ca\'fd\'be\'dd\'bd\'e1\'b9\'b9\'cd\'a8\'b3\'a3\'d3\'d0\'d2\'bb\'b8\'f6\'ba\'c3\'b4\'a6\'ca\'c7\'cd\'e2\'b2\'bf\'b4\'fa\'c2\'eb\'b2\'bb\'c4\'dc\'d3\'c3
+\f2 setter
+\f1 \'d0\'de\'b8\'c4\'b6\'d4\'cf\'f3\'b5\'c4\'d7\'b4\'cc\'ac\'a1\'a3\'c8\'bb\'b6\'f8
+\f2 ,
+\f1 \'bf\'c9\'c4\'dc\'d3\'d6\'cf\'a3\'cd\'fb\'cb\'fc\'d4\'da\'c4\'da\'b2\'bf\'d3\'d6\'ca\'c7\'d2\'bb\'b8\'f6\'bf\'c9\'d0\'b4\'b5\'c4\'ca\'f4\'d0\'d4\'a1\'a3
+\f2 Class extensions
+\f1 \'bf\'c9\'d2\'d4\'d7\'f6\'b5\'bd\'d5\'e2\'d2\'bb\'b5\'e3
+\f2 :
+\f1 \'d4\'da\'b9\'ab\'b9\'b2\'bd\'d3\'bf\'da
+\f2 (
+\f1 \'c0\'e0\'b5\'c4\'c9\'f9\'c3\'f7\'d6\'d0
+\f2 )
+\f1 \'d6\'d0
+\f2 ,
+\f1 \'bf\'aa\'b7\'a2\'d5\'df\'bf\'c9\'d2\'d4\'c9\'f9\'c3\'f7\'d2\'bb\'b8\'f6\'ca\'f4\'d0\'d4\'ca\'c7\'d6\'bb\'b6\'c1\'b5\'c4
+\f2 ,
+\f1 \'cb\'e6\'ba\'f3\'d4\'da\'c0\'e0\'c0\'a9\'d5\'b9\'d6\'d0\'c9\'f9\'c3\'f7\'ce\'aa\'bf\'c9\'d0\'b4\'a1\'a3\'d5\'e2\'d1\'f9\'a3\'ac\'b6\'d4\'cd\'e2\'b2\'bf\'b4\'fa\'c2\'eb\'b6\'f8\'d1\'d4
+\f2 ,
+\f1 \'b8\'c3\'ca\'f4\'d0\'d4\'bd\'ab\'ca\'c7\'d6\'bb\'b6\'c1\'b5\'c4
+\f2 ,
+\f1 \'b6\'f8\'c4\'da\'b2\'bf\'b4\'fa\'c2\'eb\'c8\'b4\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3\'cb\'fc
+\f2 setter
+\f1 \'b7\'bd\'b7\'a8\'a1\'a3
+\f2\fs28 \
+\'a0\
+\pard\pardeftab720
+
+\f3\b\fs18 \cf6 [cpp]
+\b0  \cf7 view plaincopyprint?\cf6 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls3\ilvl0
+\f4\fs24 \cf0 {\listtext	1.	}@interface\'a0MyClass\'a0:\'a0NSObject\'a0\'a0\cf9 \
+\ls3\ilvl0\cf0 {\listtext	2.	}@property\'a0(retain,\'a0readonly)\'a0
+\f5\b \cf11 float
+\f4\b0 \cf0 \'a0value;\'a0\'a0\cf9 \
+\ls3\ilvl0\cf0 {\listtext	3.	}@end\'a0\'a0\cf9 \
+\ls3\ilvl0\cf0 {\listtext	4.	}\'a0\'a0\'a0\cf9 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls3\ilvl0\cf8 {\listtext	5.	}//\'a0
+\f1 \'cb\'bd\'d3\'d0\'b5\'c4
+\f4 extension,\'a0
+\f1 \'d2\'fe\'b2\'d8\'d4\'da\'d6\'f7\'ca\'b5\'cf\'d6\'ce\'c4\'bc\'fe\'d6\'d0
+\f4 .\cf0 \'a0\'a0\cf9 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls3\ilvl0\cf0 {\listtext	6.	}@interface\'a0MyClass\'a0()\'a0\'a0\cf9 \
+\ls3\ilvl0\cf0 {\listtext	7.	}@property\'a0(retain,\'a0readwrite)\'a0
+\f5\b \cf11 float
+\f4\b0 \cf0 \'a0value;\'a0\'a0\cf9 \
+\ls3\ilvl0\cf0 {\listtext	8.	}@end\'a0\'a0\cf9 \
+\pard\pardeftab720
+
+\f2\fs28 \cf0 \
+\pard\pardeftab720
+
+\f1\b\fs36 \cf0 \'bf\'b4\'c6\'f0\'c0\'b4\'cf\'e0\'cb\'c6\'a3\'ac\'c6\'e4\'ca\'b5\'b2\'bb\'cd\'ac
+\f2\fs56 \
+\pard\pardeftab720
+
+\b0\fs28 \cf0 Class extension
+\f1 \'b3\'a3\'b3\'a3\'b1\'bb\'ce\'f3\'bd\'e2\'ce\'aa\'d2\'bb\'b8\'f6\'c4\'e4\'c3\'fb\'b5\'c4
+\f2 category
+\f1 \'a1\'a3\'cb\'fc\'c3\'c7\'b5\'c4\'d3\'ef\'b7\'a8\'b5\'c4\'c8\'b7\'ba\'dc\'cf\'e0\'cb\'c6\'a1\'a3\'cb\'e4\'c8\'bb\'b6\'bc\'bf\'c9\'d2\'d4\'d3\'c3\'c0\'b4\'ce\'aa\'d2\'bb\'b8\'f6\'cf\'d6\'d3\'d0\'b5\'c4\'c0\'e0\'cc\'ed\'bc\'d3\'b7\'bd\'b7\'a8\'ba\'cd\'ca\'f4\'d0\'d4\'a3\'ac\'b5\'ab\'cb\'fc\'c3\'c7\'b5\'c4\'c4\'bf\'b5\'c4\'ba\'cd\'d0\'d0\'ce\'aa\'c8\'b4\'ca\'c7\'b2\'bb\'cd\'ac\'b5\'c4\'a1\'a3
+\f2 \
+\'a0\
+\pard\pardeftab720
+
+\f1\fs24 \cf0 \'b2\'ce\'bf\'bc
+\f2 :\'a0{\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjectiveC/Chapters/ocCategories.html%23//apple_ref/doc/uid/TP30001163-CH20-SW1"}}{\fldrslt \cf4 Apple Documenation}}
+\fs28 \
+
+\f1\fs24 \'d4\'ad\'ce\'c4\'b5\'d8\'d6\'b7
+\f2 : {\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/questions/4685679/minutia-on-objective-c-categories-and-extensions"}}{\fldrslt \cf4 Minutia on Objective-C Categories and Extensions}}
+\fs28 \
+
+\f1\fs24 \'d7\'aa\'d4\'d8\'c7\'eb\'d7\'a2\'c3\'f7\'b3\'f6\'b4\'a6
+\f2 : {\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/horkychen"}}{\fldrslt \cf4 http://blog.csdn.net/horkychen}}
+\fs28 \
+\pard\pardeftab720\qr
+
+\f1\b\fs24 \cf12 \'b7\'d6\'cf\'ed\'b5\'bd\'a3\'ba
+\f2\b0 \cf0 \
+\pard\pardeftab720
+
+\f1 \cf2 \'c9\'cf\'d2\'bb\'c6\'aa\'a3\'ba{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/horkychen/article/details/7969443"}}{\fldrslt \cf4 \'d7\'d4\'c8\'bb\'b6\'f8\'c8\'bb\'b5\'c4\'c9\'e8\'bc\'c6}}
+\f2 \
+
+\f1 \'cf\'c2\'d2\'bb\'c6\'aa\'a3\'ba{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/horkychen/article/details/8002275"}}{\fldrslt \cf4 \'c0\'b9\'bd\'d8
+\f2 MPMoviePlayerController
+\f1 \'b5\'c4\'b5\'e3\'bb\'f7\'ca\'c2\'bc\'fe}}}

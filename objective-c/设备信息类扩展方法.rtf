@@ -1,0 +1,329 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red120\green149\blue180;\red13\green19\blue31;\red255\green255\blue255;
+\red53\green117\blue213;\red199\green232\blue255;\red163\green42\blue47;\red34\green185\blue18;\red253\green154\blue48;
+\red217\green226\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280
+
+\f0\fs26 \cf2 \cb3 \
+\
+\
+\
+\
+#import <Foundation/Foundation.h>\cf4 \
+\cf2 #import <UIKit/UIDevice.h>\cf4 \
+\cf2 #define IFPGA_NAMESTRING\'a0\'a0\'a0 @"iFPGA"\cf4 \
+\'a0\
+\cf2 #define IPHONE_1G_NAMESTRING\'a0\'a0 @"iPhone 1G"\cf4 \
+\cf2 #define IPHONE_3G_NAMESTRING\'a0\'a0 @"iPhone 3G"\cf4 \
+\cf2 #define IPHONE_3GS_NAMESTRING\'a0\'a0 @"iPhone 3GS" \cf4 \
+\cf2 #define IPHONE_4_NAMESTRING\'a0\'a0\'a0 @"iPhone 4" \cf4 \
+\cf2 #define IPHONE_4S_NAMESTRING\'a0\'a0 @"iPhone 4S" \cf4 \
+\cf2 #define IPHONE_5_NAMESTRING\'a0\'a0\'a0 @"iPhone 5"\cf4 \
+\cf2 #define IPHONE_UNKNOWN_NAMESTRING\'a0 @"Unknown iPhone"\cf4 \
+\'a0\
+\cf2 #define IPOD_1G_NAMESTRING\'a0\'a0\'a0 @"iPod touch 1G"\cf4 \
+\cf2 #define IPOD_2G_NAMESTRING\'a0\'a0\'a0 @"iPod touch 2G"\cf4 \
+\cf2 #define IPOD_3G_NAMESTRING\'a0\'a0\'a0 @"iPod touch 3G"\cf4 \
+\cf2 #define IPOD_4G_NAMESTRING\'a0\'a0\'a0 @"iPod touch 4G"\cf4 \
+\cf2 #define IPOD_UNKNOWN_NAMESTRING\'a0\'a0 @"Unknown iPod"\cf4 \
+\'a0\
+\cf2 #define IPAD_1G_NAMESTRING\'a0\'a0\'a0 @"iPad 1G"\cf4 \
+\cf2 #define IPAD_2G_NAMESTRING\'a0\'a0\'a0 @"iPad 2G"\cf4 \
+\cf2 #define IPAD_3G_NAMESTRING\'a0\'a0\'a0 @"iPad 3G"\cf4 \
+\cf2 #define IPAD_UNKNOWN_NAMESTRING\'a0\'a0 @"Unknown iPad"\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf5 // Nano? Apple TV?\cf4 \
+\pard\pardeftab720\sl280
+\cf2 #define APPLETV_2G_NAMESTRING\'a0\'a0 @"Apple TV 2G"\cf4 \
+\'a0\
+\cf2 #define IPOD_FAMILY_UNKNOWN_DEVICE\'a0\'a0 @"Unknown iOS device"\cf4 \
+\'a0\
+\cf2 #define IPHONE_SIMULATOR_NAMESTRING\'a0\'a0 @"iPhone Simulator"\cf4 \
+\cf2 #define IPHONE_SIMULATOR_IPHONE_NAMESTRING @"iPhone Simulator"\cf4 \
+\cf2 #define IPHONE_SIMULATOR_IPAD_NAMESTRING @"iPad Simulator"\cf4 \
+\'a0\
+typedef enum \cf6 \{\cf4 \
+\'a0\cf7 UIDeviceUnknown\cf6 ,\cf4 \
+\'a0\'a0\
+\'a0\cf7 UIDeviceiPhoneSimulator\cf6 ,\cf4 \
+\'a0\cf7 UIDeviceiPhoneSimulatoriPhone\cf6 , \cf5 // both regular and iPhone 4 devices\cf4 \
+\'a0\cf7 UIDeviceiPhoneSimulatoriPad\cf6 ,\cf4 \
+\'a0\'a0\
+\'a0\cf7 UIDevice1GiPhone\cf6 ,\cf4 \
+\'a0\cf7 UIDevice3GiPhone\cf6 ,\cf4 \
+\'a0\cf7 UIDevice3GSiPhone\cf6 ,\cf4 \
+\'a0\cf7 UIDevice4iPhone\cf6 ,\cf4 \
+\'a0\'a0\'a0\'a0\cf7 UIDevice4SiPhone\cf6 ,\cf4 \
+\'a0\cf7 UIDevice5iPhone\cf6 ,\cf4 \
+\'a0\'a0\
+\'a0\cf7 UIDevice1GiPod\cf6 ,\cf4 \
+\'a0\cf7 UIDevice2GiPod\cf6 ,\cf4 \
+\'a0\cf7 UIDevice3GiPod\cf6 ,\cf4 \
+\'a0\cf7 UIDevice4GiPod\cf6 ,\cf4 \
+\'a0\'a0\
+\'a0\cf7 UIDevice1GiPad\cf6 , \cf5 // both regular and 3G\cf4 \
+\'a0\cf7 UIDevice2GiPad\cf6 ,\cf4 \
+\'a0\'a0\'a0\'a0\cf7 UIDevice3GiPad\cf6 ,\cf4 \
+\'a0\'a0\
+\'a0\'a0\
+\'a0\cf7 UIDeviceAppleTV2\cf6 ,\cf4 \
+\'a0\'a0\
+\'a0\cf7 UIDeviceUnknowniPhone\cf6 ,\cf4 \
+\'a0\cf7 UIDeviceUnknowniPod\cf6 ,\cf4 \
+\'a0\cf7 UIDeviceUnknowniPad\cf6 ,\cf4 \
+\'a0\cf7 UIDeviceIFPGA\cf6 ,\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\pard\pardeftab720\sl280
+\cf6 \} \cf7 UIDevicePlatform\cf6 ;\cf4 \
+\'a0\
+\'a0\
+\'a0\
+\'a0\
+@interface \cf7 UIDevice\cf4  \cf6 (IdentifierAddition)\cf4 \
+\'a0\
+\'a0\
+\'a0\
+\pard\pardeftab720\sl280
+\cf5 /*\cf4 \
+\'a0\cf5 * @method uniqueDeviceIdentifier\cf4 \
+\'a0\cf5 * @description use this method when you need a unique identifier in one app.\cf4 \
+\'a0\cf5 * It generates a hash from the MAC-address in combination with the bundle identifier\cf4 \
+\'a0\cf5 * of your app.\cf4 \
+\'a0\cf5 */\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf6 - (\cf7 NSString\cf4  \cf6 *) uniqueDeviceIdentifier;\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf5 /*\cf4 \
+\'a0\cf5 * @method uniqueGlobalDeviceIdentifier\cf4 \
+\'a0\cf5 * @description use this method when you need a unique global identifier to track a device\cf4 \
+\'a0\cf5 * with multiple apps. as example a advertising network will use this method to track the device\cf4 \
+\'a0\cf5 * from different apps.\cf4 \
+\'a0\cf5 * It generates a hash from the MAC-address only.\cf4 \
+\'a0\cf5 */\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf6 - (\cf7 NSString\cf4  \cf6 *) uniqueGlobalDeviceIdentifier;\cf4 \
+\'a0\
+\'a0\
+\cf6 - (\cf7 NSString\cf4  \cf6 *) platformString;\cf4 \
+\'a0\
+\'a0\
+@end\
+\'a0\
+\'a0\
+\'a0\
+\'a0\
+\pard\pardeftab720\sl280
+\cf2 #import "UIDevice+IdentifierAddition.h"\cf4 \
+\cf2 #import "NSString+MD5Addition.h"\cf4 \
+\cf2 #import <UIKit/UIScreen.h>\cf4 \
+\'a0\
+\cf2 #import <sys/socket.h> // Per msqr\cf4 \
+\cf2 #import <sys/sysctl.h>\cf4 \
+\cf2 #import <net/if.h>\cf4 \
+\cf2 #import <net/if_dl.h>\cf4 \
+\'a0\
+@interface \cf6 UIDevice(Private)\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf6 - (\cf7 NSString\cf4  \cf6 *) getMacAddress;\cf4 \
+\'a0\
+@end\
+\'a0\
+@implementation \cf7 UIDevice\cf4  \cf6 (IdentifierAddition)\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf5 ////////////////////////////////////////////////////////////////////////////////\cf4 \
+\pard\pardeftab720\sl280
+\cf2 #pragma mark -\cf4 \
+\cf2 #pragma mark Private Methods\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf5 // Return the local MAC addy\cf4 \
+\cf5 // Courtesy of FreeBSD hackers email list\cf4 \
+\cf5 // Accidentally munged during previous update. Fixed thanks to erica sadun & mlamb.\cf4 \
+\pard\pardeftab720\sl280
+\cf6 - (\cf7 NSString\cf4  \cf6 *) getMacAddress\{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0int\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf6 mib[\cf8 6\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf6 size_t\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 len;\cf4 \
+\'a0\'a0\'a0\'a0char\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf6 *buf;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 unsigned \cf4 char\'a0\'a0\'a0\'a0\'a0\'a0 \cf6 *ptr;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 struct if_msghdr\'a0\'a0\'a0 *ifm;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 struct sockaddr_dl\'a0 *sdl;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf6 mib[\cf8 0\cf6 ] = \cf7 CTL_NET\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 mib[\cf8 1\cf6 ] = \cf7 AF_ROUTE\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 mib[\cf8 2\cf6 ] = \cf8 0\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 mib[\cf8 3\cf6 ] = \cf7 AF_LINK\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 mib[\cf8 4\cf6 ] = \cf7 NET_RT_IFLIST\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0if \cf6 ((mib[\cf8 5\cf6 ] = if_nametoindex("en\cf8 0\cf6 ")) == \cf8 0\cf6 ) \{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 printf("Error: if_nametoindex error\\n");\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0return NULL\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 \}\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0if \cf6 (sysctl(mib, \cf8 6\cf6 , \cf7 NULL\cf6 , &len;, \cf4 NULL\cf6 , \cf8 0\cf6 ) < \cf8 0\cf6 ) \{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 printf("Error: sysctl, take \cf8 1\cf6 \\n");\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0return NULL\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 \}\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0if \cf6 ((buf = malloc(len)) == \cf4 NULL\cf6 ) \{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 printf("\cf7 Could\cf4  \cf6 not allocate memory. error!\\n");\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0return NULL\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 \}\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0if \cf6 (sysctl(mib, \cf8 6\cf6 , buf, &len;, \cf7 NULL\cf6 , \cf8 0\cf6 ) < \cf8 0\cf6 ) \{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 printf("Error: sysctl, take \cf8 2\cf6 ");\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 free(buf);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0return NULL\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 \}\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf6 ifm = (struct \cf7 if_msghdr\cf4  \cf6 *)buf;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 sdl = (struct \cf7 sockaddr_dl\cf4  \cf6 *)(ifm + \cf8 1\cf6 );\cf4 \
+\'a0\'a0\'a0\'a0\cf6 ptr = (unsigned \cf4 char \cf6 *)LLADDR(sdl);\cf4 \
+\'a0\'a0\'a0\'a0\cf7 NSString\cf4  \cf6 *outstring = [\cf7 NSString\cf4  \cf9 stringWithFormat\cf6 :\cf8 @"X:X:X:X:X:X"\cf6 , \cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 *ptr, *(ptr+\cf8 1\cf6 ), *(ptr+\cf8 2\cf6 ), *(ptr+\cf8 3\cf6 ), *(ptr+\cf8 4\cf6 ), *(ptr+\cf8 5\cf6 )];\cf4 \
+\'a0\'a0\'a0\'a0\cf6 free(buf);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0return \cf6 outstring;\cf4 \
+\cf6 \}\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf5 ////////////////////////////////////////////////////////////////////////////////\cf4 \
+\pard\pardeftab720\sl280
+\cf2 #pragma mark -\cf4 \
+\cf2 #pragma mark Public Methods\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf6 - (\cf7 NSString\cf4  \cf6 *) uniqueDeviceIdentifier\{\cf4 \
+\'a0\'a0\'a0\'a0\cf7 NSString\cf4  \cf6 *macaddress = [[\cf7 UIDevice\cf4  \cf9 currentDevice\cf6 ]\cf4  \cf9 getMacAddress\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf7 NSString\cf4  \cf6 *bundleIdentifier = [[\cf7 NSBundle\cf4  \cf9 mainBundle\cf6 ]\cf4  \cf9 bundleIdentifier\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf7 NSString\cf4  \cf6 *stringToHash = [\cf7 NSString\cf4  \cf9 stringWithFormat\cf6 :\cf8 @"%@%@"\cf6 ,macaddress,bundleIdentifier];\cf4 \
+\'a0\'a0\'a0\'a0\cf7 NSString\cf4  \cf6 *uniqueIdentifier = [stringToHash\cf4  \cf9 stringFromMD5\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0return \cf6 uniqueIdentifier;\cf4 \
+\cf6 \}\cf4 \
+\'a0\
+\cf6 - (\cf7 NSString\cf4  \cf6 *) uniqueGlobalDeviceIdentifier\{\cf4 \
+\'a0\'a0\'a0\'a0\cf7 NSString\cf4  \cf6 *macaddress = [[\cf7 UIDevice\cf4  \cf9 currentDevice\cf6 ]\cf4  \cf9 getMacAddress\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf7 NSString\cf4  \cf6 *uniqueIdentifier = [macaddress\cf4  \cf9 stringFromMD5\cf6 ];\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0return \cf6 uniqueIdentifier;\cf4 \
+\cf6 \}\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf2 #pragma mark sysctlbyname utils\cf4 \
+\pard\pardeftab720\sl280
+\cf6 - (\cf7 NSString\cf4  \cf6 *)\cf4  \cf9 getSysInfoByName\cf6 :(\cf7 char\cf4  \cf6 *)typeSpecifier\cf4 \
+\cf6 \{\cf4 \
+\'a0\cf6 size_t size;\cf4 \
+\'a0\'a0\'a0\'a0\cf6 sysctlbyname(typeSpecifier, \cf4 NULL\cf6 , &size;, \cf7 NULL\cf6 , \cf8 0\cf6 );\cf4 \
+\'a0\'a0\'a0\'a0\cf7 char\cf4  \cf6 *answer = malloc(size);\cf4 \
+\'a0\cf6 sysctlbyname(typeSpecifier, answer, &size;, \cf7 NULL\cf6 , \cf8 0\cf6 );\cf4 \
+\'a0\cf7 NSString\cf4  \cf6 *results = [\cf7 NSString\cf4  \cf9 stringWithCString\cf6 :answer\cf4  \cf9 encoding\cf6 :\cf4  \cf9 NSUTF8StringEncoding\cf6 ];\cf4 \
+\'a0\cf6 free(answer);\cf4 \
+\'a0return \cf6 results;\cf4 \
+\cf6 \}\cf4 \
+\'a0\
+\cf6 - (\cf7 NSString\cf4  \cf6 *) platform\cf4 \
+\cf6 \{\cf4 \
+\'a0return \cf6 [\cf4 self \cf9 getSysInfoByName\cf6 :"hw\cf10 .machine\cf6 "];\cf4 \
+\cf6 \}\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf2 #pragma mark platform type and name utils\cf4 \
+\pard\pardeftab720\sl280
+\cf6 - (NSUInteger) platformType\cf4 \
+\cf6 \{\cf4 \
+\'a0\cf7 NSString\cf4  \cf6 *platform = [\cf4 self \cf9 platform\cf6 ];\cf4 \
+\'a0\cf5 // if ([platform isEqualToString:@"XX"])\'a0\'a0 return UIDeviceUnknown;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iFPGA"\cf6 ])\'a0 \cf4 return \cf7 UIDeviceIFPGA\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPhone1,1"\cf6 ]) \cf4 return \cf7 UIDevice1GiPhone\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPhone1,2"\cf6 ]) \cf4 return \cf7 UIDevice3GiPhone\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 hasPrefix\cf6 :\cf8 @"iPhone2"\cf6 ])\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf4 return \cf7 UIDevice3GSiPhone\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPhone3,1"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice4iPhone\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPhone4,1"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice4SiPhone\cf6 ;\cf4 \
+\'a0\
+\'a0if \cf6 ([platform\cf4  \cf9 hasPrefix\cf6 :\cf8 @"iPhone5"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice5iPhone\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPod1,1"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice1GiPod\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPod2,1"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice2GiPod\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPod3,1"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice3GiPod\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPod4,1"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice4GiPod\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPad1,1"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice1GiPad\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPad2,1"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice2GiPad\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPad3,1"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice3GiPad\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"iPad2,4"\cf6 ])\'a0\'a0 \cf4 return \cf7 UIDevice2GiPad\cf6 ;\cf4 \
+\'a0\'a0\
+\'a0if \cf6 ([platform\cf4  \cf9 isEqualToString\cf6 :\cf8 @"AppleTV2,1"\cf6 ]) \cf4 return \cf7 UIDeviceAppleTV2\cf6 ;\cf4 \
+\'a0\'a0\
+\'a0\cf5 /*\cf4 \
+\'a0\'a0\cf5 MISSING A SOLUTION HERE TO DATE TO DIFFERENTIATE iPAD and iPAD 3G.... SORRY!\cf4 \
+\'a0\'a0\cf5 */\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0if \cf6 ([platform\cf4  \cf9 hasPrefix\cf6 :\cf8 @"iPhone"\cf6 ]) \cf4 return \cf7 UIDeviceUnknowniPhone\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 hasPrefix\cf6 :\cf8 @"iPod"\cf6 ]) \cf4 return \cf7 UIDeviceUnknowniPod\cf6 ;\cf4 \
+\'a0if \cf6 ([platform\cf4  \cf9 hasPrefix\cf6 :\cf8 @"iPad"\cf6 ]) \cf4 return \cf7 UIDeviceUnknowniPad\cf6 ;\cf4 \
+\'a0\'a0\
+\'a0if \cf6 ([platform\cf4  \cf9 hasSuffix\cf6 :\cf8 @"86"\cf6 ] || [platform\cf4  \cf9 isEqual\cf6 :\cf8 @"x86_64"\cf6 ])\cf4 \
+\'a0\cf6 \{\cf4 \
+\'a0\'a0if \cf6 ([[\cf7 UIScreen\cf4  \cf9 mainScreen\cf6 ]\cf4  \cf9 bounds\cf6 ]\cf10 .size.width\cf4  \cf6 < \cf8 768\cf6 )\cf4 \
+\'a0\'a0\'a0return \cf7 UIDeviceiPhoneSimulatoriPhone\cf6 ;\cf4 \
+\'a0\'a0else\
+\'a0\'a0\'a0return \cf7 UIDeviceiPhoneSimulatoriPad\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0return \cf7 UIDeviceiPhoneSimulator\cf6 ;\cf4 \
+\'a0\cf6 \}\cf4 \
+\'a0return \cf7 UIDeviceUnknown\cf6 ;\cf4 \
+\cf6 \}\cf4 \
+\'a0\
+\cf6 - (\cf7 NSString\cf4  \cf6 *) platformString\cf4 \
+\cf6 \{\cf4 \
+\'a0switch \cf6 ([\cf4 self \cf9 platformType\cf6 ])\cf4 \
+\'a0\cf6 \{\cf4 \
+\'a0\'a0case \cf9 UIDevice1GiPhone\cf6 : \cf4 return \cf7 IPHONE_1G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDevice3GiPhone\cf6 : \cf4 return \cf7 IPHONE_3G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDevice3GSiPhone\cf6 : \cf4 return \cf7 IPHONE_3GS_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDevice4iPhone\cf6 : \cf4 return \cf7 IPHONE_4_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0case \cf9 UIDevice4SiPhone\cf6 : \cf4 return \cf7 IPHONE_4S_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDevice5iPhone\cf6 : \cf4 return \cf7 IPHONE_5_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDeviceUnknowniPhone\cf6 : \cf4 return \cf7 IPHONE_UNKNOWN_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0case \cf9 UIDevice1GiPod\cf6 : \cf4 return \cf7 IPOD_1G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDevice2GiPod\cf6 : \cf4 return \cf7 IPOD_2G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDevice3GiPod\cf6 : \cf4 return \cf7 IPOD_3G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDevice4GiPod\cf6 : \cf4 return \cf7 IPOD_4G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDeviceUnknowniPod\cf6 : \cf4 return \cf7 IPOD_UNKNOWN_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\
+\'a0\'a0case \cf7 UIDevice1GiPad\cf4  \cf6 : \cf4 return \cf7 IPAD_1G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf7 UIDevice2GiPad\cf4  \cf6 : \cf4 return \cf7 IPAD_2G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0case \cf7 UIDevice3GiPad\cf4  \cf6 : \cf4 return \cf7 IPAD_3G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0case \cf7 UIDeviceAppleTV2\cf4  \cf6 : \cf4 return \cf7 APPLETV_2G_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\
+\'a0\'a0case \cf9 UIDeviceiPhoneSimulator\cf6 : \cf4 return \cf7 IPHONE_SIMULATOR_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDeviceiPhoneSimulatoriPhone\cf6 : \cf4 return \cf7 IPHONE_SIMULATOR_IPHONE_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0case \cf9 UIDeviceiPhoneSimulatoriPad\cf6 : \cf4 return \cf7 IPHONE_SIMULATOR_IPAD_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\
+\'a0\'a0case \cf9 UIDeviceIFPGA\cf6 : \cf4 return \cf7 IFPGA_NAMESTRING\cf6 ;\cf4 \
+\'a0\'a0\'a0\'a0\
+\'a0 \cf9 default\cf6 : \cf4 return \cf7 IPOD_FAMILY_UNKNOWN_DEVICE\cf6 ;\cf4 \
+\'a0\cf6 \}\cf4 \
+\cf6 \}\cf4 \
+\'a0\
+\'a0\
+@end\
+}

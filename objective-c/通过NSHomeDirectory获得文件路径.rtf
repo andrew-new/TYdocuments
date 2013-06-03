@@ -1,0 +1,89 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Consolas;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red163\green42\blue47;\red13\green19\blue31;\red255\green255\blue255;
+\red199\green232\blue255;\red253\green154\blue48;\red34\green185\blue18;\red53\green117\blue213;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280
+
+\f0\fs26 \cf2 \cb3 NSString\cf4  \cf5 *homeDirectory = NSHomeDirectory();\cf4 \
+\cf2 NSString\cf4  \cf5 *fileDirectory = [homeDirectory\cf4  \cf6 stringByAppendingPathComponent\cf5 :\cf7 @"temp/app_data.plist"\cf5 ];\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf8 //
+\f1 \'ca\'b9\'d3\'c3
+\f0 NSSearchPathForDirectoriesInDomains
+\f1 \'bc\'ec\'cb\'f7\'d6\'b8\'b6\'a8\'c2\'b7\'be\'b6
+\f0 \cf4 \
+\pard\pardeftab720\sl280
+\cf2 NSArray\cf4  \cf5 *path = NSSearchPathForDirectoriesInDomains(\cf2 NSDocumentDirectory\cf5 , \cf2 NSUserDomainMask\cf5 , \cf4 YES\cf5 );\cf4 \
+\pard\pardeftab720\sl280
+\cf8 //
+\f1 \'b3\'a3\'c1\'bf
+\f0 NSDocumentDirectory
+\f1 \'b1\'ed\'ca\'be\'d5\'fd\'d4\'da\'b2\'e9\'d5\'d2
+\f0 Documents
+\f1 \'c4\'bf\'c2\'bc\'b5\'c4\'c2\'b7\'be\'b6
+\f0 (
+\f1 \'ca\'b9\'d3\'c3
+\f0 NSCachesDirectory
+\f1 \'b1\'ed\'c3\'f7\'d2\'aa\'b2\'e9\'d5\'d2\'b5\'c4\'ca\'b1
+\f0 Caches
+\f1 \'ce\'c4\'bc\'fe\'bc\'d0
+\f0 )
+\f1 \'a3\'ac\'b3\'a3\'c1\'bf
+\f0 NSUserDomainMask
+\f1 \'b1\'ed\'c3\'f7\'ce\'d2\'c3\'c7\'cf\'a3\'cd\'fb\'bd\'ab\'cb\'d1\'cb\'f7\'cf\'de\'d6\'c6\'d3\'da\'ce\'d2\'c3\'c7\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'c9\'b3\'ba\'d0\'a3\'ac\'d7\'ee\'ba\'f3\'d2\'bb\'b8\'f6\'b2\'ce\'ca\'fd\'be\'f6\'b6\'a8\'c1\'cb\'ca\'c7\'b7\'f1
+\f0 \'93
+\f1 \'d5\'b9\'bf\'aa
+\f0 \'94
+\f1 \'b2\'a8\'c0\'cb\'cf\'df\'b7\'fb\'ba\'c5\'a1\'a3
+\f0 \cf4 \
+\cf8 //
+\f1 \'d4\'da
+\f0 Mac
+\f1 \'cf\'b5\'cd\'b3\'d6\'d0\'a3\'ac
+\f0 \'91~\'92
+\f1 \'b1\'ed\'ca\'be\'d6\'f7\'c2\'b7\'be\'ad\'a3\'a8
+\f0 Home
+\f1 \'a3\'a9\'a3\'ac\'c8\'e7\'b9\'fb\'b2\'bb\'d5\'b9\'bf\'aa\'a3\'ac\'c2\'b7\'be\'b6\'bf\'b4\'c6\'f0\'c0\'b4\'be\'cd\'ca\'c7\'a3\'ba
+\f0 \'91~/Documents\'92,
+\f1 \'d5\'b9\'bf\'aa\'ba\'f3\'bc\'b4\'b5\'c3\'b5\'bd\'cd\'ea\'d5\'fb\'c2\'b7\'be\'b6\'a1\'a3\'d5\'e2\'b8\'f6\'b2\'ce\'ca\'fd\'d2\'bb\'d6\'b1\'c9\'e8\'d6\'c3\'ce\'bb\'d5\'e6\'bc\'b4\'bf\'c9\'a1\'a3
+\f0 \cf4 \
+\pard\pardeftab720\sl280
+\cf2 NSString\cf4  \cf5 *documentsDirectory = [paths\cf4  \cf6 objectAtIndex\cf5 :\cf7 0\cf5 ];z\cf4 \
+\cf2 NSString\cf4  \cf5 *fileDirectory = [documentsDirectory\cf4  \cf6 stringByAppendingPathComponent\cf5 :\cf7 @"file.txt"\cf5 ];\cf4 \
+\'a0\
+\pard\pardeftab720\sl280
+\cf8 //
+\f1 \'ca\'b9\'d3\'c3
+\f0 Foundation
+\f1 \'d6\'d0\'b5\'c4
+\f0 NSTemporaryDirectory
+\f1 \'ba\'af\'ca\'fd\'d6\'b1\'bd\'d3\'b7\'b5\'bb\'d8\'b4\'fa\'b1\'ed
+\f0 temp
+\f1 \'ce\'c4\'bc\'fe\'bc\'d0\'b5\'c4\'c8\'ab\'c2\'b7\'be\'b6\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'cf\'f3
+\f0 \cf4 \
+\pard\pardeftab720\sl280
+\cf2 NSString\cf4  \cf5 *tempDirectory = NSTemporaryDirectory();\cf4 \
+\cf2 NSString\cf4  \cf5 *file = [tempDirectory\cf4  \cf6 stringByAppendingPathComponent\cf5 :\cf7 @"file.txt"\cf5 ];\cf4 \
+\'a0\
+\'a0\cf6 Example\cf5 :\cf4 \
+\cf2 NSArray\cf4  \cf5 *path = NSSearchPathForDirectoriesInDomains(\cf2 NSCachesDirectory\cf5 , \cf2 NSUserDomainMask\cf5 , \cf4 YES\cf5 );\cf4 \
+\cf2 NSString\cf4  \cf5 *docDir = [path\cf4  \cf6 objectAtIndex\cf5 :\cf7 0\cf5 ];\cf4 \
+\pard\pardeftab720\sl280
+\cf5 NSLog(\cf7 @"filepath:%@"\cf5 ,docDir);\cf4 \
+\pard\pardeftab720\sl280
+\cf2 NSString\cf4  \cf5 *str = \cf7 @"hello.jpg"\cf5 ;\cf4 \
+\cf2 NSString\cf4  \cf5 *filepath = [docDir\cf4  \cf6 stringByAppendingPathComponent\cf5 :str];\cf4 \
+\pard\pardeftab720\sl280
+\cf8 //NSString *filepath = [docDir stringByAppendingPathComponent:[NSString stringWithUTF8String:"///mest.txt"]];\cf4 \
+\pard\pardeftab720\sl280
+\cf5 NSLog(\cf7 @"filepath:%@"\cf5 ,filepath);\cf4 \
+\'a0\'a0\'a0\cf2 BOOL\cf4  \cf5 success = [[\cf2 NSFileManager\cf4  \cf6 defaultManager\cf5 ]createFileAtPath: filepath\cf4  \cf6 contents\cf4 :nil \cf6 attributes\cf4 :nil\cf5 ];\cf4 \
+\cf5 NSLog(\cf7 @"result"\cf5 ,success);\cf4 \
+\cf5 printf("\cf2 Create\cf4  \cf6 File\cf5 :%s %s.",[filepath\cf4  \cf6 UTF8String\cf5 ], success ? "Success" : "Error");\cf4 \
+\'a0\
+\'a0\
+\cf5 NSString* reValue= [\cf2 NSString\cf4  \cf6 stringWithString\cf5 :\cf7 @"\\"\cf5 success\\""];\cf4 \
+}

@@ -1,0 +1,306 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset134 STHeitiSC-Light;\f1\fswiss\fcharset0 ArialMT;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red252\green79\blue8;\red11\green86\blue2;\red188\green0\blue5;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\b\fs64 \cf2 \'b3\'f5\'ca\'bc\'bb\'af
+\f1 UISegmentedControl
+\b0\fs28 \cf0 \
+\pard\pardeftab720
+
+\b\fs36 \cf0 NSArray *arr = [[NSArray alloc]initWithObjects:@"
+\f0 \'c7\'e1\'c5\'c4
+\f1 ",@"
+\f0 \'b3\'a4\'b0\'b4
+\f1 ",@"
+\f0 \'c7\'e5\'c9\'a8
+\f1 ",@"
+\f0 \'d0\'fd\'d7\'aa
+\f1 ",@"
+\f0 \'c4\'f3\'ba\'cf
+\f1 ",@"
+\f0 \'cd\'cf\'d7\'a7
+\f1 ", nil];
+\b0\fs28 \
+\pard\pardeftab720
+
+\b \cf3 //
+\f0 \'cf\'c8\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'ca\'fd\'d7\'e9\'d3\'c3\'d3\'da\'c9\'e8\'d6\'c3\'b1\'ea\'cc\'e2
+\f1\fs36 \cf0 \uc0\u8232 \u8232 \'a0UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:arr];
+\b0\fs28 \
+
+\b \cf3 //
+\f0 \'d4\'da\'c3\'bb\'d3\'d0\'c9\'e8\'d6\'c3
+\f1 [segment setApportionsSegmentWidthsByContent:YES]
+\f0 \'ca\'b1\'a3\'ac\'c3\'bf\'b8\'f6\'b5\'c4\'bf\'ed\'b6\'c8\'b0\'b4
+\f1 segment
+\f0 \'b5\'c4\'bf\'ed\'b6\'c8\'c6\'bd\'b7\'d6
+\f1\b0 \cf0 \
+\pard\pardeftab720
+
+\b\fs36 \cf0 segment.frame = CGRectMake(0, 400, 320, 40);
+\b0\fs28 \
+\pard\pardeftab720
+
+\b \cf3 //
+\f0 \'c9\'e8\'d6\'c3
+\f1 frame
+\b0 \cf0 \
+\
+\pard\pardeftab720
+
+\f0\b\fs64 \cf2 \'b9\'dc\'c0\'ed
+\f1 Segment
+\f0 \'b5\'c4\'c4\'da\'c8\'dd
+\f1\b0\fs28 \cf0 \
+\pard\pardeftab720
+
+\b\fs36 \cf0 [segment setTitle:@"
+\f0 \'b4\'f3\'b1\'e3
+\f1 " forSegmentAtIndex:3];\'a0
+\b0\fs28 \
+\pard\pardeftab720
+
+\b \cf3 //
+\f0 \'c9\'e8\'d6\'c3\'cf\'c2\'b1\'ea\'ce\'aa
+\f1 3
+\f0 \'b5\'c4
+\f1 segment
+\f0 \'b5\'c4\'b1\'ea\'cc\'e2
+\f1  
+\f0 \'cf\'c2\'b1\'ea\'d2\'d4
+\f1 0
+\f0 \'bf\'aa\'ca\'bc
+\f1  IOS
+\f0 \'c0\'ef\'b5\'c4\'cb\'f9\'d3\'d0\'cf\'c2\'b1\'ea\'b6\'bc\'ca\'c7\'d2\'d4
+\f1 0
+\f0 \'bf\'aa\'ca\'bc
+\f1\b0 \cf0 \
+\pard\pardeftab720
+
+\b\fs36 \cf0 [segment setImage:[UIImage imageNamed:@"3"] forSegmentAtIndex:4];
+\b0\fs28 \
+\pard\pardeftab720
+
+\b \cf3 //
+\f0 \'c9\'e8\'d6\'c3\'cf\'c2\'b1\'ea\'ce\'aa
+\f1 4
+\f0 \'b5\'c4
+\f1 segment
+\f0 \'b5\'c4\'cd\'bc\'c6\'ac
+\f1\b0 \cf0 \
+\
+\pard\pardeftab720
+
+\f0\b\fs64 \cf2 \'b9\'dc\'c0\'ed
+\f1 Segments
+\b0\fs28 \cf0 \
+\pard\pardeftab720
+
+\b\fs36 \cf0 [segment insertSegmentWithImage:[UIImage imageNamed:@"3"] atIndex:2 animated:YES];
+\fs28 \'a0\cf3 //
+\f0 \'c9\'e8\'d6\'c3\'cd\'bc\'c6\'ac
+\f1\b0 \cf0 \
+
+\b\fs36 [segment insertSegmentWithTitle:@"ddd" atIndex:0 animated:YES];
+\fs28 \cf3 //
+\f0 \'c9\'e8\'d6\'c3\'b1\'ea\'cc\'e2
+\f1\b0 \cf0 \
+
+\b\fs36 [segment numberOfSegments];
+\fs28 \cf3 //
+\f0 \'b5\'c3\'b5\'bd
+\f1 segment
+\f0 \'b5\'c4\'ca\'fd\'c1\'bf
+\f1\b0 \cf0 \
+
+\b\fs36 [segment removeAllSegments];
+\fs28 \cf3 //
+\f0 \'d2\'c6\'b3\'f6\'cb\'f9\'d3\'d0
+\f1 segment
+\b0 \cf0 \
+
+\b\fs36 [segment removeSegmentAtIndex:2 animated:YES];
+\fs28 \cf3 //
+\f0 \'d2\'c6\'b3\'f6\'cf\'c2\'b1\'ea\'ce\'aa
+\f1 2
+\f0 \'b5\'c4
+\f1 segment
+\b0 \cf0 \
+
+\b\fs36 segment.selectedSegmentIndex = 0;
+\fs28 \cf3 //
+\f0 \'d1\'a1\'d6\'d0\'b5\'da\'bc\'b8\'b8\'f6
+\f1 segment 
+\f0 \'d2\'bb\'b0\'e3\'d3\'c3\'d3\'da\'b3\'f5\'ca\'bc\'bb\'af\'ca\'b1\'d1\'a1\'d6\'d0
+\f1\b0 \cf0 \
+\
+\pard\pardeftab720
+
+\f0\b\fs64 \cf2 \'b9\'dc\'c0\'ed
+\f1 Segment
+\f0 \'b5\'c4\'d0\'d0\'ce\'aa\'ba\'cd\'cd\'e2\'b9\'db
+\f1  
+\fs28 \cf0 \'a0 
+\b0 \
+\pard\pardeftab720
+
+\b\fs36 \cf0 segment.momentary = NO;
+\b0\fs28 \
+\pard\pardeftab720
+
+\b \cf3 //
+\f0 \'c4\'ac\'c8\'cf\'ce\'aa
+\f1 NO 
+\f0 \'b5\'b1\'c9\'e8\'d6\'c3\'ce\'aa
+\f1 YES
+\f0 \'ca\'b1\'a3\'ac\'b5\'b1\'b1\'bb\'d1\'a1\'d6\'d0\'ba\'f3\'a3\'ac\'d2\'bb\'bb\'e1\'b6\'f9\'ba\'f3\'b2\'bb\'cf\'d4\'ca\'be\'b1\'bb\'d1\'a1\'d6\'d0\'d7\'b4\'cc\'ac
+\f1 (
+\f0 \'d7\'ee\'d7\'f3\'b1\'df\'b5\'c4\'d1\'f9\'d7\'d3
+\f1 )
+\f0 \'a3\'ac\'b2\'bb\'d1\'a1\'d6\'d0\'d7\'b4\'cc\'ac\'bc\'b4\'cf\'c2\'cd\'bc\'b5\'c4\'d3\'d2\'b1\'df\'bc\'b8\'b8\'f6\'b0\'b4\'c5\'a5\'d2\'bb\'d1\'f9
+\f1\b0 \cf0 \
+\pard\pardeftab720
+
+\f2\fs24 \cf0 {{\NeXTGraphic 1347323975_9164.png \width6380 \height840 \noorient
+}¬}\pard\pardeftab720
+
+\f1\fs28 \cf0 \
+\pard\pardeftab720
+
+\b\fs36 \cf0 segment.segmentedControlStyle = UISegmentedControlStyleBar;
+\b0\fs28 \
+\pard\pardeftab720
+
+\b \cf3 typedef enum \{\uc0\u8232 \'a0\'a0 UISegmentedControlStylePlain,\u8232 \'a0\'a0 UISegmentedControlStyleBordered,\u8232 \'a0\'a0 UISegmentedControlStyleBar,\u8232 \'a0\'a0 UISegmentedControlStyleBezeled,\u8232 \} UISegmentedControlStyle;
+\b0 \cf0 \
+
+\b \cf3 //
+\f0 \'c9\'e8\'d6\'c3\'d1\'f9\'ca\'bd
+\f1  
+\f0 \'b5\'b1\'ce\'aa
+\f1 Bordered
+\f0 \'ba\'cd
+\f1 Bar
+\f0 \'ca\'b1
+\f1 tintColor
+\f0 \'b2\'c5\'d3\'d0\'d0\'a7
+\f1  
+\f0 \'cf\'c2\'cd\'bc\'ce\'aa
+\f1 tintcolor
+\f0 \'ce\'aa\'ba\'ec\'c9\'ab\'ca\'b1\'b5\'c4\'d1\'f9\'d7\'d3
+\f1\b0 \cf0 \
+
+\b \cf3 //Bar
+\f0 \'d1\'f9\'ca\'bd
+\f2\b0\fs24 \cf0 {{\NeXTGraphic 1347324295_7719.png \width6400 \height780 \noorient
+}¬}
+\f1\fs28 \
+
+\b \cf3 //Bordered
+\f2\b0\fs24 \cf0 {{\NeXTGraphic 1347324291_4136.png \width6420 \height800 \noorient
+}¬}
+\f1\fs28 \
+\pard\pardeftab720
+
+\b\fs36 \cf0 [segment setEnabled:NO]; 
+\fs28 \cf3 //
+\f0 \'c9\'e8\'d6\'c3
+\f1 segment
+\f0 \'ca\'c7\'b7\'f1\'bf\'c9\'d3\'c3
+\f1  
+\f0 \'b4\'cb\'b7\'bd\'b7\'a8\'ca\'c7\'c6\'e4\'b8\'b8\'c0\'e0{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/xingboss3/article/details/7891861"}}{\fldrslt 
+\f1 \cf4 UIControl}}\'b5\'c4\'b7\'bd\'b7\'a8
+\f1\b0 \cf0 \
+
+\b\fs36 [segment setEnabled:NO forSegmentAtIndex:2];
+\fs28 \cf3 //
+\f0 \'c9\'e8\'d6\'c3\'cf\'c2\'b1\'ea\'ce\'aa
+\f1 2
+\f0 \'b5\'c4
+\f1 segment
+\f0 \'b2\'bb\'bf\'c9\'d3\'c3
+\f1\b0 \cf0 \
+
+\b\fs36 [segment setWidth:100 forSegmentAtIndex:2];\'a0
+\fs28 \cf3 //
+\f0 \'d5\'e2\'ca\'b1\'cf\'c2\'b1\'ed\'ce\'aa
+\f1 2
+\f0 \'b5\'c4
+\f1 segment
+\f0 \'b5\'c4\'bf\'ed\'b6\'c8
+\f1\b0 \cf0 \
+
+\b\fs36 [segment setContentOffset:CGSizeMake(10, 10) forSegmentAtIndex:2];
+\fs28 \cf3 //
+\f0 \'c9\'e8\'d6\'c3\'c4\'da\'c8\'dd\'c6\'ab\'d2\'c6
+\f1\b0 \cf0 \
+
+\b\fs36 segment.apportionsSegmentWidthsByContent = YES;
+\fs28 \'a0\cf3 //
+\f0 \'ca\'c7\'b7\'f1\'b8\'f9\'be\'dd
+\f1 segment
+\f0 \'b5\'c4\'c4\'da\'c8\'dd\'b8\'c4\'b1\'e4
+\f1 segment
+\f0 \'b5\'c4\'bf\'ed\'b6\'c8
+\f1 \cf0 \uc0\u8232 \u8232 
+\f0\fs64 \cf2 \'d7\'d4\'b6\'a8\'d2\'e5\'cd\'e2\'b9\'db
+\f1\b0\fs28 \cf0 \
+
+\b\fs36 [segment setTintColor:[UIColor redColor]];
+\fs28 \cf3  //
+\f0 \'c9\'e8\'d6\'c3
+\f1 segments
+\f0 \'b5\'c4\'d1\'d5\'c9\'ab
+\f1\b0 \cf0 \
+
+\b\fs36 [segment setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+\b0\fs28 \
+\pard\pardeftab720
+
+\b \cf3 typedef enum \{\uc0\u8232 \'a0\'a0\'a0 UIBarMetricsDefault,\'a0 //
+\f0 \'ca\'fa\'c6\'c1
+\f1 \uc0\u8232 \'a0\'a0\'a0 UIBarMetricsLandscapePhone,\'a0 
+\f0 \'ba\'e1\'c6\'c1
+\f1 \uc0\u8232 \} UIBarMetrics;
+\b0 \cf0 \
+
+\b \cf3 //
+\f0 \'c9\'e8\'d6\'c3\'d4\'da\'c4\'b3\'b8\'f6\'d7\'b4\'cc\'ac\'cf\'c2
+\f1 segments
+\f0 \'b5\'c4\'b1\'b3\'be\'b0\'cd\'bc\'c6\'ac
+\f1\b0 \cf0 \
+\pard\pardeftab720
+
+\b\fs36 \cf0 [segment setTitleTextAttributes:dic forState:UIControlStateNormal];
+\b0\fs28 \
+\pard\pardeftab720
+
+\b \cf0 \uc0\u8232 \cf3 NSString *const UITextAttributeFont;\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 value: UIFont\uc0\u8232 NSString *const UITextAttributeTextColor;\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 value: UIColor\u8232 NSString *const UITextAttributeTextShadowColor;\'a0\'a0\'a0\'a0\'a0\'a0 value: UIColor\u8232 NSString *const UITextAttributeTextShadowOffset;\'a0\'a0\'a0\'a0\'a0 value: NSValue wrapping a UIOffset\u8232 \'a0\'a0 \'a0\u8232 NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor redColor],UITextAttributeTextColor,[UIFont fontWithName:@"SnellRoundhand-Bold" size:24],UITextAttributeFont ,nil];\'a0\'a0
+\b0 \cf0 \
+\pard\pardeftab720
+
+\b \cf3 //
+\f0 \'c9\'e8\'d6\'c3\'b1\'ea\'cc\'e2\'b5\'c4\'d1\'d5\'c9\'ab
+\f1  
+\f0 \'d7\'d6\'cc\'e5\'ba\'cd\'b4\'f3\'d0\'a1
+\f1  
+\f0 \'d2\'f5\'d3\'b0\'ba\'cd\'d2\'f5\'d3\'b0\'d1\'d5\'c9\'ab
+\f1\b0 \cf0 \
+\
+\pard\pardeftab720
+
+\b\fs36 \cf0 [segment addTarget:self action:@selector(change:) forControlEvents:UIControlEventValueChanged];
+\b0\fs28 \
+\pard\pardeftab720
+
+\b \cf3 //
+\f0 \'b5\'b1\'d1\'a1\'d6\'d0\'b2\'bb\'cd\'ac\'b5\'c4
+\f1 segment
+\f0 \'ca\'b1\'a3\'ac\'bb\'e1\'d6\'b4\'d0\'d0
+\f1 change:
+\f0 \'b7\'bd\'b7\'a8}

@@ -1,0 +1,62 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Consolas;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red163\green42\blue47;\red13\green19\blue31;\red255\green255\blue255;
+\red199\green232\blue255;\red253\green154\blue48;\red34\green185\blue18;\red53\green117\blue213;\red217\green226\blue255;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280
+
+\f0\fs26 \cf2 \cb3 UIAlertView\cf4  \cf5 *alert = [[\cf2 UIAlertView\cf4  \cf6 alloc\cf5 ]\cf4  \cf6 initWithTitle\cf4 :nil\
+\'a0\'a0\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\cf5 message:[\cf7 @"
+\f1 \'d2\'bb\'b8\'f6\'bf\'c9\'d2\'d4\'d7\'d4\'b6\'af\'b9\'d8\'b1\'d5\'b5\'c4
+\f0 Alert
+\f1 \'b4\'b0\'bf\'da
+\f0 "\cf4 \
+\'a0\'a0\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \cf6 delegate\cf4 :nil\
+\'a0\'a0\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\cf5 cancelButtonTitle\cf4 :nil \cf8 //NSLocalizedString(@"OK", @"OK") \'a0 //
+\f1 \'c8\'a1\'cf\'fb\'c8\'ce\'ba\'ce\'b0\'b4\'c5\'a5
+\f0 \cf4 \
+\'a0\'a0\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\cf5 otherButtonTitles\cf4 :nil\cf5 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf8 //[alert setBounds:CGRectMake(alert.bounds.origin.x, alert.bounds.origin.y, alert.bounds.size.width, alert.bounds.size.height+30.0)];\cf4 \
+\'a0\'a0\'a0\'a0\cf5 [alert\cf4  \cf6 show\cf5 ];\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf2 UIActivityIndicatorView\cf4  \cf5 *indicator = [[\cf2 UIActivityIndicatorView\cf4  \cf6 alloc\cf5 ]\cf4  \cf6 initWithActivityIndicatorStyle\cf5 :UIActivityIndicatorViewStyleWhiteLarge];\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 // Adjust the indicator so it is up a few pixels from the bottom of the alert \'a0 \'a0\cf4 \
+\'a0\'a0\'a0\'a0\cf5 indicator\cf9 .center\cf4  \cf5 = CGPointMake(alert\cf9 .bounds.size.width\cf5 /\cf7 2\cf5 , \'a0alert\cf9 .bounds.size.height\cf5 -\cf7 40\cf9 .0\cf5 );\cf4 \
+\'a0\'a0\'a0\'a0\cf5 [indicator\cf4  \cf6 startAnimating\cf5 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf5 [alert\cf4  \cf6 insertSubview\cf5 :indicator\cf4  \cf6 atIndex\cf5 :\cf7 0\cf5 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf5 [indicator\cf4  \cf6 release\cf5 ];\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf5 [\cf2 NSTimer\cf4  \cf6 scheduledTimerWithTimeInterval\cf5 :\cf7 3\cf9 .0f\cf4 \
+\'a0\'a0\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \cf6 target\cf5 :\cf4 self\
+\'a0\'a0\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \cf6 selector\cf5 :\cf4 @selector\cf5 (dismissAlert:)\cf4 \
+\'a0\'a0\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \cf6 userInfo\cf5 :[\cf2 NSDictionary\cf4  \cf6 dictionaryWithObjectsAndKeys\cf5 :alert, \cf7 @"alert"\cf5 , \cf7 @"testing "\cf5 , \cf7 @"key"\cf4  \cf5 ,nil] \'a0\cf8 //
+\f1 \'c8\'e7\'b9\'fb\'b2\'bb\'d3\'c3\'b4\'ab\'b5\'dd\'b2\'ce\'ca\'fd\'a3\'ac\'c4\'c7\'c3\'b4\'bf\'c9\'d2\'d4\'bd\'ab\'b4\'cb\'cf\'ee\'c9\'e8\'d6\'c3\'ce\'aa
+\f0 nil.\cf4 \
+\'a0\'a0\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\cf5 repeats:\cf4 NO\cf5 ];\cf4 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf5 NSLog(\cf7 @"release alert"\cf5 );\cf4 \
+\'a0\'a0\'a0\'a0\cf5 [alert\cf4  \cf6 release\cf5 ];\cf4 \
+\'a0\'a0\
+\'a0\'a0\
+\pard\pardeftab720\sl280
+\cf5 -(\cf4 void\cf5 )\cf4  \cf6 dismissAlert\cf5 :(\cf2 NSTimer\cf4  \cf5 *)timer\{\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf5 NSLog(\cf7 @"release timer"\cf5 );\cf4 \
+\'a0\'a0\'a0\'a0\cf5 NSLog([[timer\cf4  \cf6 userInfo\cf5 ] \'a0objectForKey:\cf7 @"key"\cf5 ]);\cf4 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf2 UIAlertView\cf4  \cf5 *alert = [[timer\cf4  \cf6 userInfo\cf5 ] \'a0objectForKey:\cf7 @"alert"\cf5 ];\cf4 \
+\'a0\'a0\'a0\'a0\cf5 [alert\cf4  \cf6 dismissWithClickedButtonIndex\cf5 :\cf7 0\cf4  \cf6 animated\cf5 :\cf4 YES\cf5 ];\cf4 \
+\'a0\'a0\'a0\'a0\
+\cf5 \}\cf4 \
+\'a0\'a0\
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf8 //
+\f1 \'b6\'a8\'ca\'b1\'c6\'f7\'cd\'a3\'d6\'b9\'ca\'b9\'d3\'c3\'a3\'ba
+\f0 \cf4 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0 \'a0 \'a0\cf5 [timer\cf4  \cf6 invalidate\cf5 ];\cf4 \
+\'a0\'a0\'a0\'a0 \'a0 \'a0\cf5 timer =\cf4  nil\cf5 ;\cf4 \
+}

@@ -1,0 +1,409 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red53\green117\blue213;\red13\green19\blue31;
+\red199\green232\blue255;\red163\green42\blue47;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa200
+
+\f0\b\fs32 \cf0 \cb2 Quartz 
+\f1 \'b8\'f7\'d6\'d6\'bb\'e6\'d6\'c6\'cd\'bc\'d0\'ce\'d3\'c3\'b7\'a8
+\f0 \
+\pard\pardeftab720
+
+\b0\fs28 \cf0 \cb1 Quartz 
+\f1 \'ca\'b5\'cf\'d6\'bb\'ad\'cd\'bc\'c6\'ac\'a1\'a2\'d0\'b4\'ce\'c4\'d7\'d6\'a1\'a2\'bb\'ad\'cf\'df\'a1\'a2\'cd\'d6\'d4\'b2\'a1\'a2\'be\'d8\'d0\'ce\'a1\'a2\'c0\'e2\'d0\'ce\'b5\'c8\'a1\'a3
+\f0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f2\fs24 \cf0 \
+\
+\
+\pard\pardeftab720\sl280
+
+\f3\fs26 \cf3 \cb4 // Only override drawRect: if you perform custom drawing.\cf2 \
+\cf3 // An empty implementation adversely affects performance during animation.\cf2 \
+\pard\pardeftab720\sl280
+\cf5 - (\cf2 void\cf5 )drawRect:(CGRect)rect\cf2 \
+\cf5 \{\cf2 \
+\'a0\'a0\'a0\'a0\cf6 CGContextRef\cf2  \cf5 context = UIGraphicsGetCurrentContext();\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.1
+\f1 \'bb\'ad\'d2\'bb\'cc\'f5\'cf\'df
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBStrokeColor(context, 0.5, 0.5, 0.5, 0.5);//
+\f1 \'cf\'df\'cc\'f5\'d1\'d5\'c9\'ab
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 CGContextMoveToPoint(context, 20, 20);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 CGContextAddLineToPoint(context, 200,20);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.2
+\f1 \'d0\'b4\'ce\'c4\'d7\'d6
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 1.0);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBFillColor (context, 0.5, 0.5, 0.5, 0.5);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 UIFont\'a0 *font = [UIFont boldSystemFontOfSize:18.0];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 [@"
+\f1 \'b9\'ab\'cb\'be\'a3\'ba\'b1\'b1\'be\'a9\'d6\'d0\'c8\'ed\'bf\'c6\'bc\'bc\'b9\'c9\'b7\'dd\'d3\'d0\'cf\'de\'b9\'ab\'cb\'be
+\f3 \\n
+\f1 \'b2\'bf\'c3\'c5\'a3\'ba
+\f3 ERP
+\f1 \'ca\'c2\'d2\'b5\'b2\'bf
+\f3 \\n
+\f1 \'d0\'d5\'c3\'fb\'a3\'ba
+\f3 McLiang" drawInRect:CGRectMake(20, 40, 280, 300) withFont:font];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.3
+\f1 \'bb\'ad\'d2\'bb\'b8\'f6\'d5\'fd\'b7\'bd\'d0\'ce\'cd\'bc\'d0\'ce
+\f3  
+\f1 \'c3\'bb\'d3\'d0\'b1\'df\'bf\'f2
+\f3 \cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBFillColor(context, 0, 0.25, 0, 0.5);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextFillRect(context, CGRectMake(2, 2, 270, 270));\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.4
+\f1 \'bb\'ad\'d5\'fd\'b7\'bd\'d0\'ce\'b1\'df\'bf\'f2
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBStrokeColor(context, 0.5, 0.5, 0.5, 0.5);//
+\f1 \'cf\'df\'cc\'f5\'d1\'d5\'c9\'ab
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 2.0);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddRect(context, CGRectMake(2, 2, 270, 270));\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.5
+\f1 \'bb\'ad\'b7\'bd\'d0\'ce\'b1\'b3\'be\'b0\'d1\'d5\'c9\'ab
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextTranslateCTM(context, 0.0f, self.bounds.size.height);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextScaleCTM(context, 1.0f, -1.0f);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 UIGraphicsPushContext(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context,320);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBStrokeColor(context, 250.0/255, 250.0/255, 210.0/255, 1.0);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokeRect(context, CGRectMake(0, 0, 320, 460));\cf2 \
+\'a0\'a0\'a0\'a0\cf3 UIGraphicsPopContext();\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.6
+\f1 \'cd\'d6\'d4\'b2
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\cf3 CGRect aRect= CGRectMake(80, 80, 160, 100);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBStrokeColor(context, 0.6, 0.9, 0, 1.0);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 3.0);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 CGContextAddEllipseInRect(context, aRect); //
+\f1 \'cd\'d6\'d4\'b2
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 CGContextDrawPath(context, kCGPathStroke);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.7\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextBeginPath(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBStrokeColor(context, 0, 0, 1, 1);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextMoveToPoint(context, 100, 100);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddArcToPoint(context, 50, 100, 50, 150, 50);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.8
+\f1 \'bd\'a5\'b1\'e4
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextClip(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGColorSpaceRef rgb = CGColorSpaceCreateDeviceRGB();\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGFloat colors[] =\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \{\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 204.0 / 255.0, 224.0 / 255.0, 244.0 / 255.0, 1.00,\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 29.0 / 255.0, 156.0 / 255.0, 215.0 / 255.0, 1.00,\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 0.0 / 255.0,\'a0 50.0 / 255.0, 126.0 / 255.0, 1.00,\cf2 \
+\'a0\'a0\'a0\'a0\cf3 \};\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGGradientRef gradient = CGGradientCreateWithColorComponents\cf2 \
+\'a0\'a0\'a0\'a0\cf3 (rgb, colors, NULL, sizeof(colors)/(sizeof(colors[0])*4));\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGColorSpaceRelease(rgb);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextDrawLinearGradient(context, gradient,CGPointMake\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 (0.0,0.0) ,CGPointMake(0.0,self.frame.size.height),\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 kCGGradientDrawsBeforeStartLocation);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /* NO.9
+\f1 \'cb\'c4\'cc\'f5\'cf\'df\'bb\'ad\'d2\'bb\'b8\'f6\'d5\'fd\'b7\'bd\'d0\'ce
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 //
+\f1 \'bb\'ad\'cf\'df
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 UIColor *aColor = [UIColor colorWithRed:0 green:1.0 blue:0 alpha:0];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBStrokeColor(context, 1.0, 0, 0, 1.0);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 CGContextSetFillColorWithColor(context, aColor.CGColor);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 4.0);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGPoint aPoints[5];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 aPoints[0] =CGPointMake(60, 60);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 aPoints[1] =CGPointMake(260, 60);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 aPoints[2] =CGPointMake(260, 300);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 aPoints[3] =CGPointMake(60, 300);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 aPoints[4] =CGPointMake(60, 60);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddLines(context, aPoints, 5);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextDrawPath(context, kCGPathStroke); //
+\f1 \'bf\'aa\'ca\'bc\'bb\'ad\'cf\'df
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*\'a0 NO.10\cf2 \
+\'a0\'a0\'a0\'a0\cf3 UIColor *aColor = [UIColor colorWithRed:0 green:1.0 blue:0 alpha:0];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBStrokeColor(context, 1.0, 0, 0, 1.0);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetFillColorWithColor(context, aColor.CGColor);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 //
+\f1 \'cd\'d6\'d4\'b2
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGRect aRect= CGRectMake(80, 80, 160, 100);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetRGBStrokeColor(context, 0.6, 0.9, 0, 1.0);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 3.0);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 CGContextSetFillColorWithColor(context, aColor.CGColor);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf3 CGContextAddRect(context, rect); //
+\f1 \'be\'d8\'d0\'ce
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddEllipseInRect(context, aRect); //
+\f1 \'cd\'d6\'d4\'b2
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextDrawPath(context, kCGPathStroke);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*\'a0 NO.11\cf2 \
+\'a0\'a0\'a0\'a0\'a0
+\f1 \cf3 \'bb\'ad\'d2\'bb\'b8\'f6\'ca\'b5\'d0\'c4\'b5\'c4\'d4\'b2
+\f3 \cf2 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\cf3 CGContextFillEllipseInRect(context, CGRectMake(95, 95, 100.0, 100));\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.12\cf2 \
+\'a0\'a0\'a0\'a0\'a0
+\f1 \cf3 \'bb\'ad\'d2\'bb\'b8\'f6\'c1\'e2\'d0\'ce
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 2.0);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextMoveToPoint(context, 100, 100);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddLineToPoint(context, 150, 150);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddLineToPoint(context, 100, 200);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddLineToPoint(context, 50, 150);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddLineToPoint(context, 100, 100);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NO.13 
+\f1 \'bb\'ad\'be\'d8\'d0\'ce
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 2.0);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGRect rectangle = CGRectMake(60,170,200,80);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextAddRect(context, rectangle);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*
+\f1 \'cd\'d6\'d4\'b2
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 2.0);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGRect rectangle = CGRectMake(60,170,200,80);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextAddEllipseInRect(context, rectangle);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*
+\f1 \'d3\'c3\'ba\'ec\'c9\'ab\'cc\'ee\'b3\'e4\'c1\'cb\'d2\'bb\'b6\'ce\'c2\'b7\'be\'b6
+\f3 :\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextMoveToPoint(context, 100, 100);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddLineToPoint(context, 150, 150);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddLineToPoint(context, 100, 200);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddLineToPoint(context, 50, 150);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddLineToPoint(context, 100, 100);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextFillPath(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*
+\f1 \'cc\'ee\'b3\'e4\'d2\'bb\'b8\'f6\'c0\'b6\'c9\'ab\'b1\'df\'b5\'c4\'ba\'ec\'c9\'ab\'be\'d8\'d0\'ce
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 2.0);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGRect rectangle = CGRectMake(60,170,200,80);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddRect(context, rectangle);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextFillRect(context, rectangle);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*
+\f1 \'bb\'ad\'bb\'a1
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 //
+\f1 \'bb\'a1\'cf\'df\'b5\'c4\'ca\'c7\'cd\'a8\'b9\'fd\'d6\'b8\'b6\'a8\'c1\'bd\'b8\'f6\'c7\'d0\'b5\'e3\'a3\'ac\'bb\'b9\'d3\'d0\'bd\'c7\'b6\'c8\'a3\'ac\'b5\'f7\'d3\'c3
+\f3 CGContextAddArcToPoint()
+\f1 \'bb\'e6\'d6\'c6
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 2.0);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextMoveToPoint(context, 100, 100);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextAddArcToPoint(context, 100,200, 300,200, 100);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*\cf2 \
+\'a0\'a0\'a0\'a0
+\f1 \cf3 \'bb\'e6\'d6\'c6\'b1\'b4\'d7\'c8\'c7\'fa\'cf\'df
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 //
+\f1 \'b1\'b4\'d7\'c8\'c7\'fa\'cf\'df\'ca\'c7\'cd\'a8\'b9\'fd\'d2\'c6\'b6\'af\'d2\'bb\'b8\'f6\'c6\'f0\'ca\'bc\'b5\'e3\'a3\'ac\'c8\'bb\'ba\'f3\'cd\'a8\'b9\'fd\'c1\'bd\'b8\'f6\'bf\'d8\'d6\'c6\'b5\'e3
+\f3 ,
+\f1 \'bb\'b9\'d3\'d0\'d2\'bb\'b8\'f6\'d6\'d0\'d6\'b9\'b5\'e3\'a3\'ac\'b5\'f7\'d3\'c3
+\f3 CGContextAddCurveToPoint() 
+\f1 \'ba\'af\'ca\'fd\'bb\'e6\'d6\'c6
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 2.0);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextMoveToPoint(context, 10, 10);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextAddCurveToPoint(context, 0, 50, 300, 250, 300, 400);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*
+\f1 \'bb\'e6\'d6\'c6\'b6\'fe\'b4\'ce\'b1\'b4\'d7\'c8\'c7\'fa\'cf\'df
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 2.0);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 CGContextMoveToPoint(context, 10, 200);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 CGContextAddQuadCurveToPoint(context, 150, 10, 300, 200);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*
+\f1 \'bb\'e6\'d6\'c6\'d0\'e9\'cf\'df
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineWidth(context, 5.0);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGFloat dashArray[] = \{2,6,4,2\};\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextSetLineDash(context, 3, dashArray, 4);//
+\f1 \'cc\'f8\'b9\'fd
+\f3 3
+\f1 \'b8\'f6\'d4\'d9\'bb\'ad\'d0\'e9\'cf\'df\'a3\'ac\'cb\'f9\'d2\'d4\'b8\'d5\'bf\'aa\'ca\'bc\'d3\'d0
+\f3 6-
+\f1 \'a3\'a8
+\f3 3-2
+\f1 \'a3\'a9
+\f3 =5
+\f1 \'b8\'f6\'d0\'e9\'b5\'e3
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextMoveToPoint(context, 10, 200);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextAddQuadCurveToPoint(context, 150, 10, 300, 200);\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextStrokePath(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 */\cf2 \
+\pard\pardeftab720\sl280
+\cf3 /*
+\f1 \'bb\'e6\'d6\'c6\'cd\'bc\'c6\'ac
+\f3 \cf2 \
+\'a0\'a0\'a0\'a0\cf3 NSString* imagePath = [[NSBundle mainBundle] pathForResource:@"dog" ofType:@"png"];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 UIImage* myImageObj = [[UIImage alloc] initWithContentsOfFile:imagePath];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 //[myImageObj drawAtPoint:CGPointMake(0, 0)];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 [myImageObj drawInRect:CGRectMake(0, 0, 320, 480)];\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 NSString *s = @"
+\f1 \'ce\'d2\'b5\'c4\'d0\'a1\'b9\'b7
+\f3 ";\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 [s drawAtPoint:CGPointMake(100, 0) withFont:[UIFont systemFontOfSize:34.0]];\cf2 \
+\cf3 */\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\cf3 /*\cf2 \
+\'a0\'a0\'a0\'a0\cf3 NSString *path = [[NSBundle mainBundle] pathForResource:@"dog" ofType:@"png"];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 UIImage *img = [UIImage imageWithContentsOfFile:path];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGImageRef image = img.CGImage;\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSaveGState(context);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGRect touchRect = CGRectMake(0, 0, img.size.width, img.size.height);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextDrawImage(context, touchRect, image);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextRestoreGState(context);\cf2 \
+\'a0\'a0\'a0\cf3 */\cf2 \
+\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 /*NSString *path = [[NSBundle mainBundle] pathForResource:@"dog" ofType:@"png"];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 UIImage *img = [UIImage imageWithContentsOfFile:path];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGImageRef image = img.CGImage;\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextSaveGState(context);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextRotateCTM(context, M_PI);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextTranslateCTM(context, -img.size.width, -img.size.height);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGRect touchRect = CGRectMake(0, 0, img.size.width, img.size.height);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextDrawImage(context, touchRect, image);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextRestoreGState(context);*/\cf2 \
+\'a0\
+\cf3 /*\cf2 \
+\'a0\'a0\'a0\'a0\cf3 NSString *path = [[NSBundle mainBundle] pathForResource:@"dog" ofType:@"png"];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 UIImage *img = [UIImage imageWithContentsOfFile:path];\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGImageRef image = img.CGImage;\cf2 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextSaveGState(context);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGAffineTransform myAffine = CGAffineTransformMakeRotation(M_PI);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 myAffine = CGAffineTransformTranslate(myAffine, -img.size.width, -img.size.height);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextConcatCTM(context, myAffine);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGContextRotateCTM(context, M_PI);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextTranslateCTM(context, -img.size.width, -img.size.height);\cf2 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf3 CGRect touchRect = CGRectMake(0, 0, img.size.width, img.size.height);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextDrawImage(context, touchRect, image);\cf2 \
+\'a0\'a0\'a0\'a0\cf3 CGContextRestoreGState(context);\cf2 \
+\cf3 */\cf2 \
+\pard\pardeftab720\sl280
+\cf5 \}\cf2 \
+}
