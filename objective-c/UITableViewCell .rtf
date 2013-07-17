@@ -1,0 +1,366 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fnil\fcharset0 Verdana;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red255\green255\blue255;\red255\green255\blue193;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa320
+{\field{\*\fldinst{HYPERLINK "http://www.cnblogs.com/martin1009/archive/2012/06/07/2540127.html"}}{\fldrslt 
+\f0\b\fs48 \cf2 \cb3 \ul \ulc2 IOS
+\f1 \'bb\'f9\'b4\'a1\'a3\'ba
+\f0 tableview
+\f1 \'d6\'d0
+\f0 cell}}
+\f0\b\fs48 \cb3 \
+\pard\pardeftab720\sa200
+
+\f1\b0\fs24 \cf0 \'cc\'ed\'bc\'d3\'ca\'fd\'be\'dd\'d4\'b4
+\f0 , 
+\f1 \'d3\'c9\'c8\'fd\'b8\'f6\'ba\'af\'ca\'fd\'c0\'b4\'bb\'d8\'b4\'f0\'ca\'fd\'be\'dd\'b0\'f3\'b6\'a8\'b5\'c4\'c7\'eb\'c7\'f3
+\f0 :numberOfSectionsInTableView, numberOfRowsInSection 
+\f1 \'ba\'cd
+\f0  cellForRowAtIndexPath.\
+
+\f1 \'d3\'c3
+\f0 numberOfSectionsInTableView
+\f1 \'b7\'bd\'b7\'a8\'c0\'b4\'b7\'b5\'bb\'d8
+\f0 table
+\f1 \'d6\'d0\'d3\'d0\'bc\'b8\'b8\'f6\'d7\'e9
+\f0 .\
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView\
+\{\
+\'a0 return 1;\
+\}\
+
+\f1 \'d3\'c3
+\f0 numberOfRowsInSection
+\f1 \'b7\'bd\'b7\'a8\'c0\'b4\'b7\'b5\'bb\'d8\'c3\'bf\'b8\'f6\'d7\'e9\'c0\'ef\'d3\'d0\'bc\'b8\'d0\'d0
+\f0 \
+- (NSInteger)tableView:(UITableView *)tableView\
+\'a0numberOfRowsInSection:(NSInteger)section\'a0\
+\{\
+\'a0 return nRecords;\
+\}\
+
+\f1 \'d7\'ee\'ba\'f3\'d3\'c3
+\f0 cellForRowAtIndexPath
+\f1 \'c0\'b4\'b5\'c3\'b5\'bd\'d2\'bb\'b8\'f6\'b0\'fc\'ba\'ac\'c3\'bf\'d2\'bb\'d0\'d0\'cf\'d4\'ca\'be\'d0\'c5\'cf\'a2\'b5\'c4
+\f0 UITableViewCell
+\f1 \'b6\'d4\'cf\'f3
+\f0 . UITableViewCell
+\f1 \'c0\'e0\'d6\'a7\'b3\'d6\'ce\'c4\'b1\'be\'ba\'cd\'cd\'bc\'cf\'f1
+\f0 ,
+\f1 \'b1\'e0\'bc\'ad\'ba\'cd\'c9\'be\'b3\'fd\'c8\'b7\'c8\'cf\'b5\'c8\'b9\'a6\'c4\'dc
+\f0 . 
+\f1 \'d5\'e2\'d0\'a9\'d0\'c5\'cf\'a2\'bb\'e1\'b1\'a3\'b4\'e6\'d4\'da\'b1\'ed\'b6\'d3\'c1\'d0\'c0\'ef
+\f0 ,
+\f1 \'d3\'c3\'c0\'b4\'d6\'c1\'b4\'cb\'b7\'ad\'d2\'b3\'b5\'c8\'b9\'a6\'c4\'dc
+\f0 ,
+\f1 \'b5\'ab\'ca\'c7\'c4\'da\'b4\'e6\'ba\'dc\'b5\'cd\'b5\'c4\'ca\'b1\'ba\'f2\'bb\'e1\'d7\'d4\'b6\'af\'ca\'cd\'b7\'c5
+\f0 ,
+\f1 \'c8\'bb\'ba\'f3\'d4\'d9\'d0\'e8\'d2\'aa\'b5\'c4\'ca\'b1\'ba\'f2\'d6\'d8\'d0\'c2\'b4\'b4\'bd\'a8
+\f0 .\
+- (UITableViewCell *)tableView:(UITableView *)tableView\
+\'a0 \'a0 cellForRowAtIndexPath:(NSIndexPath *)indexPath\'a0\
+\{\
+\'a0 \'a0 NSString *CellIdentifier = [ [ NSString alloc ] initWithFormat:\
+\'a0 \'a0 \'a0 \'a0 \'a0@"Cell %d", [ indexPath indexAtPosition: 1 ] ];\
+\'a0 \'a0\'a0\
+\'a0 \'a0 UITableViewCell *cell = [ tableView dequeueReusableCellWithIdentifier: CellIdentifier ];\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0 if (cell == nil) \{\
+\'a0 \'a0 \'a0 \'a0 cell = [ [ [ UITableViewCell alloc ]\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 initWithFrame: CGRectZero reuseIdentifier: CellIdentifier ]\
+\'a0 \'a0 \'a0 \'a0 autorelease\'a0\
+\'a0 \'a0 \'a0 \'a0 ];\'a0\
+\'a0 \'a0 \}\
+\'a0 \'a0\'a0\
+\'a0 \'a0 cell.text = CellIdentifier;\
+\'a0 \'a0 return cell;\'a0\
+\}\
+NSIndexPath
+\f1 \'d3\'c3\'c0\'b4\'b1\'a3\'b4\'e6\'c4\'c4\'d2\'bb\'d7\'e9\'b5\'c4\'c4\'c4\'d2\'bb\'d0\'d0
+\f0 .\
+[ indexPath indexAtPosition: 0 ]
+\f1 \'c4\'c4\'d2\'bb\'d7\'e9
+\f0 \
+[ indexPath indexAtPosition: 1 ]
+\f1 \'c4\'c4\'d2\'bb\'d0\'d0
+\f0 \
+\'a0\
+7.2 UITableViewCell
+\f1 \'b0\'fc\'ba\'ac\'cd\'bc\'cf\'f1
+\f0 ,
+\f1 \'ce\'c4\'b1\'be\'b5\'c8
+\f0 .\
+NSString *CellIdentifier = [ [ NSString alloc ] initWithString: @"Frank" ];\
+UITableViewCell *cell = [ [ [ UITableViewCell alloc ]\
+\'a0 \'a0 \'a0 \'a0 initWithFrame: CGRectZero\
+\'a0 \'a0 \'a0 \'a0 reuseIdentifier: CellIdentifier\'a0\
+\'a0 \'a0 ] autorelease\
+];\
+
+\f1 \'c8\'bb\'ba\'f3\'c4\'e3\'bf\'c9\'d2\'d4\'ce\'aa\'c3\'bf\'d2\'bb\'b8\'f6
+\f0 cell
+\f1 \'c9\'e8\'d6\'c3\'b2\'bb\'cd\'ac\'b5\'c4\'b7\'e7\'b8\'f1
+\f0 \
+(1) 
+\f1 \'cf\'d4\'ca\'be\'ce\'c4\'b1\'be
+\f0 : cell.text = @"Frank's Table Cell";\
+(2) 
+\f1 \'b6\'d4\'c6\'eb
+\f0 : cell.textAlignment = UITextAlignmentLeft;\
+\pard\pardeftab720\sa200
+\cf0 \cb4 UITextAlignmentLeft 
+\f1 \'c4\'ac\'c8\'cf\'ca\'c7\'d7\'f3\'b6\'d4\'c6\'eb
+\f0 \cb3 \
+\cb4 UITextAlignmentRight 
+\f1 \'d3\'d2\'b6\'d4\'c6\'eb
+\f0 \cb3 \
+\cb4 UITextAlignmentCenter 
+\f1 \'d6\'d0\'b6\'d4\'c6\'eb
+\f0 \cb3 \
+(3) 
+\f1 \'d7\'d6\'cc\'e5\'ba\'cd\'b3\'df\'b4\'e7
+\f0 :\
+#import <UIKit/UIFont.h>\
+UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 18.0 ];\'a0\
+cell.font = myFont;\
+//
+\f1 \'cf\'b5\'cd\'b3\'d7\'d6\'cc\'e5
+\f0 \
+UIFont *mySystemFont = [ UIFont systemFontOfSize: 12.0 ];\
+UIFont *myBoldSystemFont = [ UIFont boldSystemFontOfSize: 12.0 ];\
+UIFont *myItalicSystemFont = [ UIFont italicSystemFontOfSize: 12.0 ];\
+(4) 
+\f1 \'d1\'d5\'c9\'ab
+\f0 \
+#import <UIKit/UIColor.h>\
+//
+\f1 \'ce\'c4\'b1\'be\'d1\'d5\'c9\'ab
+\f0 \
+cell.textColor = [ UIColor redColor ];\
+//
+\f1 \'b5\'b1\'c7\'b0\'d1\'a1\'d4\'f1\'cf\'ee\'b5\'c4\'d1\'d5\'c9\'ab
+\f0 \
+cell.selectedTextColor = [ UIColor blueColor ];\
+(5) 
+\f1 \'cd\'bc\'cf\'f1
+\f0 \
+//
+\f1 \'b4\'d3\'c4\'e3\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'c4\'bf\'c2\'bc\'cf\'c2\'b5\'c4\'ce\'c4\'bc\'fe\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f0 image\
+cell.image = [ UIImage imageNamed: @"cell.png" ];\
+//
+\f1 \'b5\'b1\'c7\'b0\'d1\'a1\'d6\'d0\'cf\'ee\'b5\'c4\'cd\'bc\'d0\'ce
+\f0 \
+cell.selectedImage = [ UIImage imageNamed: @"selected_cell.png" ];\
+\pard\pardeftab720\sa200
+
+\f1 \cf0 \'bf\'c9\'d2\'d4\'d0\'de\'b8\'c4
+\f0 table
+\f1 \'b1\'a3\'d7\'bc\'d0\'d0\'b8\'df\'c0\'b4\'ca\'ca\'d3\'a6\'c4\'e3\'b5\'c4\'cd\'bc\'d0\'ce\'b8\'df\'b6\'c8
+\f0 \
+- (id)init\'a0\
+\{\
+\'a0 \'a0 self = [ super init ];\
+\'a0 \'a0 if (self != nil) \{\
+\'a0 \'a0 \'a0 \'a0 self.tableView.rowHeight = 65;\'a0\
+\'a0 \'a0 \}\
+\'a0 \'a0 return self;\'a0\
+\}\
+
+\f1 \'c4\'e3\'d2\'b2\'bf\'c9\'d2\'d4\'ce\'aa\'c3\'bf\'d2\'bb\'b8\'f6
+\f0 cell
+\f1 \'b6\'a8\'d2\'e5\'b2\'bb\'cd\'ac\'b5\'c4\'b8\'df\'b6\'c8
+\f0 \
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath\'a0\
+\{\
+\'a0 \'a0 if ([ indexPath indexAtPosition: 1 ] == 0)\
+\'a0 \'a0 \'a0 \'a0 return 65.0;\'a0\
+\'a0 \'a0 else\
+\'a0 \'a0 \'a0 \'a0 return 40.0;\'a0\
+\}\
+(6)
+\f1 \'d1\'a1\'d6\'d0\'cf\'ee\'b5\'c4\'b7\'e7\'b8\'f1
+\f0 \
+cell.selectionStyle = UITableViewCellSelectionStyleBlue;\
+\pard\pardeftab720\sa200
+\cf0 \cb4 UITableViewCellSelectionStyleBlue 
+\f1 \'c4\'ac\'c8\'cf\'d1\'a1\'d6\'d0\'cf\'ee\'ca\'c7\'c0\'b6\'c9\'ab
+\f0 \cb3 \
+\cb4 UITableViewCellSelectionStyleGray 
+\f1 \'bb\'d2\'c9\'ab
+\f0 \cb3 \
+\cb4 UITableViewCellSelectionStyleNone 
+\f1 \'c3\'bb\'d3\'d0\'b1\'e4\'bb\'af
+\f0 \cb3 \
+\'a0\
+(7)
+\f1 \'b1\'ea\'c7\'a9
+\f0  (labels)\
+\pard\pardeftab720\sa200
+
+\f1 \cf0 \'d4\'da\'c6\'ab\'d2\'c6\'c1\'bf
+\f0 100x0
+\f1 \'b4\'a6\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'b3\'df\'b4\'e7
+\f0 50x50 label:\
+UILabel *label = [ [ UILabel alloc ] initWithFrame: CGRectMake(100.0, 0.0, 50.0, 50.0) ];\
+label.text = @"Label Text";\
+label.textAlignment = UITextAlignmentLeft;\
+label.textColor = [ UIColor redColor ];\
+label.font = [ UIFont fontWithName: @"Arial" size: 10.0 ];\
+
+\f1 \'b1\'ea\'c7\'a9
+\f0 label
+\f1 \'bf\'c9\'d2\'d4\'c9\'e8\'d6\'c3\'ce\'c4\'b1\'be\'d2\'f5\'d3\'b0
+\f0 ,
+\f1 \'c9\'f5\'d6\'c1\'bf\'c9\'d2\'d4\'b6\'a8\'d2\'e5\'d2\'f5\'d3\'b0\'b5\'c4\'c6\'ab\'d2\'c6
+\f0 :\
+label.shadowColor = [ UIColor grayColor ];\
+label.shadowOffset = CGSizeMake(0, -1);\
+
+\f1 \'b8\'df\'c1\'c1\'ca\'c7\'b5\'c4\'d1\'d5\'c9\'ab
+\f0 :\
+label.highlightedTextColor = [ UIColor blackColor ];\
+
+\f1 \'b1\'ea\'c7\'a9\'b5\'c4\'b1\'b3\'be\'b0\'c9\'ab
+\f0 :\
+label.backgroundColor = [ UIColor blueColor ];\
+
+\f1 \'b0\'d1\'b1\'ea\'c7\'a9\'bc\'d3\'b5\'bd
+\f0 cell
+\f1 \'c0\'ef
+\f0 \
+[ cell addSubview: label ];\
+(8) 
+\f1 \'b8\'bd\'bc\'fe
+\f0 \
+cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;\
+Style\
+Description\
+UITableViewCellAccessoryNone\
+
+\f1 \'c3\'bb\'d3\'d0\'b8\'bd\'bc\'fe
+\f0 \
+UITableViewCellAccessoryDisclosureIndicator\
+
+\f1 \'ba\'da\'c9\'ab\'cf\'f2\'d3\'d2\'b5\'c4\'bc\'fd\'cd\'b7
+\f0 \
+UITableViewCellAccessoryDetailDisclosureButton\
+
+\f1 \'c0\'b6\'c9\'ab\'b8\'bd\'bc\'fe\'b0\'b4\'c5\'a5
+\f0 \
+UITableViewCellAccessoryCheckmark\
+
+\f1 \'b8\'b4\'d1\'a1\'bf\'f2
+\f0 ,
+\f1 \'d6\'a7\'b3\'d6\'d1\'a1\'d4\'f1
+\f0 \
+\'a0\
+7.3 
+\f1 \'ca\'b5\'cf\'d6\'b6\'e0\'d1\'a1
+\f0 \
+- (void)tableView:(UITableView *)tableView\
+\'a0 \'a0 \'a0 \'a0 didSelectRowAtIndexPath:(NSIndexPath *)indexPath\'a0\
+\{\
+\'a0 \'a0 NSLog(@"Selected section %d, cell %d",\'a0\
+\'a0 \'a0 \'a0 \'a0 [ indexPath indexAtPosition: 0 ], [ indexPath indexAtPosition: 1 ]);\'a0\
+\'a0 \'a0 //
+\f1 \'bb\'f1\'b5\'c4\'b5\'b1\'c7\'b0\'d1\'a1\'d4\'f1\'cf\'ee
+\f0 \
+\'a0 \'a0 UITableViewCell *cell = [ self.tableView cellForRowAtIndexPath: indexPath ];\'a0\
+\'a0 \'a0 //
+\f1 \'cf\'d4\'ca\'be\'b8\'b4\'d1\'a1\'bf\'f2
+\f0 \
+\'a0 \'a0 if (cell.accessoryType == UITableViewCellAccessoryNone)\
+\'a0 \'a0 \'a0 \'a0 cell.accessoryType = UITableViewCellAccessoryCheckmark;\
+\'a0 \'a0 else\
+\'a0 \'a0 \'a0 \'a0 cell.accessoryType = UITableViewCellAccessoryNone;\'a0\
+\}\
+7.4 
+\f1 \'b1\'e0\'bc\'ad\'ba\'cd\'c9\'be\'b3\'fd
+\f0 \
+
+\f1 \'d4\'da\'d4\'ca\'d0\'ed\'d3\'c3\'bb\'a7\'c9\'be\'b3\'fd\'ba\'cd\'b1\'e0\'bc\'ad\'b5\'c4\'ca\'b1\'ba\'f2
+\f0 ,
+\f1 \'c3\'bf\'d2\'bb\'b8\'f6
+\f0 cell
+\f1 \'d7\'f3\'b1\'df\'bb\'e1\'cf\'d4\'ca\'be\'d2\'bb\'b8\'f6\'ba\'ec\'c9\'ab\'c9\'be\'b3\'fd\'cd\'bc\'b1\'ea
+\f0 \
+[ self.tableView setEditing:YES animated:YES ];\
+
+\f1 \'b9\'d8\'b1\'d5\'b1\'e0\'bc\'ad\'b5\'c4\'ca\'b1\'ba\'f2
+\f0 ,table
+\f1 \'b6\'a5\'b2\'bf\'bb\'e1\'cf\'d4\'ca\'be\'d2\'bb\'b8\'f6
+\f0 Edit
+\f1 \'b5\'bc\'ba\'bd\'cc\'f5
+\f0 \
+[ self.tableView setEditing: NO animated: YES ];\
+
+\f1 \'d4\'da\'b1\'e0\'bc\'ad\'b9\'fd\'b3\'cc\'d6\'d0
+\f0 ,
+\f1 \'c8\'e7\'b9\'fb\'d3\'c3\'bb\'a7\'d2\'aa\'c9\'be\'b3\'fd\'b8\'c3\'cf\'ee
+\f0 ,
+\f1 \'bb\'e1\'b5\'af\'b3\'f6\'d2\'bb\'b8\'f6\'c9\'be\'b3\'fd\'c8\'b7\'c8\'cf\'bf\'f2
+\f0 . 
+\f1 \'c8\'b7\'c8\'cf\'ba\'f3\'b5\'f7
+\f0 UITableViewDataSource
+\f1 \'c0\'e0\'b5\'c4
+\f0 commitEditingStyle
+\f1 \'b7\'bd\'b7\'a8\'c0\'b4\'cd\'a8\'d6\'aa\'c4\'e3\'b5\'c4\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2
+\f0 , 
+\f1 \'c8\'bb\'ba\'f3\'c4\'e3\'bf\'c9\'d2\'d4\'b4\'d3\'c4\'e3\'b5\'c4\'b5\'d7\'b2\'e3\'ca\'fd\'be\'dd\'d4\'b4\'c0\'ef\'c9\'be\'b3\'fd\'b8\'c3\'cf\'ee
+\f0 ,
+\f1 \'b2\'a2\'cd\'a8\'d6\'aa
+\f0 table view
+\f1 \'c9\'be\'b3\'fd\'b8\'c3\'d0\'d0
+\f0 .\
+- (void)tableView:(UITableView *)tableView\
+\'a0 \'a0 commitEditingStyle:(UITableViewCellEditingStyle) editingStyle\
+\'a0 \'a0 forRowAtIndexPath:(NSIndexPath *) indexPath\'a0\
+\{\
+\'a0 \'a0 if (editingStyle == UITableViewCellEditingStyleDelete)\'a0\
+\'a0 \'a0 \{\
+\'a0 \'a0 \'a0 \'a0 NSLog(@"Deleted section %d, cell %d", [ indexPath indexAtPosition: 0 ], [ indexPath indexAtPosition: 1 ]);\
+\'a0 \'a0 \'a0 \'a0 NSMutableArray *array = [ [ NSMutableArray alloc ] init ];\
+\'a0 \'a0 \'a0 \'a0 [ array addObject: indexPath ];\
+\'a0 \'a0 \'a0 \'a0 [ self.tableView deleteRowsAtIndexPaths: array\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 withRowAnimation: UITableViewRowAnimationFade\'a0\
+\'a0 \'a0 \'a0 \'a0 ];\
+\'a0 \'a0 \'a0\}\
+\}\
+
+\f1 \'cd\'a8\'b9\'fd\'b4\'ab\'b5\'dd\'d2\'bb\'b8\'f6\'ca\'fd\'d7\'e9\'b8\'f8
+\f0 deleteRowsAtIndexPaths
+\f1 \'b7\'bd\'b7\'a8
+\f0 , 
+\f1 \'bf\'c9\'d2\'d4\'c9\'be\'b3\'fd\'d2\'bb\'d0\'d0\'bb\'f2\'b6\'e0\'d0\'d0
+\f0 .\
+\'a0\
+withRowAnimation
+\f1 \'d6\'c1\'b4\'cb\'cf\'c2\'c1\'d0\'d4\'a4\'b6\'a8\'d2\'e5\'b5\'c4\'c9\'be\'b3\'fd\'b6\'af\'bb\'ad
+\f0 \
+Animation\
+Description\
+UITableViewRowAnimationFade\
+Cell fades out\
+UITableViewRowAnimationRight\
+Cell slides out from right\
+UITableViewRowAnimationLeft \'a0\
+Cell slides out from left\
+UITableViewRowAnimationTop\
+Cell slides out to top of adjacent cell\
+UITableViewRowAnimationBottom\
+Cell slides out to bottom of adjacent cell\
+\'a0\
+7.5 
+\f1 \'d6\'d8\'d0\'c2\'bc\'d3\'d4\'d8\'b1\'ed
+\f0 \
+
+\f1 \'b5\'b1\'c4\'e3\'b5\'c4\'ca\'fd\'be\'dd\'b1\'e4\'c1\'cb\'b5\'c4\'ca\'b1\'ba\'f2
+\f0 ,
+\f1 \'c4\'e3\'bf\'c9\'d2\'d4\'d6\'d8\'d0\'c2\'bc\'d3\'d4\'d8\'d5\'fb\'b8\'f6\'b1\'ed
+\f0 \
+[ self.tableView reloadData ];\
+}

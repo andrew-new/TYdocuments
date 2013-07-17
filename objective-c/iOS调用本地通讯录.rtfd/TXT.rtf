@@ -1,0 +1,616 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fnil\fcharset0 Tahoma;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset134 STHeiti;
+\f3\fnil\fcharset134 STXihei;\f4\fmodern\fcharset0 Courier;\f5\fmodern\fcharset0 Courier-Bold;
+\f6\fnil\fcharset0 MicrosoftYaHei;\f7\fswiss\fcharset0 ArialMT;\f8\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue84;\red146\green255\blue255;\red44\green44\blue44;
+\red139\green255\blue135;\red53\green53\blue53;\red0\green0\blue233;\red252\green65\blue255;\red115\green0\blue3;
+\red0\green0\blue255;\red15\green112\blue3;\red107\green0\blue109;\red107\green0\blue3;\red135\green135\blue135;
+\red252\green65\blue255;\red40\green82\blue135;\red234\green234\blue234;\red38\green38\blue38;\red146\green255\blue255;
+\red255\green255\blue255;\red133\green0\blue135;\red253\green132\blue135;\red83\green83\blue83;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa200
+
+\f0\b\fs40 \cf0 \cb2 iOS
+\f1 \cb3 \'b5\'f7\'d3\'c3
+\b0 \cf4 \cb1 \'b1\'be\'b5\'d8
+\b \cf0 \cb5 \'cd\'a8\'d1\'b6\'c2\'bc
+\f0\b0 \cf4 \cb1 \
+\pard\pardeftab720\sl420
+
+\fs28 \cf6 #import\'a0<UIKit/UIKit.h>\uc0\u8232 #import\'a0<AddressBook/AddressBook.h>\u8232 #import\'a0<AddressBookUI/AddressBookUI.h>\u8232 \u8232 @interface\'a0SettingController\'a0:\'a0UIViewController<ABPersonViewControllerDelegate,ABPeoplePickerNavigationControllerDelegate,\u8232 \'a0\'a0\'a0\'a0ABNewPersonViewControllerDelegate>\{\u8232 \'a0\'a0\'a0\'a0IBOutlet\'a0UIButton\'a0*btnBack;\u8232 \'a0\'a0\'a0\'a0IBOutlet\'a0UIScrollView\'a0*vPhone;\u8232 \'a0\'a0\'a0\'a0ABPeoplePickerNavigationController\'a0*picker;\u8232 \'a0\'a0\'a0\'a0ABNewPersonViewController\'a0*personViewController;\u8232 \}\u8232 -(IBAction)showPicker:(id)sender;\u8232 -(IBAction)btnAddClicked:(id)sender;\u8232 -(IBAction)btnBackClicked:(id)sender;\u8232 @end\u8232 \
+\
+SettingController.m
+\f1 \'ce\'c4\'bc\'fe
+\f0 \
+//
+\f1 \'cc\'ed\'bc\'d3\'c1\'aa\'cf\'b5\'c8\'cb
+\f0 \
+-(IBAction)btnAddClicked:(id)sender\uc0\u8232 \{\u8232 \'a0\'a0\'a0\'a0personViewController\'a0=\'a0[[ABNewPersonViewController\'a0alloc]\'a0init];\u8232 \'a0\'a0\'a0\'a0personViewController.newPersonViewDelegate\'a0=\'a0self;\u8232 \'a0\'a0\'a0\'a0UINavigationController\'a0*navigation\'a0=\'a0[[UINavigationController\'a0alloc]\'a0initWithRootViewController:personViewController];\u8232 \u8232 \'a0\'a0\'a0\'a0[vPhone\'a0addSubview:navigation.view];\u8232 \'a0\'a0\'a0\'a0[vPhone\'a0addSubview:personViewController.view];\'a0\'a0\'a0\'a0\'a0\u8232 \}\u8232 //
+\f1 \'cf\'d4\'ca\'be
+\b \cf0 \cb5 \'cd\'a8\'d1\'b6\'c2\'bc
+\f0\b0 \cf6 \cb1 \uc0\u8232 -\'a0(IBAction)showPicker:(id)sender\'a0\{\u8232 \'a0\'a0\'a0\'a0picker\'a0=\u8232 \'a0\'a0\'a0\'a0[[ABPeoplePickerNavigationController\'a0alloc]init];\u8232 \'a0\'a0\'a0\'a0picker.peoplePickerDelegate\'a0=\'a0self;\u8232 \'a0\'a0\'a0\'a0\u8232 \'a0\'a0\'a0\'a0//picker.navigationBar.topItem.prompt\'a0=\'a0@"
+\f1 \'d1\'a1\'d4\'f1\'d2\'aa\'cc\'ed\'bc\'d3\'b5\'bd
+\f0 \'93
+\f1 \'b8\'f6\'c8\'cb\'ca\'d5\'b2\'d8
+\f0 \'94
+\f1 \'b5\'c4\'c1\'aa\'cf\'b5\'c8\'cb
+\f0 ";\uc0\u8232 \'a0\'a0\'a0\'a0[picker\'a0setHidesBottomBarWhenPushed:YES];\u8232 \'a0\'a0\'a0\'a0[picker\'a0setNavigationBarHidden:YES\'a0animated:NO];\u8232 \'a0\'a0\'a0\'a0//picker.displayedProperties\'a0=\'a0[NSArray\'a0arrayWithObject:[NSNumber\'a0numberWithInt:kABPersonPhoneProperty]];\u8232 \'a0\'a0\'a0\'a0[vPhone\'a0addSubview:picker.view];\u8232 \'a0\'a0\'a0\'a0\u8232 \'a0\'a0\'a0\'a0\u8232 \}\u8232 //
+\f1 \'d3\'c3\'bb\'a7\'c8\'a1\'cf\'fb\'d1\'a1\'d4\'f1\'ca\'b1
+\b \cf0 \cb3 \'b5\'f7\'d3\'c3
+\f0\b0 \cf6 \cb1 \uc0\u8232 -\'a0(void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController\'a0*)peoplePicker\'a0\u8232 \{\u8232 \'a0\'a0\'a0\'a0//[self\'a0dismissModalViewControllerAnimated:YES];\u8232 \'a0\'a0\'a0\'a0\u8232 \'a0\'a0\'a0\'a0[self.view\'a0removeFromSuperview];\u8232 \}\u8232 -(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController\'a0*)peoplePicker\'a0shouldContinueAfterSelectingPerson:(ABRecordRef)person\u8232 \{\u8232 \'a0\'a0\'a0\'a0NSLog(@"%@",\'a0(NSString*)ABRecordCopyCompositeName(person));\'a0\u8232 \'a0\'a0\'a0\'a0return\'a0YES;\u8232 \}\u8232 -(BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController\'a0*)peoplePicker\'a0shouldContinueAfterSelectingPerson:(ABRecordRef)person\'a0property:(ABPropertyID)property\'a0identifier:(ABMultiValueIdentifier)identifier\u8232 \{\u8232 \'a0\'a0\'a0\'a0\u8232 \'a0\'a0\'a0\'a0return\'a0YES;\u8232 \}\u8232 -(BOOL)personViewController:(ABPersonViewController\'a0*)personViewController\'a0shouldPerformDefaultActionForPerson:(ABRecordRef)person\'a0property:(ABPropertyID)property\'a0identifier:(ABMultiValueIdentifier)identifier\{\u8232 \'a0\'a0\'a0\'a0return\'a0YES;\u8232 \}\u8232 -(void)newPersonViewController:(ABNewPersonViewController\'a0*)newPersonView\'a0didCompleteWithNewPerson:(ABRecordRef)person\{\u8232 \'a0\'a0\'a0\'a0if(person)\u8232 \'a0\'a0\'a0\'a0\{\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0CFErrorRef\'a0error=NULL;\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0ABAddressBookSave(newPersonView.addressBook,\'a0&error);\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0//[newPersonView\'a0dismissModalViewControllerAnimated:YES];\u8232 \'a0\'a0\'a0\'a0\}\u8232 \'a0\'a0\'a0\'a0[self.view\'a0removeFromSuperview];\u8232 \}\
+\
+\
+\
+\pard\pardeftab720\sa320
+{\field{\*\fldinst{HYPERLINK "http://www.cnblogs.com/y041039/archive/2012/03/22/2411771.html"}}{\fldrslt 
+\f2\b\fs48 \cf7 \ul \ulc7 \'c8\'e7\'ba\'ce\'ca\'b9\'d3\'c3iOS AddressBook}}
+\f2\b\fs48 \cf0 \
+\pard\pardeftab720
+
+\f3\b0\fs24 \cf0 \
+\pard\pardeftab720\sa240
+\cf0 \uc0\u160 \
+\'d2\'bb\'a3\'ae\'bb\'f9\'b1\'be\'d6\'aa\'ca\'b6\
+\'ba\'cd\'cd\'a8\'d1\'b6\'c2\'bc\'d6\'d0\'c1\'aa\'cf\'b5\'c8\'cb\'cf\'e0\'b9\'d8\'b5\'c4\'d3\'a6\'d3\'c3{\field{\*\fldinst{HYPERLINK "http://dev.10086.cn/cmdn/wiki/index.php?doc-view-1623"}}{\fldrslt \cf7 \ul \ulc7 iPhone}}\'cc\'e1\'b9\'a9\'c1\'cb\'c1\'bd\'b8\'f6\'bf\'f2\'bc\'dc\'a3\'baAddressBook.framework\'ba\'cdAddressBookUI.framework\'a3\'ac\'ca\'b9\'d3\'c3\'d5\'e2\'c1\'bd\'b8\'f6\'bf\'f2\'bc\'dc\'ce\'d2\'c3\'c7\'bf\'c9\'d2\'d4\'d4\'da\'b3\'cc\'d0\'f2\'d6\'d0\'b7\'c3\'ce\'ca\'b2\'a2\'cf\'d4\'ca\'beiPhone\'ca\'fd\'be\'dd\'bf\'e2\'d6\'d0\'b5\'c4\'c1\'aa\'cf\'b5\'c8\'cb\'d0\'c5\'cf\'a2\'a1\'a3\
+\'b6\'fe\'a3\'ae\'be\'df\'cc\'e5\'bd\'e9\'c9\'dc\
+1.AddressBookUI\'cf\'d4\'ca\'be\'b2\'bf\'b7\'d6\
+AddressBookUI\'d6\'d0\'cc\'e1\'b9\'a9\'c1\'cb\'ba\'cd\'c1\'aa\'cf\'b5\'c8\'cb\'cf\'d4\'ca\'be\'d0\'c5\'cf\'a2\'cf\'e0\'b9\'d8\'b5\'c4\'d2\'bb\'d0\'a9
+\f2\b \cb8 Controller
+\f3\b0 \cb1 \'a3\'ac\'d3\'d0\'cb\'c4\'b8\'f6\'a3\'ba\
+ABPeoplePickerNavigationController\'a3\'ba\'cf\'d4\'ca\'be\'d5\'fb\'b8\'f6\'cd\'a8\'d1\'b6\'c2\'bc\'b2\'a2\'bf\'c9\'d2\'d4\'d1\'a1\'d4\'f1\'d2\'bb\'b8\'f6\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'d0\'c5\'cf\'a2\
+ABPersonViewController\'a3\'ba\'cf\'d4\'ca\'be\'d2\'bb\'b8\'f6\'be\'df\'cc\'e5\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'d0\'c5\'cf\'a2\
+ABNewPersonViewController\'a3\'ba\'d4\'f6\'bc\'d3\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'c1\'aa\'cf\'b5\'c8\'cb\
+ABUnknownPersonViewController\'a3\'ba\'cd\'ea\'c9\'c6\'d2\'bb\'b8\'f6\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'d0\'c5\'cf\'a2\
+\'d3\'c9\'d3\'da\'c6\'e4\'d6\'d0\'d7\'ee\'d6\'f7\'d2\'aa\'b5\'c4\'ca\'c7ABPeoplePickerNavigationController\'a3\'ac\'d2\'f2\'b4\'cb\'be\'cd\'be\'df\'cc\'e5\'b5\'c4\'bd\'e9\'c9\'dc\'d2\'bb\'cf\'c2\'cd\'a8\'b9\'fd\'b3\'cc\'d0\'f2\'cf\'d4\'ca\'be\'d5\'fb\'b8\'f6\'cd\'a8\'d1\'b6\'c2\'bc\'b2\'a2\'c7\'d2\'bf\'c9\'d2\'d4\'d1\'a1\'d4\'f1\'c6\'e4\'d6\'d0\'c4\'b3\'b8\'f6\'c1\'aa\'cf\'b5\'c8\'cb\'d0\'c5\'cf\'a2\'b5\'c4\'b2\'bd\'d6\'e8\'a1\'a3\
+\'a3\'a8a\'a3\'a9\'b4\'b4\'bd\'a8\'b2\'a2\'b3\'f5\'ca\'bc\'bb\'af\'d2\'bb\'b8\'f6ABPeoplePickerNavigationController\'b6\'d4\'cf\'f3\
+\'a3\'a8b\'a3\'a9\'c9\'e8\'d6\'c3\'c6\'e4\'b4\'fa\'c0\'ed\'a3\'a8
+\f2\b \cf1 \cb9 delegate
+\f3\b0 \cf0 \cb1 \'a3\'a9\
+\'a3\'a8c\'a3\'a9\'d3\'c3presentModalViewController:animated:\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'bd\'f8\'d0\'d0\'cf\'d4\'ca\'be\'d5\'fb\'b8\'f6\'cd\'a8\'d1\'b6\'c2\'bc\'d2\'b3\'c3\'e6\
+\'c0\'fd\'d7\'d3\'a3\'ba\
+\pard\pardeftab720
+
+\f4 \cf0 - (IBAction)showPicker:(\cf10 id\cf0 )sender \{\
+\
+    ABPeoplePickerNavigationController *
+\f5\b \cb5 picker
+\f4\b0 \cb1  = [[ABPeoplePickerNavigationController alloc] init];\
+\
+    
+\f5\b \cb5 picker
+\f4\b0 \cb1 .peoplePickerDelegate = self;\
+\
+\
+    [self presentModalViewController:
+\f5\b \cb5 picker
+\f4\b0 \cb1  animated:YES];\
+\
+    [
+\f5\b \cb5 picker
+\f4\b0 \cb1  release];\
+\
+\}\
+\pard\pardeftab720\sa240
+
+\f3 \cf0 ABPeoplePickerNavigationControllerDelegate\'b5\'c4\'b7\'bd\'b7\'a8\'bd\'e9\'c9\'dc\
+\'a3\'a8a\'a3\'a9
+\f2\b peoplePickerNavigationControllerDidCancel
+\f3\b0 :\'b5\'b1\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'c8\'a1\'cf\'fb\'ca\'b1\'b5\'f7\'d3\'c3\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'a3\'ac\'bf\'c9\'d2\'d4\'d4\'da\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'c0\'ef\'c8\'a1\'cf\'fb\'d5\'fb\'b8\'f6\'cd\'a8\'d1\'b6\'c2\'bc\'d2\'b3\'c3\'e6\'b5\'c4\'cf\'d4\'ca\'be\'a1\'a3\
+\'a3\'a8b\'a3\'a9
+\f2\b peoplePickerNavigationController:shouldContinueAfterSelectingPerson
+\f3\b0 : \'b5\'b1\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'c1\'cb\'cd\'a8\'d1\'b6\'c2\'bc\'d6\'d0\'c4\'b3\'d2\'bb\'b8\'f6\'c1\'aa\'cf\'b5\'c8\'cb\'ca\'b1\'b5\'f7\'d3\'c3\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'a3\'ac\'bf\'c9\'d2\'d4\'d4\'da\'d5\'e2\'c0\'ef\'bb\'f1\'c8\'a1\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'d0\'c5\'cf\'a2\'a1\'a3\'c8\'e7\'b9\'fb\'cf\'a3\'cd\'fb\'bf\'c9\'d2\'d4\'bc\'cc\'d0\'f8\'cf\'d4\'ca\'be\'d5\'e2\'b8\'f6\'c1\'aa\'cf\'b5\'c8\'cb\'b8\'fc\'be\'df\'cc\'e5\'b5\'c4\'d0\'c5\'cf\'a2\'a3\'ac\'d4\'f2return YES\'a1\'a3\'b7\'f1\'d4\'f2\'c8\'a1\'cf\'fb\'d5\'fb\'b8\'f6\'cd\'a8\'d1\'b6\'c2\'bc\'d2\'b3\'c3\'e6\'b5\'c4\'cf\'d4\'ca\'be\'b2\'a2return NO\'a1\'a3\
+\'a3\'a8c\'a3\'a9
+\f2\b peoplePickerNavigationController:shouldContinueAfterSelectingPerson:property:identifier:
+\f3\b0  \'c8\'e7\'b9\'fb\'c9\'cf\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'b7\'b5\'bb\'d8\'b5\'c4\'ca\'c7YES\'a3\'ac\'d4\'f2\'bb\'e1\'cf\'d4\'ca\'be\'c4\'b3\'d2\'bb\'b8\'f6\'c1\'aa\'cf\'b5\'c8\'cb\'d0\'c5\'cf\'a2\'a3\'ac\'c8\'e7\'b9\'fb\'d1\'a1\'d4\'f1\'c1\'cb\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'c4\'b3\'d2\'bb\'cf\'ee\'bc\'cd\'c2\'bc\'a3\'ac\'be\'cd\'bb\'e1\'b5\'f7\'d3\'c3\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\'a3\'ac\'bf\'c9\'d2\'d4\'cd\'a8\'b9\'fd\'b5\'e3\'bb\'f7\'d1\'a1\'d4\'f1\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'c4\'b3\'d2\'bb\'cf\'ee\'d0\'c5\'cf\'a2\'a1\'a3\'c8\'e7\'b9\'fb \'cf\'a3\'cd\'fb\'bf\'c9\'d2\'d4\'b6\'d4\'d1\'a1\'d4\'f1\'b5\'c4\'c4\'b3\'d2\'bb\'cf\'ee\'bc\'cd\'c2\'bc\'bd\'f8\'d0\'d0\'bd\'f8\'d2\'bb\'b2\'bd\'b2\'d9\'d7\'f7\'a3\'ac\'b1\'c8\'c8\'e7\'d6\'b1\'bd\'d3\'b2\'a6\'b4\'f2\'b5\'e7\'bb\'b0\'bb\'f2\'b5\'f7\'d3\'c3\'d3\'ca\'cf\'e4\'b7\'a2\'cb\'cd\'d3\'ca\'bc\'fe\'a3\'ac\'d4\'f2return YES\'a1\'a3\'b7\'f1\'d4\'f2\'c8\'a1\'cf\'fb\'d5\'fb\'b8\'f6\'cd\'a8\'d1\'b6\'c2\'bc\'d2\'b3\'c3\'e6\'b5\'c4\'cf\'d4\'ca\'be\'b2\'a2return NO\'a1\'a3\
+\'c0\'fd\'d7\'d3\'a3\'ba\
+\'a3\'a8a\'a3\'a9\'ca\'be\'c0\'fd\'a3\'ba\
+\pard\pardeftab720
+
+\f4 \cf0 - (\cf10 void\cf0 )peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker \{\
+\pard\pardeftab720
+\cf11 \
+
+\f1 \'a1\'a1\'a1\'a1
+\f4 // assigning control back to the main 
+\f5\b \cf0 \cb8 controller
+\f4\b0 \cb1 \
+\pard\pardeftab720
+
+\f1 \cf0 \'a1\'a1\'a1\'a1
+\f4 [
+\f5\b \cb5 picker
+\f4\b0 \cb1  dismissModalViewControllerAnimated:YES];\
+\}\
+\pard\pardeftab720\sa240
+
+\f3 \cf0 \uc0\u160 \'a3\'a8b\'a3\'a9\'ca\'be\'c0\'fd\'a3\'ba\
+\pard\pardeftab720
+
+\f4 \cf0 - (BOOL)peoplePickerNavigationController: (ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person \
+\{\
+\pard\pardeftab720\sa240
+
+\f3 \cf0 \'a1\'a1\'a1\'a1//\'bb\'f1\'c8\'a1\'c1\'aa\'cf\'b5\'c8\'cb\'d0\'d5\'c3\'fb\'a1\'a1\'a1\'a1name.text = (NSString*)ABRecordCopyCompositeName(person);\
+\'a1\'a1\'a1\'a1//\'bb\'f1\'c8\'a1\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'e7\'bb\'b0\
+\'a1\'a1\'a1\'a1ABMutableMultiValueRef phoneMulti = ABRecordCopyValue(person, kABPersonPhoneProperty);\
+\'a1\'a1\'a1\'a1NSMutableArray *phones = [[NSMutableArray alloc] init];\
+\pard\pardeftab720\sa240
+\cf10 \'a1\'a1\'a1\'a1int\cf0  i;\
+\pard\pardeftab720
+
+\f1 \cf10 \'a1\'a1
+\f4 for\cf0  (i = \cf12 0\cf0 ; i < ABMultiValueGetCount(phoneMulti); i++)\
+\'a0\{\
+\
+\pard\pardeftab720
+
+\f1 \cf0 \'a1\'a1\'a1\'a1
+\f4 NSString *aPhone = [(NSString*)ABMultiValueCopyValueAtIndex(phoneMulti, i) autorelease];\
+\
+
+\f1 \'a1\'a1\'a1\'a1
+\f4 NSString *aLabel = [(NSString*)ABMultiValueCopyLabelAtIndex(phoneMulti, i) autorelease];\
+\
+
+\f1 \'a1\'a1\'a1\'a1
+\f4 NSLog(\cf13 @"PhoneLabel:%@ Phone#:%@"\cf0 ,aLabel,aPhone);\
+\
+\pard\pardeftab720
+
+\f1 \cf10 \'a1\'a1\'a1\'a1
+\f4 if\cf0 ([aLabel isEqualToString:\cf13 @"_$!<Mobile>!$_"\cf0 ])\
+\
+\pard\pardeftab720
+
+\f1 \cf0 \'a1\'a1\'a1\'a1
+\f4 \{\
+
+\f1 \'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1
+\f4 [phones addObject:aPhone];\
+
+\f1 \'a1\'a1\'a1\'a1
+\f4 \}\
+
+\f1 \'a1\'a1
+\f4 \}\
+\
+phoneNo.text=\cf13 @""\cf0 ;\
+\
+\pard\pardeftab720
+\cf10 if\cf0 ([phones count]>\cf12 0\cf0 )\
+\
+\{\
+\pard\pardeftab720
+
+\f1 \cf0 \'a1\'a1\'a1\'a1
+\f4 NSString *mobileNo = [phones objectAtIndex:\cf12 0\cf0 ];\
+
+\f1 \'a1\'a1\'a1\'a1
+\f4 phoneNo.text = mobileNo;\
+\pard\pardeftab720
+
+\f1 \cf11 \'a1\'a1\'a1\'a1
+\f4 //NSLog(mobileNo);\
+\pard\pardeftab720
+\cf0 \
+\}\
+//
+\f1 \'bb\'f1\'c8\'a1\'c1\'aa\'cf\'b5\'c8\'cb\'d3\'ca\'cf\'e4
+\f4 \
+ABMutableMultiValueRef emailMulti = ABRecordCopyValue(person, kABPersonEmailProperty);\
+\
+NSMutableArray *emails = [[NSMutableArray alloc] init];\
+\
+\cf10 for\cf0  (i = \cf12 0\cf0 ;i < ABMultiValueGetCount(emailMulti); i++)\
+\
+\{\
+\pard\pardeftab720
+
+\f1 \cf0 \'a1\'a1\'a1\'a1
+\f4 NSString *emailAdress = [(NSString*)ABMultiValueCopyValueAtIndex(emailMulti, i) autorelease];\
+\
+
+\f1 \'a1\'a1\'a1\'a1
+\f4 [emails addObject:emailAdress];\
+\}\
+\
+email.text=\cf13 @""\cf0 ;\
+\
+\pard\pardeftab720
+\cf10 if\cf0 ([emails count]>\cf12 0\cf0 )\
+\
+\{\
+\pard\pardeftab720
+
+\f1 \cf0 \'a1\'a1\'a1\'a1
+\f4 NSString *emailFirst=[emails objectAtIndex:\cf12 0\cf0 ];\
+
+\f1 \'a1\'a1\'a1\'a1
+\f4 email.text = emailFirst;\
+\pard\pardeftab720
+
+\f1 \cf11 \'a1\'a1\'a1\'a1
+\f4 //NSLog(emailFirst);\cf0 \
+\}\
+\
+[peoplePicker dismissModalViewControllerAnimated:YES];\
+\
+\pard\pardeftab720
+\cf10 return\cf0  NO;\
+\
+\}\
+\pard\pardeftab720\sa240
+
+\f3 \cf0 \uc0\u160 \'a3\'a8c\'a3\'a9\'ca\'be\'c0\'fd\
+\pard\pardeftab720
+
+\f4 \cf0 - (BOOL)peoplePickerNavigationController: (ABPeoplePickerNavigationController *)peoplePicker\
+           shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property \
+\pard\pardeftab720
+
+\f1 \cf0 \'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1\'a1
+\f4   identifier:(ABMultiValueIdentifier)identifier\
+\{\
+
+\f1 \'a1\'a1\'a1\'a1
+\f4 \cf10 return\cf0  NO;\
+\}\
+\pard\pardeftab720
+
+\f3 \cf0 \
+\
+\pard\pardeftab720\sa240
+\cf0 2.AddressBook\'b2\'bf\'b7\'d6\
+AddressBook\'bf\'f2\'bc\'dc\'b2\'bf\'b7\'d6\'d6\'f7\'d2\'aa\'ca\'c7\'bc\'c7\'c2\'bc\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'b8\'f7\'b8\'f6\'d0\'c5\'cf\'a2\'a3\'acABRecordRef\'c0\'e0\'d0\'cd\'b5\'c4\'bc\'c7\'c2\'bc\'bc\'c8\'bf\'c9\'d2\'d4\'b4\'fa\'b1\'ed\'b5\'a5\'b8\'f6\'c8\'cb\'a3\'a8kABPersonType\'a3\'a9\'a3\'ac\'d2\'b2\'bf\'c9\'d2\'d4\'ca\'c7\'d2\'bb\'b8\'f6\'bc\'af\'ba\'cf\'a3\'a8kABGroupType\'a3\'a9\'a1\'a3\
+\'cd\'a8\'d1\'b6\'c2\'bc\'d6\'d0\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'b8\'f7\'b8\'f6\'ca\'f4\'d0\'d4\'d3\'d0\'c1\'bd\'d6\'d6\'d0\'ce\'ca\'bd\'a3\'ac\'b5\'a5\'d6\'b5\'ca\'f4\'d0\'d4\'ba\'cd\'b6\'e0\'d6\'b5\'ca\'f4\'d0\'d4\'a1\'a3\'b5\'a5\'d6\'b5\'ca\'f4\'d0\'d4\'b6\'d4\'d3\'a6\'b5\'c4\'d6\'bb\'d3\'d0\'d2\'bb\'b8\'f6\'d6\'b5\'a3\'ac\'b1\'c8\'c8\'e7\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'d0\'d5\'c3\'fb\'a3\'bb\'b6\'e0\'d6\'b5\'ca\'f4\'d0\'d4\'b6\'d4\'d3\'a6\'b5\'c4\'bf\'c9\'c4\'dc\'d3\'d0\'b6\'e0\'b8\'f6\'d6\'b5\'a3\'ac\'b1\'c8\'c8\'e7\'c1\'aa\'cf\'b5\'c8\'cb\'d3\'d0\'b6\'e0\'b8\'f6\'b5\'e7\'bb\'b0\'ba\'c5\'c2\'eb\'b5\'c8\'a1\'a3\
+\'a3\'a8a\'a3\'a9\'b3\'a3\'d3\'c3\'b7\'bd\'b7\'a8\
+CFTypeRef ABRecordCopyValue (\
+\uc0\u160 \u160  ABRecordRef record,\
+\uc0\u160 \u160  ABPropertyID property\
+);\
+\'b4\'d3\'d2\'bb\'b8\'f6\'bc\'c7\'c2\'bc\'d6\'d0\'bb\'f1\'c8\'a1\'c4\'b3\'b8\'f6\'ca\'f4\'d0\'d4\'b6\'d4\'d3\'a6\'b5\'c4\'d6\'b5\
+\'a3\'a8b\'a3\'a9\'b5\'a5\'d6\'b5\'ca\'f4\'d0\'d4\'b6\'d4\'d3\'a6\'b5\'c4\'b7\'bd\'b7\'a8\
+CFStringRef ABRecordCopyCompositeName (\
+\uc0\u160 \u160  ABRecordRef record\
+);\
+\'bb\'f1\'c8\'a1\'c1\'aa\'cf\'b5\'c8\'cb\'cd\'ea\'d5\'fb\'b5\'c4\'d0\'d5\'c3\'fb\'a1\'a3\
+\'a3\'a8c\'a3\'a9\'b6\'e0\'d6\'b5\'ca\'f4\'d0\'d4\'b6\'d4\'d3\'a6\'b5\'c4\'b7\'bd\'b7\'a8\
+CFTypeRef ABMultiValueCopyValueAtIndex (\
+\uc0\u160 \u160  ABMultiValueRef multiValue,\
+\uc0\u160 \u160  CFIndex index\
+);\
+\'b7\'b5\'bb\'d8\'b6\'d4\'d3\'a6\'ce\'bb\'d6\'c3\'b4\'a6\'b5\'c4\'ca\'f4\'d0\'d4\'d6\'b5\
+CFStringRef ABMultiValueCopyLabelAtIndex (\
+\uc0\u160 \u160  ABMultiValueRef multiValue,\
+\uc0\u160 \u160  CFIndex index\
+);\
+\'b7\'b5\'bb\'d8\'b6\'d4\'d3\'a6\'ce\'bb\'d6\'c3\'b4\'a6\'b5\'c4\'ca\'f4\'d0\'d4\'b1\'ea\'ca\'b6\
+CFArrayRef ABMultiValueCopyArrayOfAllValues (\
+\uc0\u160 \u160  ABMultiValueRef multiValue\
+);\
+\'b7\'b5\'bb\'d8\'b0\'fc\'ba\'ac\'cb\'f9\'d3\'d0\'ca\'f4\'d0\'d4\'d6\'b5\'b5\'c4\'ca\'fd\'d7\'e9\
+CFIndex ABMultiValueGetCount (\
+\uc0\u160 \u160  ABMultiValueRef multiValue\
+);\
+\'b7\'b5\'bb\'d8\'ca\'f4\'d0\'d4\'d6\'b5\'b5\'c4\'b8\'f6\'ca\'fd\
+\pard\pardeftab720\sl420
+
+\f0\fs28 \cf6 ====================
+\f1 \'b6\'e0\'b8\'f6\'b5\'e7\'bb\'b0\'ba\'c5\'c2\'eb\'d6\'d0\'d1\'a1\'d4\'f1\'d2\'bb\'b8\'f6
+\f0 ====================\
+\
+\pard\pardeftab720\sl600
+
+\f6\fs40 \cf0  {\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/doubleuto/article/details/6087656"}}{\fldrslt iPhone\uc0\u31243 \u24207 \u35843 \u29992 \u31995 \u32479 \u36890 \u35759 \u24405 \u36873 \u25321 \u21333 \u20010 \u30005 \u35805 \u21495 \u30721 }}\
+\pard\pardeftab720\sl480\qr
+
+\f1\fs24 \cf14 \'b7\'d6\'c0\'e0
+\b \cf0 \cb15 \'a3\'ba
+\f7\b0 \cf14 \cb1  {\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/doubleuto/article/category/757829"}}{\fldrslt \cf16 xcode}}\
+2010-12-20 20
+\b \cf0 \cb15 :
+\b0 \cf14 \cb1 17 1936
+\f1 \'c8\'cb\'d4\'c4\'b6\'c1
+\f7  {\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/doubleuto/article/details/6087656#comments"}}{\fldrslt 
+\f1 \cf16 \'c6\'c0\'c2\'db}}(0) {\field{\*\fldinst{HYPERLINK "javascript:void(0);"}}{\fldrslt 
+\f1 \cf16 \'ca\'d5\'b2\'d8}} {\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/doubleuto/article/details/6087656#report"}}{\fldrslt 
+\f1 \cf16 \'be\'d9\'b1\'a8}}\
+\pard\pardeftab720\sl240
+{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/tag/details.html?tag=%e9%80%9a%e8%ae%af"}}{\fldrslt 
+\f1 \cf16 \cb17 \'cd\'a8\'d1\'b6}}{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/tag/details.html?tag=%e7%94%b5%e8%af%9d"}}{\fldrslt 
+\f1 \cf16 \cb17 \'b5\'e7\'bb\'b0}}{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/tag/details.html?tag=iphone"}}{\fldrslt \cf16 \cb17 iphone}}\cf18 \
+\pard\pardeftab720\sl520\sa280
+
+\fs28 \cf18 \
+
+\f1 \'ce\'aa\'c1\'cb\'b5\'f7\'d3\'c3\'cf\'b5\'cd\'b3\'b5\'c4\'cd\'a8\'d1\'b6\'c2\'bc\'bd\'e7\'c3\'e6\'d3\'eb\'cf\'e0\'d3\'a6\'b9\'a6\'c4\'dc
+\f7 ,
+\f1 \'d0\'e8\'d2\'aa\'d2\'fd\'c8\'eb
+\f7 AddressBook.framework
+\f1 \'d3\'eb
+\f7 AddressBookUI.framework,
+\f1 \'cd\'ac\'ca\'b1
+\f7 ,
+\f1 \'d4\'da\'d4\'b4\'ce\'c4\'bc\'fe\'d6\'d0\'d0\'e8\'d2\'aa\'b0\'fc\'ba\'ac\'cd\'ac\'ce\'c4\'bc\'fe
+\f7 <AddressBook/AddressBook.h>,<AddressBookUI/AddressBookUI.h>.\
+
+\f1 \'ca\'d7\'cf\'c8\'c9\'ea\'c3\'f7\'b1\'e4\'c1\'bf
+\f7\b \cf0 \cb15 :
+\b0 \cf18 \cb1 \
+\'a0\
+ABPeoplePickerNavigationController\'a0*
+\b \cf0 \cb19 picker
+\b0 \cf18 \cb1 ;\
+
+\f1 \'d4\'da\'d0\'e8\'d2\'aa\'b5\'c4\'b5\'d8\'b7\'bd\'b5\'f7\'d3\'c3\'cf\'d4\'ca\'be\'d1\'a1\'d4\'f1\'c1\'aa\'cf\'b5\'c8\'cb\'bd\'e7\'c3\'e6
+\f7 ,
+\f1 \'cd\'ac\'ca\'b1\'c9\'e8\'d6\'c3
+\f7 ABPeoplePickerNavigationControllerDelegate
+\f1 \'ce\'af\'cd\'d0
+\f7\b \cf0 \cb15 :
+\b0 \cf18 \cb1 \
+\'a0\
+if(!
+\b \cf0 \cb19 picker
+\b0 \cf18 \cb1 )\{\
+\'a0 \'a0\'a0
+\b \cf0 \cb19 picker
+\b0 \cf18 \cb1 \'a0= [[ABPeoplePickerNavigationController\'a0alloc]\'a0init];\
+\'a0 \'a0\'a0// place the delegate of the 
+\b \cf0 \cb19 picker
+\b0 \cf18 \cb1  to the controll\
+\'a0 \'a0\'a0
+\b \cf0 \cb19 picker
+\b0 \cf18 \cb1 .peoplePickerDelegate\'a0=\'a0self;\
+\}\
+\'a0\
+// showing the 
+\b \cf0 \cb19 picker
+\b0 \cf18 \cb1 \
+[self\'a0presentModalViewController
+\b \cf0 \cb15 :\cb19 picker
+\b0 \cf18 \cb1 \'a0animated
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1 YES];\
+\
+
+\f1 \'d1\'a1\'d4\'f1\'c1\'aa\'cf\'b5\'c8\'cb\'bd\'e7\'c3\'e6\'c8\'e7\'cf\'c2\'cd\'bc\'cb\'f9\'ca\'be
+\f7\b \cf0 \cb15 :
+\b0 \cf18 \cb1 \
+
+\f8\fs24 \cf0 
+\f7\fs28 \cf18 \
+\'a0\
+\'a0\
+- (BOOL)peoplePickerNavigationController
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1  (ABPeoplePickerNavigationController\'a0*)peoplePicker\'a0\
+\'a0 shouldContinueAfterSelectingPerson
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1 (ABRecordRef)
+\b \cf20 \cb21 person
+\b0 \cf18 \cb1 \'a0\
+\{\
+return\'a0YES;\
+\}\
+
+\f1 \'b8\'c3\'b7\'bd\'b7\'a8\'d4\'da\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'cd\'a8\'d1\'b6\'c2\'bc\'d2\'bb\'bc\'b6\'c1\'d0\'b1\'ed\'b5\'c4\'c4\'b3\'d2\'bb\'cf\'ee\'ca\'b1\'b1\'bb\'b5\'f7\'d3\'c3
+\f7 ,
+\f1 \'cd\'a8\'b9\'fd
+\f7\b \cf20 \cb21 person
+\f1\b0 \cf18 \cb1 \'bf\'c9\'d2\'d4\'bb\'f1\'b5\'c3\'d1\'a1\'d6\'d0\'c1\'aa\'cf\'b5\'c8\'cb\'b5\'c4\'cb\'f9\'d3\'d0\'d0\'c5\'cf\'a2
+\f7 ,
+\f1 \'b5\'ab\'b5\'b1\'d1\'a1\'d6\'d0\'b5\'c4\'c1\'aa\'cf\'b5\'c8\'cb\'d3\'d0\'b6\'e0\'b8\'f6\'ba\'c5\'c2\'eb
+\f7 ,
+\f1 \'b6\'f8\'ce\'d2\'c3\'c7\'d3\'d6\'cf\'a3\'cd\'fb\'d3\'c3\'bb\'a7\'bf\'c9\'d2\'d4\'c3\'f7\'c8\'b7\'b5\'c4\'d6\'b8\'b6\'a8\'d2\'bb\'b8\'f6\'ba\'c5\'c2\'eb\'ca\'b1
+\f7 (
+\f1 \'c8\'e7\'b2\'a6\'b4\'f2\'b5\'e7\'bb\'b0
+\f7 ),
+\f1 \'b7\'b5\'bb\'d8
+\f7 YES
+\f1 \'d4\'ca\'d0\'ed\'cd\'a8\'d1\'b6\'c2\'bc\'bd\'f8\'c8\'eb\'c1\'aa\'cf\'b5\'c8\'cb\'cf\'ea\'c7\'e9\'bd\'e7\'c3\'e6
+\f7\b \cf0 \cb15 :
+\b0 \cf18 \cb1 \
+
+\f8\fs24 \cf0 
+\f7\fs28 \cf18 \
+
+\f1 \'b5\'b1\'d3\'c3\'bb\'a7\'b5\'e3\'bb\'f7\'c4\'b3\'b8\'f6\'d7\'d6\'b6\'ce\'ca\'b1
+\f7 ,
+\f1 \'bb\'e1\'b5\'f7\'d3\'c3\'c8\'e7\'cf\'c2\'b7\'bd\'b7\'a8
+\f7\b \cf0 \cb15 :
+\b0 \cf18 \cb1 \
+\'a0\
+- (BOOL)peoplePickerNavigationController
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1  (ABPeoplePickerNavigationController\'a0*)peoplePicker\
+\'a0 shouldContinueAfterSelectingPerson
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1 (ABRecordRef)
+\b \cf20 \cb21 person
+\b0 \cf18 \cb1 \
+property
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1 (ABPropertyID)property\
+\'a0 identifier
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1 (ABMultiValueIdentifier)identifier\
+\{\
+\'a0\
+if\'a0(property ==\'a0kABPersonPhoneProperty) \{\
+ABMutableMultiValueRef\'a0phoneMulti =\'a0ABRecordCopyValue(
+\b \cf20 \cb21 person
+\b0 \cf18 \cb1 , property);\
+\'a0\
+int\'a0index =\'a0ABMultiValueGetIndexForIdentifier(phoneMulti,identifier);\
+\'a0\
+NSString\'a0*phone = (NSString*)ABMultiValueCopyValueAtIndex(phoneMulti, index);\
+\'a0\
+//do something\
+\'a0\
+\'a0\
+\'a0\
+\'a0\
+[phone release];\
+\'a0\
+\'a0\
+\'a0\
+\'a0\
+\'a0\
+[peoplePicker\'a0dismissModalViewControllerAnimated
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1 YES];\
+\'a0\
+\}\
+\
+return\'a0NO;\
+\
+\}\
+
+\f1 \'c1\'aa\'cf\'b5\'c8\'cb\'d0\'c5\'cf\'a2\'d6\'d0\'bf\'c9\'c4\'dc\'d3\'d0\'ba\'dc\'b6\'e0\'d7\'d6\'b6\'ce
+\f7 ,
+\f1 \'ca\'d7\'cf\'c8\'d0\'e8\'d2\'aa\'c5\'d0\'b6\'cf\'d1\'a1\'d4\'f1\'b5\'c4\'ca\'c7\'b7\'f1\'ce\'aa\'b5\'e7\'bb\'b0\'ba\'c5\'c2\'eb\'d7\'d6\'b6\'ce
+\f7 .
+\f1 \'b5\'b1\'c2\'fa\'d7\'e3\'d2\'aa\'c7\'f3\'ca\'b1
+\f7 ,
+\f1 \'bb\'f1\'c8\'a1\'c1\'aa\'cf\'b5\'c8\'cb\'d0\'c5\'cf\'a2
+\f7 ,
+\f1 \'cd\'a8\'b9\'fd\'b1\'ea\'ca\'b6\'b7\'fb\'bb\'f1\'b5\'c3\'d3\'c3\'bb\'a7\'d1\'a1\'d4\'f1\'b5\'c4\'ba\'c5\'c2\'eb\'d4\'da\'b8\'c3\'c1\'aa\'cf\'b5\'c8\'cb\'ba\'c5\'c2\'eb\'c1\'d0\'b1\'ed\'d6\'d0\'b5\'c4\'cb\'f7\'d2\'fd
+\f7 ,
+\f1 \'d7\'ee\'ba\'f3\'cd\'a8\'b9\'fd\'cb\'f7\'d2\'fd\'bb\'f1\'b5\'c3\'d1\'a1\'d6\'d0\'b5\'c4\'b5\'e7\'bb\'b0\'ba\'c5\'c2\'eb
+\f7 .\
+\
+
+\f1 \'d7\'ee\'ba\'f3\'bb\'b9\'d0\'e8\'d2\'aa\'ca\'b5\'cf\'d6\'c8\'e7\'cf\'c2\'b7\'bd\'b7\'a8\'ca\'b9\'b5\'c3\'d3\'c3\'bb\'a7\'d4\'da\'b5\'e3\'bb\'f7
+\f7 "
+\f1 \'c8\'a1\'cf\'fb
+\f7 "
+\f1 \'b0\'b4\'c5\'a5\'ca\'b1\'b9\'d8\'b1\'d5\'c1\'aa\'cf\'b5\'c8\'cb\'d1\'a1\'d4\'f1\'bd\'e7\'c3\'e6
+\f7\b \cf0 \cb15 :
+\b0 \cf18 \cb1 \
+\'a0\
+- (void)peoplePickerNavigationControllerDidCancel
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1 (ABPeoplePickerNavigationController\'a0*)peoplePicker\'a0\
+\{\
+\'a0 \'a0\'a0// assigning control back to the main 
+\b \cf0 \cb22 controller
+\b0 \cf18 \cb1 \
+\'a0 \'a0 [
+\b \cf0 \cb19 picker
+\b0 \cf18 \cb1 \'a0dismissModalViewControllerAnimated
+\b \cf0 \cb15 :
+\b0 \cf18 \cb1 YES];\
+\}\
+\
+\pard\pardeftab720\sl480\qr
+
+\fs24 \cf18 \
+\pard\pardeftab720\sl480
+
+\f1 \cf23 \'c9\'cf\'d2\'bb\'c6\'aa
+\b \cf0 \cb15 \'a3\'ba{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/doubleuto/article/details/6087655"}}{\fldrslt 
+\b0 \cf16 \cb1 \'b1\'dc\'c3\'e2\'bc\'fc\'c5\'cc\'b5\'af\'b3\'f6\'ca\'b1\'d5\'da\'b5\'b2\'ca\'e4\'c8\'eb\'bf\'f2}}
+\f7\b0 \cf23 \cb1 \
+
+\f1 \'cf\'c2\'d2\'bb\'c6\'aa
+\b \cf0 \cb15 \'a3\'ba{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/doubleuto/article/details/6098876"}}{\fldrslt 
+\f7\b0 \cf16 \cb1 iphone
+\f1 \'bf\'aa\'b7\'a2\'d6\'d0\'b5\'c4\'d2\'bb\'d0\'a9\'d0\'a1\'bc\'bc\'c7\'c9}}
+\f7\b0 \cf23 \cb1 \
+\pard\pardeftab720
+\cf18 \
+\pard\pardeftab720\sl600
+
+\f1\b \cf18 \'b2\'e9\'bf\'b4\'c6\'c0\'c2\'db
+\f7 \
+\pard\pardeftab720
+
+\b0 \cf18 \
+\
+\
+\pard\pardeftab720
+\cf23 * 
+\f1 \'d2\'d4\'c9\'cf\'d3\'c3\'bb\'a7\'d1\'d4\'c2\'db\'d6\'bb\'b4\'fa\'b1\'ed\'c6\'e4\'b8\'f6\'c8\'cb\'b9\'db\'b5\'e3\'a3\'ac\'b2\'bb\'b4\'fa\'b1\'ed
+\f7 CSDN
+\f1 \'cd\'f8\'d5\'be\'b5\'c4\'b9\'db\'b5\'e3\'bb\'f2\'c1\'a2\'b3\'a1
+\f7 \
+\pard\pardeftab720
+\cf18 \
+\
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl600
+\ls1\ilvl0
+\b \cf18 {\listtext	\'95	}
+\f1 \'b8\'f6\'c8\'cb\'d7\'ca\'c1\'cf
+\f7 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\qc
+\ls2\ilvl0
+\b0 \cf18 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://my.csdn.net/doubleuto"}}{\fldrslt 
+\f8 \cf0 
+\f7 \cf18  }}\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\qc
+\ls2\ilvl0
+\b \cf18 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://my.csdn.net/doubleuto"}}{\fldrslt doubleuto}}\uc0\u8232 
+\b0 \uc0\u8232  \u8232 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl280\sa160
+\ls2\ilvl1\cf23 {\listtext	\uc0\u9702 	}
+\f1 \'b7\'c3\'ce\'ca
+\b \cf0 \cb15 \'a3\'ba
+\f7\b0 \cf18 \cb1 53847
+\f1 \'b4\'ce
+\f7 \cf23 \
+{\listtext	\uc0\u9702 	}
+\f1 \'bb\'fd\'b7\'d6
+\b \cf0 \cb15 \'a3\'ba
+\f7\b0 \cf18 \cb1 1657
+\f1 \'b7\'d6
+\f7 \cf23 \
+{\listtext	\uc0\u9702 	}
+\f1 \'c5\'c5\'c3\'fb
+\b \cf0 \cb15 \'a3\'ba
+\b0 \cf18 \cb1 \'b5\'da
+\f7 5084
+\f1 \'c3\'fb
+\f7 \cf23 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sl280\sa80
+\ls2\ilvl1\cf23 {\listtext	\uc0\u9702 	}
+\f1 \'d4\'ad\'b4\'b4
+\b \cf0 \cb15 \'a3\'ba
+\f7\b0 \cf18 \cb1 109
+\f1 \'c6\'aa
+\f7 \cf23 \
+{\listtext	\uc0\u9702 	}
+\f1 \'d7\'aa\'d4\'d8
+\b \cf0 \cb15 \'a3\'ba
+\f7\b0 \cf18 \cb1 15
+\f1 \'c6\'aa
+\f7 \cf23 \
+{\listtext	\uc0\u9702 	}
+\f1 \'d2\'eb\'ce\'c4
+\b \cf0 \cb15 \'a3\'ba
+\f7\b0 \cf18 \cb1 0
+\f1 \'c6\'aa
+\f7 \cf23 \
+{\listtext	\uc0\u9702 	}
+\f1 \'c6\'c0\'c2\'db
+\b \cf0 \cb15 \'a3\'ba
+\f7\b0 \cf18 \cb1 20
+\f1 \'cc\'f5
+\f7 \cf23 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl600
+\ls3\ilvl0
+\b \cf18 {\listtext	\'95	}
+\f1 \'ce\'c4\'d5\'c2\'cb\'d1\'cb\'f7
+\f7 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280
+\ls4\ilvl0
+\b0 \cf18 {\listtext	\'95	}\uc0\u8232 \
+}

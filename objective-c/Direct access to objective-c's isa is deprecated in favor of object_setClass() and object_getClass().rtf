@@ -1,0 +1,140 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fnil\fcharset0 MicrosoftYaHei;\f1\fswiss\fcharset0 ArialMT;\f2\fnil\fcharset134 STHeitiSC-Light;
+\f3\fnil\fcharset0 SimSun;\f4\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red38\green38\blue38;\red251\green0\blue7;
+\red254\green195\blue40;\red253\green134\blue8;\red40\green82\blue135;\red237\green237\blue237;\red117\green117\blue117;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl600
+{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/sandy_kisa/article/details/7889975"}}{\fldrslt 
+\f0\fs40 \cf0 \cb2 Xcode\uc0\u21319 \u32423 4.4\u21518 \u30340 Bug\u22788 \u29702 }}
+\f0\fs40 \cb2 ]\
+\
+\
+\pard\pardeftab720\sl520\sa280
+
+\f1\fs28 \cf3 Xcode
+\f2 \'c9\'fd\'bc\'b6\'b5\'bd
+\f1 4.4
+\f2 \'ba\'f3\'a3\'ac\'b3\'f6\'cf\'d6\'c1\'cb\'d2\'bb\'b6\'d1\'b5\'c4
+\f1 Warning.
+\f2 \'cd\'f8\'c9\'cf\'cb\'d1\'c1\'cb\'d2\'bb\'d0\'a9\'b0\'ec\'b7\'a8\'a3\'ac\'d7\'dc\'bd\'e1\'d2\'bb\'cf\'c2\'a1\'a3
+\f1 \
+\
+1:Jsonkit
+\f2 \'d6\'d0\'b5\'c4
+\f1 \
+\pard\pardeftab720\sl520\sa280
+\cf4 Direct access to objective-c's isa is deprecated in favor of object_setClass() and object_getClass()\cf3 \
+\pard\pardeftab720\sl520
+\cf3 object->isa 
+\f2 \'cc\'e6\'bb\'bb\'ce\'aa
+\f1  object_getClass(object)\
+keyObject->isa 
+\f2 \'cc\'e6\'bb\'bb\'ce\'aa
+\f1  object_getClass(keyObject)\
+(id)keys[idx]->isa 
+\f2 \'cc\'e6\'bb\'bb\'ce\'aa
+\f1  object_getClass((id)keys[idx])\
+\pard\pardeftab720\sl520\sa280
+\cf3 \
+\pard\pardeftab720\sl520
+\cf4 format specifies type 'unsigned long' but the argument has type 'nsuinteger' (aka 'unsigned int')\cf3 \
+\pard\pardeftab720\sl520
+
+\f2 \cf3 \'b8\'f8\'b1\'e4\'c1\'bf\'d4\'f6\'bc\'d3
+\f1 (unsigned long)
+\f2 \'bd\'f8\'d0\'d0\'c0\'e0\'d0\'cd\'d7\'aa\'bb\'bb
+\f1 \
+\pard\pardeftab720\sl520\sa280
+\cf3 \
+2
+\f2 \'a3\'ba
+\f1 md5
+\f2 \'bc\'d3\'c3\'dc\'a3\'a8
+\f1 iOS SDK
+\f2 \'d6\'d0\'d7\'d4\'b4\'f8\'c1\'cb
+\f1 CommonCrypto
+\f2 \'a3\'a9
+\f1 \
+\pard\pardeftab720\sl420\sa280
+
+\f3\fs24 \cf4 Implicit declaration of function\'a0'CC_MD5' is invalid in C99
+\f1\fs28 \cf3 \
+#define CC_MD5_DIGEST_LENGTH 16\
++(NSString *)MD5HashForString:(NSString *)input \{\
+    const char *cStr = [input UTF8String];\
+    unsigned char result[CC_MD5_DIGEST_LENGTH];\
+    CC_MD5(cStr, strlen(cStr), result);\
+    return [NSString stringWithFormat: @"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",\
+            result[0], result[1], result[2], result[3],\
+            result[4], result[5], result[6], result[7],\
+            result[8], result[9], result[10], result[11],\
+            result[12], result[13], result[14], result[15]];\
+\}\
+\
+\pard\pardeftab720\sl520
+
+\f2 \cf3 \'d2\'fd\'c8\'eb\'ba\'af\'ca\'fd\'b6\'a8\'d2\'e5\'b5\'c4\'cd\'b7\'ce\'c4\'bc\'fe
+\f1 \
+\pard\pardeftab720\sl520\sa280
+\cf3 \
+#import <CommonCrypto/CommonDigest.h>\
+\
+3:ASIDataDecompressor
+\f2 \'d6\'d0\'b5\'c4\'be\'af\'b8\'e6
+\f1 \
+\pard\pardeftab720\sl520\sa280
+\cf4 format specifies type \'a0'short' but the \'a0argument has type 'int'\cf3 \
+\
+\pard\pardeftab720\sl520\sa280
+
+\f2 \cf3 \'d4\'da
+\f1 + (NSError *)deflateErrorWithCode:(int)code 
+\f2 \'ba\'cd
+\f1  +(NSError *)inflateErrorWithCode:(int)code
+\f2 \'d6\'d0
+\f1 \
+\
+
+\f2 \'a3\'db
+\f1 NSString stringWithFormat:@"Compression of data failed with code %hi"\cb5 ,code\cf5 \cb2 ]\cf3  
+\f2 \'d6\'d0
+\f1 \
+
+\f2 \'bd\'ab
+\f1 code
+\f2 \'b8\'c4\'ce\'aa
+\f1 \cb6  (short)code\cb2 ,
+\f2 \'c0\'e0\'d0\'cd\'d7\'aa\'bb\'bb
+\f1 \
+\
+4
+\f2 \'a3\'ba
+\f1 Reachability
+\f2 \'d6\'d0\'be\'af\'b8\'e6
+\f1 \
+\pard\pardeftab720\sl520\sa280
+\cf4 Using 'stringWithString:' with a literal is redundant\cf3 \
+\
+\pard\pardeftab720\sl520
+
+\f4 \cf3 \'a0statusString\'a0=\'a0[NSString\'a0stringWithString:\'a0@"Not\'a0Reachable"];\'a0\
+\'a0
+\f2 \'b8\'c4\'ce\'aa\'a3\'ba
+\f4 statusString\'a0=\'a0@"Not\'a0Reachable";\
+\pard\pardeftab720\sl520\sa280
+
+\f1 \cf3 \
+
+\f2 \'d0\'bb\'d0\'bb{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/samuelltk"}}{\fldrslt 
+\f1 \cf7 \cb8 samuelltk}}
+\f1 \cf9 \cb8 \'a0
+\f2 \cf3 \cb2 \'b5\'c4\'b2\'b9\'b3\'e4\'a3\'ac\'d4\'da\'d4\'f6\'bc\'d3\'cf\'c2\'c3\'e6\'d2\'bb\'b8\'f6\'a3\'ba
+\f1 \
+\pard\pardeftab720\sl400\sa280
+\cf3 5.format specifies type 'id' but the argument has type 'const char *'\uc0\u8232 \u8232 NSCAssert(NO, @"Unhandled error encountered during SAX parse. msg is %@", msg);\u8232 
+\f2 \'b8\'c4\'ce\'aa\'a3\'ba
+\f1 NSCAssert(NO, @"Unhandled error encountered during SAX parse. msg is %@", [NSString stringWithUTF8String:msg]);\
+}

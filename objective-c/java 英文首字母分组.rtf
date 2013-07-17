@@ -1,0 +1,171 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fnil\fcharset0 MicrosoftYaHei;}
+{\colortbl;\red255\green255\blue255;\red83\green83\blue83;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl600
+{\field{\*\fldinst{HYPERLINK "http://blog.csdn.net/shiyuezhong/article/details/8110346"}}{\fldrslt 
+\f0\fs40 \cf2 \cb3 java\uc0\u20013 \u33521 \u25991 \u33719 \u21462 \u39318 \u23383 \u27597 \u20043 \u21518 \u20998 \u32452 \u25490 \u24207 }}
+\f0\fs40 \cf2 \cb3 \
+\
+\
+package com.syz;\
+import java.util.ArrayList;\
+import java.util.HashMap;\
+import java.util.List;\
+import java.util.Map;\
+/**\
+ * @author shiyz\
+ * @creation date 2012-10-25 \uc0\u19978 \u21320 13:01:21\
+ *\
+ */\
+public class Sort \{\
+	public static void main(String[] args) \{\
+		Sort obj1 = new Sort();\
+		System.out.println("======================");\
+		ArrayList list=new ArrayList();\
+		list.add("adisen");\
+		list.add("bulsi");\
+		list.add("Kobe");\
+		list.add("\uc0\u24067 \u19969 ");\
+		list.add("\uc0\u26460 \u29995 ");\
+		list.add("\uc0\u20803 \u26041 ");\
+		Map map=obj1.sort(list);\
+		System.out.println("-------\uc0\u20998 \u32452 \u21518 \u30340 \u36755 \u20986 -----------");\
+        System.out.println(map.get("A"));\
+        System.out.println(map.get("B"));\
+        System.out.println(map.get("C"));\
+        System.out.println(map.get("D"));\
+        System.out.println(map.get("Y"));\
+	  \} \
+        public Sort() \{\
+ 	 \
+        \}\
+	     //\uc0\u23383 \u27597 Z\u20351 \u29992 \u20102 \u20004 \u20010 \u26631 \u31614 \u65292 \u36825 \u37324 \u26377 \u65298 \u65303 \u20010 \u20540 \
+	 	 //i, u, v\uc0\u37117 \u19981 \u20570 \u22768 \u27597 , \u36319 \u38543 \u21069 \u38754 \u30340 \u23383 \u27597 \
+	    private char[] chartable =\
+           \{\
+             '\uc0\u21834 ', '\u33453 ', '\u25830 ', '\u25645 ', '\u34558 ', '\u21457 ', '\u22134 ', '\u21704 ', '\u21704 ',\
+             '\uc0\u20987 ', '\u21888 ', '\u22403 ', '\u22920 ', '\u25343 ', '\u21734 ', '\u21866 ', '\u26399 ', '\u28982 ',\
+             '\uc0\u25746 ', '\u22604 ', '\u22604 ', '\u22604 ', '\u25366 ', '\u26132 ', '\u21387 ', '\u21277 ', '\u24231 '\
+            \};\
+	    private char[] alphatableb =\
+          \{\
+ 	         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',\
+             'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'\
+ 	       \};\
+	    private char[] alphatables =\
+          \{\
+ 	         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',\
+             'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'\
+ 	       \};\
+	    private int[] table = new int[27];  //\uc0\u21021 \u22987 \u21270 \
+	      \{\
+	 	         for (int i = 0; i < 27; ++i) \{\
+	 	             table[i] = gbValue(chartable[i]);\
+	 	         \}\
+	       \}\
+		//\uc0\u20027 \u20989 \u25968 ,\u36755 \u20837 \u23383 \u31526 ,\u24471 \u21040 \u20182 \u30340 \u22768 \u27597 ,\
+		//\uc0\u33521 \u25991 \u23383 \u27597 \u36820 \u22238 \u23545 \u24212 \u30340 \u22823 \u23567 \u20889 \u23383 \u27597 \
+	    //\uc0\u20854 \u20182 \u38750 \u31616 \u20307 \u27721 \u23383 \u36820 \u22238  '0'  \u25353 \u21442 \u25968 \
+	     public char Char2Alpha(char ch,String type) \{\
+	          if (ch >= 'a' && ch <= 'z')\
+	              return (char) (ch - 'a' + 'A');//\uc0\u20026 \u20102 \u25353 \u23383 \u27597 \u25490 \u24207 \u20808 \u36820 \u22238 \u22823 \u20889 \u23383 \u27597 \
+	           // return ch;\
+	          if (ch >= 'A' && ch <= 'Z')\
+	              return ch;\
+\
+	             int gb = gbValue(ch);\
+	 	         if (gb < table[0])\
+	              return '0';\
+	  \
+	          int i;\
+	 	         for (i = 0; i < 26; ++i) \{\
+	              if (match(i, gb))\
+	 	                 break;\
+	          \}\
+	 	 \
+	 	         if (i >= 26)\{\
+	              return '0';\}\
+	 	         else\{\
+	 	        	 if("b".equals(type))\{//\uc0\u22823 \u20889 \
+	                     return alphatableb[i];\
+	                 \}else\{//\uc0\u23567 \u20889 \
+	                	 return alphatables[i];\
+	                 \}\
+	 	         \}\
+	      \}\
+	 //\uc0\u26681 \u25454 \u19968 \u20010 \u21253 \u21547 \u27721 \u23383 \u30340 \u23383 \u31526 \u20018 \u36820 \u22238 \u19968 \u20010 \u27721 \u23383 \u25340 \u38899 \u39318 \u23383 \u27597 \u30340 \u23383 \u31526 \u20018 \
+     public String String2Alpha(String SourceStr,String type) \{\
+         String Result = "";\
+         int StrLength = SourceStr.length();\
+         int i;\
+      try \{\
+          for (i = 0; i < StrLength; i++) \{\
+                 Result += Char2Alpha(SourceStr.charAt(i),type);\
+             \}\
+         \} catch (Exception e) \{\
+          Result = "";\
+         \}\
+      return Result;\
+    \}\
+   //\uc0\u26681 \u25454 \u19968 \u20010 \u21253 \u21547 \u27721 \u23383 \u30340 \u23383 \u31526 \u20018 \u36820 \u22238 \u31532 \u19968 \u20010 \u27721 \u23383 \u25340 \u38899 \u39318 \u23383 \u27597 \u30340 \u23383 \u31526 \u20018 \
+     public String String2AlphaFirst(String SourceStr,String type) \{\
+           String Result = "";\
+         try \{\
+           Result += Char2Alpha(SourceStr.charAt(0),type);\
+         \} catch (Exception e) \{\
+           Result = "";\
+         \}\
+      return Result;\
+    \}\
+     private boolean match(int i, int gb) \{\
+            if (gb < table[i])\
+               return false;\
+ 	         int j = i + 1;\
+  	 \
+ 	         //\uc0\u23383 \u27597 Z\u20351 \u29992 \u20102 \u20004 \u20010 \u26631 \u31614 \
+  	         while (j < 26 && (table[j] == table[i]))\
+ 	             ++j;\
+ 	         if (j == 26)\
+ 	             return gb <= table[j];\
+            else\
+ 	             return gb < table[j];\
+  	      \}\
+    	  	 \
+     //\uc0\u21462 \u20986 \u27721 \u23383 \u30340 \u32534 \u30721 \
+     private int gbValue(char ch) \{\
+	     String str = new String();\
+	     str += ch;\
+	     try \{\
+	         byte[] bytes = str.getBytes("GBK");\
+	             if (bytes.length < 2)\
+	                 return 0;\
+	             return (bytes[0] << 8 & 0xff00) + (bytes[1] &\
+	                     0xff);\
+	         \} catch (Exception e) \{\
+	           return 0;\
+	         \}\
+	     \}\
+     public Map sort(List list)\{\
+    	 Map map=new HashMap();\
+    	 ArrayList arraylist=new ArrayList();\
+    	 String[] alphatableb =\
+             \{\
+    	        "A", "B", "C", "D", "E", "F", "G", "H", "I",\
+                "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"\
+    	       \};\
+    		 for(String a:alphatableb)\{\
+    			 for(int i=0;i<list.size();i++)\{//\uc0\u20026 \u20102 \u25490 \u24207 \u37117 \u36820 \u22238 \u22823 \u20889 \u23383 \u27597 \
+	    			 if(a.equals(String2AlphaFirst(list.get(i).toString(),"b")))\{\
+	    				 arraylist.add(list.get(i).toString());\
+	    			 \}\
+    		     \}\
+    			 map.put(a,arraylist);\
+    			 arraylist=new ArrayList();\
+    	 \}\
+    	 return map;\
+     \}\
+\}\
+\
+ }

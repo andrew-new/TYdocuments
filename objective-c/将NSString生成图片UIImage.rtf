@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red21\green118\blue185;\red255\green255\blue255;\red154\green166\blue182;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl480\sa160
+{\field{\*\fldinst{HYPERLINK "http://hobo86.iteye.com/blog/1122550"}}{\fldrslt 
+\f0\b\fs32 \cf2 \ul \ulc2 iOS:NSString
+\f1 \'c9\'fa\'b3\'c9
+\f0 UIImage}}
+\f0\b\fs32 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0
+\fs24 \cf0 		
+\f1 \'b2\'a9\'bf\'cd\'b7\'d6\'c0\'e0\'a3\'ba
+\f0\b0  {\field{\*\fldinst{HYPERLINK "http://hobo86.iteye.com/category/153533"}}{\fldrslt \cf2 \ul \ulc2 iOS:Develop}}{\field{\*\fldinst{HYPERLINK "http://hobo86.iteye.com/category/217498"}}{\fldrslt \cf2 \ul \ulc2 iOS}}{\field{\*\fldinst{HYPERLINK "http://hobo86.iteye.com/category/223567"}}{\fldrslt \cf2 \ul \ulc2 Objective-C}}\
+\pard\pardeftab720\sl400
+{\field{\*\fldinst{HYPERLINK "http://www.iteye.com/blogs/tag/iOS"}}{\fldrslt \cf3 \cb4 iOS}}{\field{\*\fldinst{HYPERLINK "http://www.iteye.com/blogs/tag/Apple"}}{\fldrslt \cf3 \cb4 Apple}}{\field{\*\fldinst{HYPERLINK "http://www.iteye.com/blogs/tag/UI"}}{\fldrslt \cf3 \cb4 UI}}\
+\pard\pardeftab720\sl500
+
+\fs28 \cf0 -(UIImage *)imageFromText:(NSString *)text width:(float)width height:(float)height\uc0\u8232 \{\u8232 \'a0\'a0\'a0 // set the font type and size\u8232 \'a0\'a0\'a0 UIFont *font = [UIFont systemFontOfSize:12.0];\'a0 \u8232 \'a0\'a0\'a0 CGSize size\'a0 = CGSizeMake(width, height);// [text sizeWithFont:font];\u8232 \'a0\'a0\'a0 \u8232 \'a0\'a0\'a0 // check if UIGraphicsBeginImageContextWithOptions is available (iOS is 4.0+)\u8232 \'a0\'a0\'a0 if (UIGraphicsBeginImageContextWithOptions != NULL)\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 UIGraphicsBeginImageContextWithOptions(size,NO,0.0);\u8232 \'a0\'a0\'a0 else\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 // iOS is < 4.0 \u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0 UIGraphicsBeginImageContext(size);\u8232 \'a0\'a0\'a0 \u8232 \'a0\'a0\'a0 // optional: add a shadow, to avoid clipping the shadow you should make the context size bigger \u8232 \u8232 \'a0\'a0\'a0 CGContextRef ctx = UIGraphicsGetCurrentContext();\u8232 \'a0\'a0\'a0 CGContextSetShadowWithColor(ctx, CGSizeMake(1.0, 1.0), 5.0, [[UIColor grayColor] CGColor]);\u8232 \'a0\'a0\'a0 \u8232 \'a0\'a0\'a0 // draw in context, you can use\'a0 drawInRect/drawAtPoint:withFont:\u8232 \'a0\'a0\'a0 //[text drawAtPoint:CGPointMake(0.0, 0.0) withFont:font];\u8232 \'a0\'a0\'a0 [text drawInRect:CGRectMake(0, 0, width, height) withFont:font];\u8232 \'a0\'a0\'a0 \u8232 \'a0\'a0\'a0 // transfer image\u8232 \'a0\'a0\'a0 UIImage *image = UIGraphicsGetImageFromCurrentImageContext();\u8232 \'a0\'a0\'a0 [image retain];\u8232 \'a0\'a0\'a0 UIGraphicsEndImageContext();\'a0\'a0\'a0 \u8232 \'a0\'a0\'a0 \u8232 \'a0\'a0\'a0 return image;\u8232 \}\
+}

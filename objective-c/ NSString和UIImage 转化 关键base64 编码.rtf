@@ -1,0 +1,92 @@
+{\rtf1\ansi\ansicpg936\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fnil\fcharset0 MicrosoftYaHei;\f1\fmodern\fcharset0 Courier;\f2\fnil\fcharset0 Consolas;
+\f3\fnil\fcharset0 HoeflerText-Regular;\f4\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red21\green65\blue122;\red16\green70\blue167;\red0\green0\blue0;
+\red109\green109\blue109;\red250\green234\blue173;\red89\green89\blue89;\red26\green26\blue26;\red255\green255\blue255;
+\red154\green154\blue154;\red83\green83\blue83;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl340
+{\field{\*\fldinst{HYPERLINK "http://www.16kan.com/question/detail/286941.html#"}}{\fldrslt 
+\f0\fs32 \cf2 iphone - \uc0\u20174 \u23383 \u33410 NSString\u20013 \u30340 UIImage -}}
+\f0\fs32 \cf3 \
+
+\itap1\trowd \taflags4 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth13020\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl500\sa300
+\cf0 I am trying to create a UIImage from a byte array that is actually held within a NSString.\uc0\u25105 \u35797 \u22270 \u20174 \u19968 \u20010 \u23383 \u33410 \u25968 \u32452 \u21019 \u24314 \u19968 \u20010 UIImage\u65292 \u23454 \u38469 \u19978 \u26159 \u19968 \u20010 NSString\u20869 \u20030 \u34892 \u12290 \
+Can someone please tell me how I can do that?\uc0\u26377 \u20154 \u21578 \u35785 \u25105 \u65292 \u25105 \u24590 \u20040 \u33021 \u20570 \u21040 \u36825 \u19968 \u28857 \u21527 \u65311 \
+Here is what I was thinking of doing:\uc0\u19979 \u38754 \u26159 \u25105 \u22312 \u24819 \u20160 \u20040 \u20570 \u65306 \
+\pard\intbl\itap1\pardeftab720\sl500
+
+\f1\fs24 \cf0 \cb6 NSString *sourceString = @"mYActualBytesAREinHERe="; //get the bytes const char *bytesArray = [sourceString cStringUsingEncoding:NSASCIIStringEncoding]; //build the NSData object NSData *data = [NSData dataWithBytes:bytesArray length:[sourceString length]]; //create actual image UIImage *image = [UIImage imageWithData:data];
+\f2  \
+\pard\intbl\itap1\pardeftab720\sl500\sa300
+
+\f0\fs32 \cf0 \cb1 The problem is image is always 0x0 (nil).\uc0\u38382 \u39064 \u26159 \u22270 \u20687 \u22987 \u32456 \u20026 0x0\u65288 \u26080 \u65289 \u12290 \
+Any suggestions would be appreciated.\uc0\u20219 \u20309 \u24314 \u35758 \u65292 \u23558 \u19981 \u32988 \u24863 \u28608 \u12290 \
+Thanks!\uc0\u35874 \u35874 \u65281 \cell \lastrow\row
+\pard\pardeftab720\sl560
+
+\fs26 \cf0 \uc0\u26469 \u28304 \u65306 {\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/questions/1101002/uiimage-from-bytes-held-in-nsstring"}}{\fldrslt \cf2 http://stackoverflow.com/questions/1101002/uiimage-from-bytes-held-in-nsstring}}\
+\pard\pardeftab720\sl560\qr
+\cf7 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl560\sa260
+\ls1\ilvl0\cf0 		To convert an image to string you need a method to convert 
+\f1 NSData
+\f0  to a base64Encoded string and back (lots of examples {\field{\*\fldinst{HYPERLINK "http://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=en&ie=UTF8&prev=_t&rurl=74.125.128.163&sl=en&tl=zh-CN&u=http://www.cocoadev.com/index.pl%3FBaseSixtyFour&usg=ALkJrhhp54RFkhsfx7uEHRsu0bAZ1iKLDg"}}{\fldrslt \cf2 here}} ).\uc0\u20026 \u20102 \u23558 \u22270 \u20687 \u36716 \u25442 \u20026 \u23383 \u31526 \u20018 \u65292 \u20320 \u38656 \u35201 \u19968 \u20010 \u26041 \u27861 \u26469 \u36716 \u25442 
+\f1 NSData
+\f0 \uc0\u19968 \u20010 base64Encoded\u23383 \u31526 \u20018 \u24182 \u36820 \u22238 \u65288  {\field{\*\fldinst{HYPERLINK "http://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=en&ie=UTF8&prev=_t&rurl=74.125.128.163&sl=en&tl=zh-CN&u=http://www.cocoadev.com/index.pl%3FBaseSixtyFour&usg=ALkJrhhp54RFkhsfx7uEHRsu0bAZ1iKLDg"}}{\fldrslt \cf2 \uc0\u36825 \u37324 \u26377 }}\uc0\u24456 \u22810 \u36825 \u26679 \u30340 \u20363 \u23376 \u65289 \u12290  The easiest ones to use are categories on 
+\f1 NSData
+\f0  so you can do something like this:\uc0\u26368 \u31616 \u21333 \u30340 \u20351 \u29992 \u31867 \u21035 \u19978 
+\f1 NSData
+\f0 \uc0\u36825 \u26679 \u20320 \u23601 \u21487 \u20197 \u20570 \u36825 \u26679 \u30340 \u20107 \u24773 \u65306 \u8232 
+\f2\fs24 \cb6  
+\f1 UIImage* pic = [UIImage imageNamed:@"sample.png"]; NSData* pictureData = UIImagePNGRepresentation(pic); NSString* pictureDataString = [pictureData base64Encoding];
+\f2  \uc0\u8232 
+\f0\fs26 \cb1 To go the other way you need a reverse converter:\uc0\u36208 \u21478 \u19968 \u26465 \u36335 \u65292 \u20320 \u38656 \u35201 \u21453 \u21521 \u36716 \u25442 \u22120 \u65306 \u8232 
+\f2\fs24 \cb6  
+\f1 UIImage* image = [UIImage imageWithData:[NSData dataFromBase64EncodedString: pictureDataString]];
+\f2  \uc0\u8232 
+\f0\fs26 \cb1 \uc0\u8232 \u8232 \
+\ls1\ilvl0
+\f1 		[UIImage imageWithData:data];
+\f0  will return nil if it doesn't understand the data being passed to it. 
+\f1 [UIImage imageWithData:data];
+\f0 \uc0\u23558 \u36820 \u22238 nil\u65292 \u22914 \u26524 \u23427 \u19981 \u29702 \u35299 \u36825 \u20123 \u25968 \u25454 \u34987 \u20256 \u36882 \u32473 \u23427 \u12290  I would double check your encoding, etc. It's odd that a binary string would hold pure image data without some kind of encoding (base64, etc.).\u25105 \u20250 \u20180 \u32454 \u26816 \u26597 \u20320 \u30340 \u32534 \u30721 \u31561 \u22855 \u24618 \u30340 \u26159 \u65292 \u36825 \u26159 \u19968 \u20010 \u20108 \u36827 \u21046 \u23383 \u31526 \u20018 \u65292 \u23558 \u20030 \u34892 \u32431 \u20928 \u30340 \u22270 \u20687 \u25968 \u25454 \u65292 \u32780 \u26080 \u38656 \u32534 \u30721 \u26576 \u31181 \u65288 base64\u32534 \u30721 \u31561 \u65289 \u12290  String encodings and binary encodings aren't compatible.\u23383 \u31526 \u20018 \u30340 \u32534 \u30721 \u21644 \u20108 \u36827 \u21046 \u32534 \u30721 \u19981 \u20860 \u23481 \u12290 \u8232 \u8232 \u8232 \
+		I bet your image data has some null characters in there (0x00) and as you know that is the terminator for the string, so when you ask for the C string, you probably get way-way too little data.\uc0\u25105 \u25954 \u25171 \u36172 \u65292 \u20320 \u30340 \u22270 \u20687 \u25968 \u25454 \u22312 \u37027 \u37324 \u26377 \u19968 \u20123 \u31354 \u23383 \u31526 \u65288 0x00\u65289 \u21644 \u20320 \u30693 \u36947 \u36825 \u26159 \u32456 \u27490 \u31526 \u30340 \u23383 \u31526 \u20018 \u65292 \u25152 \u20197 \u24403 \u20320 \u38382 \u30340 C\u23383 \u31526 \u20018 \u30340 \u26041 \u24335 \u26041 \u27861 \u65292 \u20320 \u21487 \u33021 \u20250 \u24471 \u21040 \u30340 \u25968 \u25454 \u22826 \u23569 \u12290 \u8232 Try something like - (NSData *)dataUsingEncoding:(NSStringEncoding)encoding; to generate your NSData.\u23581 \u35797 \u31867 \u20284  - \u65288 NSData\u30340 *\u65289 dataUsingEncoding\u65306 \u65288 NSStringEncoding\u65289 \u32534 \u30721 \u65292 \u29983 \u25104 \u24744 \u30340 NSData\u30340 \u12290 \u8232 If that doesn't work you need to evaluate whether the setting the data into an NSString (with embedded null chars) isn't causing a loss of data too.\u22914 \u26524 \u19981 \u24037 \u20316 \u65292 \u20320 \u38656 \u35201 \u35780 \u20272 \u26159 \u21542 \u35774 \u32622 \u21040 \u19968 \u20010 NSString\u65288 \u24102 \u23884 \u20837 \u30340 \u31354 \u23383 \u31526 \u65289 \u30340 \u25968 \u25454 \u20063 \u19981 \u20250 \u36896 \u25104 \u25968 \u25454 \u20002 \u22833 \u12290 \u8232 Like one of the other respondents, perhaps base-64 encoding your data would be a good idea (if using a string to transport the img data is a requirement)\u20043 \u19968 \u65292 \u20854 \u20182 \u21463 \u35775 \u32773 \u19968 \u26679 \u65292 \u20063 \u35768 Base-64\u32534 \u30721 \u30340 \u25968 \u25454 \u23558 \u26159 \u19968 \u20010 \u22909 \u20027 \u24847 \u65288 \u22914 \u26524 \u20351 \u29992 \u19968 \u20010 \u23383 \u31526 \u20018 \u26469 \u36816 \u36755 \u30340 img\u25968 \u25454 \u30340 \u35201 \u27714 \u65289 \u8232 Good luck.\u31069 \u20320 \u22909 \u36816 \u12290 \u8232 \u8232 \u8232 \
+\pard\pardeftab720\sa400
+
+\f3\fs40 \cf8 \cb9 \
+\
+\
+Converting UIImage to NSString to embedded image in email body from iphone\'a0app\
+\pard\pardeftab720\sa380
+
+\i\fs20 \cf10 December 29, 2009 {\field{\*\fldinst{HYPERLINK "http://webbuilders.wordpress.com/2009/12/29/converting-uiimage-to-nsstring-to-embedded-image-in-email-body-from-iphone-app/#comments"}}{\fldrslt \cf11 \'a7 \cf10 3 Comments}}\
+\pard\pardeftab720\sl340
+
+\f4\i0\fs18 \cf8 Including image within email body from iphone app is a very tricky business. Using Base64 encoding according to my search results works on all mail server except Gmail. Gmail won\'92t allow embedded images.\
+\
+These are the Objective-C methods converting from UIView to NSString for email body.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl340
+\ls2\ilvl0\cf8 {\listtext	\'95	}Converting the UIView to a UIImage using 
+\f1\fs22 UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+\f4\fs18 \
+{\listtext	\'95	}Converting the UIImage to NSData using 
+\f1\fs22 NSData *imageData = UIImagePNGRepresentation(viewImage);
+\f4\fs18 \
+{\listtext	\'95	}Convert the NSData to Base64\
+{\listtext	\'95	}Converting the Base64 encoded image data into an NSString using 
+\f1\fs22 NSString *dataStr = [NSString stringWithCString:encodeArray length:strlen(encodeArray)];
+\f4\fs18 \
+{\listtext	\'95	}Embedding the image into email using 
+\f1\fs22 NSString *body\'a0\'a0\'a0\'a0\'a0\'a0 = [@"" stringByAppendingFormat:@"<b><img src='data:image/png;base64,%@' alt='Interpolate Chart'></b>", dataStr];
+\f4\fs18 \
+\ls2\ilvl0
+\f1\fs22 {\listtext	\'95	}<b> and </b> in the embedded image code above must be present, or mail will strip your image.
+\f4\fs18 \
+}

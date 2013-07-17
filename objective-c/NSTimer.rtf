@@ -1,0 +1,158 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fnil\fcharset0 LucidaGrande;
+\f3\fnil\fcharset0 Consolas;\f4\fnil\fcharset0 Consolas-Bold;\f5\fswiss\fcharset0 Helvetica;
+\f6\fmodern\fcharset0 Courier;\f7\fnil\fcharset0 Consolas-Italic;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red234\green234\blue234;\red38\green38\blue38;
+\red14\green115\blue192;\red154\green154\blue154;\red231\green231\blue231;\red213\green213\blue213;\red0\green0\blue0;
+\red53\green65\blue117;\red133\green0\blue4;\red17\green137\blue135;\red14\green114\blue164;\red246\green246\blue255;
+\red98\green33\blue100;\red229\green229\blue229;\red83\green83\blue83;\red135\green136\blue117;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl780
+{\field{\*\fldinst{HYPERLINK "http://magicalboy.com/objective_c_nstimer_usage/"}}{\fldrslt 
+\f0\fs60 \cf2 \kerning1\expnd-4\expndtw-20
+Objective C NSTimer 
+\f1 \'ca\'b9\'d3\'c3}}
+\f0\fs56 \
+\pard\pardeftab720\sl500
+
+\f2\fs22 \cf0 \cb3 On 2012 
+\f1 \'c4\'ea
+\f2  5 
+\f1 \'d4\'c2
+\f2  24 
+\f1 \'c8\'d5
+\f2 , in {\field{\*\fldinst{HYPERLINK "http://magicalboy.com/category/iphone-2/"}}{\fldrslt iPhone}}, by donly
+\fs24 \cf4 \cb1 \
+\pard\pardeftab720\sl360\sa300
+{\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSTimer_Class/Reference/NSTimer.html"}}{\fldrslt \cf5 NSTimer\uc0\u8232 }}
+\f1 \'b5\'c4\'ca\'b9\'d3\'c3\'b2\'a2\'b2\'bb\'b8\'b4\'d4\'d3\'a3\'ac\'bc\'f2\'b5\'a5\'bd\'e9\'c9\'dc\'d4\'da
+\f2 iOS
+\f1 \'bf\'aa\'b7\'a2\'d6\'d0\'be\'ad\'b3\'a3\'bb\'e1\'d3\'c3\'b5\'bd\'b5\'c4\'bc\'b8\'d6\'d6\'b7\'bd\'ca\'bd\'a1\'a3
+\f2 \
+\pard\pardeftab720\sl660
+
+\f1\fs48 \cf0 \'b4\'b4\'bd\'a8
+\f2  NSTimer\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0
+\fs24 \cf4 {\listtext	1.	}Scheduled Timers & Using Selector\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0
+\f3 \cf0 {\listtext	2.	}\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clcbpat7 \clwWidth280\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrs\brdrw20\brdrcf8 \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth6580\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720\sl360\qr
+\ls1\ilvl0\cf6 {\listtext	3.	}1\uc0\u8232 2\u8232 3\u8232 4\u8232 5\u8232 6\u8232 7\u8232 8\u8232 9\u8232 10\u8232 11\u8232 12\u8232 13\cell 
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0
+\f4\b \cf0 {\listtext	4.	}-
+\f3\b0  (
+\f4\b \cf10 IBAction
+\f3\b0 \cf0 )
+\f4\b \cf11 startOneOffTimer:
+\f3\b0 \cf0 sender \{\uc0\u8232 \'a0\u8232     [NSTimer scheduledTimerWithTimeInterval
+\f4\b :
+\f3\b0 \cf12 2.0\cf0 \uc0\u8232 \'a0\u8232              target:self\u8232 \'a0\u8232              selector:
+\f4\b @selector
+\f3\b0 (targetMethod
+\f4\b :
+\f3\b0 )\uc0\u8232 \'a0\u8232              userInfo:[self userInfo]\u8232 \'a0\u8232              repeats:\cf13 NO\cf0 ];\uc0\u8232 \'a0\u8232 \}\u8232 \cell \lastrow\row
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0\cf0 \cb14 {\listtext	5.	}\uc0\u8232 \u8232 {\field{\*\fldinst{HYPERLINK "https://gist.github.com/donly/2779207/raw/7d33ba5cf906ce38613ffb0517f9de1ebcf5f361/gistfile1.m"}}{\fldrslt 
+\f5\fs20 \cf15 \cb16 view raw}}
+\f5\fs20 \cf15 \cb16 \uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://gist.github.com/donly/2779207#file-gistfile1-m"}}{\fldrslt \cf17 gistfile1.m}}\cf17 \uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://gist.github.com/donly/2779207"}}{\fldrslt \cf15 This Gist}} brought to you by {\field{\*\fldinst{HYPERLINK "https://github.com/"}}{\fldrslt \cf15 GitHub}}.\uc0\u8232 
+\f3\fs24 \cf0 \cb1 \uc0\u8232 
+\f2 \uc0\u8232 \cf4 \
+{\listtext	6.	}
+\f1 \'c8\'e7\'c9\'cf\'a3\'ac\'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'d6\'d8\'b8\'b4\'d6\'b4\'d0\'d0\'b5\'c4
+\f2 timer
+\f1 \'cf\'e0\'b5\'b1\'d3\'da
+\f2  
+\f6 [self performSelector:@selector(targetMethod:) withObject:nil afterDelay:2.0];
+\f2  \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clcbpat7 \clwWidth280\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrs\brdrw20\brdrcf8 \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth10920\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720\sl360\qr
+\ls1\ilvl0
+\f3 \cf6 {\listtext	7.	}1\uc0\u8232 2\u8232 3\u8232 4\u8232 5\u8232 6\u8232 7\u8232 8\u8232 9\u8232 10\u8232 11\u8232 12\u8232 13\u8232 14\u8232 15\u8232 16\u8232 17\u8232 18\u8232 19\u8232 20\u8232 21\u8232 22\u8232 23\u8232 24\u8232 25\cell 
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0
+\f7\i \cf18 {\listtext	8.	}// declcare
+\f3\i0 \cf0 \uc0\u8232 
+\f4\b @property
+\f3\b0  (assign) NSTimer 
+\f4\b *
+\f3\b0 repeatingTimer;\uc0\u8232 \'a0\u8232 
+\f7\i \cf18 // implements
+\f3\i0 \cf0 \uc0\u8232 
+\f4\b -
+\f3\b0  (
+\f4\b \cf10 IBAction
+\f3\b0 \cf0 )
+\f4\b \cf11 startRepeatingTimer:
+\f3\b0 \cf0 sender \{\uc0\u8232 \'a0\u8232  \u8232 \'a0\u8232     NSTimer 
+\f4\b *
+\f3\b0 timer 
+\f4\b =
+\f3\b0  [NSTimer scheduledTimerWithTimeInterval
+\f4\b :
+\f3\b0 \cf12 0.5\cf0 \uc0\u8232 \'a0\u8232                               target:self selector
+\f4\b :@selector
+\f3\b0 (timerFireMethod
+\f4\b :
+\f3\b0 )\uc0\u8232 \'a0\u8232                               userInfo:[self userInfo] repeats
+\f4\b :
+\f3\b0 \cf13 YES\cf0 ];\uc0\u8232 \'a0\u8232     self.repeatingTimer 
+\f4\b =
+\f3\b0  timer;\uc0\u8232 \'a0\u8232 \}\u8232 \'a0\u8232 
+\f4\b -
+\f3\b0  (
+\f4\b \cf10 IBAction
+\f3\b0 \cf0 )stopRepeatingTimer
+\f4\b :
+\f3\b0 sender \{\uc0\u8232 \'a0\u8232     [repeatingTimer invalidate];\u8232 \'a0\u8232     self.repeatingTimer 
+\f4\b =
+\f3\b0  \cf13 nil\cf0 ;\uc0\u8232 \'a0\u8232 \}\u8232 \cell \lastrow\row
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0\cf0 \cb14 {\listtext	9.	}\uc0\u8232 \u8232 {\field{\*\fldinst{HYPERLINK "https://gist.github.com/donly/2779217/raw/53ea1e23eb3bdc079ad41eab9c0298f5eb4d4ecc/gistfile1.m"}}{\fldrslt 
+\f5\fs20 \cf15 \cb16 view raw}}
+\f5\fs20 \cf15 \cb16 \uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://gist.github.com/donly/2779217#file-gistfile1-m"}}{\fldrslt \cf17 gistfile1.m}}\cf17 \uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://gist.github.com/donly/2779217"}}{\fldrslt \cf15 This Gist}} brought to you by {\field{\*\fldinst{HYPERLINK "https://github.com/"}}{\fldrslt \cf15 GitHub}}.\uc0\u8232 
+\f3\fs24 \cf0 \cb1 \uc0\u8232 
+\f2 \uc0\u8232 \cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0\cf4 {\listtext	10.	}Unscheduled Timers & Using Invocation\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0
+\f3 \cf0 {\listtext	11.	}\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clcbpat7 \clwWidth280\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrs\brdrw20\brdrcf8 \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth14560\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720\sl360\qr
+\ls1\ilvl0\cf6 {\listtext	12.	}1\uc0\u8232 2\u8232 3\u8232 4\u8232 5\u8232 6\u8232 7\u8232 8\u8232 9\u8232 10\u8232 11\u8232 12\u8232 13\u8232 14\u8232 15\u8232 16\u8232 17\u8232 18\u8232 19\u8232 20\u8232 21\u8232 22\u8232 23\u8232 24\u8232 25\u8232 26\u8232 27\u8232 28\u8232 29\u8232 30\u8232 31\u8232 32\u8232 33\u8232 34\u8232 35\u8232 36\u8232 37\u8232 38\u8232 39\u8232 40\u8232 41\u8232 42\u8232 43\u8232 44\u8232 45\u8232 46\u8232 47\u8232 48\cell 
+\pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0\cf0 {\listtext	13.	}// declare\uc0\u8232 @property (retain) NSTimer *unregisteredTimer;\u8232 \'a0\u8232 \'a0\u8232 \'a0\u8232 // implements\u8232 - (IBAction)createUnregisteredTimer:sender \{\u8232 \'a0\u8232     NSMethodSignature *methodSignature = [self methodSignatureForSelector:@selector(invocationMethod:)];\u8232 \'a0\u8232     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];\u8232 \'a0\u8232     [invocation setTarget:self];\u8232 \'a0\u8232     [invocation setSelector:@selector(invocationMethod:)];\u8232 \'a0\u8232     NSDate *startDate = [NSDate date];\u8232 \'a0\u8232     [invocation setArgument:&startDate atIndex:2];\u8232 \'a0\u8232 \'a0\u8232     NSTimer *timer = [NSTimer timerWithTimeInterval:0.5 invocation:invocation repeats:YES];\u8232 \'a0\u8232     self.unregisteredTimer = timer;\u8232 \'a0\u8232 \}\u8232 \'a0\u8232  \u8232 \'a0\u8232 - (IBAction)startUnregisteredTimer:sender \{\u8232 \'a0\u8232     if (unregisteredTimer != nil) \{\u8232 \'a0\u8232         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];\u8232 \'a0\u8232         [runLoop addTimer:unregisteredTimer forMode:NSDefaultRunLoopMode];\u8232 \'a0\u8232     \}\u8232 \'a0\u8232 \}\u8232 \'a0\u8232 - (IBAction)stopUnregisteredTimer:sender \{\u8232 \'a0\u8232     [unregisteredTimer invalidate];\u8232 \'a0\u8232     self.unregisteredTimer = nil;\u8232 \'a0\u8232 \}\u8232 \cell \lastrow\row
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls1\ilvl0\cf0 \cb14 {\listtext	14.	}\uc0\u8232 \u8232 {\field{\*\fldinst{HYPERLINK "https://gist.github.com/donly/2779238/raw/34c9e4d6c59269d7628ba09120d45c6cc40f8806/gistfile1.txt"}}{\fldrslt 
+\f5\fs20 \cf15 \cb16 view raw}}
+\f5\fs20 \cf15 \cb16 \uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://gist.github.com/donly/2779238#file-gistfile1-txt"}}{\fldrslt \cf17 gistfile1.txt}}\cf17 \uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://gist.github.com/donly/2779238"}}{\fldrslt \cf15 This Gist}} brought to you by {\field{\*\fldinst{HYPERLINK "https://github.com/"}}{\fldrslt \cf15 GitHub}}.\uc0\u8232 
+\f3\fs24 \cf0 \cb1 \uc0\u8232 
+\f2 \cf4 \
+\pard\pardeftab720\sl660
+
+\f1\fs48 \cf0 \'b2\'ce\'bf\'bc\'c1\'b4\'bd\'d3
+\f2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360
+\ls2\ilvl0
+\fs24 \cf5 {\listtext	1.	}{\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/questions/1449035/how-do-i-use-nstimer"}}{\fldrslt objective c \'96 How do I use NSTimer \'96 Stack Overflow}}\cf4 \
+\ls2\ilvl0\cf5 {\listtext	2.	}{\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Timers/Timers.html"}}{\fldrslt Timer Programming Topics: Introduction to Timers}}\cf4 \
+\ls2\ilvl0\cf5 {\listtext	3.	}{\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Multithreading/Introduction/Introduction.html"}}{\fldrslt Threading Programming Guide}}\cf4 \
+}
